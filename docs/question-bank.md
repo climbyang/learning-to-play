@@ -11,9 +11,10 @@ Each entry is a **template**. Its stable `id` is the unit for "not seen in 30 da
   - `plausible`: a `min`/`max`/`step` range. It must allow at least 20 reasonable answers, so guessing doesn't pay.
 - **Multiple choice (`choice`).** A prompt, at least 5 options with fixed ids, and the id of the correct option.
 - **Reading set (`passage`).** Used for English. It has a `text`, a list of comprehension `parts` (each with a prompt, at least 4 options and an answer), optional hints, and one or two `vocab` cards. Each card has a word, its meaning, the `sentence` from the passage that uses it (which must appear word for word in the text), a check prompt, at least 3 options and an answer.
+- **Word set (`passage` with kind `vocab_word`).** Learning one word in two steps, regular tier only: a short example `text` (12–60 words), exactly 2 parts (step 1 the meaning in context, step 2 how to use the word) and no vocab cards. Only both steps right earns the vocabulary reward.
 - **Figures (optional).** A question can carry a figure drawn on the TV: `{"type": "bar", "data": [{"label", "value"}…]}`, `{"type": "table", "headers": […], "rows": [[…]…]}` or `{"type": "chess", "fen": "…"}`. A chess board is drawn from the point of view of the side to move.
 - **Chess.** Kinds `chess_mate1` (regular) and `chess_mate2` (challenge) are multiple choice with moves in algebraic notation, without `+` or `#`. `tests/test_production_bank.py` uses python-chess to check that the keyed move is the only option that mates.
-- **Minimum time (optional).** `min_seconds` (5–600) overrides the tier's too-fast threshold for one template. The vocabulary questions use 8 seconds.
+- **Minimum time (optional).** `min_seconds` (5–600) overrides the tier's too-fast threshold for one template. Word sets use 10 seconds.
 
 ## Review records
 

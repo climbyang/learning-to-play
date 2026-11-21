@@ -26,6 +26,8 @@ log = logging.getLogger(__name__)
 ActionFn = Callable[[], Awaitable[None]]
 T = TypeVar("T")
 MAX_ADD_MINUTES = 180
+ADULT_DEFAULT_MINUTES = 240  # safety net in case the TV is left on after adult use
+ADULT_MAX_MINUTES = 480
 TELEGRAM_MESSAGE_LIMIT = 4096  # Telegram text cap; /quiz check reserves 64 chars for the id prefix
 QUIZ_TOAST_SUFFIX = " · Open Quiz to earn more time"
 REASON_TEXT = {"quota": "今日娱乐时间已用完", "locked": "家长已锁定电视", "curfew": "现在是休息时段"}
@@ -137,6 +139,33 @@ class Monitor:
     def locked(self) -> bool:
         return self.store.get_kv("locked") == "1"
 
+    def adult_until(self, now: datetime | None = None) -> datetime | None:
+        """End of adult mode (nothing counts, nothing is enforced), or None in kid mode."""
+        raw = self.store.get_kv("adult_until")
+        if raw is None:
+            return None
+        until = datetime.fromisoformat(raw)
+        return until if until > (now or self._now()) else None
+
+    def _counts(self, app_id: str, now: datetime | None = None) -> bool:
+        return is_counting(app_id, self.s) and self.adult_until(now) is None
+
+    def _resplit_session(self, now: datetime) -> None:
+        """Close and reopen the current session so its counting flag follows the mode."""
+        if self._session_id is not None and self._session_app is not None:
+            app = self._session_app
+            self._heartbeat(now)
+            self._close_session(now, "mode_switch")
+            self._open_session(app, now)
+
+    def _end_adult(self, now: datetime, why: str) -> list[ActionFn]:
+        if self.store.get_kv("adult_until") is None:
+            return []
+        self.store.del_kv("adult_until")
+        self._resplit_session(now)
+        self._enforced = None
+        return [self._send(f"👶 {why}，已回到孩子模式\n" + self.status_text(now), self._buttons())]
+
     def _local(self, now: datetime) -> datetime:
         return now.astimezone(self.s.timezone)
 
@@ -242,7 +271,7 @@ class Monitor:
             had_quota = allowance * 60 - used > 0
         self._session_had_quota = had_quota
         self._session_id = self.store.open_session(
-            app_id, self._title(app_id), is_counting(app_id, self.s), ts)
+            app_id, self._title(app_id), self._counts(app_id, ts), ts)
         self._session_app = app_id
         self._last_hb = ts
 
@@ -286,11 +315,13 @@ class Monitor:
         if prev.active and not state.active:
             self.store.set_kv("last_active_utc", now.isoformat())
             self.store.log_event("tv_off" if state.connected else "tv_lost", prev.app_id, now)
-            if not state.connected and is_counting(prev.app_id, self.s):
+            if not state.connected and self._counts(prev.app_id, now):
                 actions.append(self._send(
                     f"⚠️ 电视连接中断（当时在看 {self._title(prev.app_id)}）。"
                     "如果不是关机，可能是电视被断网，断网期间无法计时。"))
-        if state.active and desired != prev.app_id and is_counting(desired or "", self.s):
+        if prev.active and not state.active:
+            actions += self._end_adult(now, "电视已关")
+        if state.active and desired != prev.app_id and self._counts(desired or "", now):
             actions += self._on_play(desired or "", now)
         if state.active:
             actions += self._decide(now)
@@ -323,11 +354,11 @@ class Monitor:
         # Single point where remaining quota is computed (tick, post-award _decide, /add
         # re-checks): once a counted session sees quota left, its expiry is natural,
         # whichever path granted that quota.
-        if (self._session_id is not None and is_counting(self._state.app_id, self.s)
+        if (self._session_id is not None and self._counts(self._state.app_id, now)
                 and allowance * 60 - used > 0):
             self._session_had_quota = True
         return evaluate(used_s=used, allowance_min=allowance,
-                        counting=is_counting(self._state.app_id, self.s),
+                        counting=self._counts(self._state.app_id, now),
                         allowed_when=rule_for(self._state.app_id, self.s).allowed_when,
                         locked=self.locked, curfew=in_curfew(self._local(now), self.s),
                         warned=frozenset(), settings=self.s, day=day)
@@ -392,7 +423,7 @@ class Monitor:
         return lambda: self.tv.launch_app(quiz)
 
     def _decide(self, now: datetime) -> list[ActionFn]:
-        if not self._state.active:
+        if not self._state.active or self.adult_until(now) is not None:
             return []
         app_id = self._state.app_id
         day = self._local(now).date()
@@ -550,7 +581,11 @@ class Monitor:
         async with self._lock:
             now = self._now()
             self._heartbeat(now)
-            actions = self._decide(now)
+            if self.store.get_kv("adult_until") is not None and self.adult_until(now) is None:
+                actions = self._end_adult(now, "成人模式到时间了")
+            else:
+                actions = []
+            actions += self._decide(now)
             actions += self._end_streak(now)
             actions += self._maybe_summary(now)
         await self._execute(actions)
@@ -573,7 +608,8 @@ class Monitor:
     def _buttons(self) -> Buttons:
         lock = ("🔓 解锁", "unlock") if self.locked else ("🔒 锁定", "lock")
         power = ("⏻ 关机", "off") if self.tv.state.active else ("⏻ 开机", "on")
-        return [[("+10 分钟", "add:10"), ("+30 分钟", "add:30")],
+        adult = ("👶 孩子模式", "kid") if self.adult_until() else ("🧑 成人模式", "adult")
+        return [[("+10 分钟", "add:10"), ("+30 分钟", "add:30"), adult],
                 [lock, power, ("🔄 刷新", "status")]]
 
     def status_text(self, now: datetime | None = None) -> str:
@@ -589,7 +625,9 @@ class Monitor:
         return (f"📊 {day:%m-%d} 已用 {_fmt_min(used)} / {allowance:g} 分钟"
                 f"（剩 {_fmt_min(allowance * 60 - used)}）\n"
                 f"当前：{current}\n"
-                f"模式：{'执行' if self.mode == 'enforce' else '观察'}"
+                + (f"🧑 成人模式（到 {self._local(until):%H:%M}，关机自动结束）\n"
+                   if (until := self.adult_until(now)) else "")
+                + f"模式：{'执行' if self.mode == 'enforce' else '观察'}"
                 f" | 锁定：{'是' if self.locked else '否'}"
                 f" | 休息时段：{'是' if in_curfew(self._local(now), self.s) else '否'}")
 
@@ -628,6 +666,27 @@ class Monitor:
             self.store.add_credit(day, minutes, "parent", f"telegram:{cmd.user_id}", now)
             self._enforced = None
             return Reply(f"✅ 已加 {minutes} 分钟\n" + self.status_text(now), self._buttons())
+        if name == "adult":
+            raw = cmd.arg.strip()
+            try:
+                minutes = int(raw) if raw else ADULT_DEFAULT_MINUTES
+            except ValueError:
+                return Reply("用法：/adult [分钟数]（默认 240，关机自动结束）")
+            if not 1 <= minutes <= ADULT_MAX_MINUTES:
+                return Reply(f"成人模式时长 1–{ADULT_MAX_MINUTES} 分钟")
+            self.store.set_kv("adult_until", (now + timedelta(minutes=minutes)).isoformat())
+            self._resplit_session(now)
+            self._enforced = None
+            return Reply("🧑 成人模式已开启：不计时、不限制。电视关机后自动回到孩子模式\n"
+                         + self.status_text(now), self._buttons())
+        if name == "kid":
+            if self.store.get_kv("adult_until") is None:
+                return Reply("现在就是孩子模式\n" + self.status_text(now), self._buttons())
+            self.store.del_kv("adult_until")
+            self._resplit_session(now)
+            self._enforced = None
+            actions += self._decide(now)
+            return Reply("👶 已回到孩子模式\n" + self.status_text(now), self._buttons())
         if name == "lock":
             self.store.set_kv("locked", "1")
             actions += self._decide(now)
@@ -653,7 +712,8 @@ class Monitor:
         if name in ("status", "today"):
             return Reply(self.status_text(now), self._buttons())
         return Reply("命令：/status 今日状态 · /add 分钟 加时 · /lock 锁定 · /unlock 解锁 · "
-                     "/on 开机 · /off 关机 · /mode observe|enforce · /quiz 答题明细",
+                     "/on 开机 · /off 关机 · /adult 成人模式 · /kid 孩子模式 · "
+                     "/mode observe|enforce · /quiz 答题明细",
                      self._buttons())
 
     # -- main loop --------------------------------------------------------

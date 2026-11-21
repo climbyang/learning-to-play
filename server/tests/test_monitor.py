@@ -853,3 +853,49 @@ async def test_retried_quiet_power_off_counted_once(tmp_path):
     await tv.set(connected=False)
     await watch(mon, clock, 11)
     assert sink.has("又重复打开了 1 次，其中 1 次关机")
+
+
+async def test_adult_mode_does_not_count_or_enforce(tmp_path):
+    mon, tv, sink, clock, store = _monitor(tmp_path, CURFEW_YAML)
+    clock.advance(hours=11)                      # 21:00 local: curfew
+    reply = await mon.handle(Command(PARENT, PARENT, "adult", ""))
+    assert "成人模式已开启" in reply.text
+    await tv.set(app_id=YT)
+    await watch(mon, clock, 30)
+    assert tv.powered_off == 0 and tv.closed == [] and tv.toasts == []
+    assert used_min(mon, clock) == 0
+    assert store.count_events("violation", clock() - timedelta(hours=1)) == 0
+
+
+async def test_adult_mode_ends_when_tv_turns_off(tmp_path):
+    mon, tv, sink, clock, store = _monitor(tmp_path, CURFEW_YAML)
+    clock.advance(hours=11)
+    await mon.handle(Command(PARENT, PARENT, "adult", ""))
+    await tv.set(app_id=YT)
+    await tv.set(connected=False)
+    assert mon.adult_until() is None and sink.has("电视已关，已回到孩子模式")
+    clock.advance(minutes=1)
+    await tv.set(app_id=YT)                      # next power-on is kid mode again
+    assert tv.powered_off == 1
+
+
+async def test_adult_mode_times_out_and_counting_resumes(env):
+    mon, tv, sink, clock, store, s = env
+    await mon.handle(Command(PARENT, PARENT, "adult", "10"))
+    await tv.set(app_id=YT)
+    await watch(mon, clock, 15)
+    assert sink.has("成人模式到时间了")
+    assert used_min(mon, clock) == pytest.approx(5, abs=0.3)
+
+
+async def test_kid_command_switches_back_mid_session(env):
+    mon, tv, sink, clock, store, s = env
+    await mon.handle(Command(PARENT, PARENT, "adult", ""))
+    await tv.set(app_id=YT)
+    await watch(mon, clock, 5)
+    reply = await mon.handle(Command(PARENT, PARENT, "kid", ""))
+    assert "已回到孩子模式" in reply.text
+    await watch(mon, clock, 3)
+    assert used_min(mon, clock) == pytest.approx(3, abs=0.3)
+    assert "用法" in (await mon.handle(Command(PARENT, PARENT, "adult", "abc"))).text
+    assert "1–480" in (await mon.handle(Command(PARENT, PARENT, "adult", "999"))).text

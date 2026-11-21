@@ -1,0 +1,452 @@
+[
+  {
+    "id": "logic-chess-back-rank",
+    "subject": "logic",
+    "kind": "chess_mate1",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 2,
+    "prompt": "White to move. The black king is hemmed in by its own pawns. Which move is checkmate?",
+    "figure": "{\"type\": \"chess\", \"fen\": \"6k1/5ppp/2n5/8/8/5N2/5PPP/4R1K1 w - - 0 1\"}",
+    "hints": [
+      "Look for checks first. Where could a rook give check to a king that is hiding behind its own pawns?",
+      "A king boxed in by its own pawns has no flight squares. Which check cannot be blocked or captured?"
+    ],
+    "explanation": "The rook goes to e8 and checks along the back rank. The black king on g8 is shut in by its own pawns on f7, g7 and h7, and no black piece can capture the rook or block the check, so it is checkmate.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-chess-back-rank-1",
+        "params": {},
+        "answer": "e"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Re6"
+      },
+      {
+        "id": "b",
+        "text": "Ng5"
+      },
+      {
+        "id": "c",
+        "text": "Re4"
+      },
+      {
+        "id": "d",
+        "text": "Rb1"
+      },
+      {
+        "id": "e",
+        "text": "Re8"
+      }
+    ]
+  },
+  {
+    "id": "logic-chess-scholars-mate",
+    "subject": "logic",
+    "kind": "chess_mate1",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 2,
+    "prompt": "White to move. Black has just played two quiet developing moves. Which move is checkmate?",
+    "figure": "{\"type\": \"chess\", \"fen\": \"r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 0 1\"}",
+    "hints": [
+      "Which black pawn is attacked twice, by the queen and by the bishop? Only the king defends it.",
+      "If the queen takes on f7, the king cannot take back. Why not?"
+    ],
+    "explanation": "The queen captures the pawn on f7. The bishop on c4 protects the queen, so the king cannot take it, and the king's other neighbouring squares are taken by its own pieces or covered by the queen. It is checkmate.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-chess-scholars-mate-1",
+        "params": {},
+        "answer": "e"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Ba6"
+      },
+      {
+        "id": "b",
+        "text": "Ke2"
+      },
+      {
+        "id": "c",
+        "text": "b4"
+      },
+      {
+        "id": "d",
+        "text": "f4"
+      },
+      {
+        "id": "e",
+        "text": "Qxf7"
+      }
+    ]
+  },
+  {
+    "id": "logic-chess-fools-mate",
+    "subject": "logic",
+    "kind": "chess_mate1",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 2,
+    "prompt": "Black to move. White has made two weakening pawn moves. Which move is checkmate?",
+    "figure": "{\"type\": \"chess\", \"fen\": \"rnbqkbnr/pppp1ppp/8/4p3/6P1/5P2/PPPPP2P/RNBQKBNR b KQkq - 0 2\"}",
+    "hints": [
+      "White has opened the diagonal leading to the white king. Which black piece can use it?",
+      "Check whether any white piece can block the diagonal or capture the checking piece."
+    ],
+    "explanation": "The black queen moves to h4 and checks the white king along the diagonal h4 to e1. The king cannot step away because its own pieces and the queen's diagonal take every square, and nothing can block on g3 or capture the queen, so it is checkmate.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-chess-fools-mate-1",
+        "params": {},
+        "answer": "b"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Nf6"
+      },
+      {
+        "id": "b",
+        "text": "Qh4"
+      },
+      {
+        "id": "c",
+        "text": "Ke7"
+      },
+      {
+        "id": "d",
+        "text": "a5"
+      },
+      {
+        "id": "e",
+        "text": "h5"
+      }
+    ]
+  },
+  {
+    "id": "logic-chess-rook-corner",
+    "subject": "logic",
+    "kind": "chess_mate1",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 2,
+    "prompt": "White to move. The black king is stuck in the corner. Which move is checkmate?",
+    "figure": "{\"type\": \"chess\", \"fen\": \"7k/8/6K1/8/8/8/8/R7 w - - 0 1\"}",
+    "hints": [
+      "The white king already takes away two of the black king's squares. Which check on the back rank takes away the last one?",
+      "Remember that a king cannot step next to the enemy king."
+    ],
+    "explanation": "The rook goes to a8 and checks along the eighth rank. The black king on h8 cannot go to g8 because the rook covers it, and cannot go to g7 or h7 because the white king covers them. It is checkmate.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-chess-rook-corner-1",
+        "params": {},
+        "answer": "e"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Kf5"
+      },
+      {
+        "id": "b",
+        "text": "Rh1"
+      },
+      {
+        "id": "c",
+        "text": "Rb1"
+      },
+      {
+        "id": "d",
+        "text": "Kg5"
+      },
+      {
+        "id": "e",
+        "text": "Ra8"
+      }
+    ]
+  },
+  {
+    "id": "logic-chess-smothered",
+    "subject": "logic",
+    "kind": "chess_mate1",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 2,
+    "prompt": "White to move. The black king is surrounded by its own rook and pawns. Which move is checkmate?",
+    "figure": "{\"type\": \"chess\", \"fen\": \"6rk/6pp/8/6N1/8/8/6PP/6K1 w - - 0 1\"}",
+    "hints": [
+      "Look at the black king. Which of its neighbouring squares are free to step to?",
+      "A knight check cannot be blocked. Which knight move attacks the king on h8?"
+    ],
+    "explanation": "The knight jumps to f7 and checks the king on h8. The king's neighbouring squares g8, g7 and h7 are all taken up by its own rook and pawns, and the knight cannot be captured, so it is a smothered checkmate.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-chess-smothered-1",
+        "params": {},
+        "answer": "d"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Nh3"
+      },
+      {
+        "id": "b",
+        "text": "Kf1"
+      },
+      {
+        "id": "c",
+        "text": "h3"
+      },
+      {
+        "id": "d",
+        "text": "Nf7"
+      },
+      {
+        "id": "e",
+        "text": "g4"
+      }
+    ]
+  },
+  {
+    "id": "logic-chess-two-rooks",
+    "subject": "logic",
+    "kind": "chess_mate1",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 2,
+    "prompt": "White to move. White has two rooks against a lone king. Which move is checkmate?",
+    "figure": "{\"type\": \"chess\", \"fen\": \"2k5/R7/8/8/8/8/7R/6K1 w - - 0 1\"}",
+    "hints": [
+      "One rook already controls the whole seventh rank. What can the other rook do to the eighth rank?",
+      "The king on c8 would need an empty square to run to. Count the squares it could use after your check."
+    ],
+    "explanation": "The rook on a7 stops the black king stepping onto the seventh rank. The rook goes to h8 and checks along the eighth rank, covering the king's other squares. There is no escape, no block and no capture, so it is checkmate.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-chess-two-rooks-1",
+        "params": {},
+        "answer": "b"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Rc7"
+      },
+      {
+        "id": "b",
+        "text": "Rh8"
+      },
+      {
+        "id": "c",
+        "text": "Rc2"
+      },
+      {
+        "id": "d",
+        "text": "Ra4"
+      },
+      {
+        "id": "e",
+        "text": "Rg2"
+      }
+    ]
+  },
+  {
+    "id": "logic-chess-legal-trap",
+    "subject": "logic",
+    "kind": "chess_mate1",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 2,
+    "prompt": "White to move. Black has just taken White's queen. Which move is checkmate?",
+    "figure": "{\"type\": \"chess\", \"fen\": \"rn1q1bnr/ppp1kB1p/3p2p1/4N3/4P3/2N5/PPPP1PPP/R1BbK2R w KQ - 1 7\"}",
+    "hints": [
+      "The black king on e7 has few safe squares. Which white knight can give a check there?",
+      "Check whether the bishop on f7 and the knight on e5 already take away the king's escape squares."
+    ],
+    "explanation": "The knight from c3 jumps to d5 and checks the king on e7. The bishop on f7 and the knight on e5 cover the squares the king could run to, and the king's own pieces block the rest. No black piece can capture the knight, so it is checkmate.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-chess-legal-trap-1",
+        "params": {},
+        "answer": "e"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Nxg6"
+      },
+      {
+        "id": "b",
+        "text": "Bc4"
+      },
+      {
+        "id": "c",
+        "text": "Bxg8"
+      },
+      {
+        "id": "d",
+        "text": "Bxg6"
+      },
+      {
+        "id": "e",
+        "text": "Nd5"
+      }
+    ]
+  },
+  {
+    "id": "logic-chess-mate2-rook-block",
+    "subject": "logic",
+    "kind": "chess_mate2",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 5,
+    "prompt": "White to move. Black's king has no flight squares on the back rank. Which first move forces checkmate in two moves?",
+    "figure": "{\"type\": \"chess\", \"fen\": \"6k1/2R2ppp/8/4r3/8/1b2Q3/5PPP/6K1 w - - 0 1\"}",
+    "hints": [
+      "Look for a check that leaves Black only one reply. Then see whether that forced reply allows a mating capture.",
+      "A rook check on the back rank can only be met by interposing a piece. What does the interposing piece let you do next?"
+    ],
+    "explanation": "The rook goes to c8 with check. Black's only defence is to block with the rook from e5 to e8. Then White captures that rook with the rook or the queen, and it is checkmate on the back rank. Moves that give a different check or no check let Black escape.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-chess-mate2-rook-block-1",
+        "params": {},
+        "answer": "c"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Qxb3"
+      },
+      {
+        "id": "b",
+        "text": "Qxe5"
+      },
+      {
+        "id": "c",
+        "text": "Rc8"
+      },
+      {
+        "id": "d",
+        "text": "Qh6"
+      },
+      {
+        "id": "e",
+        "text": "Rc1"
+      }
+    ]
+  },
+  {
+    "id": "logic-chess-mate2-bishop-block",
+    "subject": "logic",
+    "kind": "chess_mate2",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 5,
+    "prompt": "White to move. White's queen and rook are both aimed at the black back rank. Which first move forces checkmate in two moves?",
+    "figure": "{\"type\": \"chess\", \"fen\": \"6k1/5ppp/b6r/8/5R2/8/5PPP/1Q4K1 w - - 0 1\"}",
+    "hints": [
+      "Can you give check on the back rank so that Black has exactly one way to answer?",
+      "The black bishop is the only piece that can get in the way. What happens to the queen when it does?"
+    ],
+    "explanation": "The queen goes to b8 with check. Black's only reply is the bishop interposing on c8. Then the queen takes the bishop on c8 and it is checkmate, because nothing can block or capture on the back rank. Other tries leave the black king a free move.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-chess-mate2-bishop-block-1",
+        "params": {},
+        "answer": "d"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Rg4"
+      },
+      {
+        "id": "b",
+        "text": "Rxf7"
+      },
+      {
+        "id": "c",
+        "text": "Qe4"
+      },
+      {
+        "id": "d",
+        "text": "Qb8"
+      },
+      {
+        "id": "e",
+        "text": "Rf3"
+      }
+    ]
+  },
+  {
+    "id": "logic-chess-mate2-queen-check",
+    "subject": "logic",
+    "kind": "chess_mate2",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 5,
+    "prompt": "White to move. White's queen and rook are lined up against the back rank. Which first move forces checkmate in two moves?",
+    "figure": "{\"type\": \"chess\", \"fen\": \"6k1/5ppp/4r3/6n1/8/2Q5/5PPP/5RK1 w - - 0 1\"}",
+    "hints": [
+      "Think about forcing moves. Which check can Black answer in only one way?",
+      "After Black's only reply, look at what your queen can capture."
+    ],
+    "explanation": "The queen goes to c8 with check. Black must block with the rook on e8. The queen takes that rook with check, and the king on g8 has no way out because of its own pawns, so it is checkmate. A different first move gives Black time to escape or to give its king a safe square by moving a pawn.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-chess-mate2-queen-check-1",
+        "params": {},
+        "answer": "d"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Qxg7"
+      },
+      {
+        "id": "b",
+        "text": "Qg3"
+      },
+      {
+        "id": "c",
+        "text": "Qc5"
+      },
+      {
+        "id": "d",
+        "text": "Qc8"
+      },
+      {
+        "id": "e",
+        "text": "h3"
+      }
+    ]
+  }
+]

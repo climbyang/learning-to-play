@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-chess-mate2-rook-block",
+  "content_hash": "7a95ec630e28682d503c3119e09092df2df94979e5931065073034e744c26922",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:28:13Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Rc8 forces Re8, followed by either Rxe8 or Qxe8 checkmate; no distractor forces mate in two."
+}

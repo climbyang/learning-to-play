@@ -1,0 +1,17 @@
+{
+  "template_id": "eng-vocab-13-accurate",
+  "content_hash": "c7537066ea0c08d89b91b86816ece81e87c0fedf164dc336c21628867a9dbaa1",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:22:09Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "\"Accurate\" uniquely fits the map context."
+}

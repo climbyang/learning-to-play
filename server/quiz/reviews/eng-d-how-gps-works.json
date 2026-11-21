@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-d-how-gps-works",
+  "content_hash": "4ed4c4360e9fe6422f2869c1374686102289227207093ff0dc8ae2d46a58eee0",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:28:58Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The simplified GPS explanation is accurate for this level, the options are unambiguous, and the shared vocabulary sentence appears verbatim."
+}

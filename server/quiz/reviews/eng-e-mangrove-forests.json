@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-e-mangrove-forests",
+  "content_hash": "278720d03a16ff6594f351a9333490075177ef1b84b2e40daea3f77291efa5b9",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:25:23Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "答案唯一；有关呼吸根、育幼场、海岸防护和碳储存的陈述准确且有恰当限定，词汇例句逐字出现。"
+}

@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-e-pluto-dwarf-planet",
+  "content_hash": "2487422bef83d5948d8a818f1c014f6fcc05cf488b942079258d4fd28f0e5575",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:25:23Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "答案均由原文唯一支持；天文史和冥王星分类说明准确，词汇例句逐字出现。"
+}

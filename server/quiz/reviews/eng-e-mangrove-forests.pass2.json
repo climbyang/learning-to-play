@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-e-mangrove-forests",
+  "content_hash": "278720d03a16ff6594f351a9333490075177ef1b84b2e40daea3f77291efa5b9",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:27:28Z",
+  "pass": 2,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "答案与文意明确，红树林呼吸根、育幼场、护岸和储碳等叙述可接受；例句均逐字出现。"
+}

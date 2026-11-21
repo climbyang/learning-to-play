@@ -1,0 +1,17 @@
+{
+  "template_id": "eng-vocab-15-essential",
+  "content_hash": "aa8f022a071b6a66c30770b7db826457236f2bfdfe5e8b9583ab1a37f41fcf9d",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:22:09Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "\"Essential\" uniquely means necessary, and living things require water to survive."
+}

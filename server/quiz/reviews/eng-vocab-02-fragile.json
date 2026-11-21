@@ -1,0 +1,17 @@
+{
+  "template_id": "eng-vocab-02-fragile",
+  "content_hash": "6b41dd1a2e049d7d18411b2458c54ad39da2ed478417aa69ad3cd4f03c0b414e",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:21:33Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "The sentence clearly supports the keyed meaning, with no plausible competing option."
+}

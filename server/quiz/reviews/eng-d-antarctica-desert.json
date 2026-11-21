@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-d-antarctica-desert",
+  "content_hash": "da23a30b9a7af3b4c893bab2bcd7795416ae8fbe73bb25f9a898665135f63a0f",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:26:01Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "答案唯一；南极干燥、冰层、淡水及《南极条约》表述适当，例句逐字匹配。"
+}

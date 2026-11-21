@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-chess-smothered",
+  "content_hash": "95bb39aa804f54d6e9171cb150701252932396883e8f42757a2d11807a9b6ab7",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:28:13Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Nf7 is the only listed checkmate; the king is boxed in by its own pieces."
+}

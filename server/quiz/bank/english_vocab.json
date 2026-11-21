@@ -1,0 +1,902 @@
+[
+  {
+    "id": "eng-vocab-01-reluctant",
+    "subject": "english",
+    "kind": "vocab_meaning",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Read the sentence: \"Mia was reluctant to jump into the cold pool.\" What does \"reluctant\" mean?",
+    "hints": [
+      "Think about how you would feel about jumping into cold water.",
+      "The word shows Mia did not really want to do it."
+    ],
+    "explanation": "Reluctant means unwilling or hesitant to do something.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "unwilling and hesitant"
+      },
+      {
+        "id": "b",
+        "text": "excited and eager"
+      },
+      {
+        "id": "c",
+        "text": "able and strong"
+      },
+      {
+        "id": "d",
+        "text": "allowed to"
+      },
+      {
+        "id": "e",
+        "text": "required to"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-01-reluctant-1",
+        "params": {},
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-02-fragile",
+    "subject": "english",
+    "kind": "vocab_meaning",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Read the sentence: \"Be careful with the fragile vase, because it breaks easily.\" What does \"fragile\" mean?",
+    "hints": [
+      "The sentence itself explains it: the vase breaks easily.",
+      "Which choice describes something that can break?"
+    ],
+    "explanation": "Fragile means easily broken or damaged.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "very heavy"
+      },
+      {
+        "id": "b",
+        "text": "brightly coloured"
+      },
+      {
+        "id": "c",
+        "text": "easily broken"
+      },
+      {
+        "id": "d",
+        "text": "old and dusty"
+      },
+      {
+        "id": "e",
+        "text": "expensive to buy"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-02-fragile-1",
+        "params": {},
+        "answer": "c"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-03-abundant",
+    "subject": "english",
+    "kind": "vocab_meaning",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Read the sentence: \"Fruit was abundant in the orchard, so everyone filled their baskets.\" What does \"abundant\" mean?",
+    "hints": [
+      "If everyone filled their baskets, was there a lot of fruit or a little?",
+      "Think of the word for having more than enough."
+    ],
+    "explanation": "Abundant means existing in large quantities; plentiful.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "rotten"
+      },
+      {
+        "id": "b",
+        "text": "hard to find"
+      },
+      {
+        "id": "c",
+        "text": "expensive"
+      },
+      {
+        "id": "d",
+        "text": "tasteless"
+      },
+      {
+        "id": "e",
+        "text": "plentiful"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-03-abundant-1",
+        "params": {},
+        "answer": "e"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-04-peculiar",
+    "subject": "english",
+    "kind": "vocab_meaning",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Read the sentence: \"The soup had a peculiar smell, like burnt toast and flowers.\" What does \"peculiar\" mean?",
+    "hints": [
+      "Burnt toast and flowers together is an unexpected mix.",
+      "Which choice means odd?"
+    ],
+    "explanation": "Peculiar means strange or unusual.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "delicious"
+      },
+      {
+        "id": "b",
+        "text": "strange or unusual"
+      },
+      {
+        "id": "c",
+        "text": "very strong"
+      },
+      {
+        "id": "d",
+        "text": "pleasant and sweet"
+      },
+      {
+        "id": "e",
+        "text": "familiar"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-04-peculiar-1",
+        "params": {},
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-05-cautious",
+    "subject": "english",
+    "kind": "vocab_synonym",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which word is closest in meaning to \"cautious\"?",
+    "hints": [
+      "A cautious person thinks about danger before acting.",
+      "Look for a word about taking care."
+    ],
+    "explanation": "Cautious means careful to avoid danger or mistakes, so careful is the closest.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "clumsy"
+      },
+      {
+        "id": "b",
+        "text": "fearless"
+      },
+      {
+        "id": "c",
+        "text": "lazy"
+      },
+      {
+        "id": "d",
+        "text": "careful"
+      },
+      {
+        "id": "e",
+        "text": "noisy"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-05-cautious-1",
+        "params": {},
+        "answer": "d"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-06-enormous",
+    "subject": "english",
+    "kind": "vocab_synonym",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which word is closest in meaning to \"enormous\"?",
+    "hints": [
+      "Think about how big an enormous elephant is.",
+      "Look for a word about size."
+    ],
+    "explanation": "Enormous means very large, so huge is the closest.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "narrow"
+      },
+      {
+        "id": "b",
+        "text": "huge"
+      },
+      {
+        "id": "c",
+        "text": "ordinary"
+      },
+      {
+        "id": "d",
+        "text": "gentle"
+      },
+      {
+        "id": "e",
+        "text": "ancient"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-06-enormous-1",
+        "params": {},
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-07-hesitate",
+    "subject": "english",
+    "kind": "vocab_synonym",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which word is closest in meaning to \"hesitate\"?",
+    "hints": [
+      "When you hesitate you stop for a moment before doing something.",
+      "Look for a word about stopping briefly."
+    ],
+    "explanation": "Hesitate means to pause before acting, often because you are unsure.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "hurry"
+      },
+      {
+        "id": "b",
+        "text": "announce"
+      },
+      {
+        "id": "c",
+        "text": "remember"
+      },
+      {
+        "id": "d",
+        "text": "pause"
+      },
+      {
+        "id": "e",
+        "text": "succeed"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-07-hesitate-1",
+        "params": {},
+        "answer": "d"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-08-genuine",
+    "subject": "english",
+    "kind": "vocab_synonym",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which word is closest in meaning to \"genuine\"?",
+    "hints": [
+      "A genuine diamond is not a copy.",
+      "Look for a word meaning true or authentic."
+    ],
+    "explanation": "Genuine means truly what it is said to be; real.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "real"
+      },
+      {
+        "id": "b",
+        "text": "fake"
+      },
+      {
+        "id": "c",
+        "text": "funny"
+      },
+      {
+        "id": "d",
+        "text": "valuable"
+      },
+      {
+        "id": "e",
+        "text": "modern"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-08-genuine-1",
+        "params": {},
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-09-generous",
+    "subject": "english",
+    "kind": "vocab_antonym",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which word is most opposite in meaning to \"generous\"?",
+    "hints": [
+      "A generous person likes to share.",
+      "Which person would refuse to share?"
+    ],
+    "explanation": "Generous means willing to give and share; selfish is the opposite.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "kind"
+      },
+      {
+        "id": "b",
+        "text": "friendly"
+      },
+      {
+        "id": "c",
+        "text": "selfish"
+      },
+      {
+        "id": "d",
+        "text": "cheerful"
+      },
+      {
+        "id": "e",
+        "text": "wealthy"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-09-generous-1",
+        "params": {},
+        "answer": "c"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-10-ancient",
+    "subject": "english",
+    "kind": "vocab_antonym",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which word is most opposite in meaning to \"ancient\"?",
+    "hints": [
+      "Ancient means from a very long time ago.",
+      "Think of something that is new and up to date."
+    ],
+    "explanation": "Ancient means extremely old; modern means of the present time.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "historic"
+      },
+      {
+        "id": "b",
+        "text": "enormous"
+      },
+      {
+        "id": "c",
+        "text": "delicate"
+      },
+      {
+        "id": "d",
+        "text": "forgotten"
+      },
+      {
+        "id": "e",
+        "text": "modern"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-10-ancient-1",
+        "params": {},
+        "answer": "e"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-11-temporary",
+    "subject": "english",
+    "kind": "vocab_antonym",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which word is most opposite in meaning to \"temporary\"?",
+    "hints": [
+      "Temporary means lasting only a short time.",
+      "Which word means lasting for a very long time?"
+    ],
+    "explanation": "Temporary means lasting a short time; permanent means lasting for ever.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "quick"
+      },
+      {
+        "id": "b",
+        "text": "useful"
+      },
+      {
+        "id": "c",
+        "text": "permanent"
+      },
+      {
+        "id": "d",
+        "text": "hidden"
+      },
+      {
+        "id": "e",
+        "text": "careless"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-11-temporary-1",
+        "params": {},
+        "answer": "c"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-12-victorious",
+    "subject": "english",
+    "kind": "vocab_antonym",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which word is most opposite in meaning to \"victorious\"?",
+    "hints": [
+      "Victorious means having won.",
+      "Who is the opposite of a winner?"
+    ],
+    "explanation": "Victorious means having won; defeated means having lost.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "proud"
+      },
+      {
+        "id": "b",
+        "text": "skilful"
+      },
+      {
+        "id": "c",
+        "text": "puzzled"
+      },
+      {
+        "id": "d",
+        "text": "exhausted"
+      },
+      {
+        "id": "e",
+        "text": "defeated"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-12-victorious-1",
+        "params": {},
+        "answer": "e"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-13-accurate",
+    "subject": "english",
+    "kind": "vocab_cloze",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Choose the best word to fill the blank: \"The map was so ____ that we found the hidden path without any trouble.\"",
+    "hints": [
+      "Which word means correct in every detail?",
+      "Why would the map help them find the path easily?"
+    ],
+    "explanation": "An accurate map is correct in its details, which let them find the path.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "reluctant"
+      },
+      {
+        "id": "b",
+        "text": "accurate"
+      },
+      {
+        "id": "c",
+        "text": "fragile"
+      },
+      {
+        "id": "d",
+        "text": "peculiar"
+      },
+      {
+        "id": "e",
+        "text": "abundant"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-13-accurate-1",
+        "params": {},
+        "answer": "b"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-14-transparent",
+    "subject": "english",
+    "kind": "vocab_cloze",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Choose the best word to fill the blank: \"We could see the fish clearly through the ____ glass of the tank.\"",
+    "hints": [
+      "You can see through glass that is clear.",
+      "Which word means see-through?"
+    ],
+    "explanation": "Transparent means clear enough to see through.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "generous"
+      },
+      {
+        "id": "b",
+        "text": "cautious"
+      },
+      {
+        "id": "c",
+        "text": "enormous"
+      },
+      {
+        "id": "d",
+        "text": "transparent"
+      },
+      {
+        "id": "e",
+        "text": "temporary"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-14-transparent-1",
+        "params": {},
+        "answer": "d"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-15-essential",
+    "subject": "english",
+    "kind": "vocab_cloze",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Choose the best word to fill the blank: \"Water is ____ for all living things, because they cannot survive without it.\"",
+    "hints": [
+      "Think about something that you must have.",
+      "The sentence says they cannot survive without it."
+    ],
+    "explanation": "Essential means absolutely necessary.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "essential"
+      },
+      {
+        "id": "b",
+        "text": "peculiar"
+      },
+      {
+        "id": "c",
+        "text": "optional"
+      },
+      {
+        "id": "d",
+        "text": "ancient"
+      },
+      {
+        "id": "e",
+        "text": "fragile"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-15-essential-1",
+        "params": {},
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-16-ferocious",
+    "subject": "english",
+    "kind": "vocab_cloze",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Choose the best word to fill the blank: \"The campers ran away when they heard the ____ growl of a bear.\"",
+    "hints": [
+      "Why would the campers run away?",
+      "Which word means fierce and frightening?"
+    ],
+    "explanation": "Ferocious means fierce and savage, which explains why the campers ran.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "gentle"
+      },
+      {
+        "id": "b",
+        "text": "temporary"
+      },
+      {
+        "id": "c",
+        "text": "genuine"
+      },
+      {
+        "id": "d",
+        "text": "ferocious"
+      },
+      {
+        "id": "e",
+        "text": "accurate"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-16-ferocious-1",
+        "params": {},
+        "answer": "d"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-17-necessary",
+    "subject": "english",
+    "kind": "vocab_spelling",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which is the correct spelling of the word meaning \"needed\" (\"It is ____ to wear a helmet\")?",
+    "hints": [
+      "Remember: one collar (c) and two sleeves (s).",
+      "Count the c's and the s's carefully."
+    ],
+    "explanation": "The correct spelling is necessary, with one c and two s.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "necessary"
+      },
+      {
+        "id": "b",
+        "text": "neccessary"
+      },
+      {
+        "id": "c",
+        "text": "necesary"
+      },
+      {
+        "id": "d",
+        "text": "nessesary"
+      },
+      {
+        "id": "e",
+        "text": "neccesary"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-17-necessary-1",
+        "params": {},
+        "answer": "a"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-18-separate",
+    "subject": "english",
+    "kind": "vocab_spelling",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which is the correct spelling of the word meaning \"to divide or keep apart\"?",
+    "hints": [
+      "There is \"a rat\" in separate.",
+      "The middle part is -par-, not -per-."
+    ],
+    "explanation": "The correct spelling is separate, which has \"a rat\" in the middle.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "seperate"
+      },
+      {
+        "id": "b",
+        "text": "separete"
+      },
+      {
+        "id": "c",
+        "text": "separate"
+      },
+      {
+        "id": "d",
+        "text": "seprate"
+      },
+      {
+        "id": "e",
+        "text": "sepperate"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-18-separate-1",
+        "params": {},
+        "answer": "c"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-19-environment",
+    "subject": "english",
+    "kind": "vocab_spelling",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which is the correct spelling of the word for the natural world around us, such as forests and rivers?",
+    "hints": [
+      "There is an \"n\" before the \"m\" in the middle: -iron-.",
+      "It ends in -ment."
+    ],
+    "explanation": "The correct spelling is environment, which contains the word iron.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "enviroment"
+      },
+      {
+        "id": "b",
+        "text": "envirenment"
+      },
+      {
+        "id": "c",
+        "text": "environmant"
+      },
+      {
+        "id": "d",
+        "text": "enviornment"
+      },
+      {
+        "id": "e",
+        "text": "environment"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-19-environment-1",
+        "params": {},
+        "answer": "e"
+      }
+    ]
+  },
+  {
+    "id": "eng-vocab-20-disappear",
+    "subject": "english",
+    "kind": "vocab_spelling",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 1,
+    "min_seconds": 8,
+    "prompt": "Which is the correct spelling of the word meaning \"to vanish from sight\"?",
+    "hints": [
+      "It is dis- plus appear.",
+      "Appear has two p's; dis has one s."
+    ],
+    "explanation": "The correct spelling is disappear: dis + appear.",
+    "answer_type": "choice",
+    "options": [
+      {
+        "id": "a",
+        "text": "dissapear"
+      },
+      {
+        "id": "b",
+        "text": "disappear"
+      },
+      {
+        "id": "c",
+        "text": "disapear"
+      },
+      {
+        "id": "d",
+        "text": "dissappear"
+      },
+      {
+        "id": "e",
+        "text": "disapere"
+      }
+    ],
+    "instances": [
+      {
+        "id": "eng-vocab-20-disappear-1",
+        "params": {},
+        "answer": "b"
+      }
+    ]
+  }
+]

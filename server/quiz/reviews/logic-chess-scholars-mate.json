@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-chess-scholars-mate",
+  "content_hash": "ca84638608973808ad294a7fd05533e7544a70d2a56eb7a81b703ec3b036fa9e",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:27:15Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Qxf7 is correctly protected by the bishop and gives checkmate."
+}

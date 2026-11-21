@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-chess-mate2-queen-check",
+  "content_hash": "195db3a0b77d6ef5b09ecfd315f470f7eb57f11ac722de2526be7058b66f4ac1",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:31:14Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Qc8+ forces Re8, followed by Qxe8 checkmate; no distractor also forces mate in two."
+}

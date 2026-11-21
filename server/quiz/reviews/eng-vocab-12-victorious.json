@@ -1,0 +1,17 @@
+{
+  "template_id": "eng-vocab-12-victorious",
+  "content_hash": "7f02a7ae5eb7e01780391739d7e78e8761dbb2bced9b018de7a0e73dd8f8aa32",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:22:09Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "\"Defeated\" is the only clear opposite of \"victorious\"."
+}

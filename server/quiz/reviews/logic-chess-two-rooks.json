@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-chess-two-rooks",
+  "content_hash": "220dcef8b34e48898bd70fbfa024d3bf1261558a01b55e5538d7ccadf77b4892",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:28:13Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Rh8 is the only listed mate; the other rook covers every seventh-rank escape square."
+}

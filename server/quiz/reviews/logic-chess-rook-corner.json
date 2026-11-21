@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-chess-rook-corner",
+  "content_hash": "810491d2170763b98f74f511823f9351a977d802c6442916db49c794ecc9b10f",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:27:15Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Ra8 gives checkmate with all escape squares covered."
+}

@@ -1,0 +1,17 @@
+{
+  "template_id": "eng-vocab-09-generous",
+  "content_hash": "a71215f0186dd1e2c6cd4d93d685e7b5b5061ad3d1e0ad81bca6895a6ac33878",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:21:51Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Selfish is the clear opposite of generous; other options are distinct."
+}

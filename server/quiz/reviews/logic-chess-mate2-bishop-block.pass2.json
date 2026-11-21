@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-chess-mate2-bishop-block",
+  "content_hash": "23e8acf1b678c63ac46f21557a8382dc29285d81f199fc8ad2af3ab95f9f5d4b",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:29:57Z",
+  "pass": 2,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Qb8+ forces Bc8 and Qxc8 is mate; the other listed moves do not force mate in two."
+}

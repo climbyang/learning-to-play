@@ -51,7 +51,7 @@ PROMPT_PASS1 = (
     "You are reviewing quiz questions for a primary-school child (each template's grade field is "
     "its target school year). For each template below, check:\n{rubric}\n"
     "Templates use {{param}} placeholders filled from each instance's params; judge the filled-in question. "
-    "Do not modify any file."
+    "Do not modify any file. Write any notes in English."
 )
 PROMPT_PASS2 = (
     "You are an adversarial second reviewer of challenge-tier quiz questions for a primary-school child "
@@ -59,7 +59,7 @@ PROMPT_PASS2 = (
     "Try hard to break each template: look for a second defensible answer, an ambiguous or trick option, "
     "a wrong key, a hint or explanation that leaks or contradicts the answer, wording above the reading level, "
     "or unsuitable content. Mark a check false if you can build any reasonable counter-argument. "
-    "Checks:\n{rubric}\nDo not modify any file."
+    "Checks:\n{rubric}\nDo not modify any file. Write any notes in English."
 )
 REPLY_FORMAT = (
     "\n\nEnd your reply with ONE final line, exactly in this form (valid single-line JSON, keys are template ids):\n"

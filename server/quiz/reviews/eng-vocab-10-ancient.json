@@ -1,0 +1,17 @@
+{
+  "template_id": "eng-vocab-10-ancient",
+  "content_hash": "704de2fd82aff4b00852b5af9459a89bf78576414778cb08db91ba49d4e371fa",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:21:51Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Modern is the clear opposite of ancient; definitions and distractors are sound."
+}

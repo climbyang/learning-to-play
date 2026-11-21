@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-e-story-the-power-cut",
+  "content_hash": "91d904622a556059a19a55f37c0f47434f030a48caec15889a4f2e327456109e",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:27:28Z",
+  "pass": 2,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "人物情绪和态度变化有明确文本依据，选项无合理并列答案，内容适龄且例句逐字出现。"
+}

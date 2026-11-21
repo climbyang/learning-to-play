@@ -4411,5 +4411,1335 @@
     "hints": [
       "Think about what each animal chose to do when the pond dried up."
     ]
+  },
+  {
+    "id": "eng-d-honeybee-dance",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "answer_type": "passage",
+    "text": "Honeybees cannot talk, yet a bee that finds a good patch of flowers can tell her hive-mates exactly where to go. When she returns, she performs a waggle dance on the dark wall of the hive. She walks in a straight line while shaking her body from side to side, then loops back and repeats the pattern. The angle of the straight run shows the direction of the flowers compared with the position of the sun. The longer she waggles, the farther away the flowers are. Other bees crowd around, touch the dancer with their antennae and learn the message. Scientists first decoded this dance in the 1940s, and the work later earned Karl von Frisch a share of a Nobel Prize. Because the other bees learn the message by touch, the dance works even in the dark.",
+    "parts": [
+      {
+        "id": "eng-d-honeybee-dance-q1",
+        "prompt": "A dancing bee waggles for a very long time. What does this tell the other bees?",
+        "options": [
+          {
+            "id": "eng-d-honeybee-dance-q1a",
+            "text": "The flowers are far from the hive."
+          },
+          {
+            "id": "eng-d-honeybee-dance-q1b",
+            "text": "The flowers are very close to the hive."
+          },
+          {
+            "id": "eng-d-honeybee-dance-q1c",
+            "text": "The flowers have no nectar left."
+          },
+          {
+            "id": "eng-d-honeybee-dance-q1d",
+            "text": "The sun is about to set."
+          }
+        ],
+        "answer": "eng-d-honeybee-dance-q1a",
+        "explanation": "The passage says the longer she waggles, the farther away the flowers are."
+      },
+      {
+        "id": "eng-d-honeybee-dance-q2",
+        "prompt": "Why can the waggle dance work inside a dark hive?",
+        "options": [
+          {
+            "id": "eng-d-honeybee-dance-q2a",
+            "text": "The dancing bee glows so the others can see it."
+          },
+          {
+            "id": "eng-d-honeybee-dance-q2b",
+            "text": "The watching bees feel the dancer's movements with their antennae."
+          },
+          {
+            "id": "eng-d-honeybee-dance-q2c",
+            "text": "The bees use sunlight that shines inside the hive."
+          },
+          {
+            "id": "eng-d-honeybee-dance-q2d",
+            "text": "The dancer buzzes out a spoken sentence."
+          }
+        ],
+        "answer": "eng-d-honeybee-dance-q2b",
+        "explanation": "The passage says the bees learn the message by touch, so they do not need light."
+      },
+      {
+        "id": "eng-d-honeybee-dance-q3",
+        "prompt": "What is the main idea of the passage?",
+        "options": [
+          {
+            "id": "eng-d-honeybee-dance-q3a",
+            "text": "Honeybees are the only insects that can dance."
+          },
+          {
+            "id": "eng-d-honeybee-dance-q3b",
+            "text": "Scientists have taught bees to follow a map."
+          },
+          {
+            "id": "eng-d-honeybee-dance-q3c",
+            "text": "Honeybees use a dance to share directions to food."
+          },
+          {
+            "id": "eng-d-honeybee-dance-q3d",
+            "text": "Honeybees dance because they are happy."
+          }
+        ],
+        "answer": "eng-d-honeybee-dance-q3c",
+        "explanation": "Every sentence explains how the dance shows where to find flowers."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-d-honeybee-dance-v1",
+        "word": "antennae",
+        "meaning": "the two thin feelers on an insect's head, used to touch and sense things",
+        "sentence": "Other bees crowd around, touch the dancer with their antennae and learn the message.",
+        "check_prompt": "What are antennae used for?",
+        "options": [
+          {
+            "id": "eng-d-honeybee-dance-v1a",
+            "text": "Chewing leaves"
+          },
+          {
+            "id": "eng-d-honeybee-dance-v1b",
+            "text": "Touching and sensing the world"
+          },
+          {
+            "id": "eng-d-honeybee-dance-v1c",
+            "text": "Flying fast"
+          }
+        ],
+        "answer": "eng-d-honeybee-dance-v1b"
+      },
+      {
+        "id": "eng-d-honeybee-dance-v2",
+        "word": "decoded",
+        "meaning": "worked out the meaning of something that was hidden or in code",
+        "sentence": "Scientists first decoded this dance in the 1940s, and the work later earned Karl von Frisch a share of a Nobel Prize.",
+        "check_prompt": "If you decoded a secret message, you",
+        "options": [
+          {
+            "id": "eng-d-honeybee-dance-v2a",
+            "text": "tore it up"
+          },
+          {
+            "id": "eng-d-honeybee-dance-v2b",
+            "text": "hid it again"
+          },
+          {
+            "id": "eng-d-honeybee-dance-v2c",
+            "text": "worked out what it meant"
+          }
+        ],
+        "answer": "eng-d-honeybee-dance-v2c"
+      }
+    ],
+    "hints": [
+      "Link each part of the dance to what it tells: direction, distance, and how the message is learned."
+    ]
+  },
+  {
+    "id": "eng-d-bats-echolocation",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "answer_type": "passage",
+    "text": "Bats fly at night, when it is too dark to see well, yet they catch tiny insects in mid-air. Many bats solve this problem with echolocation. A bat sends out a burst of high-pitched sound through its mouth or nose, too high for people to hear. The sound travels until it hits an object, such as a moth, and bounces back as an echo. The bat's ears pick up the echo, and its brain works out how far away the object is and which way it is moving. As the bat closes in, it calls faster and faster, like a person checking a map more often as they near a turning. Bats are not blind, as the old saying suggests, and many species see quite well. Echolocation simply gives them a second way to sense the world when light is poor.",
+    "parts": [
+      {
+        "id": "eng-d-bats-echolocation-q1",
+        "prompt": "Why does a bat call faster and faster as it closes in on a moth?",
+        "options": [
+          {
+            "id": "eng-d-bats-echolocation-q1a",
+            "text": "It is calling for other bats to help."
+          },
+          {
+            "id": "eng-d-bats-echolocation-q1b",
+            "text": "It needs updated information about the moth's position more often."
+          },
+          {
+            "id": "eng-d-bats-echolocation-q1c",
+            "text": "The moth is too far away to hear it."
+          },
+          {
+            "id": "eng-d-bats-echolocation-q1d",
+            "text": "It is getting tired and nervous."
+          }
+        ],
+        "answer": "eng-d-bats-echolocation-q1b",
+        "explanation": "The map comparison shows that nearing the target means checking position more often."
+      },
+      {
+        "id": "eng-d-bats-echolocation-q2",
+        "prompt": "Which statement does the passage support?",
+        "options": [
+          {
+            "id": "eng-d-bats-echolocation-q2a",
+            "text": "A bat can only hunt in complete silence."
+          },
+          {
+            "id": "eng-d-bats-echolocation-q2b",
+            "text": "All bats are completely blind."
+          },
+          {
+            "id": "eng-d-bats-echolocation-q2c",
+            "text": "A bat can use sight as well as echolocation."
+          },
+          {
+            "id": "eng-d-bats-echolocation-q2d",
+            "text": "People can hear every sound a bat makes."
+          }
+        ],
+        "answer": "eng-d-bats-echolocation-q2c",
+        "explanation": "It says bats are not blind and echolocation gives them a second way to sense things."
+      },
+      {
+        "id": "eng-d-bats-echolocation-q3",
+        "prompt": "Why does the author mention \"the old saying\"?",
+        "options": [
+          {
+            "id": "eng-d-bats-echolocation-q3a",
+            "text": "To prove that old sayings are always right"
+          },
+          {
+            "id": "eng-d-bats-echolocation-q3b",
+            "text": "To explain how bats make sounds"
+          },
+          {
+            "id": "eng-d-bats-echolocation-q3c",
+            "text": "To suggest that bats are dangerous"
+          },
+          {
+            "id": "eng-d-bats-echolocation-q3d",
+            "text": "To correct a common mistaken belief about bats"
+          }
+        ],
+        "answer": "eng-d-bats-echolocation-q3d",
+        "explanation": "The author says bats are not blind, which corrects the old saying."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-d-bats-echolocation-v1",
+        "word": "echo",
+        "meaning": "a sound that bounces off a surface and is heard again",
+        "sentence": "The sound travels until it hits an object, such as a moth, and bounces back as an echo.",
+        "check_prompt": "Where might you hear an echo?",
+        "options": [
+          {
+            "id": "eng-d-bats-echolocation-v1a",
+            "text": "Whispering in a small cupboard"
+          },
+          {
+            "id": "eng-d-bats-echolocation-v1b",
+            "text": "Reading silently in bed"
+          },
+          {
+            "id": "eng-d-bats-echolocation-v1c",
+            "text": "Shouting inside a big empty hall"
+          }
+        ],
+        "answer": "eng-d-bats-echolocation-v1c"
+      },
+      {
+        "id": "eng-d-bats-echolocation-v2",
+        "word": "species",
+        "meaning": "a particular kind of animal or plant",
+        "sentence": "Bats are not blind, as the old saying suggests, and many species see quite well.",
+        "check_prompt": "Which pair are two different species?",
+        "options": [
+          {
+            "id": "eng-d-bats-echolocation-v2a",
+            "text": "A koala and a kangaroo"
+          },
+          {
+            "id": "eng-d-bats-echolocation-v2b",
+            "text": "Two brown dogs"
+          },
+          {
+            "id": "eng-d-bats-echolocation-v2c",
+            "text": "Two baby sparrows from the same nest"
+          }
+        ],
+        "answer": "eng-d-bats-echolocation-v2a"
+      }
+    ],
+    "hints": [
+      "Follow the sound step by step: sent out, bounced back, picked up by the ears."
+    ]
+  },
+  {
+    "id": "eng-d-silk-road",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 5,
+    "answer_type": "passage",
+    "text": "The Silk Road was not one road but a web of trade routes that linked China with the Mediterranean for well over a thousand years. Traders rarely travelled the whole distance. Instead, goods passed from merchant to merchant, like a parcel handed along a long line of people. Chinese silk, which Romans prized, was carried west, while horses, glassware, gold and silver travelled east. Camels were the favourite animals for crossing deserts because they can go for days without much water. Caravans stopped at oasis towns, where travellers rested, traded and swapped news. Ideas also moved along the routes. Buddhism spread from India into China, and techniques for making paper slowly reached the Middle East and Europe. Today the name reminds us that trade connects people far more than goods alone.",
+    "parts": [
+      {
+        "id": "eng-d-silk-road-q1",
+        "prompt": "Why does the author compare the trade to a parcel handed along a line of people?",
+        "options": [
+          {
+            "id": "eng-d-silk-road-q1a",
+            "text": "Parcels were the main thing traded."
+          },
+          {
+            "id": "eng-d-silk-road-q1b",
+            "text": "Everyone on the route knew each other."
+          },
+          {
+            "id": "eng-d-silk-road-q1c",
+            "text": "Few traders carried goods along the whole route."
+          },
+          {
+            "id": "eng-d-silk-road-q1d",
+            "text": "The goods were always small and light."
+          }
+        ],
+        "answer": "eng-d-silk-road-q1c",
+        "explanation": "Goods passed from merchant to merchant, so no single trader went the whole way."
+      },
+      {
+        "id": "eng-d-silk-road-q2",
+        "prompt": "Why were camels the favourite animals for crossing deserts?",
+        "options": [
+          {
+            "id": "eng-d-silk-road-q2a",
+            "text": "They are faster than horses."
+          },
+          {
+            "id": "eng-d-silk-road-q2b",
+            "text": "They are small enough to hide in sand."
+          },
+          {
+            "id": "eng-d-silk-road-q2c",
+            "text": "They were the only animals that could carry silk."
+          },
+          {
+            "id": "eng-d-silk-road-q2d",
+            "text": "They can travel for days with little water."
+          }
+        ],
+        "answer": "eng-d-silk-road-q2d",
+        "explanation": "The passage says they can go for days without much water."
+      },
+      {
+        "id": "eng-d-silk-road-q3",
+        "prompt": "What does the last sentence mean?",
+        "options": [
+          {
+            "id": "eng-d-silk-road-q3a",
+            "text": "Trade also spreads ideas and links different peoples together."
+          },
+          {
+            "id": "eng-d-silk-road-q3b",
+            "text": "Trade should only involve silk."
+          },
+          {
+            "id": "eng-d-silk-road-q3c",
+            "text": "Roads are more important than ships."
+          },
+          {
+            "id": "eng-d-silk-road-q3d",
+            "text": "Merchants always become friends."
+          }
+        ],
+        "answer": "eng-d-silk-road-q3a",
+        "explanation": "The passage showed that religion and paper-making travelled with the goods."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-d-silk-road-v1",
+        "word": "caravans",
+        "meaning": "groups of travellers moving together, often with pack animals",
+        "sentence": "Caravans stopped at oasis towns, where travellers rested, traded and swapped news.",
+        "check_prompt": "Which is a caravan?",
+        "options": [
+          {
+            "id": "eng-d-silk-road-v1a",
+            "text": "A line of camels and merchants crossing a desert"
+          },
+          {
+            "id": "eng-d-silk-road-v1b",
+            "text": "A single bicycle in a park"
+          },
+          {
+            "id": "eng-d-silk-road-v1c",
+            "text": "A boat moored in a harbour"
+          }
+        ],
+        "answer": "eng-d-silk-road-v1a"
+      },
+      {
+        "id": "eng-d-silk-road-v2",
+        "word": "prized",
+        "meaning": "valued very highly",
+        "sentence": "Chinese silk, which Romans prized, was carried west, while horses, glassware, gold and silver travelled east.",
+        "check_prompt": "If a family prized an old photo, they",
+        "options": [
+          {
+            "id": "eng-d-silk-road-v2a",
+            "text": "threw it away"
+          },
+          {
+            "id": "eng-d-silk-road-v2b",
+            "text": "valued it greatly"
+          },
+          {
+            "id": "eng-d-silk-road-v2c",
+            "text": "never noticed it"
+          }
+        ],
+        "answer": "eng-d-silk-road-v2b"
+      }
+    ],
+    "hints": [
+      "Ask who carried the goods, how far, and what else travelled besides goods."
+    ]
+  },
+  {
+    "id": "eng-d-solar-panels",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "answer_type": "passage",
+    "text": "A solar panel turns sunlight directly into electricity. Each panel is made of many small cells, usually made from silicon, a material refined from quartz rock. When light hits a cell, it knocks tiny particles called electrons loose, and the cell's design pushes them in one direction. This flow of electrons is an electric current. Solar panels have no moving parts, so they are quiet and need little repair. However, they make less power on cloudy days and none at night. For this reason, many homes with solar panels also use a battery, which stores spare electricity made during the day for use after dark. Panels have also become much cheaper over the past twenty years, which is one reason that more households and farms now use them.",
+    "parts": [
+      {
+        "id": "eng-d-solar-panels-q1",
+        "prompt": "Why do many homes with solar panels also have a battery?",
+        "options": [
+          {
+            "id": "eng-d-solar-panels-q1a",
+            "text": "The panels stop working if there is no battery."
+          },
+          {
+            "id": "eng-d-solar-panels-q1b",
+            "text": "The battery makes the sun shine for longer."
+          },
+          {
+            "id": "eng-d-solar-panels-q1c",
+            "text": "The battery cleans the panels each morning."
+          },
+          {
+            "id": "eng-d-solar-panels-q1d",
+            "text": "The battery keeps spare daytime electricity for use at night."
+          }
+        ],
+        "answer": "eng-d-solar-panels-q1d",
+        "explanation": "Panels make no power at night, so stored electricity fills the gap."
+      },
+      {
+        "id": "eng-d-solar-panels-q2",
+        "prompt": "Why do solar panels need little repair?",
+        "options": [
+          {
+            "id": "eng-d-solar-panels-q2a",
+            "text": "They have no moving parts that wear out."
+          },
+          {
+            "id": "eng-d-solar-panels-q2b",
+            "text": "They are made of sand."
+          },
+          {
+            "id": "eng-d-solar-panels-q2c",
+            "text": "They only work on cloudy days."
+          },
+          {
+            "id": "eng-d-solar-panels-q2d",
+            "text": "They are replaced every year."
+          }
+        ],
+        "answer": "eng-d-solar-panels-q2a",
+        "explanation": "The passage links having no moving parts to being quiet and needing little repair."
+      },
+      {
+        "id": "eng-d-solar-panels-q3",
+        "prompt": "What is the author's main purpose?",
+        "options": [
+          {
+            "id": "eng-d-solar-panels-q3a",
+            "text": "To persuade readers to stop using electricity"
+          },
+          {
+            "id": "eng-d-solar-panels-q3b",
+            "text": "To explain how solar panels work and what their strengths and limits are"
+          },
+          {
+            "id": "eng-d-solar-panels-q3c",
+            "text": "To describe how to build a battery at home"
+          },
+          {
+            "id": "eng-d-solar-panels-q3d",
+            "text": "To tell the history of the sun"
+          }
+        ],
+        "answer": "eng-d-solar-panels-q3b",
+        "explanation": "The passage explains the process and then gives advantages and drawbacks."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-d-solar-panels-v1",
+        "word": "current",
+        "meaning": "a steady flow of electricity",
+        "sentence": "This flow of electrons is an electric current.",
+        "check_prompt": "A current in a wire is",
+        "options": [
+          {
+            "id": "eng-d-solar-panels-v1a",
+            "text": "a type of fruit"
+          },
+          {
+            "id": "eng-d-solar-panels-v1b",
+            "text": "a flow of electric charge"
+          },
+          {
+            "id": "eng-d-solar-panels-v1c",
+            "text": "a rule about safety"
+          }
+        ],
+        "answer": "eng-d-solar-panels-v1b"
+      },
+      {
+        "id": "eng-d-solar-panels-v2",
+        "word": "stores",
+        "meaning": "keeps something to be used later",
+        "sentence": "For this reason, many homes with solar panels also use a battery, which stores spare electricity made during the day for use after dark.",
+        "check_prompt": "A squirrel that stores nuts for winter",
+        "options": [
+          {
+            "id": "eng-d-solar-panels-v2a",
+            "text": "eats them all at once"
+          },
+          {
+            "id": "eng-d-solar-panels-v2b",
+            "text": "plants them in a pot"
+          },
+          {
+            "id": "eng-d-solar-panels-v2c",
+            "text": "keeps them to eat later"
+          }
+        ],
+        "answer": "eng-d-solar-panels-v2c"
+      }
+    ],
+    "hints": [
+      "Think about what happens to a panel when there is no sunlight."
+    ]
+  },
+  {
+    "id": "eng-d-antarctica-desert",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 5,
+    "answer_type": "passage",
+    "text": "Antarctica is covered in ice, so many people are surprised to learn that it is a desert. A desert is defined by how little rain or snow falls, not by how hot it is. Most of Antarctica receives very little snowfall each year, and the interior is among the driest places on Earth. The snow does not melt, though. It piles up slowly over a very long time and is squeezed into ice that is, in places, more than four kilometres thick. This ice holds about 70 per cent of the world's fresh water. No people live in Antarctica permanently, but scientists from many countries stay at research stations, some for the whole winter. An international agreement signed in 1959 says that the continent can be used only for peaceful purposes and science.",
+    "parts": [
+      {
+        "id": "eng-d-antarctica-desert-q1",
+        "prompt": "Why does the author write \"The snow does not melt, though\"?",
+        "options": [
+          {
+            "id": "eng-d-antarctica-desert-q1a",
+            "text": "To explain how thick ice builds up even though little snow falls"
+          },
+          {
+            "id": "eng-d-antarctica-desert-q1b",
+            "text": "To prove Antarctica is warmer than people think"
+          },
+          {
+            "id": "eng-d-antarctica-desert-q1c",
+            "text": "To show that Antarctica gets heavy rain"
+          },
+          {
+            "id": "eng-d-antarctica-desert-q1d",
+            "text": "To explain why scientists live there"
+          }
+        ],
+        "answer": "eng-d-antarctica-desert-q1a",
+        "explanation": "Little snow falls each year, but because none melts it adds up over time."
+      },
+      {
+        "id": "eng-d-antarctica-desert-q2",
+        "prompt": "Which statement best sums up the passage?",
+        "options": [
+          {
+            "id": "eng-d-antarctica-desert-q2a",
+            "text": "Antarctica is a hot desert covered in sand."
+          },
+          {
+            "id": "eng-d-antarctica-desert-q2b",
+            "text": "Antarctica is a very dry, icy continent used for peaceful science."
+          },
+          {
+            "id": "eng-d-antarctica-desert-q2c",
+            "text": "Antarctica has many towns and cities."
+          },
+          {
+            "id": "eng-d-antarctica-desert-q2d",
+            "text": "Antarctica belongs to a single country."
+          }
+        ],
+        "answer": "eng-d-antarctica-desert-q2b",
+        "explanation": "The passage covers dryness, ice and the agreement about peace and science."
+      },
+      {
+        "id": "eng-d-antarctica-desert-q3",
+        "prompt": "What is the author's purpose in the first sentences?",
+        "options": [
+          {
+            "id": "eng-d-antarctica-desert-q3a",
+            "text": "To make readers afraid of cold places"
+          },
+          {
+            "id": "eng-d-antarctica-desert-q3b",
+            "text": "To advertise holidays in Antarctica"
+          },
+          {
+            "id": "eng-d-antarctica-desert-q3c",
+            "text": "To challenge a surprising idea and explain what \"desert\" means"
+          },
+          {
+            "id": "eng-d-antarctica-desert-q3d",
+            "text": "To compare Antarctica with the Sahara"
+          }
+        ],
+        "answer": "eng-d-antarctica-desert-q3c",
+        "explanation": "The first sentences correct the belief that deserts must be hot and explain the definition."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-d-antarctica-desert-v1",
+        "word": "permanently",
+        "meaning": "for always, or for a very long time without changing",
+        "sentence": "No people live in Antarctica permanently, but scientists from many countries stay at research stations, some for the whole winter.",
+        "check_prompt": "A family that lives in a town permanently",
+        "options": [
+          {
+            "id": "eng-d-antarctica-desert-v1a",
+            "text": "is only visiting for a day"
+          },
+          {
+            "id": "eng-d-antarctica-desert-v1b",
+            "text": "moves every week"
+          },
+          {
+            "id": "eng-d-antarctica-desert-v1c",
+            "text": "stays there for good"
+          }
+        ],
+        "answer": "eng-d-antarctica-desert-v1c"
+      },
+      {
+        "id": "eng-d-antarctica-desert-v2",
+        "word": "agreement",
+        "meaning": "a deal that people or countries all accept",
+        "sentence": "An international agreement signed in 1959 says that the continent can be used only for peaceful purposes and science.",
+        "check_prompt": "Which is an agreement?",
+        "options": [
+          {
+            "id": "eng-d-antarctica-desert-v2a",
+            "text": "Two schools promising to share a sports field"
+          },
+          {
+            "id": "eng-d-antarctica-desert-v2b",
+            "text": "A storm over the sea"
+          },
+          {
+            "id": "eng-d-antarctica-desert-v2c",
+            "text": "A loud argument"
+          }
+        ],
+        "answer": "eng-d-antarctica-desert-v2a"
+      }
+    ],
+    "hints": [
+      "A desert is about how much falls from the sky, not how warm it is."
+    ]
+  },
+  {
+    "id": "eng-d-tides",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "answer_type": "passage",
+    "text": "Twice a day, on most coasts, the sea creeps up the beach and then slides away again. These rises and falls are called tides, and they are caused mainly by the Moon. The Moon's gravity pulls on Earth, and the ocean, which can flow, bulges towards the Moon. A second bulge forms on the opposite side of Earth. As Earth spins, a given coastline passes through both bulges each day, which is why most places have two high tides and two low tides. The Sun also pulls on the oceans, though less strongly because it is so much farther away. When the Sun, Moon and Earth line up, at new moon and full moon, the pulls combine and tides are bigger. Fishers and people who explore rock pools all check tide tables, because the water level can change by many metres in some places.",
+    "parts": [
+      {
+        "id": "eng-d-tides-q1",
+        "prompt": "Why are tides bigger at new moon and full moon?",
+        "options": [
+          {
+            "id": "eng-d-tides-q1a",
+            "text": "The Moon is closer to the Sun then."
+          },
+          {
+            "id": "eng-d-tides-q1b",
+            "text": "The pulls of the Sun and Moon combine when they line up."
+          },
+          {
+            "id": "eng-d-tides-q1c",
+            "text": "Earth stops spinning for a short time."
+          },
+          {
+            "id": "eng-d-tides-q1d",
+            "text": "The ocean becomes warmer."
+          }
+        ],
+        "answer": "eng-d-tides-q1b",
+        "explanation": "The passage says when the three line up, the pulls combine."
+      },
+      {
+        "id": "eng-d-tides-q2",
+        "prompt": "Why would a person exploring rock pools check a tide table?",
+        "options": [
+          {
+            "id": "eng-d-tides-q2a",
+            "text": "To find out when the Moon will disappear"
+          },
+          {
+            "id": "eng-d-tides-q2b",
+            "text": "To see how fast Earth spins"
+          },
+          {
+            "id": "eng-d-tides-q2c",
+            "text": "To plan when the water is low enough to explore safely"
+          },
+          {
+            "id": "eng-d-tides-q2d",
+            "text": "To learn the names of the fish"
+          }
+        ],
+        "answer": "eng-d-tides-q2c",
+        "explanation": "Water level can change by many metres, so timing matters for safety."
+      },
+      {
+        "id": "eng-d-tides-q3",
+        "prompt": "The Sun is much larger than the Moon. Why does it have a smaller effect on the tides?",
+        "options": [
+          {
+            "id": "eng-d-tides-q3a",
+            "text": "It does not have gravity."
+          },
+          {
+            "id": "eng-d-tides-q3b",
+            "text": "It only shines in daytime."
+          },
+          {
+            "id": "eng-d-tides-q3c",
+            "text": "It is cooler than the Moon."
+          },
+          {
+            "id": "eng-d-tides-q3d",
+            "text": "It is much farther away."
+          }
+        ],
+        "answer": "eng-d-tides-q3d",
+        "explanation": "The passage says the Sun pulls less strongly because it is so much farther away."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-d-tides-v1",
+        "word": "gravity",
+        "meaning": "the pulling force that draws objects towards each other",
+        "sentence": "The Moon's gravity pulls on Earth, and the ocean, which can flow, bulges towards the Moon.",
+        "check_prompt": "Gravity is the force that",
+        "options": [
+          {
+            "id": "eng-d-tides-v1a",
+            "text": "makes a dropped ball fall"
+          },
+          {
+            "id": "eng-d-tides-v1b",
+            "text": "makes ice cream sweet"
+          },
+          {
+            "id": "eng-d-tides-v1c",
+            "text": "turns lights on"
+          }
+        ],
+        "answer": "eng-d-tides-v1a"
+      },
+      {
+        "id": "eng-d-tides-v2",
+        "word": "bulge",
+        "meaning": "a rounded lump that sticks out",
+        "sentence": "A second bulge forms on the opposite side of Earth.",
+        "check_prompt": "Which has a bulge?",
+        "options": [
+          {
+            "id": "eng-d-tides-v2a",
+            "text": "A flat sheet of paper"
+          },
+          {
+            "id": "eng-d-tides-v2b",
+            "text": "A balloon with a ball pushed under it"
+          },
+          {
+            "id": "eng-d-tides-v2c",
+            "text": "A straight ruler"
+          }
+        ],
+        "answer": "eng-d-tides-v2b"
+      }
+    ],
+    "hints": [
+      "Keep track of three bodies: the Moon, the Sun and Earth."
+    ]
+  },
+  {
+    "id": "eng-d-how-gps-works",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 5,
+    "answer_type": "passage",
+    "text": "A GPS receiver in a phone or car can tell you where you are to within a few metres, but it never sends a signal to anything. Instead, it listens. Around thirty satellites orbit Earth for the Global Positioning System, and each one constantly broadcasts its position and the exact time. A receiver picks up signals from several satellites. Because radio signals travel at a known speed, the small difference between the time a signal was sent and the time it arrived reveals how far away that satellite is. With distances from several satellites, the receiver can work out the one place where it must be. The system was built for the United States military, but now the signals are free for anyone to use. GPS works best outdoors, because signals are weakened by thick walls and tunnels.",
+    "parts": [
+      {
+        "id": "eng-d-how-gps-works-q1",
+        "prompt": "How does a receiver work out its distance from a satellite?",
+        "options": [
+          {
+            "id": "eng-d-how-gps-works-q1a",
+            "text": "By measuring how bright the satellite looks"
+          },
+          {
+            "id": "eng-d-how-gps-works-q1b",
+            "text": "By sending a message and waiting for a reply"
+          },
+          {
+            "id": "eng-d-how-gps-works-q1c",
+            "text": "By comparing the time a signal was sent with the time it arrived"
+          },
+          {
+            "id": "eng-d-how-gps-works-q1d",
+            "text": "By counting the satellites in the sky"
+          }
+        ],
+        "answer": "eng-d-how-gps-works-q1c",
+        "explanation": "Signals travel at a known speed, so the delay shows the distance."
+      },
+      {
+        "id": "eng-d-how-gps-works-q2",
+        "prompt": "Why might GPS fail inside a long tunnel?",
+        "options": [
+          {
+            "id": "eng-d-how-gps-works-q2a",
+            "text": "The satellites turn off at night."
+          },
+          {
+            "id": "eng-d-how-gps-works-q2b",
+            "text": "The receiver must send a message to the satellites first."
+          },
+          {
+            "id": "eng-d-how-gps-works-q2c",
+            "text": "The signals can only travel downwards."
+          },
+          {
+            "id": "eng-d-how-gps-works-q2d",
+            "text": "Thick walls weaken the satellite signals."
+          }
+        ],
+        "answer": "eng-d-how-gps-works-q2d",
+        "explanation": "The last sentence says thick walls and tunnels weaken signals."
+      },
+      {
+        "id": "eng-d-how-gps-works-q3",
+        "prompt": "What is the author's main purpose?",
+        "options": [
+          {
+            "id": "eng-d-how-gps-works-q3a",
+            "text": "To explain how GPS finds a location"
+          },
+          {
+            "id": "eng-d-how-gps-works-q3b",
+            "text": "To warn people about the military"
+          },
+          {
+            "id": "eng-d-how-gps-works-q3c",
+            "text": "To persuade readers to buy a phone"
+          },
+          {
+            "id": "eng-d-how-gps-works-q3d",
+            "text": "To describe the history of satellites"
+          }
+        ],
+        "answer": "eng-d-how-gps-works-q3a",
+        "explanation": "The passage explains each step of how a receiver finds its place."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-d-how-gps-works-v1",
+        "word": "satellites",
+        "meaning": "objects that circle a planet in space",
+        "sentence": "Around thirty satellites orbit Earth for the Global Positioning System, and each one constantly broadcasts its position and the exact time.",
+        "check_prompt": "Where are GPS satellites found?",
+        "options": [
+          {
+            "id": "eng-d-how-gps-works-v1a",
+            "text": "Buried under the sea"
+          },
+          {
+            "id": "eng-d-how-gps-works-v1b",
+            "text": "Circling high above Earth"
+          },
+          {
+            "id": "eng-d-how-gps-works-v1c",
+            "text": "Inside a phone case"
+          }
+        ],
+        "answer": "eng-d-how-gps-works-v1b"
+      },
+      {
+        "id": "eng-d-how-gps-works-v2",
+        "word": "broadcasts",
+        "meaning": "sends out a message or signal for many to receive",
+        "sentence": "Around thirty satellites orbit Earth for the Global Positioning System, and each one constantly broadcasts its position and the exact time.",
+        "check_prompt": "A radio station that broadcasts",
+        "options": [
+          {
+            "id": "eng-d-how-gps-works-v2a",
+            "text": "keeps its music secret"
+          },
+          {
+            "id": "eng-d-how-gps-works-v2b",
+            "text": "only plays to one listener"
+          },
+          {
+            "id": "eng-d-how-gps-works-v2c",
+            "text": "sends out programs for many people to hear"
+          }
+        ],
+        "answer": "eng-d-how-gps-works-v2c"
+      }
+    ],
+    "hints": [
+      "Notice who sends signals and who only listens."
+    ]
+  },
+  {
+    "id": "eng-d-the-red-kite",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "answer_type": "passage",
+    "text": "Leila had waited all week for a windy day, and now the flag at the end of the street was snapping like a whip. She carried the kite her grandfather had made up to the top of the hill. It was not as shiny as the plastic kites in the shops. Its frame was cane, its skin was bright red paper, and its tail was made of knotted ribbons. \"It will never fly,\" muttered a boy nearby, but Leila pretended not to hear. She held the string tightly, ran down the slope, and let go. For a moment the kite wobbled and dipped towards the grass. Then a gust caught it, and it leapt upward as though it had been waiting for permission. Higher and higher it climbed, its ribbons dancing, until it was a small red spark in the sky. The boy stopped smirking. Leila grinned and felt her grandfather's careful work tugging gently at her fingers.",
+    "parts": [
+      {
+        "id": "eng-d-the-red-kite-q1",
+        "prompt": "What does \"Leila pretended not to hear\" suggest about her?",
+        "options": [
+          {
+            "id": "eng-d-the-red-kite-q1a",
+            "text": "She truly could not hear him."
+          },
+          {
+            "id": "eng-d-the-red-kite-q1b",
+            "text": "She agreed with the boy."
+          },
+          {
+            "id": "eng-d-the-red-kite-q1c",
+            "text": "She was afraid of the wind."
+          },
+          {
+            "id": "eng-d-the-red-kite-q1d",
+            "text": "She was determined not to let the boy's words upset her."
+          }
+        ],
+        "answer": "eng-d-the-red-kite-q1d",
+        "explanation": "She heard but chose to ignore him, which shows determination."
+      },
+      {
+        "id": "eng-d-the-red-kite-q2",
+        "prompt": "What does \"as though it had been waiting for permission\" suggest?",
+        "options": [
+          {
+            "id": "eng-d-the-red-kite-q2a",
+            "text": "The kite seemed eager to fly once the wind came."
+          },
+          {
+            "id": "eng-d-the-red-kite-q2b",
+            "text": "The kite was too heavy to lift."
+          },
+          {
+            "id": "eng-d-the-red-kite-q2c",
+            "text": "Leila had told it to wait."
+          },
+          {
+            "id": "eng-d-the-red-kite-q2d",
+            "text": "The kite was broken."
+          }
+        ],
+        "answer": "eng-d-the-red-kite-q2a",
+        "explanation": "The writer pictures the kite as if it wanted to leap up and was only waiting for the right moment."
+      },
+      {
+        "id": "eng-d-the-red-kite-q3",
+        "prompt": "Which idea is the story mainly about?",
+        "options": [
+          {
+            "id": "eng-d-the-red-kite-q3a",
+            "text": "Plastic kites always fly higher."
+          },
+          {
+            "id": "eng-d-the-red-kite-q3b",
+            "text": "Things made with care can be better than they first appear."
+          },
+          {
+            "id": "eng-d-the-red-kite-q3c",
+            "text": "Windy days are dangerous."
+          },
+          {
+            "id": "eng-d-the-red-kite-q3d",
+            "text": "It is wrong to talk to strangers."
+          }
+        ],
+        "answer": "eng-d-the-red-kite-q3b",
+        "explanation": "The handmade kite flies beautifully and proves the boy wrong."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-d-the-red-kite-v1",
+        "word": "gust",
+        "meaning": "a sudden strong rush of wind",
+        "sentence": "Then a gust caught it, and it leapt upward as though it had been waiting for permission.",
+        "check_prompt": "A gust of wind",
+        "options": [
+          {
+            "id": "eng-d-the-red-kite-v1a",
+            "text": "never moves at all"
+          },
+          {
+            "id": "eng-d-the-red-kite-v1b",
+            "text": "only blows at night"
+          },
+          {
+            "id": "eng-d-the-red-kite-v1c",
+            "text": "blows hard for a short moment"
+          }
+        ],
+        "answer": "eng-d-the-red-kite-v1c"
+      },
+      {
+        "id": "eng-d-the-red-kite-v2",
+        "word": "muttered",
+        "meaning": "said something quietly, often in a grumbling way",
+        "sentence": "\"It will never fly,\" muttered a boy nearby, but Leila pretended not to hear.",
+        "check_prompt": "A person who muttered",
+        "options": [
+          {
+            "id": "eng-d-the-red-kite-v2a",
+            "text": "spoke in a low, quiet voice"
+          },
+          {
+            "id": "eng-d-the-red-kite-v2b",
+            "text": "shouted across the oval"
+          },
+          {
+            "id": "eng-d-the-red-kite-v2c",
+            "text": "sang loudly"
+          }
+        ],
+        "answer": "eng-d-the-red-kite-v2a"
+      }
+    ],
+    "hints": [
+      "Notice how the boy's attitude changes by the end."
+    ]
+  },
+  {
+    "id": "eng-d-school-play",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "answer_type": "passage",
+    "text": "Jonas knew every line of the school play. He had practised in the shower, on the bus and even while brushing his teeth. But when the curtain opened and he saw two hundred faces in the dark hall, his mind went as blank as a clean whiteboard. His mouth was dry. Beside him, Priya, who played the queen, raised one eyebrow and waited. Jonas swallowed. Then, instead of the speech he had learned, he heard himself say, \"Your Majesty, I have run so fast that I have forgotten my message!\" A few people laughed, and Priya replied, \"Then catch your breath, messenger, and tell me when you remember.\" Jonas took a slow breath, and the first line floated back into his head. The rest of the scene went smoothly. Afterwards, the teacher said that the best performers are not the ones who never slip, but the ones who keep going.",
+    "parts": [
+      {
+        "id": "eng-d-school-play-q1",
+        "prompt": "How did Jonas rescue the scene?",
+        "options": [
+          {
+            "id": "eng-d-school-play-q1a",
+            "text": "He made up a line that fitted the story."
+          },
+          {
+            "id": "eng-d-school-play-q1b",
+            "text": "He walked off the stage."
+          },
+          {
+            "id": "eng-d-school-play-q1c",
+            "text": "He read his lines from a paper."
+          },
+          {
+            "id": "eng-d-school-play-q1d",
+            "text": "He asked the audience for help."
+          }
+        ],
+        "answer": "eng-d-school-play-q1a",
+        "explanation": "He said he had forgotten his message, which suited his messenger role."
+      },
+      {
+        "id": "eng-d-school-play-q2",
+        "prompt": "What did Priya's reply show about her?",
+        "options": [
+          {
+            "id": "eng-d-school-play-q2a",
+            "text": "She was angry with Jonas."
+          },
+          {
+            "id": "eng-d-school-play-q2b",
+            "text": "She was quick-thinking and supportive of her classmate."
+          },
+          {
+            "id": "eng-d-school-play-q2c",
+            "text": "She wanted to take over his part."
+          },
+          {
+            "id": "eng-d-school-play-q2d",
+            "text": "She had forgotten her own lines."
+          }
+        ],
+        "answer": "eng-d-school-play-q2b",
+        "explanation": "She played along and gave him time to remember."
+      },
+      {
+        "id": "eng-d-school-play-q3",
+        "prompt": "What lesson does the teacher's comment teach?",
+        "options": [
+          {
+            "id": "eng-d-school-play-q3a",
+            "text": "Mistakes should never be forgiven."
+          },
+          {
+            "id": "eng-d-school-play-q3b",
+            "text": "Practising is a waste of time."
+          },
+          {
+            "id": "eng-d-school-play-q3c",
+            "text": "Good performers recover from mistakes and carry on."
+          },
+          {
+            "id": "eng-d-school-play-q3d",
+            "text": "Only the queen matters in a play."
+          }
+        ],
+        "answer": "eng-d-school-play-q3c",
+        "explanation": "The teacher says the best performers are those who keep going after a slip."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-d-school-play-v1",
+        "word": "blank",
+        "meaning": "empty, with nothing written or remembered",
+        "sentence": "But when the curtain opened and he saw two hundred faces in the dark hall, his mind went as blank as a clean whiteboard.",
+        "check_prompt": "If your mind goes blank, you",
+        "options": [
+          {
+            "id": "eng-d-school-play-v1a",
+            "text": "cannot think of anything for a moment"
+          },
+          {
+            "id": "eng-d-school-play-v1b",
+            "text": "remember everything perfectly"
+          },
+          {
+            "id": "eng-d-school-play-v1c",
+            "text": "feel very sleepy"
+          }
+        ],
+        "answer": "eng-d-school-play-v1a"
+      },
+      {
+        "id": "eng-d-school-play-v2",
+        "word": "performers",
+        "meaning": "people who act, sing, dance or play music for an audience",
+        "sentence": "Afterwards, the teacher said that the best performers are not the ones who never slip, but the ones who keep going.",
+        "check_prompt": "Which person is a performer?",
+        "options": [
+          {
+            "id": "eng-d-school-play-v2a",
+            "text": "A librarian stamping books"
+          },
+          {
+            "id": "eng-d-school-play-v2b",
+            "text": "A magician on a stage"
+          },
+          {
+            "id": "eng-d-school-play-v2c",
+            "text": "A sleeping cat"
+          }
+        ],
+        "answer": "eng-d-school-play-v2b"
+      }
+    ],
+    "hints": [
+      "Think about what Jonas could have done instead, and why his choice worked."
+    ]
+  },
+  {
+    "id": "eng-d-clockmakers-apprentice",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 5,
+    "answer_type": "passage",
+    "text": "In a narrow lane lived a clockmaker named Mr Osei, who could mend any watch in the town. His apprentice, Lina, was quick with her hands but hated waiting. One morning, he handed her a tiny pocket watch that had stopped years before. \"Do not hurry it,\" he said. Lina cleaned each gear and set each spring, but when she closed the case, the watch still did not tick. She sighed and wanted to give up. Instead, Mr Osei asked her to open it once more and look slowly. This time she noticed a speck of dust, almost too small to see, caught beneath a gear. She lifted it out with a fine pair of tweezers, and the watch began to tick. \"The hardest faults to find,\" said Mr Osei, smiling, \"are the ones we are too hurried to notice.\" Lina laughed, and for the first time she was not in a rush to start the next job.",
+    "parts": [
+      {
+        "id": "eng-d-clockmakers-apprentice-q1",
+        "prompt": "Why did the watch still not tick after Lina cleaned and set the parts?",
+        "options": [
+          {
+            "id": "eng-d-clockmakers-apprentice-q1a",
+            "text": "The spring was too tight."
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-q1b",
+            "text": "A tiny speck of dust was still jamming a gear."
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-q1c",
+            "text": "The case was closed too loosely."
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-q1d",
+            "text": "Mr Osei had broken it on purpose."
+          }
+        ],
+        "answer": "eng-d-clockmakers-apprentice-q1b",
+        "explanation": "She found a speck of dust caught under a gear only when she looked slowly."
+      },
+      {
+        "id": "eng-d-clockmakers-apprentice-q2",
+        "prompt": "What is the main lesson of the story?",
+        "options": [
+          {
+            "id": "eng-d-clockmakers-apprentice-q2a",
+            "text": "Watches are too difficult to repair."
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-q2b",
+            "text": "Apprentices should never ask for help."
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-q2c",
+            "text": "Slowing down and looking carefully can solve problems."
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-q2d",
+            "text": "Dust is the main cause of broken watches."
+          }
+        ],
+        "answer": "eng-d-clockmakers-apprentice-q2c",
+        "explanation": "Mr Osei says the hardest faults are missed by people who hurry."
+      },
+      {
+        "id": "eng-d-clockmakers-apprentice-q3",
+        "prompt": "How has Lina changed by the end?",
+        "options": [
+          {
+            "id": "eng-d-clockmakers-apprentice-q3a",
+            "text": "She has decided to quit."
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-q3b",
+            "text": "She has become angry with Mr Osei."
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-q3c",
+            "text": "She has forgotten how to fix watches."
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-q3d",
+            "text": "She has learned to be patient."
+          }
+        ],
+        "answer": "eng-d-clockmakers-apprentice-q3d",
+        "explanation": "She is no longer in a rush to start the next job."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-d-clockmakers-apprentice-v1",
+        "word": "apprentice",
+        "meaning": "a person who learns a skill by working for an expert",
+        "sentence": "His apprentice, Lina, was quick with her hands but hated waiting.",
+        "check_prompt": "An apprentice baker",
+        "options": [
+          {
+            "id": "eng-d-clockmakers-apprentice-v1a",
+            "text": "owns the whole bakery"
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-v1b",
+            "text": "learns baking by working with a skilled baker"
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-v1c",
+            "text": "only eats the bread"
+          }
+        ],
+        "answer": "eng-d-clockmakers-apprentice-v1b"
+      },
+      {
+        "id": "eng-d-clockmakers-apprentice-v2",
+        "word": "speck",
+        "meaning": "a very small spot or piece",
+        "sentence": "This time she noticed a speck of dust, almost too small to see, caught beneath a gear.",
+        "check_prompt": "Which is a speck?",
+        "options": [
+          {
+            "id": "eng-d-clockmakers-apprentice-v2a",
+            "text": "A large boulder"
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-v2b",
+            "text": "A long river"
+          },
+          {
+            "id": "eng-d-clockmakers-apprentice-v2c",
+            "text": "A tiny grain of sand"
+          }
+        ],
+        "answer": "eng-d-clockmakers-apprentice-v2c"
+      }
+    ],
+    "hints": [
+      "Compare what Lina does the first time with what she does the second time."
+    ]
   }
 ]

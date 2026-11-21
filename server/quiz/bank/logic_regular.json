@@ -1444,5 +1444,416 @@
         "text": "Ada"
       }
     ]
+  },
+  {
+    "id": "logic-magic-nine",
+    "subject": "logic",
+    "kind": "magic_square",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "The numbers 1 to 9 are each used once to fill a 3 by 3 square so that every row, every column and both long diagonals add up to the same total. The top row reads 4, ?, 2 from left to right, and the centre square holds 5. What number goes in the bottom right corner?",
+    "hints": [
+      "Work out the common total first. The three rows use every number from 1 to 9 once, so their sums add up to 45.",
+      "The top row gives you the missing top-middle number. Then look at the diagonal that ends in the bottom right corner."
+    ],
+    "explanation": "The numbers 1 to 9 add up to 45, shared between 3 rows, so every line adds to 15. The top row is 4 + ? + 2 = 15, so the top-middle is 9. The diagonal from the top left through the centre ends in the bottom right corner: 4 + 5 + ? = 15, so that corner is 6.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-magic-nine-1",
+        "params": {},
+        "answer": "6"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 30,
+      "step": 1
+    },
+    "verify": "45 / 3 - 4 - 5"
+  },
+  {
+    "id": "logic-digits-ab-ba",
+    "subject": "logic",
+    "kind": "digit_puzzle",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A and B are different digits. The two-digit number AB (A tens, B units) and the two-digit number BA add up to 154. Also, A is 4 more than B. What is the number AB?",
+    "hints": [
+      "Write AB as 10 x A + B and BA as 10 x B + A. What do the two numbers add up to in terms of A + B?",
+      "Once you know A + B, use the fact that A is 4 more than B to find both digits."
+    ],
+    "explanation": "AB + BA = 11 x (A + B) = 154, so A + B = 14. A is 4 more than B, so A = 9 and B = 5, because 9 + 5 = 14 and 9 - 5 = 4. The number AB is 95. Check: 95 + 59 = 154.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-digits-ab-ba-1",
+        "params": {},
+        "answer": "95"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "95"
+  },
+  {
+    "id": "logic-coin-weighings",
+    "subject": "logic",
+    "kind": "weighing",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 5,
+    "prompt": "Ten coins look identical, but one of them is a fake that is slightly heavier than the rest. You have a balance scale with two pans and no weights. What is the smallest number of weighings that is certain to find the fake coin, however lucky or unlucky you are?",
+    "hints": [
+      "A balance gives three possible results: the left pan is heavier, the right pan is heavier, or they balance. So each weighing can split the coins into three groups.",
+      "With 9 coins you can split 3, 3, 3 and need only two weighings. What changes with one more coin?"
+    ],
+    "explanation": "Each weighing has three outcomes, so two weighings can only sort out up to 3 x 3 = 9 coins. With 10 coins two weighings are not always enough, but three weighings can handle up to 27 coins. So the answer is 3.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-coin-weighings-1",
+        "params": {},
+        "answer": "3"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 30,
+      "step": 1
+    },
+    "verify": "3"
+  },
+  {
+    "id": "logic-river-wolf-goat",
+    "subject": "logic",
+    "kind": "river_crossing",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 5,
+    "prompt": "A farmer must take a wolf, a goat and a cabbage across a river in a boat that carries only the farmer and one item at a time. If the farmer is not there, the wolf will eat the goat, and the goat will eat the cabbage. The farmer may carry an item back across the river. What is the smallest number of river crossings (each trip in either direction counts as one) that gets everything safely to the far bank?",
+    "hints": [
+      "The goat is the problem animal: the farmer has to take it across first. Then think about which item to bring back.",
+      "Sometimes the farmer must carry the goat back again. Count every trip, including the ones going back."
+    ],
+    "explanation": "Cross with the goat (1). Return alone (2). Cross with the wolf (3). Return with the goat (4). Cross with the cabbage (5). Return alone (6). Cross with the goat (7). That is 7 crossings, and a search of every safe sequence shows nothing shorter works.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-river-wolf-goat-1",
+        "params": {},
+        "answer": "7"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 30,
+      "step": 1
+    },
+    "verify": "7"
+  },
+  {
+    "id": "logic-leo-savings",
+    "subject": "logic",
+    "kind": "working_backwards",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Leo spent a quarter of his savings on a game. He then spent a third of the money he had left on snacks, and then {a} pounds on a bus ticket. He now has {left} pounds. How many pounds did he have at the start?",
+    "hints": [
+      "Work backwards from the end. Before the bus ticket he had the bus fare plus the money he has left now. What fraction of his savings was that?",
+      "After the game he had three quarters of his savings. After the snacks he kept two thirds of that."
+    ],
+    "explanation": "After the game Leo kept 3/4 of his savings. The snacks took a third of that, so he kept 2/3 of 3/4 = 1/2 of his savings. Then 6 pounds for the bus left him 9 pounds, so half his savings was 9 + 6 = 15 pounds. He started with 30 pounds.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-leo-savings-1",
+        "params": {
+          "a": 6,
+          "left": 9
+        },
+        "answer": "30"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "2 * (left + a)"
+  },
+  {
+    "id": "logic-staircase-ways",
+    "subject": "logic",
+    "kind": "counting",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 6,
+    "prompt": "Mia climbs a staircase of 6 steps. On each move she goes up either 1 step or 2 steps. For example, she could climb 2, 2, 1, 1. How many different ways are there for Mia to reach the top?",
+    "hints": [
+      "Count the ways for small staircases first: 1 step, 2 steps, 3 steps. Look for a pattern.",
+      "To land on step n, Mia's last move came from step n - 1 or from step n - 2, so add those two counts."
+    ],
+    "explanation": "Let W(n) be the number of ways to reach step n. W(1) = 1 and W(2) = 2. Any later step is reached from the step before or from two steps before, so W(3) = 3, W(4) = 5, W(5) = 8 and W(6) = 13.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-staircase-ways-1",
+        "params": {},
+        "answer": "13"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 60,
+      "step": 1
+    },
+    "verify": "13"
+  },
+  {
+    "id": "logic-digit-sum-four",
+    "subject": "logic",
+    "kind": "counting",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 6,
+    "prompt": "How many three-digit whole numbers (from 100 to 999) have digits that add up to exactly 4? For example 112 and 400 count, but 213 does not.",
+    "hints": [
+      "Sort the numbers by their hundreds digit: 1, 2, 3 or 4.",
+      "If the hundreds digit is 1, the other two digits must add to 3. List them all, then do the same for 2, 3 and 4."
+    ],
+    "explanation": "Hundreds digit 1: the other digits add to 3, giving 103, 112, 121, 130 (4 numbers). Hundreds digit 2: they add to 2, giving 202, 211, 220 (3 numbers). Hundreds digit 3: they add to 1, giving 301, 310 (2 numbers). Hundreds digit 4: 400 (1 number). Total 4 + 3 + 2 + 1 = 10.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-digit-sum-four-1",
+        "params": {},
+        "answer": "10"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 60,
+      "step": 1
+    },
+    "verify": "4 + 3 + 2 + 1"
+  },
+  {
+    "id": "logic-thu-fri-sat",
+    "subject": "logic",
+    "kind": "clock_calendar",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A month has 31 days and its 1st day is a Thursday. How many days of that month fall on a Thursday, a Friday or a Saturday?",
+    "hints": [
+      "31 days is 4 whole weeks plus some extra days. Which weekdays do the extra days land on?",
+      "Every weekday appears 4 times in 28 days. Work out which weekdays appear a fifth time."
+    ],
+    "explanation": "28 days make exactly 4 weeks, so each weekday occurs 4 times. The 3 extra days are the 29th, 30th and 31st, which fall on Thursday, Friday and Saturday. So each of those three weekdays occurs 5 times: 5 + 5 + 5 = 15 days.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-thu-fri-sat-1",
+        "params": {},
+        "answer": "15"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 31,
+      "step": 1
+    },
+    "verify": "3 * 5"
+  },
+  {
+    "id": "logic-first-monday-april",
+    "subject": "logic",
+    "kind": "clock_calendar",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "In a year when 15 March falls on a Wednesday, what is the date (the day of the month) of the first Monday in April?",
+    "hints": [
+      "Find the Monday just before 15 March, then keep adding 7 days.",
+      "March has 31 days, so the dates carry on past 31 into April."
+    ],
+    "explanation": "15 March is a Wednesday, so Monday was 13 March. Adding weeks gives Mondays on 20 March and 27 March. The next Monday is 27 + 7 = 34 March, which is 3 April.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-first-monday-april-1",
+        "params": {},
+        "answer": "3"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 31,
+      "step": 1
+    },
+    "verify": "27 + 7 - 31"
+  },
+  {
+    "id": "logic-three-islanders",
+    "subject": "logic",
+    "kind": "truth_teller",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 5,
+    "prompt": "On an island, every person is either a knight (always tells the truth) or a knave (always lies). Ann, Ben and Cal say:\n- Ann says: \"Exactly one of the three of us is a knight.\"\n- Ben says: \"Exactly two of the three of us are knights.\"\n- Cal says: \"All three of us are knaves.\"\nWho is a knight?",
+    "hints": [
+      "Cal's statement is the easiest to test. Could Cal be a knight and tell the truth?",
+      "Ann and Ben cannot both be telling the truth, because their statements disagree about how many knights there are."
+    ],
+    "explanation": "If Cal were a knight, then all three would be knaves, which contradicts Cal being a knight. So Cal is a knave, and there is at least one knight among Ann and Ben. Ann and Ben cannot both be knights, since only one of their statements can be true. If Ben alone were a knight, his claim of two knights would be false. If Ann alone is the knight, her statement is true and Ben's and Cal's are false, which fits. So only Ann is a knight.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-three-islanders-1",
+        "params": {},
+        "answer": "b"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Cal"
+      },
+      {
+        "id": "b",
+        "text": "Ann"
+      },
+      {
+        "id": "c",
+        "text": "Ben"
+      },
+      {
+        "id": "d",
+        "text": "It cannot be worked out"
+      },
+      {
+        "id": "e",
+        "text": "Nobody is a knight"
+      }
+    ]
+  },
+  {
+    "id": "logic-growing-gaps",
+    "subject": "logic",
+    "kind": "number_pattern",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Here is the start of a number pattern: 3, 4, 6, 9, 13, 18, ... What is the 10th number in the pattern?",
+    "hints": [
+      "Look at the gaps between neighbouring numbers: 1, 2, 3, ... What comes next?",
+      "Keep adding the growing gaps until you reach the 10th number."
+    ],
+    "explanation": "The gaps grow by 1 each time: +1, +2, +3, +4, +5. The next gaps are +6, +7, +8, +9, so the numbers continue 24, 31, 39, 48. The 10th number is 48.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-growing-gaps-1",
+        "params": {},
+        "answer": "48"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "3 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9"
+  },
+  {
+    "id": "logic-painted-cube-edges",
+    "subject": "logic",
+    "kind": "spatial",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "A 3 by 3 by 3 cube is built from 27 small identical cubes. The whole outside of the big cube is painted red, and then the cube is taken apart into the 27 small cubes. How many small cubes have exactly two red faces?",
+    "hints": [
+      "Picture where the small cubes sit in the big cube: corners, edges, faces and the very middle.",
+      "A small cube with exactly two painted faces sits on an edge of the big cube but is not a corner. How many edges does a cube have, and how many such cubes are on each edge?"
+    ],
+    "explanation": "A cube has 12 edges. On each edge of this 3 by 3 by 3 cube there are 3 small cubes, but the two at the ends are corners (three red faces). That leaves 1 middle cube per edge with exactly two red faces: 12 x 1 = 12.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-painted-cube-edges-1",
+        "params": {},
+        "answer": "12"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 40,
+      "step": 1
+    },
+    "verify": "12 * 1"
+  },
+  {
+    "id": "logic-socks-three-alike",
+    "subject": "logic",
+    "kind": "pigeonhole",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 5,
+    "prompt": "A drawer holds many red, blue and green socks, all mixed up. You take socks out one at a time in the dark. How many socks must you take out to be completely sure that at least 3 of them are the same colour?",
+    "hints": [
+      "Imagine the worst luck you could have. How many socks can you take without having 3 of any colour?",
+      "In the worst case you hold 2 of each colour. One more sock then has to match a pair."
+    ],
+    "explanation": "The worst case is taking 2 red, 2 blue and 2 green, which is 6 socks with no colour three times. The 7th sock must make three of one colour. So 7 socks are enough, and 6 are not.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-socks-three-alike-1",
+        "params": {},
+        "answer": "7"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 30,
+      "step": 1
+    },
+    "verify": "2 * 3 + 1"
+  },
+  {
+    "id": "logic-clock-angle",
+    "subject": "logic",
+    "kind": "clock_calendar",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 5,
+    "prompt": "What is the smaller angle, in degrees, between the hour hand and the minute hand of a clock at exactly 4:20?",
+    "hints": [
+      "The minute hand turns 6 degrees every minute. Where is it pointing at 20 minutes past?",
+      "The hour hand also keeps moving: it turns 30 degrees every hour, so it has moved a third of the way from the 4 towards the 5."
+    ],
+    "explanation": "At 20 minutes the minute hand is at 20 x 6 = 120 degrees. The hour hand has moved 4 x 30 = 120 degrees for the 4 o'clock, plus a third of 30 degrees, which is 10 degrees, so it is at 130 degrees. The angle between them is 130 - 120 = 10 degrees.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-clock-angle-1",
+        "params": {},
+        "answer": "10"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 180,
+      "step": 1
+    },
+    "verify": "4 * 30 + 10 - 120"
   }
 ]

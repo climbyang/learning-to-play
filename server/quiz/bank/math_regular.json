@@ -1953,5 +1953,914 @@
       "step": 1
     },
     "verify": "hi // m - (lo - 1) // m"
+  },
+  {
+    "id": "math-cake-two-shares",
+    "subject": "math",
+    "kind": "fractions",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "A cake is cut into {n} equal slices. Jo eats 1/{a} of the cake and Kim eats 1/{b} of the cake. How many slices are left?",
+    "hints": [
+      "Find how many slices are the first fraction of the cake and how many are the second of the cake.",
+      "Take both amounts away from the total number of slices."
+    ],
+    "explanation": "Jo eats n / a slices and Kim eats n / b slices. Slices left = n - n / a - n / b.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-cake-two-shares-1",
+        "params": {
+          "n": 24,
+          "a": 2,
+          "b": 3
+        },
+        "answer": "4"
+      },
+      {
+        "id": "math-cake-two-shares-2",
+        "params": {
+          "n": 36,
+          "a": 3,
+          "b": 4
+        },
+        "answer": "15"
+      },
+      {
+        "id": "math-cake-two-shares-3",
+        "params": {
+          "n": 40,
+          "a": 2,
+          "b": 5
+        },
+        "answer": "12"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "verify": "n - n / a - n / b"
+  },
+  {
+    "id": "math-fabric-cost-decimal",
+    "subject": "math",
+    "kind": "decimals",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "Fabric costs ${p} per metre. Sia buys {m} metres of it. How much does she pay, in dollars? Write your answer as a decimal.",
+    "hints": [
+      "Multiply the price per metre by the number of metres.",
+      "Ignore the decimal points while you multiply, then put the point back at the end."
+    ],
+    "explanation": "The cost is the price per metre times the number of metres: p x m. Count the decimal places in both numbers to place the point in the answer.",
+    "answer_type": "decimal",
+    "instances": [
+      {
+        "id": "math-fabric-cost-decimal-1",
+        "params": {
+          "p": 2.75,
+          "m": 2.4
+        },
+        "answer": "6.6"
+      },
+      {
+        "id": "math-fabric-cost-decimal-2",
+        "params": {
+          "p": 4.25,
+          "m": 3.2
+        },
+        "answer": "13.6"
+      },
+      {
+        "id": "math-fabric-cost-decimal-3",
+        "params": {
+          "p": 3.5,
+          "m": 4.6
+        },
+        "answer": "16.1"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 100,
+      "step": 0.05
+    },
+    "verify": "p * m"
+  },
+  {
+    "id": "math-pen-packs-best-buy",
+    "subject": "math",
+    "kind": "money",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Pack A has {na} pens for ${pa}. Pack B has {nb} pens for ${pb}. Pack A costs more for each pen. How many cents more does one pen cost in Pack A than in Pack B?",
+    "hints": [
+      "Change each price to cents first.",
+      "Divide each pack's price in cents by the number of pens to get the price of one pen."
+    ],
+    "explanation": "Price of one pen in Pack A = pa x 100 / na cents. Price of one pen in Pack B = pb x 100 / nb cents. The answer is the difference between them.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-pen-packs-best-buy-1",
+        "params": {
+          "na": 6,
+          "pa": 4.5,
+          "nb": 10,
+          "pb": 6.5
+        },
+        "answer": "10"
+      },
+      {
+        "id": "math-pen-packs-best-buy-2",
+        "params": {
+          "na": 8,
+          "pa": 5.6,
+          "nb": 12,
+          "pb": 7.8
+        },
+        "answer": "5"
+      },
+      {
+        "id": "math-pen-packs-best-buy-3",
+        "params": {
+          "na": 5,
+          "pa": 3.25,
+          "nb": 20,
+          "pb": 11
+        },
+        "answer": "10"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "verify": "pa * 100 / na - pb * 100 / nb"
+  },
+  {
+    "id": "math-survey-neither",
+    "subject": "math",
+    "kind": "percentages",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "In a survey of {n} students, {p1}% walk to school and {p2}% ride a bike. Everyone else is driven or takes the bus. How many students are driven or take the bus?",
+    "hints": [
+      "Find how many students walk and how many ride a bike.",
+      "Take those two numbers away from the total."
+    ],
+    "explanation": "Walkers = n x p1 / 100 and riders = n x p2 / 100. Everyone else = n - walkers - riders.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-survey-neither-1",
+        "params": {
+          "n": 200,
+          "p1": 35,
+          "p2": 25
+        },
+        "answer": "80"
+      },
+      {
+        "id": "math-survey-neither-2",
+        "params": {
+          "n": 240,
+          "p1": 25,
+          "p2": 40
+        },
+        "answer": "84"
+      },
+      {
+        "id": "math-survey-neither-3",
+        "params": {
+          "n": 150,
+          "p1": 20,
+          "p2": 30
+        },
+        "answer": "75"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 300,
+      "step": 1
+    },
+    "verify": "n - n * p1 / 100 - n * p2 / 100"
+  },
+  {
+    "id": "math-sticker-ratio-share",
+    "subject": "math",
+    "kind": "ratio",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "Sam and Tia share {T} stickers in the ratio {a} : {b}. Tia gets the bigger share. How many more stickers does Tia get than Sam?",
+    "hints": [
+      "Add the parts of the ratio to find how many equal parts there are.",
+      "Find the value of one part, then the difference in parts."
+    ],
+    "explanation": "There are a + b equal parts, so one part is T / (a + b) stickers. Tia has b - a more parts than Sam, so the difference is (b - a) x T / (a + b).",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-sticker-ratio-share-1",
+        "params": {
+          "T": 64,
+          "a": 3,
+          "b": 5
+        },
+        "answer": "16"
+      },
+      {
+        "id": "math-sticker-ratio-share-2",
+        "params": {
+          "T": 72,
+          "a": 4,
+          "b": 5
+        },
+        "answer": "8"
+      },
+      {
+        "id": "math-sticker-ratio-share-3",
+        "params": {
+          "T": 90,
+          "a": 2,
+          "b": 7
+        },
+        "answer": "50"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "verify": "T * (b - a) / (a + b)"
+  },
+  {
+    "id": "math-temperature-change",
+    "subject": "math",
+    "kind": "negative_numbers",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 3,
+    "prompt": "At dawn on a mountain the temperature was {start} degrees Celsius. By midday it rose by {rise} degrees, and by night it fell by {fall} degrees. What was the temperature at night, in degrees Celsius? Use a minus sign if it is below zero.",
+    "hints": [
+      "Start at the dawn temperature and move up by the rise.",
+      "Then move down by the fall. You may need to count past zero."
+    ],
+    "explanation": "Night temperature = start + rise - fall. If the result is below zero, write it with a minus sign.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-temperature-change-1",
+        "params": {
+          "start": -7,
+          "rise": 12,
+          "fall": 9
+        },
+        "answer": "-4"
+      },
+      {
+        "id": "math-temperature-change-2",
+        "params": {
+          "start": -3,
+          "rise": 8,
+          "fall": 11
+        },
+        "answer": "-6"
+      },
+      {
+        "id": "math-temperature-change-3",
+        "params": {
+          "start": -12,
+          "rise": 15,
+          "fall": 9
+        },
+        "answer": "-6"
+      }
+    ],
+    "plausible": {
+      "min": -30,
+      "max": 30,
+      "step": 1
+    },
+    "verify": "start + rise - fall"
+  },
+  {
+    "id": "math-order-of-operations",
+    "subject": "math",
+    "kind": "order_of_operations",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 2,
+    "prompt": "Work out {a} + {b} × ({c} − {d}) − {e} ÷ {f}.",
+    "hints": [
+      "Brackets come first, then multiplication and division, then addition and subtraction.",
+      "Work out the multiplication and the division separately before adding and subtracting."
+    ],
+    "explanation": "Brackets first: c - d. Then multiply and divide: b x (c - d) and e / f. Finally add and subtract from left to right: a + b x (c - d) - e / f.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-order-of-operations-1",
+        "params": {
+          "a": 5,
+          "b": 4,
+          "c": 11,
+          "d": 6,
+          "e": 24,
+          "f": 3
+        },
+        "answer": "17"
+      },
+      {
+        "id": "math-order-of-operations-2",
+        "params": {
+          "a": 12,
+          "b": 3,
+          "c": 9,
+          "d": 2,
+          "e": 36,
+          "f": 4
+        },
+        "answer": "24"
+      },
+      {
+        "id": "math-order-of-operations-3",
+        "params": {
+          "a": 7,
+          "b": 6,
+          "c": 15,
+          "d": 9,
+          "e": 40,
+          "f": 8
+        },
+        "answer": "38"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "a + b * (c - d) - e / f"
+  },
+  {
+    "id": "math-fish-tank-litres",
+    "subject": "math",
+    "kind": "volume",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 4,
+    "prompt": "A fish tank is {l} cm long, {w} cm wide and {h} cm tall. It is filled with water to a depth of {d} cm. How many litres of water are in the tank? (1 litre is 1000 cubic centimetres.)",
+    "hints": [
+      "The water forms a box that is l long, w wide and d deep. Do not use the full height of the tank.",
+      "Multiply to find the volume in cubic centimetres, then divide by 1000."
+    ],
+    "explanation": "Volume of water = l x w x d cubic centimetres. Divide by 1000 to change cubic centimetres into litres.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-fish-tank-litres-1",
+        "params": {
+          "l": 50,
+          "w": 30,
+          "h": 40,
+          "d": 20
+        },
+        "answer": "30"
+      },
+      {
+        "id": "math-fish-tank-litres-2",
+        "params": {
+          "l": 60,
+          "w": 25,
+          "h": 35,
+          "d": 24
+        },
+        "answer": "36"
+      },
+      {
+        "id": "math-fish-tank-litres-3",
+        "params": {
+          "l": 40,
+          "w": 25,
+          "h": 30,
+          "d": 18
+        },
+        "answer": "18"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "l * w * d / 1000"
+  },
+  {
+    "id": "math-triangle-sail-cost",
+    "subject": "math",
+    "kind": "area",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 4,
+    "prompt": "A triangular sail has a base of {b} metres and a height of {h} metres. Sail cloth costs ${c} per square metre. How many dollars does the cloth for one sail cost?",
+    "hints": [
+      "The area of a triangle is half of base times height.",
+      "Multiply the area by the cost of each square metre."
+    ],
+    "explanation": "Area = b x h / 2 square metres. Cost = area x c dollars.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-triangle-sail-cost-1",
+        "params": {
+          "b": 6,
+          "h": 5,
+          "c": 12
+        },
+        "answer": "180"
+      },
+      {
+        "id": "math-triangle-sail-cost-2",
+        "params": {
+          "b": 8,
+          "h": 7,
+          "c": 9
+        },
+        "answer": "252"
+      },
+      {
+        "id": "math-triangle-sail-cost-3",
+        "params": {
+          "b": 10,
+          "h": 9,
+          "c": 4
+        },
+        "answer": "180"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "verify": "b * h / 2 * c"
+  },
+  {
+    "id": "math-straight-line-angles",
+    "subject": "math",
+    "kind": "angles",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "Three angles sit side by side along a straight line. The first is {a} degrees. The second is {k} times as big as the first. How many degrees is the third angle?",
+    "hints": [
+      "Angles along a straight line add up to 180 degrees.",
+      "Find the size of the second angle first."
+    ],
+    "explanation": "The second angle is k x a degrees. The third angle = 180 - a - k x a.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-straight-line-angles-1",
+        "params": {
+          "a": 20,
+          "k": 3
+        },
+        "answer": "100"
+      },
+      {
+        "id": "math-straight-line-angles-2",
+        "params": {
+          "a": 15,
+          "k": 4
+        },
+        "answer": "105"
+      },
+      {
+        "id": "math-straight-line-angles-3",
+        "params": {
+          "a": 25,
+          "k": 2
+        },
+        "answer": "105"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 180,
+      "step": 1
+    },
+    "verify": "180 - a - k * a"
+  },
+  {
+    "id": "math-regular-polygon-angle",
+    "subject": "math",
+    "kind": "angles",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 3,
+    "prompt": "A regular polygon has {n} equal sides. Each outside (exterior) angle is found by dividing a full turn, 360 degrees, by the number of sides. How many degrees is each inside (interior) angle?",
+    "hints": [
+      "First find one exterior angle: 360 divided by the number of sides.",
+      "An inside angle and an outside angle at the same corner make a straight line (180 degrees)."
+    ],
+    "explanation": "Exterior angle = 360 / n degrees. Interior angle = 180 - 360 / n degrees.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-regular-polygon-angle-1",
+        "params": {
+          "n": 5
+        },
+        "answer": "108"
+      },
+      {
+        "id": "math-regular-polygon-angle-2",
+        "params": {
+          "n": 9
+        },
+        "answer": "140"
+      },
+      {
+        "id": "math-regular-polygon-angle-3",
+        "params": {
+          "n": 12
+        },
+        "answer": "150"
+      }
+    ],
+    "plausible": {
+      "min": 60,
+      "max": 179,
+      "step": 1
+    },
+    "verify": "180 - 360 / n"
+  },
+  {
+    "id": "math-new-game-average",
+    "subject": "math",
+    "kind": "averages",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 3,
+    "prompt": "In {n} basketball games a player averaged {m} points per game. In the next game she scored {x} points. What is her average per game over all the games now?",
+    "hints": [
+      "Find the total points scored in the first games from the average.",
+      "Add the new score and divide by the new number of games."
+    ],
+    "explanation": "Total so far = n x m. New total = n x m + x over n + 1 games. New mean = (n x m + x) / (n + 1).",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-new-game-average-1",
+        "params": {
+          "n": 4,
+          "m": 12,
+          "x": 17
+        },
+        "answer": "13"
+      },
+      {
+        "id": "math-new-game-average-2",
+        "params": {
+          "n": 5,
+          "m": 14,
+          "x": 20
+        },
+        "answer": "15"
+      },
+      {
+        "id": "math-new-game-average-3",
+        "params": {
+          "n": 7,
+          "m": 9,
+          "x": 17
+        },
+        "answer": "10"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "verify": "(n * m + x) / (n + 1)"
+  },
+  {
+    "id": "math-mystery-number",
+    "subject": "math",
+    "kind": "algebra",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 3,
+    "prompt": "I think of a number. I multiply it by {a}, then subtract {b}, and the answer is {r}. What number did I think of?",
+    "hints": [
+      "Work backwards. Undo the last step first.",
+      "Add the subtracted amount back on, then undo the multiplication."
+    ],
+    "explanation": "Undo the steps in reverse order. r + b gives the number before subtracting, and dividing by a undoes the multiplication: (r + b) / a.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-mystery-number-1",
+        "params": {
+          "a": 6,
+          "b": 5,
+          "r": 37
+        },
+        "answer": "7"
+      },
+      {
+        "id": "math-mystery-number-2",
+        "params": {
+          "a": 4,
+          "b": 9,
+          "r": 39
+        },
+        "answer": "12"
+      },
+      {
+        "id": "math-mystery-number-3",
+        "params": {
+          "a": 3,
+          "b": 8,
+          "r": 37
+        },
+        "answer": "15"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "verify": "(r + b) / a"
+  },
+  {
+    "id": "math-count-factors",
+    "subject": "math",
+    "kind": "number_theory",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 4,
+    "prompt": "The number {n} can be written as a product of prime numbers: {n} = {p}^{a} × {q}^{b} (for example 2^3 means 2 × 2 × 2). How many different factors does {n} have, including 1 and {n} itself?",
+    "hints": [
+      "Every factor uses between 0 and a copies of the first prime and between 0 and b copies of the second prime.",
+      "Count the choices for each prime, then multiply the counts."
+    ],
+    "explanation": "The first prime can be used 0, 1, ... a times, which is a + 1 choices. The second prime gives b + 1 choices. Number of factors = (a + 1) x (b + 1).",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-count-factors-1",
+        "params": {
+          "n": 72,
+          "p": 2,
+          "a": 3,
+          "q": 3,
+          "b": 2
+        },
+        "answer": "12"
+      },
+      {
+        "id": "math-count-factors-2",
+        "params": {
+          "n": 100,
+          "p": 2,
+          "a": 2,
+          "q": 5,
+          "b": 2
+        },
+        "answer": "9"
+      },
+      {
+        "id": "math-count-factors-3",
+        "params": {
+          "n": 200,
+          "p": 2,
+          "a": 3,
+          "q": 5,
+          "b": 2
+        },
+        "answer": "12"
+      }
+    ],
+    "plausible": {
+      "min": 2,
+      "max": 60,
+      "step": 1
+    },
+    "verify": "(a + 1) * (b + 1)"
+  },
+  {
+    "id": "math-buses-meet-again",
+    "subject": "math",
+    "kind": "number_theory",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 4,
+    "prompt": "Two bus routes start together at the depot at 8:00 am. Route A buses leave every {a} minutes and Route B buses leave every {b} minutes. After 8:00 am, how many minutes pass until buses from both routes leave together again? (The highest common factor of {a} and {b} is {g}.)",
+    "hints": [
+      "The buses leave together again at a common multiple of the two times. You want the lowest one.",
+      "Lowest common multiple = a x b divided by the highest common factor."
+    ],
+    "explanation": "LCM = a x b / g, where g is the highest common factor.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-buses-meet-again-1",
+        "params": {
+          "a": 12,
+          "b": 18,
+          "g": 6
+        },
+        "answer": "36"
+      },
+      {
+        "id": "math-buses-meet-again-2",
+        "params": {
+          "a": 8,
+          "b": 20,
+          "g": 4
+        },
+        "answer": "40"
+      },
+      {
+        "id": "math-buses-meet-again-3",
+        "params": {
+          "a": 15,
+          "b": 25,
+          "g": 5
+        },
+        "answer": "75"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 400,
+      "step": 1
+    },
+    "verify": "a * b / g"
+  },
+  {
+    "id": "math-average-speed",
+    "subject": "math",
+    "kind": "rates",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 4,
+    "prompt": "A car travels {d} kilometres in {h} hours and {m} minutes. What is its average speed in kilometres per hour?",
+    "hints": [
+      "Change the time into minutes first.",
+      "Speed in kilometres per hour = distance divided by hours, so multiply by 60 to turn minutes into hours."
+    ],
+    "explanation": "Time in minutes = h x 60 + m. Speed = d x 60 / (h x 60 + m) kilometres per hour.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-average-speed-1",
+        "params": {
+          "d": 150,
+          "h": 2,
+          "m": 30
+        },
+        "answer": "60"
+      },
+      {
+        "id": "math-average-speed-2",
+        "params": {
+          "d": 135,
+          "h": 1,
+          "m": 30
+        },
+        "answer": "90"
+      },
+      {
+        "id": "math-average-speed-3",
+        "params": {
+          "d": 170,
+          "h": 2,
+          "m": 30
+        },
+        "answer": "68"
+      }
+    ],
+    "plausible": {
+      "min": 10,
+      "max": 150,
+      "step": 1
+    },
+    "verify": "d * 60 / (h * 60 + m)"
+  },
+  {
+    "id": "math-bill-tip-split",
+    "subject": "math",
+    "kind": "money",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 4,
+    "prompt": "A group of {n} friends has a restaurant bill of ${bill}. They add a {tip}% tip and split the total equally. How many dollars does each friend pay? Write your answer as a decimal.",
+    "hints": [
+      "Find the tip as a percentage of the bill and add it on.",
+      "Then divide the total by the number of friends."
+    ],
+    "explanation": "Total = bill x (100 + tip) / 100. Each friend pays total / n.",
+    "answer_type": "decimal",
+    "instances": [
+      {
+        "id": "math-bill-tip-split-1",
+        "params": {
+          "n": 6,
+          "bill": 84,
+          "tip": 10
+        },
+        "answer": "15.4"
+      },
+      {
+        "id": "math-bill-tip-split-2",
+        "params": {
+          "n": 8,
+          "bill": 120,
+          "tip": 15
+        },
+        "answer": "17.25"
+      },
+      {
+        "id": "math-bill-tip-split-3",
+        "params": {
+          "n": 5,
+          "bill": 60,
+          "tip": 20
+        },
+        "answer": "14.4"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 100,
+      "step": 0.01
+    },
+    "verify": "bill * (100 + tip) / 100 / n"
+  },
+  {
+    "id": "math-library-science",
+    "subject": "math",
+    "kind": "multi_step",
+    "tier": "regular",
+    "grade": 6,
+    "est_minutes": 4,
+    "prompt": "A library has {n} books. {a}% of them are fiction. Of the books that are not fiction, 1/{k} are science books. How many science books does the library have?",
+    "hints": [
+      "Find how many books are not fiction.",
+      "Then find the fraction 1/k of that number."
+    ],
+    "explanation": "Non-fiction books = n x (100 - a) / 100. Science books = that number / k.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-library-science-1",
+        "params": {
+          "n": 400,
+          "a": 25,
+          "k": 5
+        },
+        "answer": "60"
+      },
+      {
+        "id": "math-library-science-2",
+        "params": {
+          "n": 600,
+          "a": 40,
+          "k": 6
+        },
+        "answer": "60"
+      },
+      {
+        "id": "math-library-science-3",
+        "params": {
+          "n": 500,
+          "a": 30,
+          "k": 7
+        },
+        "answer": "50"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "n * (100 - a) / 100 / k"
   }
 ]

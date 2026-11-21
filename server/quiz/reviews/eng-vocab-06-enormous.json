@@ -1,0 +1,17 @@
+{
+  "template_id": "eng-vocab-06-enormous",
+  "content_hash": "e224defad2d7912b28a2cf81c3e0df42d7b9c74368caeebdf8b1f0ab5f4f6817",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:21:51Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Huge is the only synonym of enormous; wording and options are clear."
+}

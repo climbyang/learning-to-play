@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-three-islanders",
+  "content_hash": "1d93113e320dbcc3caa469679a717dac2d57c082841883464371732ad38f63d4",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:28:46Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Only Ann being a knight makes her statement true while Ben's and Cal's statements are false."
+}

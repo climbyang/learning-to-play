@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-e-roman-aqueducts",
+  "content_hash": "71dadd2e61bc9714e04c62a0977b2b1a69e6628118a55fdf565a2d17843cccc3",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:29:33Z",
+  "pass": 2,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The keys are uniquely supported, the distractors are clearly wrong, the historical account is accurate at this level, and both vocabulary sentences appear verbatim."
+}

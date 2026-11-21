@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-chess-fools-mate",
+  "content_hash": "82ee280a7056d3a6f3c593f1e1eb6f9e4162e137b0f292df6168dccd40d842f8",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:27:15Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Qh4 is the only listed checkmating move."
+}

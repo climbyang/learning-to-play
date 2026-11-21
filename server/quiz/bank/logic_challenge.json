@@ -513,5 +513,193 @@
         "text": "6"
       }
     ]
+  },
+  {
+    "id": "logic-painted-cube-five",
+    "subject": "logic",
+    "kind": "spatial",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 8,
+    "prompt": "A 5 by 5 by 5 cube is built from 125 small identical cubes. The whole outside of the big cube is painted blue, and then it is taken apart into the 125 small cubes. How many small cubes have exactly one or exactly two blue faces?",
+    "hints": [
+      "Sort the small cubes by position: corners, edge cubes, face cubes and inside cubes. Which of these have one painted face, and which have two?",
+      "On each edge of the big cube, 5 small cubes sit in a line. Remove the 2 corners to see how many have two painted faces. On each face, the cubes not touching an edge have just one painted face."
+    ],
+    "explanation": "Two painted faces: each of the 12 edges has 5 - 2 = 3 non-corner cubes, giving 12 x 3 = 36. One painted face: on each of the 6 faces the middle 3 by 3 block has 9 cubes, giving 6 x 9 = 54. Together 36 + 54 = 90.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-painted-cube-five-1",
+        "params": {},
+        "answer": "90"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 125,
+      "step": 1
+    },
+    "verify": "12 * (5 - 2) + 6 * (5 - 2) * (5 - 2)"
+  },
+  {
+    "id": "logic-music-lessons",
+    "subject": "logic",
+    "kind": "grid_deduction",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 8,
+    "prompt": "Four friends, Dara, Eli, Fran and Gus, each play a different instrument (piano, violin, drums or flute). Each has one lesson a week, on a different day from Monday to Thursday. These facts are known.\n- Fran's lesson is on the day right after Dara's lesson.\n- The pianist has a lesson earlier in the week than the flute player.\n- The drummer's lesson is on the day right before or right after Eli's lesson.\n- The violinist has the Thursday lesson.\n- Dara and Gus do not play the drums.\n- Eli has a lesson later in the week than Gus.\nWho plays the flute?",
+    "hints": [
+      "Start with the Thursday lesson: it belongs to the violinist. Dara and Fran have lessons on two days in a row, so list the possible pairs of days for them.",
+      "Try each pair, then place the drums next to Eli's day and the pianist before the flute player. Only one arrangement keeps every clue true."
+    ],
+    "explanation": "Trying each possible pair of days for Dara and Fran (Monday-Tuesday, Tuesday-Wednesday, Wednesday-Thursday) and testing every clue leaves just one arrangement: Gus plays piano on Monday, Dara plays flute on Tuesday, Fran plays drums on Wednesday, and Eli plays violin on Thursday. So Dara plays the flute.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-music-lessons-1",
+        "params": {},
+        "answer": "b"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "It cannot be worked out"
+      },
+      {
+        "id": "b",
+        "text": "Dara"
+      },
+      {
+        "id": "c",
+        "text": "Gus"
+      },
+      {
+        "id": "d",
+        "text": "Eli"
+      },
+      {
+        "id": "e",
+        "text": "Fran"
+      }
+    ]
+  },
+  {
+    "id": "logic-ten-islanders",
+    "subject": "logic",
+    "kind": "truth_teller",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 7,
+    "prompt": "On an island, every person is either a knight (always tells the truth) or a knave (always lies). Ten islanders are numbered 1 to 10. Islander number k says: \"Exactly k of the ten of us are knaves.\" How many of the ten islanders are knaves?",
+    "hints": [
+      "The ten statements give ten different numbers of knaves, so they contradict each other. How many of them can be true at the same time?",
+      "Think about what would happen if every statement were false."
+    ],
+    "explanation": "No two statements can both be true, so at most one islander is a knight. If nobody were a knight, all ten would be knaves, but then islander 10's statement \"exactly 10 are knaves\" would be true, which a knave cannot say. So exactly one islander is a knight and nine are knaves. This fits, because islander 9 says \"exactly 9 are knaves\" truthfully.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-ten-islanders-1",
+        "params": {},
+        "answer": "9"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 20,
+      "step": 1
+    },
+    "verify": "10 - 1"
+  },
+  {
+    "id": "logic-reverse-times-four",
+    "subject": "logic",
+    "kind": "digit_puzzle",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 8,
+    "prompt": "A, B, C and D are four different digits, and A is not 0. The four-digit number ABCD, multiplied by 4, gives the four-digit number DCBA, which is the same digits in reverse order. What is the number ABCD?",
+    "hints": [
+      "Because 4 x ABCD is still a four-digit number, A can only be 1 or 2. Since DCBA is a multiple of 4 and so is even, what does that tell you about A and D?",
+      "Once you have A, work out D from the units digit of 4 x D. Then use the tens column to find B and C."
+    ],
+    "explanation": "4 x ABCD still has four digits, so A is 1 or 2. DCBA = 4 x ABCD is even, and its last digit is A, so A = 2. Then DCBA is at least 4 x 2000 = 8000, so D is 8 or 9. The last digit of 4 x ABCD is A = 2, and 4 x 8 = 32 ends in 2, so D = 8. Working through the tens and hundreds columns with the carries gives B = 1 and C = 7. So ABCD = 2178. Check: 2178 x 4 = 8712.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-reverse-times-four-1",
+        "params": {},
+        "answer": "2178"
+      }
+    ],
+    "plausible": {
+      "min": 1000,
+      "max": 9999,
+      "step": 1
+    },
+    "verify": "2178"
+  },
+  {
+    "id": "logic-frog-in-well",
+    "subject": "logic",
+    "kind": "working_backwards",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 6,
+    "prompt": "A frog sits at the bottom of a well that is {depth} metres deep. Each day it climbs up {up} metres, and each night it slips back down {down} metres. On which day does the frog first reach the top and get out of the well?",
+    "hints": [
+      "Do not just divide the depth by the daily gain. The frog is done as soon as it reaches the top during the day, before the night's slip.",
+      "Find where the frog is each morning before it climbs. How high can it be before the last climb takes it out?"
+    ],
+    "explanation": "Each full day and night the frog gains 5 - 3 = 2 metres. It gets out as soon as a daytime climb reaches 20 metres, so before that last climb it must be at 15 metres or higher. After 8 full days and nights it is at 16 metres. On day 9 it climbs 5 metres to 21 metres and gets out. The answer is day 9.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-frog-in-well-1",
+        "params": {
+          "depth": 20,
+          "up": 5,
+          "down": 3
+        },
+        "answer": "9"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 60,
+      "step": 1
+    },
+    "verify": "(depth - up + (up - down) - 1) // (up - down) + 1"
+  },
+  {
+    "id": "logic-distinct-digits-five",
+    "subject": "logic",
+    "kind": "counting",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 8,
+    "prompt": "How many four-digit whole numbers have four different digits and are divisible by 5?",
+    "hints": [
+      "A number divisible by 5 ends in 0 or 5. Count the two cases separately.",
+      "When the number ends in 5, the first digit cannot be 0 or 5, so it has fewer choices than you might expect."
+    ],
+    "explanation": "Case 1, ends in 0: the first digit has 9 choices, the second 8, the third 7, so 9 x 8 x 7 = 504. Case 2, ends in 5: the first digit cannot be 0 or 5, so it has 8 choices; the second digit can be 0 but not the first digit or 5, so it has 8 choices; the third has 7, so 8 x 8 x 7 = 448. Total 504 + 448 = 952.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-distinct-digits-five-1",
+        "params": {},
+        "answer": "952"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "9 * 8 * 7 + 8 * 8 * 7"
   }
 ]

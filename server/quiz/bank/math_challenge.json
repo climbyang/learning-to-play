@@ -611,5 +611,361 @@
       "step": 1
     },
     "verify": "k + a * (d - k) / (a + m)"
+  },
+  {
+    "id": "math-c-phone-plans",
+    "subject": "math",
+    "kind": "algebra",
+    "tier": "challenge",
+    "grade": 7,
+    "est_minutes": 8,
+    "prompt": "Plan A charges ${fa} a month plus ${ra} for each gigabyte (GB) of data used. Plan B charges ${fb} a month plus ${rb} for each GB. For one particular amount of data, both plans cost exactly the same for the month. How many GB is that?",
+    "hints": [
+      "Plan B has the higher monthly fee but the lower price per GB. How far apart are the monthly fees?",
+      "Each GB closes the gap by the difference between the two per-GB prices."
+    ],
+    "explanation": "Plan B starts (fb - fa) dollars higher. Each GB makes Plan A (ra - rb) dollars dearer than Plan B, so the plans cost the same after (fb - fa) / (ra - rb) GB.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-phone-plans-1",
+        "params": {
+          "fa": 10,
+          "ra": 5,
+          "fb": 40,
+          "rb": 2
+        },
+        "answer": "10"
+      },
+      {
+        "id": "math-c-phone-plans-2",
+        "params": {
+          "fa": 15,
+          "ra": 6,
+          "fb": 39,
+          "rb": 3
+        },
+        "answer": "8"
+      },
+      {
+        "id": "math-c-phone-plans-3",
+        "params": {
+          "fa": 20,
+          "ra": 9,
+          "fb": 62,
+          "rb": 2
+        },
+        "answer": "6"
+      }
+    ],
+    "plausible": {
+      "min": 1,
+      "max": 100,
+      "step": 1
+    },
+    "verify": "(fb - fa) / (ra - rb)"
+  },
+  {
+    "id": "math-c-remove-largest",
+    "subject": "math",
+    "kind": "averages",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 8,
+    "prompt": "The mean of {n} numbers is {m}. When the largest of the numbers is removed, the mean of the remaining numbers is {m2}. What is the largest number?",
+    "hints": [
+      "Use the mean to find the total of all the numbers.",
+      "Find the total of the remaining numbers the same way. What does the difference tell you?"
+    ],
+    "explanation": "Total of all numbers = n x m. Total of the rest = (n - 1) x m2. The largest number is the difference: n x m - (n - 1) x m2.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-remove-largest-1",
+        "params": {
+          "n": 5,
+          "m": 20,
+          "m2": 17
+        },
+        "answer": "32"
+      },
+      {
+        "id": "math-c-remove-largest-2",
+        "params": {
+          "n": 6,
+          "m": 25,
+          "m2": 22
+        },
+        "answer": "40"
+      },
+      {
+        "id": "math-c-remove-largest-3",
+        "params": {
+          "n": 8,
+          "m": 14,
+          "m2": 12
+        },
+        "answer": "28"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "n * m - (n - 1) * m2"
+  },
+  {
+    "id": "math-c-jacket-discount",
+    "subject": "math",
+    "kind": "percentages",
+    "tier": "challenge",
+    "grade": 7,
+    "est_minutes": 8,
+    "prompt": "A jacket was discounted by {pct}% and now costs ${sale}. Ravi buys two jackets at the sale price. How many dollars does he save compared with paying the original price for two jackets?",
+    "hints": [
+      "The sale price is (100 - pct)% of the original price. Use that to find the original price.",
+      "Find the saving on one jacket, then double it."
+    ],
+    "explanation": "Original price = sale x 100 / (100 - pct). Saving on one jacket = original - sale. Saving on two jackets = 2 x (original - sale).",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-jacket-discount-1",
+        "params": {
+          "pct": 20,
+          "sale": 60
+        },
+        "answer": "30"
+      },
+      {
+        "id": "math-c-jacket-discount-2",
+        "params": {
+          "pct": 25,
+          "sale": 90
+        },
+        "answer": "60"
+      },
+      {
+        "id": "math-c-jacket-discount-3",
+        "params": {
+          "pct": 30,
+          "sale": 84
+        },
+        "answer": "72"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 300,
+      "step": 1
+    },
+    "verify": "2 * (sale * 100 / (100 - pct) - sale)"
+  },
+  {
+    "id": "math-c-ratio-after-joining",
+    "subject": "math",
+    "kind": "ratio",
+    "tier": "challenge",
+    "grade": 7,
+    "est_minutes": 10,
+    "prompt": "At first the ratio of boys to girls in a club is {a} : {b}. After {x} more girls join, the ratio of boys to girls becomes {c} : {d}. No boys join or leave. How many students were in the club at the start?",
+    "hints": [
+      "Write the boys as a x k and the girls as b x k for some number k. The number of boys stays the same.",
+      "After the girls join, the ratio is c : d, so boys x d = girls x c. Solve for k."
+    ],
+    "explanation": "Boys = a x k and girls = b x k. After joining, a x k x d = (b x k + x) x c. This gives k = c x x / (d x a - c x b). The club had (a + b) x k students.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-ratio-after-joining-1",
+        "params": {
+          "a": 3,
+          "b": 2,
+          "c": 1,
+          "d": 1,
+          "x": 8
+        },
+        "answer": "40"
+      },
+      {
+        "id": "math-c-ratio-after-joining-2",
+        "params": {
+          "a": 5,
+          "b": 3,
+          "c": 1,
+          "d": 1,
+          "x": 12
+        },
+        "answer": "48"
+      },
+      {
+        "id": "math-c-ratio-after-joining-3",
+        "params": {
+          "a": 2,
+          "b": 1,
+          "c": 4,
+          "d": 5,
+          "x": 9
+        },
+        "answer": "18"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "(a + b) * c * x / (d * a - c * b)"
+  },
+  {
+    "id": "math-c-tank-and-drain",
+    "subject": "math",
+    "kind": "rates",
+    "tier": "challenge",
+    "grade": 7,
+    "est_minutes": 10,
+    "prompt": "Tap A alone can fill an empty tank in {a} hours and Tap B alone can fill it in {b} hours. A drain at the bottom can empty a full tank in {c} hours. With both taps and the drain all open together, how many minutes does it take to fill the empty tank?",
+    "hints": [
+      "Work out what fraction of the tank each tap fills in one hour, and what fraction the drain empties.",
+      "Combine the three rates into a single fraction of the tank per hour, then flip it."
+    ],
+    "explanation": "In one hour the taps fill 1/a + 1/b of the tank and the drain removes 1/c. The net rate is 1/a + 1/b - 1/c of a tank per hour, so the time is 1 / (net rate) hours. Multiply by 60 for minutes.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-tank-and-drain-1",
+        "params": {
+          "a": 4,
+          "b": 12,
+          "c": 6
+        },
+        "answer": "360"
+      },
+      {
+        "id": "math-c-tank-and-drain-2",
+        "params": {
+          "a": 5,
+          "b": 20,
+          "c": 10
+        },
+        "answer": "400"
+      },
+      {
+        "id": "math-c-tank-and-drain-3",
+        "params": {
+          "a": 3,
+          "b": 6,
+          "c": 18
+        },
+        "answer": "135"
+      }
+    ],
+    "plausible": {
+      "min": 1,
+      "max": 1000,
+      "step": 1
+    },
+    "verify": "60 / (1 / a + 1 / b - 1 / c)"
+  },
+  {
+    "id": "math-c-remainder-number",
+    "subject": "math",
+    "kind": "number_theory",
+    "tier": "challenge",
+    "grade": 7,
+    "est_minutes": 8,
+    "prompt": "What is the smallest whole number bigger than {r} that leaves a remainder of {r} when divided by {a} and also leaves a remainder of {r} when divided by {b}? (The highest common factor of {a} and {b} is {g}.)",
+    "hints": [
+      "A number that leaves remainder 0 when divided by both the two numbers is a common multiple. Find the lowest common multiple.",
+      "Add the remainder on to that."
+    ],
+    "explanation": "LCM of a and b = a x b / g. The smallest number with remainder r in both divisions is LCM + r, because r is smaller than both a and b.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-remainder-number-1",
+        "params": {
+          "a": 6,
+          "b": 8,
+          "g": 2,
+          "r": 5
+        },
+        "answer": "29"
+      },
+      {
+        "id": "math-c-remainder-number-2",
+        "params": {
+          "a": 10,
+          "b": 15,
+          "g": 5,
+          "r": 3
+        },
+        "answer": "33"
+      },
+      {
+        "id": "math-c-remainder-number-3",
+        "params": {
+          "a": 12,
+          "b": 18,
+          "g": 6,
+          "r": 7
+        },
+        "answer": "43"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "a * b / g + r"
+  },
+  {
+    "id": "math-c-rectangle-perimeter",
+    "subject": "math",
+    "kind": "area",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 8,
+    "prompt": "A rectangle has a perimeter of {p} centimetres. Its length is {k} times its width. What is the area of the rectangle in square centimetres?",
+    "hints": [
+      "Half the perimeter is length plus width. Write that in terms of the width.",
+      "Find the width, then the length, then multiply."
+    ],
+    "explanation": "Length + width = p / 2, and length = k x width, so (k + 1) x width = p / 2 and width = p / (2 x (k + 1)). Area = k x width x width.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-rectangle-perimeter-1",
+        "params": {
+          "p": 48,
+          "k": 3
+        },
+        "answer": "108"
+      },
+      {
+        "id": "math-c-rectangle-perimeter-2",
+        "params": {
+          "p": 60,
+          "k": 2
+        },
+        "answer": "200"
+      },
+      {
+        "id": "math-c-rectangle-perimeter-3",
+        "params": {
+          "p": 70,
+          "k": 4
+        },
+        "answer": "196"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "k * (p / (2 * (k + 1))) ** 2"
   }
 ]

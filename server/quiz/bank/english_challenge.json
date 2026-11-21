@@ -1786,5 +1786,838 @@
     "hints": [
       "Reread what the passage says about lights and about predators."
     ]
+  },
+  {
+    "id": "eng-e-pluto-dwarf-planet",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "For seventy-six years, schoolchildren learned that the Solar System had nine planets. Pluto was found in 1930 by Clyde Tombaugh, a young American astronomer, and it was welcomed as the ninth planet. Yet from the start it was odd. It is smaller than Earth's Moon, and its orbit is stretched and tilted, so that for part of each journey around the Sun it is actually closer to the Sun than Neptune.\n\nIn the 1990s, astronomers began to find other icy bodies beyond Neptune, in a region now called the Kuiper Belt. Then, in 2005, a team announced the discovery of Eris, an object that first appeared to be larger than Pluto and was later found to be slightly smaller but heavier. If Pluto was a planet, many people asked, was Eris one too? And what about the many others that might still be waiting to be found?\n\nIn 2006, members of the International Astronomical Union voted on a definition. To be a planet, an object must orbit the Sun, be round because of its own gravity, and have cleared the neighbourhood around its orbit of other large objects. Pluto meets the first two rules, but it shares its orbital zone with many other icy bodies, so it failed the third. It was placed in a new group called dwarf planets.\n\nThe decision upset many people, and some scientists still disagree with it. Yet it did not change Pluto itself. In 2015, the New Horizons spacecraft flew past and sent back pictures of mountains of water ice and a large, heart-shaped plain. Whatever we call it, Pluto turned out to be a fascinating world. The story also shows that science is willing to change its categories when the evidence changes.",
+    "parts": [
+      {
+        "id": "eng-e-pluto-dwarf-planet-q1",
+        "prompt": "Why did the discovery of Eris matter so much?",
+        "options": [
+          {
+            "id": "eng-e-pluto-dwarf-planet-q1a",
+            "text": "It raised the question of whether Pluto and many similar objects should all count as planets."
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q1b",
+            "text": "It proved that Pluto was smaller than the Moon."
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q1c",
+            "text": "It showed that Neptune was not a planet."
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q1d",
+            "text": "It was the first object ever seen beyond Earth's orbit."
+          }
+        ],
+        "answer": "eng-e-pluto-dwarf-planet-q1a",
+        "explanation": "Eris seemed similar to Pluto, so astronomers had to decide where to draw the line."
+      },
+      {
+        "id": "eng-e-pluto-dwarf-planet-q2",
+        "prompt": "Which of the three rules did Pluto fail?",
+        "options": [
+          {
+            "id": "eng-e-pluto-dwarf-planet-q2a",
+            "text": "It does not orbit the Sun."
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q2b",
+            "text": "It has not cleared its orbital zone of other large objects."
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q2c",
+            "text": "It is not round."
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q2d",
+            "text": "It does not have gravity."
+          }
+        ],
+        "answer": "eng-e-pluto-dwarf-planet-q2b",
+        "explanation": "The passage says Pluto shares its orbital zone with many other icy bodies."
+      },
+      {
+        "id": "eng-e-pluto-dwarf-planet-q3",
+        "prompt": "What does the author suggest with the sentence \"Yet it did not change Pluto itself\"?",
+        "options": [
+          {
+            "id": "eng-e-pluto-dwarf-planet-q3a",
+            "text": "Pluto stopped orbiting the Sun after the vote."
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q3b",
+            "text": "The vote had no effect on any scientist."
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q3c",
+            "text": "Changing a label does not change what a thing really is."
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q3d",
+            "text": "Pluto was moved to a new orbit."
+          }
+        ],
+        "answer": "eng-e-pluto-dwarf-planet-q3c",
+        "explanation": "The label changed, but the world with its mountains and plains stayed the same."
+      },
+      {
+        "id": "eng-e-pluto-dwarf-planet-q4",
+        "prompt": "What is the author's main purpose?",
+        "options": [
+          {
+            "id": "eng-e-pluto-dwarf-planet-q4a",
+            "text": "To argue that scientists made a terrible mistake"
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q4b",
+            "text": "To describe how a spacecraft is built"
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q4c",
+            "text": "To prove that Eris is the biggest dwarf planet"
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-q4d",
+            "text": "To explain why Pluto was reclassified and what this shows about science"
+          }
+        ],
+        "answer": "eng-e-pluto-dwarf-planet-q4d",
+        "explanation": "The passage tells the story and ends by saying science changes categories when evidence changes."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-e-pluto-dwarf-planet-v1",
+        "word": "astronomer",
+        "meaning": "a scientist who studies stars, planets and space",
+        "sentence": "Pluto was found in 1930 by Clyde Tombaugh, a young American astronomer, and it was welcomed as the ninth planet.",
+        "check_prompt": "What does an astronomer study?",
+        "options": [
+          {
+            "id": "eng-e-pluto-dwarf-planet-v1a",
+            "text": "Ancient pottery"
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-v1b",
+            "text": "Objects in space"
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-v1c",
+            "text": "Rocks under the sea"
+          }
+        ],
+        "answer": "eng-e-pluto-dwarf-planet-v1b"
+      },
+      {
+        "id": "eng-e-pluto-dwarf-planet-v2",
+        "word": "categories",
+        "meaning": "groups that things are sorted into",
+        "sentence": "The story also shows that science is willing to change its categories when the evidence changes.",
+        "check_prompt": "Which is a category of animal?",
+        "options": [
+          {
+            "id": "eng-e-pluto-dwarf-planet-v2a",
+            "text": "Tuesday"
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-v2b",
+            "text": "Cloudy weather"
+          },
+          {
+            "id": "eng-e-pluto-dwarf-planet-v2c",
+            "text": "Reptiles"
+          }
+        ],
+        "answer": "eng-e-pluto-dwarf-planet-v2c"
+      }
+    ],
+    "hints": [
+      "Compare what Pluto is like with the three rules, one rule at a time."
+    ]
+  },
+  {
+    "id": "eng-e-roman-aqueducts",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "Rome at its height was home to about a million people, and every one of them needed water. Wells and the Tiber River could not supply enough, so Roman engineers built aqueducts, channels that carried fresh water from springs and rivers many kilometres away. The city eventually received water from about eleven of them.\n\nThe Romans did have simple hand-worked pumps, but no machine of their time could push a whole river's worth of water over long distances. Instead, they used gravity. An aqueduct was built to slope very gently downhill along its whole length, dropping by only a small amount for every hundred metres. If the slope was too steep, the water would race along and wear away the channel. If it was too shallow, the water would barely move. Surveyors had to measure the slope with simple tools, and the accuracy of their work still impresses engineers today.\n\nMuch of an aqueduct actually ran underground, where it was protected from damage and kept the water cooler and cleaner. The famous stone arches appeared only where the channel had to cross a valley while staying at the right height. One of these, the Pont du Gard in southern France, still stands, almost fifty metres tall.\n\nAqueducts supplied public fountains, bathhouses and, for the wealthy, private homes. They were a source of pride, and officials were appointed to keep them in repair. Yet they also depended on constant care. When Rome's empire weakened in later centuries, enemies cut some of the channels, and with no money for repairs, many fell into ruin. This shows that clever engineering alone cannot last without people willing to maintain it.",
+    "parts": [
+      {
+        "id": "eng-e-roman-aqueducts-q1",
+        "prompt": "Why did Roman engineers make aqueducts slope only gently?",
+        "options": [
+          {
+            "id": "eng-e-roman-aqueducts-q1a",
+            "text": "Gentle slopes made the stone arches look better."
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q1b",
+            "text": "A steep slope would damage the channel and a flat one would not move the water."
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q1c",
+            "text": "They did not have the tools to build steeper channels."
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q1d",
+            "text": "Gentle slopes let the water flow uphill."
+          }
+        ],
+        "answer": "eng-e-roman-aqueducts-q1b",
+        "explanation": "The passage says too steep wears away the channel and too shallow means water barely moves."
+      },
+      {
+        "id": "eng-e-roman-aqueducts-q2",
+        "prompt": "Why did the arches appear only in certain places?",
+        "options": [
+          {
+            "id": "eng-e-roman-aqueducts-q2a",
+            "text": "They were built to look impressive in every town."
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q2b",
+            "text": "They protected the water from the sun along the whole route."
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q2c",
+            "text": "They carried the channel across valleys while keeping it at the right height."
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q2d",
+            "text": "They were the cheapest way to build the whole aqueduct."
+          }
+        ],
+        "answer": "eng-e-roman-aqueducts-q2c",
+        "explanation": "Much of an aqueduct ran underground; arches were needed only to cross valleys."
+      },
+      {
+        "id": "eng-e-roman-aqueducts-q3",
+        "prompt": "In the passage, the word \"maintain\" most nearly means",
+        "options": [
+          {
+            "id": "eng-e-roman-aqueducts-q3a",
+            "text": "destroy carefully"
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q3b",
+            "text": "build for the first time"
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q3c",
+            "text": "ignore for many years"
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q3d",
+            "text": "keep in good working order"
+          }
+        ],
+        "answer": "eng-e-roman-aqueducts-q3d",
+        "explanation": "The aqueducts fell into ruin when no one could pay for repairs, so maintain means to keep them repaired."
+      },
+      {
+        "id": "eng-e-roman-aqueducts-q4",
+        "prompt": "What is the main message of the last paragraph?",
+        "options": [
+          {
+            "id": "eng-e-roman-aqueducts-q4a",
+            "text": "Great engineering needs ongoing care to survive."
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q4b",
+            "text": "Enemies are the only danger to buildings."
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q4c",
+            "text": "Romans cared little for water."
+          },
+          {
+            "id": "eng-e-roman-aqueducts-q4d",
+            "text": "Aqueducts were only for the rich."
+          }
+        ],
+        "answer": "eng-e-roman-aqueducts-q4a",
+        "explanation": "The paragraph ends by saying clever engineering cannot last without people willing to maintain it."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-e-roman-aqueducts-v1",
+        "word": "aqueducts",
+        "meaning": "channels or bridges built to carry water over long distances",
+        "sentence": "Wells and the Tiber River could not supply enough, so Roman engineers built aqueducts, channels that carried fresh water from springs and rivers many kilometres away.",
+        "check_prompt": "What is an aqueduct for?",
+        "options": [
+          {
+            "id": "eng-e-roman-aqueducts-v1a",
+            "text": "Storing grain for the winter"
+          },
+          {
+            "id": "eng-e-roman-aqueducts-v1b",
+            "text": "Sending messages across a sea"
+          },
+          {
+            "id": "eng-e-roman-aqueducts-v1c",
+            "text": "Carrying water from one place to another"
+          }
+        ],
+        "answer": "eng-e-roman-aqueducts-v1c"
+      },
+      {
+        "id": "eng-e-roman-aqueducts-v2",
+        "word": "surveyors",
+        "meaning": "people who measure land and distances accurately",
+        "sentence": "Surveyors had to measure the slope with simple tools, and the accuracy of their work still impresses engineers today.",
+        "check_prompt": "What might a surveyor do?",
+        "options": [
+          {
+            "id": "eng-e-roman-aqueducts-v2a",
+            "text": "Measure the height of the land before a road is built"
+          },
+          {
+            "id": "eng-e-roman-aqueducts-v2b",
+            "text": "Bake bread for builders"
+          },
+          {
+            "id": "eng-e-roman-aqueducts-v2c",
+            "text": "Paint portraits of the engineers"
+          }
+        ],
+        "answer": "eng-e-roman-aqueducts-v2a"
+      }
+    ],
+    "hints": [
+      "Link each design choice to the problem it solved: slope, underground channel, arches."
+    ]
+  },
+  {
+    "id": "eng-e-electric-car-trade-offs",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "Electric cars have no exhaust pipe, and they make no smoke as they drive, which makes them seem like a perfect solution to pollution. The truth is more complicated, and sensible people weigh several trade-offs.\n\nFirst, consider the benefits. An electric motor wastes far less energy than a petrol engine, which turns much of its fuel into heat. Electric cars are also quieter, and they cut pollution in busy streets, which is good for people's lungs. Over its whole life, including the energy used to build it, an electric car usually produces less carbon dioxide than a similar petrol car, and the gap grows as electricity networks use more wind, solar and hydro power.\n\nNow consider the costs. A large battery needs metals such as lithium, nickel and cobalt, and mining them can damage land and water if it is not carefully managed. Making a battery also uses a lot of energy, so a new electric car begins its life with a larger carbon footprint than a similar petrol car. It takes time on the road to pay back that difference. Charging can also be a problem for people who live in apartments without a private parking space, and long trips need fast chargers along the way.\n\nFinally, the picture is changing. Batteries are being recycled so that their metals can be used again, and makers are developing designs that use less cobalt. Cities are adding more public chargers each year.\n\nAn electric car is therefore not magic, but neither is it a trick. For most drivers, it is one useful tool among several, alongside trains, buses, bikes and walking.",
+    "parts": [
+      {
+        "id": "eng-e-electric-car-trade-offs-q1",
+        "prompt": "Why does a new electric car start with a larger carbon footprint than a similar petrol car?",
+        "options": [
+          {
+            "id": "eng-e-electric-car-trade-offs-q1a",
+            "text": "Its motor burns more fuel."
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q1b",
+            "text": "It produces exhaust smoke when parked."
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q1c",
+            "text": "Making its battery uses a lot of energy."
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q1d",
+            "text": "It is always heavier than a petrol car."
+          }
+        ],
+        "answer": "eng-e-electric-car-trade-offs-q1c",
+        "explanation": "The passage says making a battery uses a lot of energy."
+      },
+      {
+        "id": "eng-e-electric-car-trade-offs-q2",
+        "prompt": "According to the passage, what makes an electric car cleaner over time as the years pass?",
+        "options": [
+          {
+            "id": "eng-e-electric-car-trade-offs-q2a",
+            "text": "Drivers using the car less each year"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q2b",
+            "text": "Petrol engines becoming bigger"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q2c",
+            "text": "Batteries becoming heavier"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q2d",
+            "text": "Electricity networks using more wind, solar and hydro power"
+          }
+        ],
+        "answer": "eng-e-electric-car-trade-offs-q2d",
+        "explanation": "The gap grows as electricity networks use more renewable power."
+      },
+      {
+        "id": "eng-e-electric-car-trade-offs-q3",
+        "prompt": "Why does the author mention people who live in apartments?",
+        "options": [
+          {
+            "id": "eng-e-electric-car-trade-offs-q3a",
+            "text": "To show that charging at home is not easy for everyone"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q3b",
+            "text": "To suggest apartments are bad for the planet"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q3c",
+            "text": "To prove that electric cars are too expensive"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q3d",
+            "text": "To explain how batteries are recycled"
+          }
+        ],
+        "answer": "eng-e-electric-car-trade-offs-q3a",
+        "explanation": "Without a private parking space, home charging is hard, which is a cost."
+      },
+      {
+        "id": "eng-e-electric-car-trade-offs-q4",
+        "prompt": "Which best describes the author's view?",
+        "options": [
+          {
+            "id": "eng-e-electric-car-trade-offs-q4a",
+            "text": "Electric cars are a perfect solution."
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q4b",
+            "text": "Electric cars have real benefits and real problems, and neither side should be ignored."
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q4c",
+            "text": "Electric cars are worse than petrol cars."
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q4d",
+            "text": "People should stop travelling."
+          }
+        ],
+        "answer": "eng-e-electric-car-trade-offs-q4b",
+        "explanation": "The author weighs both sides and concludes electric cars are a useful tool, not magic."
+      },
+      {
+        "id": "eng-e-electric-car-trade-offs-q5",
+        "prompt": "In the passage, \"trade-offs\" are",
+        "options": [
+          {
+            "id": "eng-e-electric-car-trade-offs-q5a",
+            "text": "rules that forbid driving"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q5b",
+            "text": "prizes won in a car race"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q5c",
+            "text": "situations where you gain something good but give up something else"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-q5d",
+            "text": "things you swap at the shops for free"
+          }
+        ],
+        "answer": "eng-e-electric-car-trade-offs-q5c",
+        "explanation": "Benefits and costs are weighed against each other."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-e-electric-car-trade-offs-v1",
+        "word": "exhaust",
+        "meaning": "the used gases that come out of an engine",
+        "sentence": "Electric cars have no exhaust pipe, and they make no smoke as they drive, which makes them seem like a perfect solution to pollution.",
+        "check_prompt": "Where does exhaust come out of a petrol car?",
+        "options": [
+          {
+            "id": "eng-e-electric-car-trade-offs-v1a",
+            "text": "Out of a pipe at the back"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-v1b",
+            "text": "Out of the headlights"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-v1c",
+            "text": "Out of the seats"
+          }
+        ],
+        "answer": "eng-e-electric-car-trade-offs-v1a"
+      },
+      {
+        "id": "eng-e-electric-car-trade-offs-v2",
+        "word": "recycled",
+        "meaning": "treated so that the materials can be used again",
+        "sentence": "Batteries are being recycled so that their metals can be used again, and makers are developing designs that use less cobalt.",
+        "check_prompt": "Which item is being recycled?",
+        "options": [
+          {
+            "id": "eng-e-electric-car-trade-offs-v2a",
+            "text": "A banana peel on the ground"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-v2b",
+            "text": "An old bottle melted down to make a new one"
+          },
+          {
+            "id": "eng-e-electric-car-trade-offs-v2c",
+            "text": "A drawing pinned to a wall"
+          }
+        ],
+        "answer": "eng-e-electric-car-trade-offs-v2b"
+      }
+    ],
+    "hints": [
+      "List the benefits, then the costs, then the changes that may improve things."
+    ]
+  },
+  {
+    "id": "eng-e-mangrove-forests",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "Along tropical coasts, where many plants would die in salty mud, mangrove trees thrive. They grow in the zone between land and sea, and their tangled roots rise out of the water like the legs of a spider. These roots solve two problems at once. Because the mud has little oxygen, many mangrove species send up roots that stick out of the ground and take in air. Other roots grow down and spread wide, holding the tree upright in soft, shifting soil. Some mangroves can also remove salt from the water they take up, and some push it out through their leaves.\n\nThe roots do much more than keep the trees alive. Fish, crabs and prawns shelter among them, and for many ocean species, mangroves serve as a nursery where young animals grow up safely before heading out to the open water. Birds nest in the branches above. The roots also slow the movement of water, which lets mud and sand settle, so the shoreline is held in place rather than washed away.\n\nMangroves can also protect people. Studies suggest that thick belts of mangroves reduce the height and force of waves, which helps shield villages from storms, though they cannot stop the largest surges. They also store large amounts of carbon in their wood and in the soil beneath them, which helps to slow climate change.\n\nDespite all these benefits, mangroves have been cleared in many places for shrimp farms, ports and building. Scientists estimate that the world has lost a large share of its mangrove forests over the past fifty years, but many countries are now protecting what remains and planting new trees along coasts.",
+    "parts": [
+      {
+        "id": "eng-e-mangrove-forests-q1",
+        "prompt": "Why do many mangroves have roots that stick up out of the mud?",
+        "options": [
+          {
+            "id": "eng-e-mangrove-forests-q1a",
+            "text": "To take in air because the mud has little oxygen"
+          },
+          {
+            "id": "eng-e-mangrove-forests-q1b",
+            "text": "To hold salt away from the leaves"
+          },
+          {
+            "id": "eng-e-mangrove-forests-q1c",
+            "text": "To make homes for birds"
+          },
+          {
+            "id": "eng-e-mangrove-forests-q1d",
+            "text": "To measure the height of waves"
+          }
+        ],
+        "answer": "eng-e-mangrove-forests-q1a",
+        "explanation": "The passage says the mud has little oxygen, so some roots take in air."
+      },
+      {
+        "id": "eng-e-mangrove-forests-q2",
+        "prompt": "In the passage, a mangrove \"nursery\" is a place where",
+        "options": [
+          {
+            "id": "eng-e-mangrove-forests-q2a",
+            "text": "farmers sell young trees"
+          },
+          {
+            "id": "eng-e-mangrove-forests-q2b",
+            "text": "young animals grow up safely before moving to open water"
+          },
+          {
+            "id": "eng-e-mangrove-forests-q2c",
+            "text": "people learn to swim"
+          },
+          {
+            "id": "eng-e-mangrove-forests-q2d",
+            "text": "fish are caught for food"
+          }
+        ],
+        "answer": "eng-e-mangrove-forests-q2b",
+        "explanation": "The sentence explains it as a place where young animals grow up safely."
+      },
+      {
+        "id": "eng-e-mangrove-forests-q3",
+        "prompt": "What could happen to a coastal village if the mangroves nearby were cleared?",
+        "options": [
+          {
+            "id": "eng-e-mangrove-forests-q3a",
+            "text": "It would receive less rain."
+          },
+          {
+            "id": "eng-e-mangrove-forests-q3b",
+            "text": "It would be safe from storms."
+          },
+          {
+            "id": "eng-e-mangrove-forests-q3c",
+            "text": "Storm waves might reach it with more force."
+          },
+          {
+            "id": "eng-e-mangrove-forests-q3d",
+            "text": "The shoreline would grow larger."
+          }
+        ],
+        "answer": "eng-e-mangrove-forests-q3c",
+        "explanation": "Mangroves reduce the height and force of waves and hold the shoreline in place."
+      },
+      {
+        "id": "eng-e-mangrove-forests-q4",
+        "prompt": "What is the author's main purpose?",
+        "options": [
+          {
+            "id": "eng-e-mangrove-forests-q4a",
+            "text": "To describe how to grow mangroves at home"
+          },
+          {
+            "id": "eng-e-mangrove-forests-q4b",
+            "text": "To warn people never to visit the coast"
+          },
+          {
+            "id": "eng-e-mangrove-forests-q4c",
+            "text": "To argue that shrimp farms are always harmful"
+          },
+          {
+            "id": "eng-e-mangrove-forests-q4d",
+            "text": "To explain why mangrove forests are valuable and worth protecting"
+          }
+        ],
+        "answer": "eng-e-mangrove-forests-q4d",
+        "explanation": "The passage describes how mangroves survive, what they provide, and ends with their loss and protection."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-e-mangrove-forests-v1",
+        "word": "thrive",
+        "meaning": "grow strongly and do very well",
+        "sentence": "Along tropical coasts, where many plants would die in salty mud, mangrove trees thrive.",
+        "check_prompt": "A plant that thrives in a garden",
+        "options": [
+          {
+            "id": "eng-e-mangrove-forests-v1a",
+            "text": "slowly dies"
+          },
+          {
+            "id": "eng-e-mangrove-forests-v1b",
+            "text": "is washed away"
+          },
+          {
+            "id": "eng-e-mangrove-forests-v1c",
+            "text": "grows strong and healthy"
+          }
+        ],
+        "answer": "eng-e-mangrove-forests-v1c"
+      },
+      {
+        "id": "eng-e-mangrove-forests-v2",
+        "word": "shoreline",
+        "meaning": "the edge of land where it meets the sea",
+        "sentence": "The roots also slow the movement of water, which lets mud and sand settle, so the shoreline is held in place rather than washed away.",
+        "check_prompt": "Where would you find a shoreline?",
+        "options": [
+          {
+            "id": "eng-e-mangrove-forests-v2a",
+            "text": "Where the land meets the sea"
+          },
+          {
+            "id": "eng-e-mangrove-forests-v2b",
+            "text": "At the top of a mountain"
+          },
+          {
+            "id": "eng-e-mangrove-forests-v2c",
+            "text": "In the middle of a desert"
+          }
+        ],
+        "answer": "eng-e-mangrove-forests-v2a"
+      }
+    ],
+    "hints": [
+      "Note each job the roots do: survive, shelter animals, protect the coast."
+    ]
+  },
+  {
+    "id": "eng-e-story-the-power-cut",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 6,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "When the storm knocked out the power, the whole street fell silent. Maya, who had been halfway through a video game, stared at the dead screen and groaned. In the kitchen, her grandmother, Nana Rosa, was already lighting candles as calmly as if this happened every week. Even the fridge had stopped humming, and the quiet felt strange.\n\n\"Come and sit,\" said Nana Rosa. \"We have no electricity, but we have plenty of time.\" Maya rolled her eyes and sat at the table with her arms folded. Outside, the wind rattled the shutters.\n\nNana Rosa pulled out a battered tin of buttons. \"Every button here is a story,\" she said, holding up a tiny silver one. \"This was from the coat I wore the day I arrived in this country. I was eleven, and I did not speak a word of English.\" Maya looked up. She had never heard this before. Her grandmother had always seemed to belong to the house, like the old clock in the hall.\n\n\"Weren't you scared?\" Maya asked.\n\n\"Terrified,\" said Nana Rosa. \"But a girl next door gave me a sandwich and pointed at the playground. That was how I learned my first word. She said, 'Friend.'\" Her eyes were bright in the candlelight.\n\nFor an hour Maya sorted through the buttons and listened. By the time the lights flickered back on, she hardly noticed. When her phone buzzed with a message from her friends, she turned it face down on the table. \"Tell me about the red one,\" she said.",
+    "parts": [
+      {
+        "id": "eng-e-story-the-power-cut-q1",
+        "prompt": "How does Maya feel at the start of the story?",
+        "options": [
+          {
+            "id": "eng-e-story-the-power-cut-q1a",
+            "text": "Excited about the storm"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q1b",
+            "text": "Frightened of the dark"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q1c",
+            "text": "Eager to hear her grandmother's stories"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q1d",
+            "text": "Annoyed that her game has been interrupted"
+          }
+        ],
+        "answer": "eng-e-story-the-power-cut-q1d",
+        "explanation": "She groans at the dead screen and sits with her arms folded."
+      },
+      {
+        "id": "eng-e-story-the-power-cut-q2",
+        "prompt": "What does \"like the old clock in the hall\" suggest about how Maya saw her grandmother?",
+        "options": [
+          {
+            "id": "eng-e-story-the-power-cut-q2a",
+            "text": "As someone who had always been there, with no life before it"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q2b",
+            "text": "As someone who was very old and slow"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q2c",
+            "text": "As someone who was always late"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q2d",
+            "text": "As someone who made a lot of noise"
+          }
+        ],
+        "answer": "eng-e-story-the-power-cut-q2a",
+        "explanation": "Maya had never imagined her grandmother's past, so she seemed a fixture of the house."
+      },
+      {
+        "id": "eng-e-story-the-power-cut-q3",
+        "prompt": "Why did Nana Rosa most likely tell this story?",
+        "options": [
+          {
+            "id": "eng-e-story-the-power-cut-q3a",
+            "text": "She wanted to scare Maya."
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q3b",
+            "text": "She wanted to share something meaningful and connect with Maya."
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q3c",
+            "text": "She wanted Maya to go to bed."
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q3d",
+            "text": "She was trying to find a lost button."
+          }
+        ],
+        "answer": "eng-e-story-the-power-cut-q3b",
+        "explanation": "She gives Maya something real to listen to instead of a screen, and the story is about friendship."
+      },
+      {
+        "id": "eng-e-story-the-power-cut-q4",
+        "prompt": "What does Maya turning her phone face down show?",
+        "options": [
+          {
+            "id": "eng-e-story-the-power-cut-q4a",
+            "text": "She is angry with her friends."
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q4b",
+            "text": "Her phone has run out of battery."
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q4c",
+            "text": "She now values the time with her grandmother more than the message."
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q4d",
+            "text": "She wants to hide the phone from Nana Rosa."
+          }
+        ],
+        "answer": "eng-e-story-the-power-cut-q4c",
+        "explanation": "She chooses to keep listening and asks about the red button."
+      },
+      {
+        "id": "eng-e-story-the-power-cut-q5",
+        "prompt": "In the story, the word \"battered\" suggests that the tin was",
+        "options": [
+          {
+            "id": "eng-e-story-the-power-cut-q5a",
+            "text": "brand new"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q5b",
+            "text": "made of gold"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q5c",
+            "text": "very heavy"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-q5d",
+            "text": "old and worn from long use"
+          }
+        ],
+        "answer": "eng-e-story-the-power-cut-q5d",
+        "explanation": "A battered object has been knocked about and worn over time, which fits a tin kept for years."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-e-story-the-power-cut-v1",
+        "word": "battered",
+        "meaning": "damaged or worn from being used a lot",
+        "sentence": "Nana Rosa pulled out a battered tin of buttons.",
+        "check_prompt": "Which object is most likely battered?",
+        "options": [
+          {
+            "id": "eng-e-story-the-power-cut-v1a",
+            "text": "A new pencil still in its box"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-v1b",
+            "text": "A schoolbag used every day for ten years"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-v1c",
+            "text": "A freshly washed plate"
+          }
+        ],
+        "answer": "eng-e-story-the-power-cut-v1b"
+      },
+      {
+        "id": "eng-e-story-the-power-cut-v2",
+        "word": "flickered",
+        "meaning": "shone or moved with an unsteady, quick light",
+        "sentence": "By the time the lights flickered back on, she hardly noticed.",
+        "check_prompt": "A candle flame that flickers",
+        "options": [
+          {
+            "id": "eng-e-story-the-power-cut-v2a",
+            "text": "burns with a perfectly still light"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-v2b",
+            "text": "makes a loud bang"
+          },
+          {
+            "id": "eng-e-story-the-power-cut-v2c",
+            "text": "keeps moving and changing brightness"
+          }
+        ],
+        "answer": "eng-e-story-the-power-cut-v2c"
+      }
+    ],
+    "hints": [
+      "Follow how Maya's behaviour changes from the first paragraph to the last."
+    ]
   }
 ]

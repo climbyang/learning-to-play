@@ -1,0 +1,17 @@
+{
+  "template_id": "eng-vocab-08-genuine",
+  "content_hash": "510f66e2d8993bdc2475a45c19348b41f424a1e97d25e60bf5fc594bc0323766",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:21:51Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Real is the only synonym of genuine; the definition and example are accurate."
+}

@@ -1,0 +1,17 @@
+{
+  "template_id": "eng-vocab-17-necessary",
+  "content_hash": "485355a02ba3a6995307731c727f3a16f1bb0e4e2ff51dc2ab2c1c27df00f753",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:22:29Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Necessary is the only correctly spelled option; the context and mnemonic suit Year 5."
+}

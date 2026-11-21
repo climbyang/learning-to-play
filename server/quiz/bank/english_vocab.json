@@ -1,902 +1,1302 @@
 [
   {
-    "id": "eng-vocab-01-reluctant",
+    "id": "eng-word-01-reluctant",
     "subject": "english",
-    "kind": "vocab_meaning",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 5,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Read the sentence: \"Mia was reluctant to jump into the cold pool.\" What does \"reluctant\" mean?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "Mia stood at the edge of the cold pool, reluctant to jump. Her toes curled over the tiles while her friends splashed and called her name.",
+    "parts": [
+      {
+        "id": "eng-word-01-reluctant-q1",
+        "prompt": "In the passage, what does \"reluctant\" mean?",
+        "options": [
+          {
+            "id": "eng-word-01-reluctant-q1a",
+            "text": "unwilling and hesitant"
+          },
+          {
+            "id": "eng-word-01-reluctant-q1b",
+            "text": "tired and sleepy"
+          },
+          {
+            "id": "eng-word-01-reluctant-q1c",
+            "text": "allowed to do something"
+          },
+          {
+            "id": "eng-word-01-reluctant-q1d",
+            "text": "keen and excited"
+          }
+        ],
+        "answer": "eng-word-01-reluctant-q1a",
+        "explanation": "Mia hesitated and did not want to jump, so \"reluctant\" means unwilling."
+      },
+      {
+        "id": "eng-word-01-reluctant-q2",
+        "prompt": "Which sentence uses \"reluctant\" correctly?",
+        "options": [
+          {
+            "id": "eng-word-01-reluctant-q2a",
+            "text": "I keep my reluctant in a box under the bed."
+          },
+          {
+            "id": "eng-word-01-reluctant-q2b",
+            "text": "Dad was reluctant to lend his new bike, so he asked us to be careful."
+          },
+          {
+            "id": "eng-word-01-reluctant-q2c",
+            "text": "She reluctant walked to school every morning."
+          },
+          {
+            "id": "eng-word-01-reluctant-q2d",
+            "text": "The soup was so reluctant that it burned my tongue."
+          }
+        ],
+        "answer": "eng-word-01-reluctant-q2b",
+        "explanation": "Being reluctant means not wanting to do something, so Dad asking us to be careful fits. The other sentences use the word for the opposite meaning or in the wrong form."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "Think about how you would feel about jumping into cold water.",
-      "The word shows Mia did not really want to do it."
-    ],
-    "explanation": "Reluctant means unwilling or hesitant to do something.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "unwilling and hesitant"
-      },
-      {
-        "id": "b",
-        "text": "excited and eager"
-      },
-      {
-        "id": "c",
-        "text": "able and strong"
-      },
-      {
-        "id": "d",
-        "text": "allowed to"
-      },
-      {
-        "id": "e",
-        "text": "required to"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-01-reluctant-1",
-        "params": {},
-        "answer": "a"
-      }
+      "Look at what Mia's toes and friends are doing."
     ]
   },
   {
-    "id": "eng-vocab-02-fragile",
+    "id": "eng-word-02-fragile",
     "subject": "english",
-    "kind": "vocab_meaning",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 6,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Read the sentence: \"Be careful with the fragile vase, because it breaks easily.\" What does \"fragile\" mean?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "Grandma wrapped the fragile teacup in three layers of soft cloth. Even a small bump in the suitcase could have shattered it.",
+    "parts": [
+      {
+        "id": "eng-word-02-fragile-q1",
+        "prompt": "In the passage, what does \"fragile\" mean?",
+        "options": [
+          {
+            "id": "eng-word-02-fragile-q1a",
+            "text": "heavy and strong"
+          },
+          {
+            "id": "eng-word-02-fragile-q1b",
+            "text": "old and dusty"
+          },
+          {
+            "id": "eng-word-02-fragile-q1c",
+            "text": "easily broken or damaged"
+          },
+          {
+            "id": "eng-word-02-fragile-q1d",
+            "text": "very expensive"
+          }
+        ],
+        "answer": "eng-word-02-fragile-q1c",
+        "explanation": "A cup that a small bump could shatter is easily broken, which is what fragile means."
+      },
+      {
+        "id": "eng-word-02-fragile-q2",
+        "prompt": "The glass sculpture was so ____ that the museum kept it in a locked case.",
+        "options": [
+          {
+            "id": "eng-word-02-fragile-q2a",
+            "text": "fragile"
+          },
+          {
+            "id": "eng-word-02-fragile-q2b",
+            "text": "generous"
+          },
+          {
+            "id": "eng-word-02-fragile-q2c",
+            "text": "sturdy"
+          },
+          {
+            "id": "eng-word-02-fragile-q2d",
+            "text": "enormous"
+          }
+        ],
+        "answer": "eng-word-02-fragile-q2a",
+        "explanation": "A glass sculpture that needs a locked case breaks easily, so fragile fits. Sturdy means strong, which does not match."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "The sentence itself explains it: the vase breaks easily.",
-      "Which choice describes something that can break?"
-    ],
-    "explanation": "Fragile means easily broken or damaged.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "very heavy"
-      },
-      {
-        "id": "b",
-        "text": "brightly coloured"
-      },
-      {
-        "id": "c",
-        "text": "easily broken"
-      },
-      {
-        "id": "d",
-        "text": "old and dusty"
-      },
-      {
-        "id": "e",
-        "text": "expensive to buy"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-02-fragile-1",
-        "params": {},
-        "answer": "c"
-      }
+      "What could happen to the cup in a bumpy suitcase?"
     ]
   },
   {
-    "id": "eng-vocab-03-abundant",
+    "id": "eng-word-03-abundant",
     "subject": "english",
-    "kind": "vocab_meaning",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 5,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Read the sentence: \"Fruit was abundant in the orchard, so everyone filled their baskets.\" What does \"abundant\" mean?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "After the spring rain, wildflowers were abundant on the hillside. There were so many that the whole slope looked yellow.",
+    "parts": [
+      {
+        "id": "eng-word-03-abundant-q1",
+        "prompt": "In the passage, what does \"abundant\" mean?",
+        "options": [
+          {
+            "id": "eng-word-03-abundant-q1a",
+            "text": "hidden from view"
+          },
+          {
+            "id": "eng-word-03-abundant-q1b",
+            "text": "dying slowly"
+          },
+          {
+            "id": "eng-word-03-abundant-q1c",
+            "text": "existing in large amounts"
+          },
+          {
+            "id": "eng-word-03-abundant-q1d",
+            "text": "rare and hard to find"
+          }
+        ],
+        "answer": "eng-word-03-abundant-q1c",
+        "explanation": "The whole slope looked yellow because there were so many flowers, so abundant means plentiful."
+      },
+      {
+        "id": "eng-word-03-abundant-q2",
+        "prompt": "Which sentence uses \"abundant\" correctly?",
+        "options": [
+          {
+            "id": "eng-word-03-abundant-q2a",
+            "text": "The desert had an abundant of sand."
+          },
+          {
+            "id": "eng-word-03-abundant-q2b",
+            "text": "Only one abundant apple was left in the bowl."
+          },
+          {
+            "id": "eng-word-03-abundant-q2c",
+            "text": "Water is abundant in the rainforest, so the animals never go thirsty."
+          },
+          {
+            "id": "eng-word-03-abundant-q2d",
+            "text": "She felt abundant when she lost her favourite toy."
+          }
+        ],
+        "answer": "eng-word-03-abundant-q2c",
+        "explanation": "Abundant means plentiful, and a rainforest with lots of water fits. The others use it to mean sad, a single item, or the wrong part of speech."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "If everyone filled their baskets, was there a lot of fruit or a little?",
-      "Think of the word for having more than enough."
-    ],
-    "explanation": "Abundant means existing in large quantities; plentiful.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "rotten"
-      },
-      {
-        "id": "b",
-        "text": "hard to find"
-      },
-      {
-        "id": "c",
-        "text": "expensive"
-      },
-      {
-        "id": "d",
-        "text": "tasteless"
-      },
-      {
-        "id": "e",
-        "text": "plentiful"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-03-abundant-1",
-        "params": {},
-        "answer": "e"
-      }
+      "Think about the whole slope looking yellow."
     ]
   },
   {
-    "id": "eng-vocab-04-peculiar",
+    "id": "eng-word-04-peculiar",
     "subject": "english",
-    "kind": "vocab_meaning",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 6,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Read the sentence: \"The soup had a peculiar smell, like burnt toast and flowers.\" What does \"peculiar\" mean?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "The old clock made a peculiar noise, somewhere between a hiccup and a whistle. Nobody in the family had ever heard anything like it.",
+    "parts": [
+      {
+        "id": "eng-word-04-peculiar-q1",
+        "prompt": "In the passage, what does \"peculiar\" mean?",
+        "options": [
+          {
+            "id": "eng-word-04-peculiar-q1a",
+            "text": "very old"
+          },
+          {
+            "id": "eng-word-04-peculiar-q1b",
+            "text": "pleasant and musical"
+          },
+          {
+            "id": "eng-word-04-peculiar-q1c",
+            "text": "loud and annoying"
+          },
+          {
+            "id": "eng-word-04-peculiar-q1d",
+            "text": "strange or unusual"
+          }
+        ],
+        "answer": "eng-word-04-peculiar-q1d",
+        "explanation": "Nobody had heard such a noise before, which tells us peculiar means strange."
+      },
+      {
+        "id": "eng-word-04-peculiar-q2",
+        "prompt": "Jack noticed a ____ smell coming from the cupboard, unlike anything he knew.",
+        "options": [
+          {
+            "id": "eng-word-04-peculiar-q2a",
+            "text": "ordinary"
+          },
+          {
+            "id": "eng-word-04-peculiar-q2b",
+            "text": "peculiar"
+          },
+          {
+            "id": "eng-word-04-peculiar-q2c",
+            "text": "accurate"
+          },
+          {
+            "id": "eng-word-04-peculiar-q2d",
+            "text": "temporary"
+          }
+        ],
+        "answer": "eng-word-04-peculiar-q2b",
+        "explanation": "A smell unlike anything he knew is unusual, so peculiar fits. Ordinary means normal, which is the opposite."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "Burnt toast and flowers together is an unexpected mix.",
-      "Which choice means odd?"
-    ],
-    "explanation": "Peculiar means strange or unusual.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "delicious"
-      },
-      {
-        "id": "b",
-        "text": "strange or unusual"
-      },
-      {
-        "id": "c",
-        "text": "very strong"
-      },
-      {
-        "id": "d",
-        "text": "pleasant and sweet"
-      },
-      {
-        "id": "e",
-        "text": "familiar"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-04-peculiar-1",
-        "params": {},
-        "answer": "b"
-      }
+      "Notice how the sound is described: not like anything heard before."
     ]
   },
   {
-    "id": "eng-vocab-05-cautious",
+    "id": "eng-word-05-cautious",
     "subject": "english",
-    "kind": "vocab_synonym",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 5,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which word is closest in meaning to \"cautious\"?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "Leo was cautious as he crossed the wobbly log over the creek. He tested each step before putting his weight down.",
+    "parts": [
+      {
+        "id": "eng-word-05-cautious-q1",
+        "prompt": "In the passage, what does \"cautious\" mean?",
+        "options": [
+          {
+            "id": "eng-word-05-cautious-q1a",
+            "text": "angry and rude"
+          },
+          {
+            "id": "eng-word-05-cautious-q1b",
+            "text": "bored and lazy"
+          },
+          {
+            "id": "eng-word-05-cautious-q1c",
+            "text": "careful to avoid danger"
+          },
+          {
+            "id": "eng-word-05-cautious-q1d",
+            "text": "fast and daring"
+          }
+        ],
+        "answer": "eng-word-05-cautious-q1c",
+        "explanation": "Leo tested every step to stay safe, so cautious means careful."
+      },
+      {
+        "id": "eng-word-05-cautious-q2",
+        "prompt": "Which sentence uses \"cautious\" correctly?",
+        "options": [
+          {
+            "id": "eng-word-05-cautious-q2a",
+            "text": "The cautious puppy ran wildly through the puddles without looking."
+          },
+          {
+            "id": "eng-word-05-cautious-q2b",
+            "text": "He cautious closed the gate."
+          },
+          {
+            "id": "eng-word-05-cautious-q2c",
+            "text": "She was cautious to win the race by a mile."
+          },
+          {
+            "id": "eng-word-05-cautious-q2d",
+            "text": "A cautious driver slows down when the road is wet."
+          }
+        ],
+        "answer": "eng-word-05-cautious-q2d",
+        "explanation": "Cautious means careful about danger, so slowing down on a wet road fits. The other sentences give it the wrong meaning or the wrong form."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "A cautious person thinks about danger before acting.",
-      "Look for a word about taking care."
-    ],
-    "explanation": "Cautious means careful to avoid danger or mistakes, so careful is the closest.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "clumsy"
-      },
-      {
-        "id": "b",
-        "text": "fearless"
-      },
-      {
-        "id": "c",
-        "text": "lazy"
-      },
-      {
-        "id": "d",
-        "text": "careful"
-      },
-      {
-        "id": "e",
-        "text": "noisy"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-05-cautious-1",
-        "params": {},
-        "answer": "d"
-      }
+      "What does Leo do before each step?"
     ]
   },
   {
-    "id": "eng-vocab-06-enormous",
+    "id": "eng-word-06-enormous",
     "subject": "english",
-    "kind": "vocab_synonym",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 6,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which word is closest in meaning to \"enormous\"?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "An enormous whale rose beside the small boat. The children gasped, because it was longer than their school bus.",
+    "parts": [
+      {
+        "id": "eng-word-06-enormous-q1",
+        "prompt": "In the passage, what does \"enormous\" mean?",
+        "options": [
+          {
+            "id": "eng-word-06-enormous-q1a",
+            "text": "quite dangerous"
+          },
+          {
+            "id": "eng-word-06-enormous-q1b",
+            "text": "fairly small"
+          },
+          {
+            "id": "eng-word-06-enormous-q1c",
+            "text": "very quiet"
+          },
+          {
+            "id": "eng-word-06-enormous-q1d",
+            "text": "extremely large"
+          }
+        ],
+        "answer": "eng-word-06-enormous-q1d",
+        "explanation": "The whale was longer than a school bus, so enormous means extremely large."
+      },
+      {
+        "id": "eng-word-06-enormous-q2",
+        "prompt": "The elephant was so ____ that it filled the whole doorway of the barn.",
+        "options": [
+          {
+            "id": "eng-word-06-enormous-q2a",
+            "text": "tiny"
+          },
+          {
+            "id": "eng-word-06-enormous-q2b",
+            "text": "enormous"
+          },
+          {
+            "id": "eng-word-06-enormous-q2c",
+            "text": "fragile"
+          },
+          {
+            "id": "eng-word-06-enormous-q2d",
+            "text": "reluctant"
+          }
+        ],
+        "answer": "eng-word-06-enormous-q2b",
+        "explanation": "Filling a whole doorway means being huge, so enormous fits. Tiny is the opposite."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "Think about how big an enormous elephant is.",
-      "Look for a word about size."
-    ],
-    "explanation": "Enormous means very large, so huge is the closest.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "narrow"
-      },
-      {
-        "id": "b",
-        "text": "huge"
-      },
-      {
-        "id": "c",
-        "text": "ordinary"
-      },
-      {
-        "id": "d",
-        "text": "gentle"
-      },
-      {
-        "id": "e",
-        "text": "ancient"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-06-enormous-1",
-        "params": {},
-        "answer": "b"
-      }
+      "Compare the whale to the school bus."
     ]
   },
   {
-    "id": "eng-vocab-07-hesitate",
+    "id": "eng-word-07-hesitate",
     "subject": "english",
-    "kind": "vocab_synonym",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 5,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which word is closest in meaning to \"hesitate\"?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "If you hesitate at the top of the slide, the queue behind you will grow. Take a breath and go when you are ready.",
+    "parts": [
+      {
+        "id": "eng-word-07-hesitate-q1",
+        "prompt": "In the passage, what does \"hesitate\" mean?",
+        "options": [
+          {
+            "id": "eng-word-07-hesitate-q1a",
+            "text": "to pause because you are unsure"
+          },
+          {
+            "id": "eng-word-07-hesitate-q1b",
+            "text": "to forget something"
+          },
+          {
+            "id": "eng-word-07-hesitate-q1c",
+            "text": "to rush ahead quickly"
+          },
+          {
+            "id": "eng-word-07-hesitate-q1d",
+            "text": "to shout loudly"
+          }
+        ],
+        "answer": "eng-word-07-hesitate-q1a",
+        "explanation": "Pausing at the top while unsure is what hesitate means."
+      },
+      {
+        "id": "eng-word-07-hesitate-q2",
+        "prompt": "Please do not ____ to ask me if you need any help with your homework.",
+        "options": [
+          {
+            "id": "eng-word-07-hesitate-q2a",
+            "text": "victorious"
+          },
+          {
+            "id": "eng-word-07-hesitate-q2b",
+            "text": "hesitate"
+          },
+          {
+            "id": "eng-word-07-hesitate-q2c",
+            "text": "separate"
+          },
+          {
+            "id": "eng-word-07-hesitate-q2d",
+            "text": "disappear"
+          }
+        ],
+        "answer": "eng-word-07-hesitate-q2b",
+        "explanation": "The sentence tells you not to pause or feel unsure about asking, so hesitate fits. The other words do not make sense here."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "When you hesitate you stop for a moment before doing something.",
-      "Look for a word about stopping briefly."
-    ],
-    "explanation": "Hesitate means to pause before acting, often because you are unsure.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "hurry"
-      },
-      {
-        "id": "b",
-        "text": "announce"
-      },
-      {
-        "id": "c",
-        "text": "remember"
-      },
-      {
-        "id": "d",
-        "text": "pause"
-      },
-      {
-        "id": "e",
-        "text": "succeed"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-07-hesitate-1",
-        "params": {},
-        "answer": "d"
-      }
+      "What is the person standing at the top of the slide doing?"
     ]
   },
   {
-    "id": "eng-vocab-08-genuine",
+    "id": "eng-word-08-genuine",
     "subject": "english",
-    "kind": "vocab_synonym",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 6,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which word is closest in meaning to \"genuine\"?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "The antique dealer checked the coin carefully and smiled. It was a genuine gold coin, not a clever copy.",
+    "parts": [
+      {
+        "id": "eng-word-08-genuine-q1",
+        "prompt": "In the passage, what does \"genuine\" mean?",
+        "options": [
+          {
+            "id": "eng-word-08-genuine-q1a",
+            "text": "worth very little"
+          },
+          {
+            "id": "eng-word-08-genuine-q1b",
+            "text": "hard to find"
+          },
+          {
+            "id": "eng-word-08-genuine-q1c",
+            "text": "shiny and new"
+          },
+          {
+            "id": "eng-word-08-genuine-q1d",
+            "text": "real, not fake"
+          }
+        ],
+        "answer": "eng-word-08-genuine-q1d",
+        "explanation": "It was a real coin and not a copy, so genuine means real."
+      },
+      {
+        "id": "eng-word-08-genuine-q2",
+        "prompt": "Which sentence uses \"genuine\" correctly?",
+        "options": [
+          {
+            "id": "eng-word-08-genuine-q2a",
+            "text": "The genuine mountain was very tall and cold."
+          },
+          {
+            "id": "eng-word-08-genuine-q2b",
+            "text": "He genuine apologised to his teacher."
+          },
+          {
+            "id": "eng-word-08-genuine-q2c",
+            "text": "Her smile was genuine because she was truly happy to see us."
+          },
+          {
+            "id": "eng-word-08-genuine-q2d",
+            "text": "The genuine painting was painted by a machine to look like a copy."
+          }
+        ],
+        "answer": "eng-word-08-genuine-q2c",
+        "explanation": "Genuine means real and sincere, so a smile that comes from true happiness fits. The others do not use the word correctly."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "A genuine diamond is not a copy.",
-      "Look for a word meaning true or authentic."
-    ],
-    "explanation": "Genuine means truly what it is said to be; real.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "real"
-      },
-      {
-        "id": "b",
-        "text": "fake"
-      },
-      {
-        "id": "c",
-        "text": "funny"
-      },
-      {
-        "id": "d",
-        "text": "valuable"
-      },
-      {
-        "id": "e",
-        "text": "modern"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-08-genuine-1",
-        "params": {},
-        "answer": "a"
-      }
+      "The dealer contrasts it with a copy."
     ]
   },
   {
-    "id": "eng-vocab-09-generous",
+    "id": "eng-word-09-generous",
     "subject": "english",
-    "kind": "vocab_antonym",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 5,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which word is most opposite in meaning to \"generous\"?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "Mr Singh was generous with his time and his garden. Every summer he shared his tomatoes with all the neighbours.",
+    "parts": [
+      {
+        "id": "eng-word-09-generous-q1",
+        "prompt": "In the passage, what does \"generous\" mean?",
+        "options": [
+          {
+            "id": "eng-word-09-generous-q1a",
+            "text": "shy around people"
+          },
+          {
+            "id": "eng-word-09-generous-q1b",
+            "text": "strict with rules"
+          },
+          {
+            "id": "eng-word-09-generous-q1c",
+            "text": "willing to give or share freely"
+          },
+          {
+            "id": "eng-word-09-generous-q1d",
+            "text": "good at gardening"
+          }
+        ],
+        "answer": "eng-word-09-generous-q1c",
+        "explanation": "He shared his tomatoes with everyone, so generous means happy to give."
+      },
+      {
+        "id": "eng-word-09-generous-q2",
+        "prompt": "The ____ girl gave half of her lunch to a classmate who had forgotten his.",
+        "options": [
+          {
+            "id": "eng-word-09-generous-q2a",
+            "text": "generous"
+          },
+          {
+            "id": "eng-word-09-generous-q2b",
+            "text": "peculiar"
+          },
+          {
+            "id": "eng-word-09-generous-q2c",
+            "text": "cautious"
+          },
+          {
+            "id": "eng-word-09-generous-q2d",
+            "text": "ancient"
+          }
+        ],
+        "answer": "eng-word-09-generous-q2a",
+        "explanation": "Giving away half her lunch is sharing freely, so generous fits."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "A generous person likes to share.",
-      "Which person would refuse to share?"
-    ],
-    "explanation": "Generous means willing to give and share; selfish is the opposite.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "kind"
-      },
-      {
-        "id": "b",
-        "text": "friendly"
-      },
-      {
-        "id": "c",
-        "text": "selfish"
-      },
-      {
-        "id": "d",
-        "text": "cheerful"
-      },
-      {
-        "id": "e",
-        "text": "wealthy"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-09-generous-1",
-        "params": {},
-        "answer": "c"
-      }
+      "What does Mr Singh do with his tomatoes?"
     ]
   },
   {
-    "id": "eng-vocab-10-ancient",
+    "id": "eng-word-10-ancient",
     "subject": "english",
-    "kind": "vocab_antonym",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 6,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which word is most opposite in meaning to \"ancient\"?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "Deep in the desert, explorers found the ruins of an ancient city. Its stone walls had stood for more than three thousand years.",
+    "parts": [
+      {
+        "id": "eng-word-10-ancient-q1",
+        "prompt": "In the passage, what does \"ancient\" mean?",
+        "options": [
+          {
+            "id": "eng-word-10-ancient-q1a",
+            "text": "brand new"
+          },
+          {
+            "id": "eng-word-10-ancient-q1b",
+            "text": "very old, from long ago"
+          },
+          {
+            "id": "eng-word-10-ancient-q1c",
+            "text": "built by children"
+          },
+          {
+            "id": "eng-word-10-ancient-q1d",
+            "text": "hidden underground"
+          }
+        ],
+        "answer": "eng-word-10-ancient-q1b",
+        "explanation": "Walls standing for three thousand years tells us ancient means very old."
+      },
+      {
+        "id": "eng-word-10-ancient-q2",
+        "prompt": "Which sentence uses \"ancient\" correctly?",
+        "options": [
+          {
+            "id": "eng-word-10-ancient-q2a",
+            "text": "My ancient sister was born last week."
+          },
+          {
+            "id": "eng-word-10-ancient-q2b",
+            "text": "The ancient puppy chased its tail all day because it was so young."
+          },
+          {
+            "id": "eng-word-10-ancient-q2c",
+            "text": "We bought an ancient phone this morning from the shop's new range."
+          },
+          {
+            "id": "eng-word-10-ancient-q2d",
+            "text": "The ancient Egyptians built the pyramids thousands of years ago."
+          }
+        ],
+        "answer": "eng-word-10-ancient-q2d",
+        "explanation": "Ancient means from a very long time ago, so the pyramids fit. The other sentences describe new or young things."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "Ancient means from a very long time ago.",
-      "Think of something that is new and up to date."
-    ],
-    "explanation": "Ancient means extremely old; modern means of the present time.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "historic"
-      },
-      {
-        "id": "b",
-        "text": "enormous"
-      },
-      {
-        "id": "c",
-        "text": "delicate"
-      },
-      {
-        "id": "d",
-        "text": "forgotten"
-      },
-      {
-        "id": "e",
-        "text": "modern"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-10-ancient-1",
-        "params": {},
-        "answer": "e"
-      }
+      "How many years had the walls stood?"
     ]
   },
   {
-    "id": "eng-vocab-11-temporary",
+    "id": "eng-word-11-temporary",
     "subject": "english",
-    "kind": "vocab_antonym",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 5,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which word is most opposite in meaning to \"temporary\"?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "The bridge was closed, so the council built a temporary path across the creek. It would only be used until the repairs were finished.",
+    "parts": [
+      {
+        "id": "eng-word-11-temporary-q1",
+        "prompt": "In the passage, what does \"temporary\" mean?",
+        "options": [
+          {
+            "id": "eng-word-11-temporary-q1a",
+            "text": "painted bright colours"
+          },
+          {
+            "id": "eng-word-11-temporary-q1b",
+            "text": "very long"
+          },
+          {
+            "id": "eng-word-11-temporary-q1c",
+            "text": "lasting only a short time"
+          },
+          {
+            "id": "eng-word-11-temporary-q1d",
+            "text": "strong and safe"
+          }
+        ],
+        "answer": "eng-word-11-temporary-q1c",
+        "explanation": "The path was only used until repairs finished, so temporary means short-lived."
+      },
+      {
+        "id": "eng-word-11-temporary-q2",
+        "prompt": "Our school is using a ____ classroom while the new building is finished.",
+        "options": [
+          {
+            "id": "eng-word-11-temporary-q2a",
+            "text": "temporary"
+          },
+          {
+            "id": "eng-word-11-temporary-q2b",
+            "text": "abundant"
+          },
+          {
+            "id": "eng-word-11-temporary-q2c",
+            "text": "genuine"
+          },
+          {
+            "id": "eng-word-11-temporary-q2d",
+            "text": "permanent"
+          }
+        ],
+        "answer": "eng-word-11-temporary-q2a",
+        "explanation": "A classroom used only until the new building is ready lasts a short time, so temporary fits. Permanent means lasting forever."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "Temporary means lasting only a short time.",
-      "Which word means lasting for a very long time?"
-    ],
-    "explanation": "Temporary means lasting a short time; permanent means lasting for ever.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "quick"
-      },
-      {
-        "id": "b",
-        "text": "useful"
-      },
-      {
-        "id": "c",
-        "text": "permanent"
-      },
-      {
-        "id": "d",
-        "text": "hidden"
-      },
-      {
-        "id": "e",
-        "text": "careless"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-11-temporary-1",
-        "params": {},
-        "answer": "c"
-      }
+      "Read the last sentence: until when would the path be used?"
     ]
   },
   {
-    "id": "eng-vocab-12-victorious",
+    "id": "eng-word-12-victorious",
     "subject": "english",
-    "kind": "vocab_antonym",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 6,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which word is most opposite in meaning to \"victorious\"?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "The netball team was victorious after a tense final match. They hugged each other and held the shining trophy high.",
+    "parts": [
+      {
+        "id": "eng-word-12-victorious-q1",
+        "prompt": "In the passage, what does \"victorious\" mean?",
+        "options": [
+          {
+            "id": "eng-word-12-victorious-q1a",
+            "text": "very late"
+          },
+          {
+            "id": "eng-word-12-victorious-q1b",
+            "text": "having won"
+          },
+          {
+            "id": "eng-word-12-victorious-q1c",
+            "text": "badly injured"
+          },
+          {
+            "id": "eng-word-12-victorious-q1d",
+            "text": "feeling sad"
+          }
+        ],
+        "answer": "eng-word-12-victorious-q1b",
+        "explanation": "They won the final and held the trophy, so victorious means having won."
+      },
+      {
+        "id": "eng-word-12-victorious-q2",
+        "prompt": "Which sentence uses \"victorious\" correctly?",
+        "options": [
+          {
+            "id": "eng-word-12-victorious-q2a",
+            "text": "They victorious the match yesterday."
+          },
+          {
+            "id": "eng-word-12-victorious-q2b",
+            "text": "He was victorious when he lost every game."
+          },
+          {
+            "id": "eng-word-12-victorious-q2c",
+            "text": "The victorious soup was hot and tasty."
+          },
+          {
+            "id": "eng-word-12-victorious-q2d",
+            "text": "The victorious runner crossed the finish line first and raised her arms."
+          }
+        ],
+        "answer": "eng-word-12-victorious-q2d",
+        "explanation": "Victorious means having won, so a runner finishing first fits. The others contradict it or use the wrong form."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "Victorious means having won.",
-      "Who is the opposite of a winner?"
-    ],
-    "explanation": "Victorious means having won; defeated means having lost.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "proud"
-      },
-      {
-        "id": "b",
-        "text": "skilful"
-      },
-      {
-        "id": "c",
-        "text": "puzzled"
-      },
-      {
-        "id": "d",
-        "text": "exhausted"
-      },
-      {
-        "id": "e",
-        "text": "defeated"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-12-victorious-1",
-        "params": {},
-        "answer": "e"
-      }
+      "What are they holding up at the end?"
     ]
   },
   {
-    "id": "eng-vocab-13-accurate",
+    "id": "eng-word-13-accurate",
     "subject": "english",
-    "kind": "vocab_cloze",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 5,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Choose the best word to fill the blank: \"The map was so ____ that we found the hidden path without any trouble.\"",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "The map was accurate down to the smallest creek. Using it, the scouts found the hidden campsite without a single wrong turn.",
+    "parts": [
+      {
+        "id": "eng-word-13-accurate-q1",
+        "prompt": "In the passage, what does \"accurate\" mean?",
+        "options": [
+          {
+            "id": "eng-word-13-accurate-q1a",
+            "text": "correct and exact"
+          },
+          {
+            "id": "eng-word-13-accurate-q1b",
+            "text": "hand drawn"
+          },
+          {
+            "id": "eng-word-13-accurate-q1c",
+            "text": "out of date"
+          },
+          {
+            "id": "eng-word-13-accurate-q1d",
+            "text": "colourful"
+          }
+        ],
+        "answer": "eng-word-13-accurate-q1a",
+        "explanation": "The map led them without a wrong turn because it was exact, so accurate means correct."
+      },
+      {
+        "id": "eng-word-13-accurate-q2",
+        "prompt": "Please check that your answer is ____ before you hand in your test.",
+        "options": [
+          {
+            "id": "eng-word-13-accurate-q2a",
+            "text": "accurate"
+          },
+          {
+            "id": "eng-word-13-accurate-q2b",
+            "text": "ferocious"
+          },
+          {
+            "id": "eng-word-13-accurate-q2c",
+            "text": "transparent"
+          },
+          {
+            "id": "eng-word-13-accurate-q2d",
+            "text": "reluctant"
+          }
+        ],
+        "answer": "eng-word-13-accurate-q2a",
+        "explanation": "You check an answer to make sure it is right, so accurate fits."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "Which word means correct in every detail?",
-      "Why would the map help them find the path easily?"
-    ],
-    "explanation": "An accurate map is correct in its details, which let them find the path.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "reluctant"
-      },
-      {
-        "id": "b",
-        "text": "accurate"
-      },
-      {
-        "id": "c",
-        "text": "fragile"
-      },
-      {
-        "id": "d",
-        "text": "peculiar"
-      },
-      {
-        "id": "e",
-        "text": "abundant"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-13-accurate-1",
-        "params": {},
-        "answer": "b"
-      }
+      "The map led the scouts without any wrong turns."
     ]
   },
   {
-    "id": "eng-vocab-14-transparent",
+    "id": "eng-word-14-transparent",
     "subject": "english",
-    "kind": "vocab_cloze",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 6,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Choose the best word to fill the blank: \"We could see the fish clearly through the ____ glass of the tank.\"",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "The aquarium wall was made of transparent glass. Visitors could see the sharks gliding past as clearly as if there were no barrier at all.",
+    "parts": [
+      {
+        "id": "eng-word-14-transparent-q1",
+        "prompt": "In the passage, what does \"transparent\" mean?",
+        "options": [
+          {
+            "id": "eng-word-14-transparent-q1a",
+            "text": "coloured blue"
+          },
+          {
+            "id": "eng-word-14-transparent-q1b",
+            "text": "clear enough to see through"
+          },
+          {
+            "id": "eng-word-14-transparent-q1c",
+            "text": "very thick and heavy"
+          },
+          {
+            "id": "eng-word-14-transparent-q1d",
+            "text": "covered in water"
+          }
+        ],
+        "answer": "eng-word-14-transparent-q1b",
+        "explanation": "Visitors could see through it clearly, so transparent means see-through."
+      },
+      {
+        "id": "eng-word-14-transparent-q2",
+        "prompt": "Which sentence uses \"transparent\" correctly?",
+        "options": [
+          {
+            "id": "eng-word-14-transparent-q2a",
+            "text": "Clean window glass is transparent, so light passes straight through."
+          },
+          {
+            "id": "eng-word-14-transparent-q2b",
+            "text": "The transparent of the jar was high."
+          },
+          {
+            "id": "eng-word-14-transparent-q2c",
+            "text": "She felt transparent when she won the prize."
+          },
+          {
+            "id": "eng-word-14-transparent-q2d",
+            "text": "A brick wall is transparent, so we could see the garden behind it."
+          }
+        ],
+        "answer": "eng-word-14-transparent-q2a",
+        "explanation": "Transparent means you can see through it, so window glass fits. Bricks are solid, and the other sentences use the word wrongly."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "You can see through glass that is clear.",
-      "Which word means see-through?"
-    ],
-    "explanation": "Transparent means clear enough to see through.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "generous"
-      },
-      {
-        "id": "b",
-        "text": "cautious"
-      },
-      {
-        "id": "c",
-        "text": "enormous"
-      },
-      {
-        "id": "d",
-        "text": "transparent"
-      },
-      {
-        "id": "e",
-        "text": "temporary"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-14-transparent-1",
-        "params": {},
-        "answer": "d"
-      }
+      "Could visitors see the sharks through the wall?"
     ]
   },
   {
-    "id": "eng-vocab-15-essential",
+    "id": "eng-word-15-essential",
     "subject": "english",
-    "kind": "vocab_cloze",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 5,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Choose the best word to fill the blank: \"Water is ____ for all living things, because they cannot survive without it.\"",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "Water is essential for every living thing. Without it, plants wilt, animals weaken and people cannot survive for long.",
+    "parts": [
+      {
+        "id": "eng-word-15-essential-q1",
+        "prompt": "In the passage, what does \"essential\" mean?",
+        "options": [
+          {
+            "id": "eng-word-15-essential-q1a",
+            "text": "too expensive"
+          },
+          {
+            "id": "eng-word-15-essential-q1b",
+            "text": "interesting but optional"
+          },
+          {
+            "id": "eng-word-15-essential-q1c",
+            "text": "absolutely needed"
+          },
+          {
+            "id": "eng-word-15-essential-q1d",
+            "text": "easy to find"
+          }
+        ],
+        "answer": "eng-word-15-essential-q1c",
+        "explanation": "Living things cannot survive without it, so essential means absolutely needed."
+      },
+      {
+        "id": "eng-word-15-essential-q2",
+        "prompt": "A helmet is ____ when you ride a bike because it protects your head.",
+        "options": [
+          {
+            "id": "eng-word-15-essential-q2a",
+            "text": "essential"
+          },
+          {
+            "id": "eng-word-15-essential-q2b",
+            "text": "abundant"
+          },
+          {
+            "id": "eng-word-15-essential-q2c",
+            "text": "ancient"
+          },
+          {
+            "id": "eng-word-15-essential-q2d",
+            "text": "peculiar"
+          }
+        ],
+        "answer": "eng-word-15-essential-q2a",
+        "explanation": "Something that protects you and must be worn is needed, so essential fits."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "Think about something that you must have.",
-      "The sentence says they cannot survive without it."
-    ],
-    "explanation": "Essential means absolutely necessary.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "essential"
-      },
-      {
-        "id": "b",
-        "text": "peculiar"
-      },
-      {
-        "id": "c",
-        "text": "optional"
-      },
-      {
-        "id": "d",
-        "text": "ancient"
-      },
-      {
-        "id": "e",
-        "text": "fragile"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-15-essential-1",
-        "params": {},
-        "answer": "a"
-      }
+      "What happens to living things without water?"
     ]
   },
   {
-    "id": "eng-vocab-16-ferocious",
+    "id": "eng-word-16-ferocious",
     "subject": "english",
-    "kind": "vocab_cloze",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 6,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Choose the best word to fill the blank: \"The campers ran away when they heard the ____ growl of a bear.\"",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "The ferocious dog barked and snarled behind the fence. Its teeth flashed, and the postman wisely kept his distance.",
+    "parts": [
+      {
+        "id": "eng-word-16-ferocious-q1",
+        "prompt": "In the passage, what does \"ferocious\" mean?",
+        "options": [
+          {
+            "id": "eng-word-16-ferocious-q1a",
+            "text": "sleepy and slow"
+          },
+          {
+            "id": "eng-word-16-ferocious-q1b",
+            "text": "friendly and calm"
+          },
+          {
+            "id": "eng-word-16-ferocious-q1c",
+            "text": "small and cute"
+          },
+          {
+            "id": "eng-word-16-ferocious-q1d",
+            "text": "fierce and violent"
+          }
+        ],
+        "answer": "eng-word-16-ferocious-q1d",
+        "explanation": "Barking, snarling and flashing teeth show a fierce dog, so ferocious means fierce."
+      },
+      {
+        "id": "eng-word-16-ferocious-q2",
+        "prompt": "Which sentence uses \"ferocious\" correctly?",
+        "options": [
+          {
+            "id": "eng-word-16-ferocious-q2a",
+            "text": "We ferocious the cake with chocolate."
+          },
+          {
+            "id": "eng-word-16-ferocious-q2b",
+            "text": "A ferocious lion roared and chased the zebras across the plain."
+          },
+          {
+            "id": "eng-word-16-ferocious-q2c",
+            "text": "We ate a ferocious slice of cake for dessert."
+          },
+          {
+            "id": "eng-word-16-ferocious-q2d",
+            "text": "The ferocious of the storm kept us inside."
+          }
+        ],
+        "answer": "eng-word-16-ferocious-q2b",
+        "explanation": "Ferocious means fierce and wild, so a roaring lion chasing zebras fits. A purring kitten or a kind whisper is the opposite."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "Why would the campers run away?",
-      "Which word means fierce and frightening?"
-    ],
-    "explanation": "Ferocious means fierce and savage, which explains why the campers ran.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "gentle"
-      },
-      {
-        "id": "b",
-        "text": "temporary"
-      },
-      {
-        "id": "c",
-        "text": "genuine"
-      },
-      {
-        "id": "d",
-        "text": "ferocious"
-      },
-      {
-        "id": "e",
-        "text": "accurate"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-16-ferocious-1",
-        "params": {},
-        "answer": "d"
-      }
+      "Look at the dog's teeth and the postman's reaction."
     ]
   },
   {
-    "id": "eng-vocab-17-necessary",
+    "id": "eng-word-17-necessary",
     "subject": "english",
-    "kind": "vocab_spelling",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 5,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which is the correct spelling of the word meaning \"needed\" (\"It is ____ to wear a helmet\")?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "It is necessary to wear sunscreen at the beach. Our summer sun is strong, and sunburn can happen in only twenty minutes.",
+    "parts": [
+      {
+        "id": "eng-word-17-necessary-q1",
+        "prompt": "In the passage, what does \"necessary\" mean?",
+        "options": [
+          {
+            "id": "eng-word-17-necessary-q1a",
+            "text": "unusual"
+          },
+          {
+            "id": "eng-word-17-necessary-q1b",
+            "text": "forbidden"
+          },
+          {
+            "id": "eng-word-17-necessary-q1c",
+            "text": "needed and required"
+          },
+          {
+            "id": "eng-word-17-necessary-q1d",
+            "text": "pleasant and fun"
+          }
+        ],
+        "answer": "eng-word-17-necessary-q1c",
+        "explanation": "Sunburn can happen quickly, so sunscreen is needed; necessary means required."
+      },
+      {
+        "id": "eng-word-17-necessary-q2",
+        "prompt": "Is it ____ to bring a pencil case, or will the school give us pencils?",
+        "options": [
+          {
+            "id": "eng-word-17-necessary-q2a",
+            "text": "fragile"
+          },
+          {
+            "id": "eng-word-17-necessary-q2b",
+            "text": "victorious"
+          },
+          {
+            "id": "eng-word-17-necessary-q2c",
+            "text": "transparent"
+          },
+          {
+            "id": "eng-word-17-necessary-q2d",
+            "text": "necessary"
+          }
+        ],
+        "answer": "eng-word-17-necessary-q2d",
+        "explanation": "The question asks whether a pencil case is needed, so necessary fits."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "Remember: one collar (c) and two sleeves (s).",
-      "Count the c's and the s's carefully."
-    ],
-    "explanation": "The correct spelling is necessary, with one c and two s.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "necessary"
-      },
-      {
-        "id": "b",
-        "text": "neccessary"
-      },
-      {
-        "id": "c",
-        "text": "necesary"
-      },
-      {
-        "id": "d",
-        "text": "nessesary"
-      },
-      {
-        "id": "e",
-        "text": "neccesary"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-17-necessary-1",
-        "params": {},
-        "answer": "a"
-      }
+      "Why is sunscreen worn at the beach?"
     ]
   },
   {
-    "id": "eng-vocab-18-separate",
+    "id": "eng-word-18-separate",
     "subject": "english",
-    "kind": "vocab_spelling",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 6,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which is the correct spelling of the word meaning \"to divide or keep apart\"?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "The teacher asked us to separate the plastic bottles from the paper in the recycling bin. We put them into two different piles.",
+    "parts": [
+      {
+        "id": "eng-word-18-separate-q1",
+        "prompt": "In the passage, what does \"separate\" mean?",
+        "options": [
+          {
+            "id": "eng-word-18-separate-q1a",
+            "text": "to mix together"
+          },
+          {
+            "id": "eng-word-18-separate-q1b",
+            "text": "to count carefully"
+          },
+          {
+            "id": "eng-word-18-separate-q1c",
+            "text": "to throw far away"
+          },
+          {
+            "id": "eng-word-18-separate-q1d",
+            "text": "to divide into different groups"
+          }
+        ],
+        "answer": "eng-word-18-separate-q1d",
+        "explanation": "They put the bottles and paper into two piles, so separate means to divide apart."
+      },
+      {
+        "id": "eng-word-18-separate-q2",
+        "prompt": "Which sentence uses \"separate\" correctly?",
+        "options": [
+          {
+            "id": "eng-word-18-separate-q2a",
+            "text": "Please separate the red beads from the blue beads before you start."
+          },
+          {
+            "id": "eng-word-18-separate-q2b",
+            "text": "She put the books in a separate of the shelf."
+          },
+          {
+            "id": "eng-word-18-separate-q2c",
+            "text": "They separate the pizza into one big lump."
+          },
+          {
+            "id": "eng-word-18-separate-q2d",
+            "text": "I separate happy when I see my friends."
+          }
+        ],
+        "answer": "eng-word-18-separate-q2a",
+        "explanation": "To separate is to divide things apart, so sorting red and blue beads fits. The other sentences use the wrong meaning or form."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "There is \"a rat\" in separate.",
-      "The middle part is -par-, not -per-."
-    ],
-    "explanation": "The correct spelling is separate, which has \"a rat\" in the middle.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "seperate"
-      },
-      {
-        "id": "b",
-        "text": "separete"
-      },
-      {
-        "id": "c",
-        "text": "separate"
-      },
-      {
-        "id": "d",
-        "text": "seprate"
-      },
-      {
-        "id": "e",
-        "text": "sepperate"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-18-separate-1",
-        "params": {},
-        "answer": "c"
-      }
+      "How many piles did they end up with?"
     ]
   },
   {
-    "id": "eng-vocab-19-environment",
+    "id": "eng-word-19-environment",
     "subject": "english",
-    "kind": "vocab_spelling",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 5,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which is the correct spelling of the word for the natural world around us, such as forests and rivers?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "Our class cleaned the creek to protect the environment. Fewer rubbish bags meant cleaner water for the fish, frogs and birds that lived there.",
+    "parts": [
+      {
+        "id": "eng-word-19-environment-q1",
+        "prompt": "In the passage, what does \"environment\" mean?",
+        "options": [
+          {
+            "id": "eng-word-19-environment-q1a",
+            "text": "a type of building"
+          },
+          {
+            "id": "eng-word-19-environment-q1b",
+            "text": "the natural world around us"
+          },
+          {
+            "id": "eng-word-19-environment-q1c",
+            "text": "a school subject"
+          },
+          {
+            "id": "eng-word-19-environment-q1d",
+            "text": "a kind of machine"
+          }
+        ],
+        "answer": "eng-word-19-environment-q1b",
+        "explanation": "Fish, frogs, birds and water make up nature around us, so environment means the natural world."
+      },
+      {
+        "id": "eng-word-19-environment-q2",
+        "prompt": "Planting trees helps to protect the ____ and gives animals a home.",
+        "options": [
+          {
+            "id": "eng-word-19-environment-q2a",
+            "text": "environment"
+          },
+          {
+            "id": "eng-word-19-environment-q2b",
+            "text": "ferocious"
+          },
+          {
+            "id": "eng-word-19-environment-q2c",
+            "text": "reluctant"
+          },
+          {
+            "id": "eng-word-19-environment-q2d",
+            "text": "temporary"
+          }
+        ],
+        "answer": "eng-word-19-environment-q2a",
+        "explanation": "Trees and animals are part of the natural world, so environment fits."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "There is an \"n\" before the \"m\" in the middle: -iron-.",
-      "It ends in -ment."
-    ],
-    "explanation": "The correct spelling is environment, which contains the word iron.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "enviroment"
-      },
-      {
-        "id": "b",
-        "text": "envirenment"
-      },
-      {
-        "id": "c",
-        "text": "environmant"
-      },
-      {
-        "id": "d",
-        "text": "enviornment"
-      },
-      {
-        "id": "e",
-        "text": "environment"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-19-environment-1",
-        "params": {},
-        "answer": "e"
-      }
+      "Who benefits from cleaner water in the passage?"
     ]
   },
   {
-    "id": "eng-vocab-20-disappear",
+    "id": "eng-word-20-disappear",
     "subject": "english",
-    "kind": "vocab_spelling",
+    "kind": "vocab_word",
     "tier": "regular",
     "grade": 6,
     "est_minutes": 1,
-    "min_seconds": 8,
-    "prompt": "Which is the correct spelling of the word meaning \"to vanish from sight\"?",
+    "min_seconds": 10,
+    "answer_type": "passage",
+    "text": "The magician waved his wand, and the rabbit seemed to disappear. One moment it sat on the table, and the next it was gone.",
+    "parts": [
+      {
+        "id": "eng-word-20-disappear-q1",
+        "prompt": "In the passage, what does \"disappear\" mean?",
+        "options": [
+          {
+            "id": "eng-word-20-disappear-q1a",
+            "text": "to make a loud noise"
+          },
+          {
+            "id": "eng-word-20-disappear-q1b",
+            "text": "to grow bigger"
+          },
+          {
+            "id": "eng-word-20-disappear-q1c",
+            "text": "to appear suddenly"
+          },
+          {
+            "id": "eng-word-20-disappear-q1d",
+            "text": "to vanish from sight"
+          }
+        ],
+        "answer": "eng-word-20-disappear-q1d",
+        "explanation": "The rabbit was on the table and then gone, so disappear means to vanish."
+      },
+      {
+        "id": "eng-word-20-disappear-q2",
+        "prompt": "Which sentence uses \"disappear\" correctly?",
+        "options": [
+          {
+            "id": "eng-word-20-disappear-q2a",
+            "text": "The disappear was very bright."
+          },
+          {
+            "id": "eng-word-20-disappear-q2b",
+            "text": "Please disappear the door quietly behind you."
+          },
+          {
+            "id": "eng-word-20-disappear-q2c",
+            "text": "The sun will disappear behind the clouds and then come out again."
+          },
+          {
+            "id": "eng-word-20-disappear-q2d",
+            "text": "She felt disappear when she lost the game."
+          }
+        ],
+        "answer": "eng-word-20-disappear-q2c",
+        "explanation": "Disappear means to vanish from sight, so the sun going behind clouds fits. The others use it in the wrong form or with the wrong meaning."
+      }
+    ],
+    "vocab": [],
     "hints": [
-      "It is dis- plus appear.",
-      "Appear has two p's; dis has one s."
-    ],
-    "explanation": "The correct spelling is disappear: dis + appear.",
-    "answer_type": "choice",
-    "options": [
-      {
-        "id": "a",
-        "text": "dissapear"
-      },
-      {
-        "id": "b",
-        "text": "disappear"
-      },
-      {
-        "id": "c",
-        "text": "disapear"
-      },
-      {
-        "id": "d",
-        "text": "dissappear"
-      },
-      {
-        "id": "e",
-        "text": "disapere"
-      }
-    ],
-    "instances": [
-      {
-        "id": "eng-vocab-20-disappear-1",
-        "params": {},
-        "answer": "b"
-      }
+      "Where was the rabbit at first and what happened next?"
     ]
   }
 ]

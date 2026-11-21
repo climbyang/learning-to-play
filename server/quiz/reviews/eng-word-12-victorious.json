@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-word-12-victorious",
+  "content_hash": "a71bdfe857839352302e7ba1ac47a6ece46b50eb98e87266c637670eb457bd35",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:48:36Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Both questions clearly test the meaning and correct grammatical use of “victorious.”"
+}

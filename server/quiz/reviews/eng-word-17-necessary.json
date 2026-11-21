@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-word-17-necessary",
+  "content_hash": "26e96618dc03757c553f715aa69b0c24ad8336da9ca1f5fc2194cefc8626c27e",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:48:57Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The keyed answers are uniquely correct, and the sunscreen statement is suitable and factually reasonable."
+}

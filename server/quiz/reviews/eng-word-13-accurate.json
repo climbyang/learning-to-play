@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-word-13-accurate",
+  "content_hash": "8b84973f0b6acad6243123dfad7f5b54336015434e58617eecd502756896bcc1",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:48:36Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The context supports “correct and exact,” and no distractor is plausibly correct."
+}

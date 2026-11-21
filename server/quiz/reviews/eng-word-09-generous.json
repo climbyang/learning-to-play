@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-word-09-generous",
+  "content_hash": "0e3449f41e022bbd6f144799ab5aa7e30c0c6d541f1c6ee8da0cfce7b8d080d6",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:48:13Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Sharing tomatoes and lunch uniquely illustrates willingness to give freely."
+}

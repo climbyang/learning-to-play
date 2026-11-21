@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-word-08-genuine",
+  "content_hash": "e09d37da17da21b502a5e259eacb50305b33a8199078fd0a74808a4f73fbd215",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:48:13Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The passage clearly contrasts genuine with a copy, and only the keyed sentence uses the word naturally and correctly."
+}

@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-word-07-hesitate",
+  "content_hash": "586abb940f52c22a55ca4ef4a09c52480b627f28d1ebd9c123540f6cbede270c",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:48:13Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Both contexts uniquely support hesitate as pausing because of uncertainty."
+}

@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-word-05-cautious",
+  "content_hash": "2c3df92d7d4ec18f6ee17e3e8a70bf9b64f894cb1347d284c773ad61a9b75c46",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:47:53Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Both keyed answers are uniquely correct, and the passage and examples are appropriate for Year 5."
+}

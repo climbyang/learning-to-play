@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-word-04-peculiar",
+  "content_hash": "317af28a3e88c696554a9445562cd947e4a9d4f0c0997e435876be6763a9b64b",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:47:53Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Both questions use peculiar accurately and have distinct, unambiguous options suitable for Year 6."
+}

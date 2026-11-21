@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-word-11-temporary",
+  "content_hash": "866871fbd727696466cc317cee03adbccbafb3c8734114e822a5c25721fddb69",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T23:48:36Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The keyed answers are uniquely correct; the wording is suitable, though “while the new building is finished” is slightly awkward."
+}

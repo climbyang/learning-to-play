@@ -50,6 +50,7 @@ class LGWebOSController:
     def __init__(self, ip: str, client_key: str | None, *, allow_pairing: bool = False,
                  client_factory: ClientFactory | None = None,
                  request_timeout: float = 5.0, ping_interval: int = 10,
+                 lifecycle_timeout: float = 20.0,
                  mac: str | None = None,
                  wol_sender: Callable[[str, list[str]], None] | None = None) -> None:
         self._ip = ip
@@ -59,6 +60,8 @@ class LGWebOSController:
         self._allow_pairing = allow_pairing
         self._factory = client_factory or _default_factory
         self._timeout = request_timeout
+        self._lifecycle_timeout = lifecycle_timeout
+        self._abandoned: set[asyncio.Future] = set()
         self._ping_interval = ping_interval
         self._client: Any = None
         self._state = TVState.OFFLINE
@@ -117,6 +120,36 @@ class LGWebOSController:
         self._client = None
         await self._set_state(TVState.OFFLINE)
 
+    async def _bounded(self, coro: Any, what: str) -> None:
+        """Run a library connect/disconnect with a hard deadline. The library's own cleanup
+        can wait forever (it shields its close-out from cancellation), so on timeout the task
+        is cancelled and abandoned instead of awaited."""
+        task = asyncio.ensure_future(coro)
+        try:
+            done, _ = await asyncio.wait({task}, timeout=self._lifecycle_timeout)
+        except asyncio.CancelledError:
+            self._give_up(task)
+            raise
+        if not done:
+            self._give_up(task)
+            raise asyncio.TimeoutError(f"{what} did not finish within {self._lifecycle_timeout:g}s")
+        task.result()
+
+    def _give_up(self, task: asyncio.Future) -> None:
+        """Cancel a library task without awaiting it. It is kept referenced until it really
+        ends, and its outcome is consumed so it never surfaces as an unretrieved exception."""
+        task.cancel()
+        self._abandoned.add(task)
+
+        def _reap(t: asyncio.Future) -> None:
+            self._abandoned.discard(t)
+            if not t.cancelled() and t.exception() is not None:
+                log.debug("abandoned TV task ended with %r", t.exception())
+
+        task.add_done_callback(_reap)
+        if len(self._abandoned) > 1:
+            log.warning("%d abandoned TV connection tasks still running", len(self._abandoned))
+
     async def _request(self, uri: str, payload: dict | None = None) -> dict:
         if self._client is None:
             raise ConnectionError("not connected")
@@ -150,15 +183,21 @@ class LGWebOSController:
         if self._client_key:
             kwargs["client_key"] = self._client_key
         client = await self._factory(self._ip, **kwargs)
-        await client.connect()
+        try:
+            await self._bounded(client.connect(), "TV connect")
+        except BaseException as exc:
+            if isinstance(exc, asyncio.TimeoutError):
+                log.warning("TV connect hung; abandoning that connection attempt")
+            await asyncio.shield(self._abandon(client))
+            raise
         self._client = client
         self._client_key = client.client_key or self._client_key
-        await self._refresh_launch_points()
         try:
+            await self._refresh_launch_points()
             await client.register_state_update_callback(self._on_lib_state)
         except BaseException:
             self._client = None
-            await client.disconnect()
+            await asyncio.shield(self._abandon(client))
             raise
         task = getattr(client, "connect_task", None)
         if task is not None:
@@ -166,15 +205,23 @@ class LGWebOSController:
 
     async def disconnect(self) -> None:
         client, self._client = self._client, None
-        if client is not None:
-            try:
-                await client.disconnect()
-            except Exception as exc:
-                log.warning("disconnect error: %s", exc)
-        if self._watch_task is not None:
-            self._watch_task.cancel()
-            self._watch_task = None
-        await self._set_state(TVState.OFFLINE)
+        watch, self._watch_task = self._watch_task, None
+        if watch is not None and watch is not asyncio.current_task():
+            watch.cancel()
+        try:
+            if client is not None:
+                await self._abandon(client)
+        finally:
+            await self._set_state(TVState.OFFLINE)
+
+    async def _abandon(self, client: Any) -> None:
+        """Best-effort, time-bounded disconnect of a client the adapter no longer uses."""
+        try:
+            await self._bounded(client.disconnect(), "TV disconnect")
+        except asyncio.TimeoutError as exc:
+            log.warning("%s; continuing as offline", exc)
+        except Exception as exc:
+            log.warning("disconnect error: %s", exc)
 
     async def refresh(self) -> TVState:
         version = self._push_version

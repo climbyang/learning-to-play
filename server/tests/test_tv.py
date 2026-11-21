@@ -279,3 +279,35 @@ async def test_list_app_ids_failure_or_empty_is_unknown():
     c.launch_points = []
     assert await tv.list_app_ids() is None
     assert tv.app_title("youtube.leanback.v4") == "YouTube"  # old titles kept on failure
+
+
+async def test_disconnect_returns_and_goes_offline_when_library_disconnect_hangs():
+    # bscpylgtv's disconnect awaits its connection task, whose cleanup can wait forever;
+    # the daemon's tick must not hang with it (seen live: 4.5 h without ticks).
+    tv, holder = _make(lifecycle_timeout=0.05)
+    await tv.connect()
+
+    async def stuck():
+        await asyncio.Event().wait()
+
+    holder["c"].disconnect = stuck
+    await asyncio.wait_for(tv.disconnect(), 2)
+    assert tv.state == TVState.OFFLINE
+
+
+async def test_connect_gives_up_when_library_connect_hangs():
+    tv, holder = _make(lifecycle_timeout=0.05)
+    orig = StubClient.connect
+
+    async def stuck(self):
+        await asyncio.Event().wait()
+
+    StubClient.connect = stuck
+    try:
+        with pytest.raises(asyncio.TimeoutError):
+            await asyncio.wait_for(tv.connect(), 2)
+    finally:
+        StubClient.connect = orig
+    assert tv.state == TVState.OFFLINE
+    await tv.connect()  # a later attempt still works
+    assert tv.state.connected

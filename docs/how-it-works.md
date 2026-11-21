@@ -37,7 +37,7 @@ The server owns every attempt. The TV app never sees an answer, and explanations
 - **Answers.** Integers are compared by value. Decimals are compared exactly, so `1.5` equals `1.50`. Multiple choice uses fixed option ids, and the order is shuffled per attempt.
 - **Mistakes.** A numeric question gets 3 tries, with a 60-second wait after each wrong one. Multiple choice forfeits the reward after one wrong answer. Ten wrong answers in a day pause the quiz for 15 minutes.
 - **Hints.** Hints come in order. Using any hint halves the reward, rounded down.
-- **Too fast.** A correct answer submitted sooner than the minimum thinking time (60 s regular, 180 s challenge) is recorded but earns nothing, and the parents are told.
+- **Too fast.** A correct answer submitted sooner than the minimum thinking time (20 s regular, 180 s challenge) is recorded but earns nothing, and the parents are told.
 - **Skips.** The child can skip up to 3 regular questions a day. The challenge can't be skipped.
 - **Rewards.** By default 10 minutes for a regular question and 25 for the challenge, capped by what is left under the daily cap. Notifications and stats always show the minutes actually credited.
 
@@ -48,7 +48,7 @@ An English reading set is a single attempt: a passage, a few comprehension quest
 - Each question is answered once, in order.
 - Each vocabulary card shows the word, its meaning and the sentence from the passage, followed by a check question. A wrong check sends the child back to re-read the card before trying again, with a short cooldown.
 - The set is settled only after the last card. One wrong part halves the reward. A hint halves it again. Two or more wrong parts earn nothing.
-- The minimum time for a whole set is 150 s regular and 300 s challenge.
+- The minimum time for a whole set is 60 s regular and 300 s challenge.
 - A skipped or expired set shows every answer and won't come back for 30 days.
 
 ### HTTP API

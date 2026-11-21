@@ -39,7 +39,7 @@ The server owns every attempt. The TV app never sees an answer, and explanations
 - **Hints.** Hints come in order. Using any hint halves the reward, rounded down.
 - **Too fast.** A correct answer submitted sooner than the minimum thinking time (20 s regular, 180 s challenge) is recorded but earns nothing, and the parents are told.
 - **Skips.** The child can skip up to 3 regular questions a day. The challenge can't be skipped.
-- **Rewards.** By default 10 minutes for a regular question and 25 for the challenge. `quiz.kind_minutes` sets a different reward for a family of regular kinds; vocabulary word sets (`vocab_*`) earn 3 minutes by default, and only when both steps are right. Rewards are capped by what is left under the daily cap. Notifications and stats always show the minutes actually credited.
+- **Rewards.** By default 10 minutes for a regular question and 25 for the challenge. `quiz.kind_minutes` sets a different reward for a family of regular kinds; vocabulary word sets (`vocab_*`) earn 3 minutes by default, and only when both steps are right. `quiz.kind_daily_limit` caps how many questions of a family are rewarded per day (3 word sets by default); later ones still count as practice. Rewards are capped by what is left under the daily cap. Notifications and stats always show the minutes actually credited.
 
 ### Reading sets with vocabulary
 

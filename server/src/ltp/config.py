@@ -52,6 +52,8 @@ class QuizSettings:
     # Reward for regular questions of a kind family ("vocab" covers vocab_*), instead of
     # regular_minutes: quick questions must not pay as much as a maths problem.
     kind_minutes: Mapping[str, int] = field(default_factory=lambda: {"vocab": 3})
+    # At most this many rewarded questions per day of a kind family; later ones are practice.
+    kind_daily_limit: Mapping[str, int] = field(default_factory=lambda: {"vocab": 3})
     bank_dir: Path = Path("quiz/bank")  # relative to the server root
 
 
@@ -190,20 +192,22 @@ def _parse_quiz(raw: Mapping[str, Any], env: Mapping[str, str], tv_ip: str | Non
                      else frozenset({tv_ip}) if tv_ip else frozenset()),
         tokens=_quiz_tokens(_env(env, "QUIZ_TOKENS")),
         bank_dir=bank_dir,
-        kind_minutes=_kind_minutes(raw.get("kind_minutes", d.kind_minutes)),
+        kind_minutes=_kind_map(raw.get("kind_minutes", d.kind_minutes), "kind_minutes", 60),
+        kind_daily_limit=_kind_map(raw.get("kind_daily_limit", d.kind_daily_limit),
+                                   "kind_daily_limit", 100),
         **ints,
     )
 
 
-def _kind_minutes(raw: Any) -> dict[str, int]:
+def _kind_map(raw: Any, key: str, hi: int) -> dict[str, int]:
     if not isinstance(raw, Mapping):
-        raise ValueError(f"quiz.kind_minutes must be a mapping, got {raw!r}")
+        raise ValueError(f"quiz.{key} must be a mapping, got {raw!r}")
     out: dict[str, int] = {}
-    for kind, minutes in raw.items():
-        if (not isinstance(kind, str) or not kind or isinstance(minutes, bool)
-                or not isinstance(minutes, int) or not 0 <= minutes <= 60):
-            raise ValueError(f"quiz.kind_minutes: {kind!r} needs whole minutes 0-60, got {minutes!r}")
-        out[kind] = minutes
+    for kind, value in raw.items():
+        if (not isinstance(kind, str) or not kind or isinstance(value, bool)
+                or not isinstance(value, int) or not 0 <= value <= hi):
+            raise ValueError(f"quiz.{key}: {kind!r} needs a whole number 0-{hi}, got {value!r}")
+        out[kind] = value
     return out
 
 

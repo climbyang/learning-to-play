@@ -14,7 +14,7 @@ import secrets
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
-from typing import Any, TypeVar
+from typing import Any, Mapping, TypeVar
 
 from ltp.config import QuizSettings
 from ltp.monitor import Monitor, QuizContext
@@ -519,6 +519,9 @@ class QuizService:
         if elapsed < min_s:
             outcome, credited = "too_fast", 0.0
             reason = f"（答得太快：用时 {elapsed:.0f} 秒，少于 {min_s} 秒，未计入）"
+        elif (limit := self._kind_limit_reached(a, ctx.day)) is not None:
+            outcome, credited = "kind_cap", 0.0
+            reason = f"（这类题今天已奖励 {limit} 个，这题算练习，未计入）"
         else:
             credited = ctx.award(a.id, nominal, f"{a.tier}:{a.template_id}")
             if credited <= 0:
@@ -547,14 +550,29 @@ class QuizService:
             ctx.notify("🏆 今日挑战完成")
 
     # -- grading -----------------------------------------------------------------
+    @staticmethod
+    def _family(kind: str, table: Mapping[str, int]) -> str | None:
+        """The key of `table` covering this kind ("vocab" covers vocab_*), if any."""
+        return next((f for f in table if kind == f or kind.startswith(f + "_")), None)
+
     def _base_minutes(self, a: Attempt) -> int:
         if a.tier == "challenge":
             return self.cfg.challenge_minutes
-        kind = a.snapshot.get("kind") or ""
-        for family, minutes in self.cfg.kind_minutes.items():
-            if kind == family or kind.startswith(family + "_"):
-                return minutes
-        return self.cfg.regular_minutes
+        family = self._family(a.snapshot.get("kind") or "", self.cfg.kind_minutes)
+        return self.cfg.regular_minutes if family is None else self.cfg.kind_minutes[family]
+
+    def _kind_limit_reached(self, a: Attempt, day: date) -> int | None:
+        """The daily limit when this attempt's kind family already used it up today."""
+        if a.tier == "challenge":
+            return None
+        table = self.cfg.kind_daily_limit
+        family = self._family(a.snapshot.get("kind") or "", table)
+        if family is None:
+            return None
+        used = sum(1 for x in self.store.attempts_on(day)
+                   if x.id != a.id and x.tier == "regular" and x.credited_minutes > 0
+                   and self._family(x.snapshot.get("kind") or "", {family: 0}) == family)
+        return table[family] if used >= table[family] else None
 
     def _finish_correct(self, a: Attempt, ctx: QuizContext) -> None:
         challenge = a.tier == "challenge"
@@ -569,6 +587,9 @@ class QuizService:
         elif a.reward_lost:
             outcome, credited = "lost", 0.0
             reason = "（选择题答错过，未计入）"
+        elif (limit := self._kind_limit_reached(a, ctx.day)) is not None:
+            outcome, credited = "kind_cap", 0.0
+            reason = f"（这类题今天已奖励 {limit} 个，这题算练习，未计入）"
         else:
             credited = ctx.award(a.id, nominal, f"{a.tier}:{a.template_id}")
             if credited <= 0:

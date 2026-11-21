@@ -47,6 +47,7 @@ quiz:
 #   regular_minutes: 10
 #   challenge_minutes: 25
 #   kind_minutes: {vocab: 3}   # reward per regular question of a kind family (vocab = vocab_*)
+#   kind_daily_limit: {vocab: 3}   # rewarded questions per day of a kind family
 #   write_rate_per_min: 10
 #   read_rate_per_min: 60
 

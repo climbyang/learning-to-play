@@ -477,3 +477,15 @@ async def test_word_set_uses_its_min_seconds(tmp_path):
     v = await env.svc.current(DEV, "regular")
     v = await answer_parts(env, v, [True, True], total_s=8)
     assert v.outcome == "too_fast" and v.credited_minutes == 0
+
+
+async def test_word_sets_rewarded_at_most_three_a_day(tmp_path):
+    env = make_env(tmp_path, [word_set(f"w{i}") for i in range(5)])
+    got = []
+    for _ in range(4):
+        v = await env.svc.current(DEV, "regular")
+        v = await answer_parts(env, v, [True, True], total_s=12)
+        got.append((v.outcome, v.credited_minutes))
+    assert got[:3] == [("credited", 3)] * 3
+    assert got[3] == ("kind_cap", 0)
+    assert env.sink.has("这类题今天已奖励 3 个")

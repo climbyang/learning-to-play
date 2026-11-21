@@ -198,3 +198,12 @@ def test_quiz_kind_minutes(tmp_path):
         f.write_text(f"mode: observe\nquiz:\n  kind_minutes: {bad}\n", encoding="utf-8")
         with pytest.raises(ValueError, match="kind_minutes"):
             load_settings(f, {})
+
+
+def test_quiz_kind_daily_limit(tmp_path):
+    f = tmp_path / "settings.yaml"
+    f.write_text("mode: observe\n", encoding="utf-8")
+    assert dict(load_settings(f, {}).quiz.kind_daily_limit) == {"vocab": 3}
+    f.write_text("mode: observe\nquiz:\n  kind_daily_limit: {vocab: 101}\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="kind_daily_limit"):
+        load_settings(f, {})

@@ -19,7 +19,7 @@ from typing import Any, TypeVar
 from ltp.config import QuizSettings
 from ltp.monitor import Monitor, QuizContext
 from ltp.quiz import passage as ps
-from ltp.quiz.bank import Instance, QuizBank, check_answer
+from ltp.quiz.bank import WORD_SET_KIND, Instance, QuizBank, check_answer
 from ltp.store import Attempt, Store
 
 T = TypeVar("T")
@@ -469,6 +469,10 @@ class QuizService:
             if not correct:  # wrong parts feed the daily wrong pause; vocab wrongs never do
                 changes.update(wrong_count=a.wrong_count + 1, last_wrong_utc=ctx.now)
             self.store.update_attempt(a.id, **changes)
+            settled = self.store.get_attempt(a.id)
+            if (settled is not None and not ps.parts_left(settled)
+                    and ps.current_card(settled) is None):  # no vocab cards (word set)
+                self._finish_passage(settled, ctx)
             return
         card = ps.current_card(a)
         if card is None:
@@ -497,7 +501,8 @@ class QuizService:
     def _finish_passage(self, a: Attempt, ctx: QuizContext) -> None:
         """Settle a passage once its last vocab card is done."""
         wrong = ps.wrong_parts(a)
-        if wrong >= 2:  # no reward and no notification
+        word_set = a.snapshot.get("kind") == WORD_SET_KIND
+        if wrong >= (1 if word_set else 2):  # no reward and no notification
             self.store.update_attempt(a.id, state="exhausted", finished_utc=ctx.now,
                                       outcome="parts_wrong", credited_minutes=0.0)
             return
@@ -506,8 +511,9 @@ class QuizService:
         nominal = base // 2 if wrong == 1 else base
         if a.hints_used > 0:
             nominal //= 2
-        min_s = (self.cfg.min_seconds_passage_challenge if challenge
-                 else self.cfg.min_seconds_passage_regular)
+        min_s = a.snapshot.get("min_seconds") or (
+            self.cfg.min_seconds_passage_challenge if challenge
+            else self.cfg.min_seconds_passage_regular)
         done = ps.parse_utc(a.progress["parts_done_utc"])
         elapsed = ((done or ctx.now) - a.issued_utc).total_seconds()
         if elapsed < min_s:
@@ -534,7 +540,8 @@ class QuizService:
         n = self.store.count_attempts(a.device, ctx.day, state="correct")
         total = self.store.quiz_credit_minutes(ctx.day)
         n_parts = len(a.snapshot["parts"])
-        ctx.notify(f"✅ 阅读题答对 {n_parts - wrong}/{n_parts} +{_fmt(credited)} 分钟"
+        label = "单词题" if word_set else "阅读题"
+        ctx.notify(f"✅ {label}答对 {n_parts - wrong}/{n_parts} +{_fmt(credited)} 分钟"
                    f"（今日 {n} 题，已赚 {_fmt(total)} 分钟）{reason}")
         if challenge:
             ctx.notify("🏆 今日挑战完成")

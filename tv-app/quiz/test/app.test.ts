@@ -267,6 +267,23 @@ describe("passage flow", () => {
     expect(root.querySelector(".vocab")).not.toBeNull();
     expect(root.querySelector("#act-skip")).not.toBeNull();
   });
+  it("a set settled by its last part shows that part's feedback before the result", async () => {
+    const api = fakeApi();
+    const v = answered({ state: "correct", stage: "done", step: null, outcome: "credited", credited_minutes: 3 });
+    v.parts[2] = { ...v.parts[2], status: "right", correct: "a", explanation: "Last." };
+    api.openAttempts.mockResolvedValue([answered()]);
+    api.submit.mockResolvedValueOnce(v);
+    await boot(api);
+    root.querySelector<HTMLElement>("#home-start")!.click();
+    await flush();
+    root.querySelector<HTMLElement>("#opt-a")!.click();
+    await flush();
+    expect(root.querySelector(".explanation")!.textContent).toBe("Last.");
+    root.querySelector<HTMLElement>("#part-next")!.click();
+    await flush();
+    expect(root.querySelector(".passage.feedback")).toBeNull();
+    expect(root.textContent).toContain("right");
+  });
   it("hint and skip on the passage page call the server with the current rev", async () => {
     const api = fakeApi();
     api.hint.mockResolvedValueOnce(passageView({ rev: 2, hints: ["Look at line 2."] }));

@@ -448,3 +448,32 @@ async def test_quiz_check_reply_fits_4096_even_with_huge_parts(tmp_path):
     env.mon.quiz = env.svc
     text = (await _cmd(env, "quiz", "check")).text
     assert text.startswith("p1\n") and len(text) <= 4096 and text.endswith("…")
+
+
+def word_set(tid):
+    w = passage(tid, n_parts=2, n_cards=0)
+    return replace(w, kind="vocab_word", min_seconds=10,
+                   passage={**w.passage, "text": SENTENCE + " He loved the sea."})
+
+
+async def test_word_set_both_steps_right_earns_vocab_reward(tmp_path):
+    env = make_env(tmp_path, [word_set("w1")])
+    v = await env.svc.current(DEV, "regular")
+    v = await answer_parts(env, v, [True, True], total_s=12)
+    assert v.state == "correct" and v.credited_minutes == 3 and v.outcome == "credited"
+    assert env.sink.has("✅ 单词题答对 2/2 +3 分钟")
+
+
+async def test_word_set_one_wrong_step_earns_nothing(tmp_path):
+    env = make_env(tmp_path, [word_set("w1")])
+    v = await env.svc.current(DEV, "regular")
+    v = await answer_parts(env, v, [False, True], total_s=30)
+    assert v.state == "exhausted" and v.credited_minutes == 0
+    assert env.quiz_credits() == []
+
+
+async def test_word_set_uses_its_min_seconds(tmp_path):
+    env = make_env(tmp_path, [word_set("w1")])
+    v = await env.svc.current(DEV, "regular")
+    v = await answer_parts(env, v, [True, True], total_s=8)
+    assert v.outcome == "too_fast" and v.credited_minutes == 0

@@ -21,6 +21,9 @@ MAX_ANSWER_LEN = 64
 MAX_POW_EXPONENT = 10
 # passage sets: tier -> (min words, max words, min parts, max parts)
 PASSAGE_LIMITS = {"regular": (120, 200, 3, 3), "challenge": (250, 350, 4, 5)}
+# word set: a short example text, step 1 meaning, step 2 usage; no vocab cards, regular only
+WORD_SET_KIND = "vocab_word"
+WORD_SET_LIMITS = (12, 60, 2, 2)
 MIN_PART_OPTIONS = 4
 MIN_VOCAB_OPTIONS = 3
 MAX_PASSAGE_HINTS = 2
@@ -242,6 +245,13 @@ def _validate_passage(t: dict, bad, seen_instances: dict[str, str]) -> Instance 
     if not isinstance(text, str) or not text.strip():
         bad("passage text must be a non-empty string")
         text = ""
+    elif t.get("kind") == WORD_SET_KIND:
+        lo, hi, pmin, pmax = WORD_SET_LIMITS
+        words = len(text.split())
+        if tier != "regular":
+            bad("word sets are regular tier only")
+        if not lo <= words <= hi:
+            bad(f"word set text has {words} words, needs {lo}-{hi}")
     elif isinstance(tier, str) and tier in PASSAGE_LIMITS:
         lo, hi, pmin, pmax = PASSAGE_LIMITS[tier]
         words = len(text.split())
@@ -289,7 +299,10 @@ def _validate_passage(t: dict, bad, seen_instances: dict[str, str]) -> Instance 
     if not isinstance(raw_vocab, list) or not all(isinstance(v, dict) for v in raw_vocab):
         bad("vocab must be a list of objects")
     else:
-        if not 1 <= len(raw_vocab) <= 2:
+        if t.get("kind") == WORD_SET_KIND:
+            if raw_vocab:
+                bad("word sets have no vocab cards")
+        elif not 1 <= len(raw_vocab) <= 2:
             bad(f"passage needs 1-2 vocab cards, got {len(raw_vocab)}")
         for v in raw_vocab:
             vid = v.get("id")
@@ -325,6 +338,12 @@ def _validate_passage(t: dict, bad, seen_instances: dict[str, str]) -> Instance 
         bad(f"hints must be 0-{MAX_PASSAGE_HINTS} non-empty strings")
         hints = []
 
+    min_seconds = t.get("min_seconds")
+    if min_seconds is not None and (isinstance(min_seconds, bool) or not isinstance(min_seconds, int)
+                                    or not 5 <= min_seconds <= 600):
+        bad("min_seconds must be an integer from 5 to 600 when present")
+        min_seconds = None
+
     if tid in seen_instances:
         bad(f"duplicate instance id {tid!r} (also in {seen_instances[tid]})")
     else:
@@ -335,7 +354,7 @@ def _validate_passage(t: dict, bad, seen_instances: dict[str, str]) -> Instance 
         template_id=tid, instance_id=tid, subject="english", kind=t["kind"], tier=tier,
         prompt="", figure=None, hints=tuple(hints), explanation="", answer_type="passage",
         answer="", options=(), content_hash=content_hash(t),
-        passage={"text": text, "parts": parts, "vocab": vocab},
+        passage={"text": text, "parts": parts, "vocab": vocab}, min_seconds=min_seconds,
     )
 
 

@@ -270,10 +270,9 @@ export class App {
   }
 
   private buildAttempt(v: AttemptView): Page {
-    if (v.state !== "issued" || v.stage === "done") {
-      return renderResult(v, () => this.refresh());
-    }
     if (v.answer_type === "passage") {
+      // Feedback for a newly answered part comes first, also when that part settled the set
+      // (a word set ends on its last part, so its explanation would otherwise never show).
       const answered = answeredParts(v);
       const seen = this.partsSeen;
       if (seen !== null && seen.id === v.id && answered > seen.count) {
@@ -282,6 +281,11 @@ export class App {
           this.render();
         });
       }
+    }
+    if (v.state !== "issued" || v.stage === "done") {
+      return renderResult(v, () => this.refresh());
+    }
+    if (v.answer_type === "passage") {
       const answer = (optionId: string) =>
         this.act((cur) => this.api.submit(cur.id, cur.rev, optionId, cur.step ?? undefined));
       const skip = () => this.act((cur) => this.api.skip(cur.id, cur.rev));

@@ -260,3 +260,29 @@ def test_min_seconds_is_optional_and_bounded(tmp_path, value, ok):
         assert any("min_seconds" in p for p in problems)
     problems, built = _validate_template(base_template("t2"), {})
     assert problems == [] and built[0].min_seconds is None
+
+
+def _word_set(tid="eng-w1"):
+    opts = [{"id": f"{tid}o{i}", "text": f"option {i}"} for i in range(4)]
+    return {"id": tid, "subject": "english", "kind": "vocab_word", "tier": "regular", "grade": 5,
+            "est_minutes": 1, "min_seconds": 10, "answer_type": "passage",
+            "text": "Mia was reluctant to jump into the cold pool, so she waited at the edge.",
+            "parts": [{"id": f"{tid}q{k}", "prompt": f"Step {k}?", "options": opts,
+                       "answer": f"{tid}o0", "explanation": "Because."} for k in (1, 2)],
+            "vocab": [], "hints": ["Read the sentence again."]}
+
+
+def test_word_set_shape_rules():
+    from ltp.quiz.bank import _Problems, _validate_passage
+    def check(t):
+        sink: list[str] = []
+        inst = _validate_passage(t, _Problems(t["id"], sink), {})
+        return sink, inst
+    problems, inst = check(_word_set())
+    assert problems == [] and inst.min_seconds == 10 and inst.kind == "vocab_word"
+    t = _word_set(); t["parts"] = t["parts"][:1]
+    assert any("needs 2 parts" in p for p in check(t)[0])
+    t = _word_set(); t["tier"] = "challenge"
+    assert any("regular tier only" in p for p in check(t)[0])
+    t = _word_set(); t["vocab"] = [{"id": "x"}]
+    assert any("no vocab cards" in p for p in check(t)[0])

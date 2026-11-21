@@ -70,6 +70,7 @@ Requests are also rate-limited per device, separately for reads and writes. Ever
 | `/lock`, `/unlock` | Lock or unlock the TV immediately |
 | `/on`, `/off` | Wake-on-LAN power-on (needs `LG_TV_MAC`; takes about a minute), or power-off |
 | `/mode observe` or `/mode enforce` | Switch the mode |
+| `/adult [minutes]`, `/kid` | Adult mode: nothing counts and nothing is enforced. It ends by itself when the TV turns off or after the given minutes (240 by default, at most 480), so the next power-on is always back in kid mode. `/kid` ends it at once |
 | `/quiz` | Today's quiz details |
 | `/quiz check` | A random live question with its answer, for spot-checking |
 | `/quiz bad <id>` | Pull a question from the bank |

@@ -109,7 +109,7 @@ def test_quiz_defaults(tmp_path):
     assert q.bind == "0.0.0.0" and q.port == 8765 and q.api_version == 2
     assert q.allowed_ips == frozenset({"10.0.0.5"}) and dict(q.tokens) == {}
     assert (q.regular_minutes, q.challenge_minutes) == (10, 25)
-    assert (q.min_seconds_regular, q.min_seconds_challenge) == (60, 180)
+    assert (q.min_seconds_regular, q.min_seconds_challenge) == (20, 180)
     assert (q.numeric_tries, q.wrong_cooldown_s, q.skips_per_day) == (3, 60, 3)
     assert (q.wrong_pause_threshold, q.wrong_pause_minutes) == (10, 15)
     assert (q.write_rate_per_min, q.read_rate_per_min, q.dedup_days) == (10, 60, 30)

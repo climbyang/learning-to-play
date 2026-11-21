@@ -77,9 +77,9 @@ async def test_correct_after_60s_credits_10(env):
     assert env.sink.has("✅ 答对 1 题 +10 分钟（今日 1 题，已赚 10 分钟）")
 
 
-async def test_correct_before_60s_is_too_fast(env):
+async def test_correct_before_20s_is_too_fast(env):
     v = await env.svc.current(DEV, "regular")
-    env.clock.advance(seconds=59)
+    env.clock.advance(seconds=19)
     r = await env.svc.submit(DEV, v.id, env.answer(v), env.rev(v.id))
     assert r.state == "correct" and r.outcome == "too_fast"
     assert r.credited_minutes == 0 and r.nominal_minutes == 10

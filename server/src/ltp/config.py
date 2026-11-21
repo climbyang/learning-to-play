@@ -36,9 +36,9 @@ class QuizSettings:
     api_version: int = 2
     regular_minutes: int = 10
     challenge_minutes: int = 25
-    min_seconds_regular: int = 60
+    min_seconds_regular: int = 20
     min_seconds_challenge: int = 180
-    min_seconds_passage_regular: int = 150  # issue -> last part submission
+    min_seconds_passage_regular: int = 60  # issue -> last part submission
     min_seconds_passage_challenge: int = 300
     vocab_cooldown_s: int = 5  # between vocab check submissions
     numeric_tries: int = 3

@@ -174,7 +174,7 @@ async def test_challenge_one_wrong_and_hint_gives_6(env):
 
 async def test_too_fast_measured_to_last_part(env):
     v = await env.svc.current(DEV, "regular")
-    v = await answer_parts(env, v, [True, True, True], total_s=100)
+    v = await answer_parts(env, v, [True, True, True], total_s=50)
     env.clock.advance(seconds=600)  # slow vocab does not rescue a rushed reading
     v = await finish_vocab(env, v)
     assert v.state == "correct" and v.outcome == "too_fast" and v.credited_minutes == 0
@@ -371,7 +371,7 @@ def test_passage_config_defaults_and_range(tmp_path):
     f.write_text("mode: observe\n", encoding="utf-8")
     q = load_settings(f, {}).quiz
     assert (q.min_seconds_passage_regular, q.min_seconds_passage_challenge,
-            q.vocab_cooldown_s) == (150, 300, 5)
+            q.vocab_cooldown_s) == (60, 300, 5)
     f.write_text("mode: observe\nquiz:\n  vocab_cooldown_s: -1\n", encoding="utf-8")
     with pytest.raises(ValueError, match="vocab_cooldown_s"):
         load_settings(f, {})

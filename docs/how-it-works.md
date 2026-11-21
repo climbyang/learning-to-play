@@ -23,7 +23,7 @@ An ordinary webOS app gets suspended once it leaves the foreground, and its back
 - A session counts while the TV is on and an app that counts toward the allowance is in front. The home screen, launcher, settings, screensaver and quiz app don't count.
 - Today's allowance is the free minutes, plus minutes earned from quizzes (both limited by the daily cap), plus parent grants (which aren't). Days roll over at local midnight in the configured time zone.
 - Warnings appear as toasts a set number of minutes before time runs out (5 and 1 by default).
-- When time is up, enforce mode closes the foreground app and, if the quiz is available, opens the quiz app. Reopening an app 3 times within 10 minutes switches the TV off.
+- When time is up, enforce mode closes the foreground app and, if the quiz is available, opens the quiz app. Reopening an app 3 times within 10 minutes switches the TV off. With `enforcement.curfew_power_off: true`, any open during curfew switches the TV off straight away. Parent messages for a run of back-to-back violations are merged: the first close and the first power-off are reported, the rest are counted and sent as one summary once 10 quiet minutes have passed.
 - During curfew or a parent lock, nothing may be used, including the quiz.
 - Observe mode runs every rule and records and reports what it would do, but never acts on the TV.
 - If the TV drops off the network while a session is running, the parents are alerted.

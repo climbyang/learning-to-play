@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-round-table",
+  "content_hash": "7a56d0581102a18cd133e0678c69e9ba9e01f2c26a4fcc7994909ba6887d55a2",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:37:08Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "The clues uniquely place Rosa in seat 3."
+}

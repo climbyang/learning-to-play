@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-lost-dog-biscuit",
+  "content_hash": "eee488de54557348c69cf883a72274d9f39b2ba7d3457c2f5679c9f8b52e124a",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:33:39Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The narrative and questions are clear, age-appropriate, and internally consistent."
+}

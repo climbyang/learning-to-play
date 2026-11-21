@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-windowsill-pots",
+  "content_hash": "91599e439dccffaa152ddcc1040b743655b521b8a5b46fc46d0f0528d53b5188",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:36:41Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "The clues produce one arrangement, with Ivy uniquely in the fourth pot."
+}

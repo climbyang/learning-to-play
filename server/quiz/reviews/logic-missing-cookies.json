@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-missing-cookies",
+  "content_hash": "180456a72334ec54edf97edd9042168458c78dd6b3bd7f6f902da55d1cb6181c",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:37:08Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Only Cal as the culprit makes exactly two statements true."
+}

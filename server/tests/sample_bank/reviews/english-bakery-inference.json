@@ -1,0 +1,17 @@
+{
+  "template_id": "english-bakery-inference",
+  "content_hash": "176da7b3818cfbdb4f117a0a2e68fc3d01ae63d305c3162fa53c26ce7f103284",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:26:29Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "The passage clearly supports kindness as a way to attract families back; the other motives are contradicted or unsupported."
+}

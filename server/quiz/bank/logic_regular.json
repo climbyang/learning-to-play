@@ -1,0 +1,1448 @@
+[
+  {
+    "id": "logic-stickers",
+    "subject": "logic",
+    "kind": "reasoning_numeric",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Ava, Ben and Chloe have {total} stickers altogether. Ben has twice as many stickers as Ava. Chloe has {extra} more stickers than Ben. How many stickers does Ava have?",
+    "hints": [
+      "Call Ava's number of stickers one unit. How many units is Ben's? How many is Chloe's?",
+      "Take away the extra stickers first, then share what is left into equal units."
+    ],
+    "explanation": "Ava = 1 unit, Ben = 2 units, Chloe = 2 units + extra. So 5 units + extra = total, and 5 units = total - extra = 105, giving 21.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-stickers-1",
+        "params": {
+          "total": 120,
+          "extra": 15
+        },
+        "answer": "21"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "(total - extra) / 5"
+  },
+  {
+    "id": "logic-race-order",
+    "subject": "logic",
+    "kind": "ordering",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "Seven runners finished a race with no ties: Una, Priya, Sam, Omar, Lena, Tia and Raj. These facts are known.\n- Raj finished after Tia, and Tia finished after Lena.\n- Exactly two runners finished between Una and Omar.\n- Sam finished immediately before Omar.\n- Priya finished before Sam.\n- Lena finished immediately after Omar.\n- Una finished before Priya.\nWho finished fifth?",
+    "hints": [
+      "Some clues only link two runners. Others give exact gaps. Start with the gaps.",
+      "Build the middle of the order first, then attach the runners who must come before or after it."
+    ],
+    "explanation": "Sam is immediately before Omar and Lena is immediately after Omar, giving Sam, Omar, Lena in a row. Tia then Raj come after Lena. Una and Priya come before Sam, with Una first. Exactly two runners (Priya and Sam) are between Una and Omar. The order is Una, Priya, Sam, Omar, Lena, Tia, Raj, so Lena was fifth.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-race-order-1",
+        "params": {},
+        "answer": "c"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Omar"
+      },
+      {
+        "id": "b",
+        "text": "Sam"
+      },
+      {
+        "id": "c",
+        "text": "Lena"
+      },
+      {
+        "id": "d",
+        "text": "Tia"
+      },
+      {
+        "id": "e",
+        "text": "Priya"
+      }
+    ]
+  },
+  {
+    "id": "logic-odd-oblong",
+    "subject": "logic",
+    "kind": "odd_one_out",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Four of these five numbers can each be written as n × (n + 1) for some whole number n (for example 12 = 3 × 4). Which one cannot?",
+    "hints": [
+      "Write each number as a multiplication of two numbers that are one apart, such as 6 × 7 = 42.",
+      "Check which number has no such pair. Remember that a number that looks special, such as a square, may not fit the rule."
+    ],
+    "explanation": "30 = 5 × 6, 42 = 6 × 7, 56 = 7 × 8 and 72 = 8 × 9. But 64 lies between 7 × 8 = 56 and 8 × 9 = 72, so it is not of the form n × (n + 1).",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-odd-oblong-1",
+        "params": {},
+        "answer": "e"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "56"
+      },
+      {
+        "id": "b",
+        "text": "30"
+      },
+      {
+        "id": "c",
+        "text": "42"
+      },
+      {
+        "id": "d",
+        "text": "72"
+      },
+      {
+        "id": "e",
+        "text": "64"
+      }
+    ]
+  },
+  {
+    "id": "logic-odd-friendly",
+    "subject": "logic",
+    "kind": "odd_one_out",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A number is friendly if it divides exactly by the sum of its own digits. For example 12 is friendly because 1 + 2 = 3 and 12 ÷ 3 = 4. Four of these five numbers are friendly. Which one is not?",
+    "hints": [
+      "For each number, add its digits first. Then check whether the number divides exactly by that sum.",
+      "Take care with the numbers whose digit sum is 12 or 9: check the division carefully."
+    ],
+    "explanation": "54: 5 + 4 = 9 and 54 ÷ 9 = 6. 63: 6 + 3 = 9 and 63 ÷ 9 = 7. 72: 7 + 2 = 9 and 72 ÷ 9 = 8. 84: 8 + 4 = 12 and 84 ÷ 12 = 7. But 75: 7 + 5 = 12 and 75 ÷ 12 is not a whole number, so 75 is not friendly.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-odd-friendly-1",
+        "params": {},
+        "answer": "e"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "54"
+      },
+      {
+        "id": "b",
+        "text": "63"
+      },
+      {
+        "id": "c",
+        "text": "84"
+      },
+      {
+        "id": "d",
+        "text": "72"
+      },
+      {
+        "id": "e",
+        "text": "75"
+      }
+    ]
+  },
+  {
+    "id": "logic-jump-pattern",
+    "subject": "logic",
+    "kind": "number_pattern",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A number pattern starts at {a}. To get each next number you add a jump. The first jump is {d}, and every jump after that is 1 bigger than the jump before it. What is the number in position {n} of the pattern?",
+    "hints": [
+      "Write out the first few numbers and the jumps between them to see how the jumps grow.",
+      "The jumps are the first jump, then the first jump + 1, then the first jump + 2, and so on. How many jumps do you need to reach the position asked for?"
+    ],
+    "explanation": "To reach position n you make n - 1 jumps. The jumps are the first jump, then 1 more, then 2 more, and so on, so the n - 1 jumps add up to (n - 1) times the first jump plus (0 + 1 + 2 + ... + (n - 2)). Add this to the starting number.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-jump-pattern-1",
+        "params": {
+          "a": 3,
+          "d": 2,
+          "n": 10
+        },
+        "answer": "57"
+      },
+      {
+        "id": "logic-jump-pattern-2",
+        "params": {
+          "a": 5,
+          "d": 3,
+          "n": 12
+        },
+        "answer": "93"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 400,
+      "step": 1
+    },
+    "verify": "a + (n-1)*d + (n-1)*(n-2)/2"
+  },
+  {
+    "id": "logic-add-two-before",
+    "subject": "logic",
+    "kind": "number_pattern",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "In a number pattern the first two numbers are {a} and {b}. Every number after that is the sum of the two numbers just before it. What is the 8th number in the pattern?",
+    "hints": [
+      "Write the numbers down one after another: the third is the first plus the second.",
+      "Keep going until you reach the 8th number, checking each addition."
+    ],
+    "explanation": "Build the pattern term by term, adding the two previous numbers each time, until the 8th term is reached. The 8th term equals 8 times the first number plus 13 times the second.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-add-two-before-1",
+        "params": {
+          "a": 2,
+          "b": 3
+        },
+        "answer": "55"
+      },
+      {
+        "id": "logic-add-two-before-2",
+        "params": {
+          "a": 4,
+          "b": 5
+        },
+        "answer": "97"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "8*a + 13*b"
+  },
+  {
+    "id": "logic-tom-jill-ages",
+    "subject": "logic",
+    "kind": "age_puzzle",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Tom is {k} times as old as his sister Jill. In {y} years' time the sum of their ages will be {s}. How old is Tom now?",
+    "hints": [
+      "Each of them gets older in those years, so work out the sum of their ages now.",
+      "The sum of their ages today is split in the ratio 1 to k. Find Jill's age first."
+    ],
+    "explanation": "In the future both are y years older, so the sum now is the future sum minus 2y. Jill is one share and Tom is k shares, so the sum is (k + 1) shares. Divide to find Jill's age, then multiply by k to get Tom's age.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-tom-jill-ages-1",
+        "params": {
+          "k": 4,
+          "y": 5,
+          "s": 40
+        },
+        "answer": "24"
+      },
+      {
+        "id": "logic-tom-jill-ages-2",
+        "params": {
+          "k": 3,
+          "y": 3,
+          "s": 34
+        },
+        "answer": "21"
+      }
+    ],
+    "plausible": {
+      "min": 1,
+      "max": 100,
+      "step": 1
+    },
+    "verify": "k*(s-2*y)/(k+1)"
+  },
+  {
+    "id": "logic-party-handshakes",
+    "subject": "logic",
+    "kind": "counting",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "{n} children and 1 teacher are at a party. Every two people shake hands exactly once. How many handshakes happen altogether?",
+    "hints": [
+      "Count the people first. Each handshake is a pair of different people.",
+      "Each person shakes hands with everyone else, but a handshake counted from both sides is the same handshake."
+    ],
+    "explanation": "With n children and 1 teacher there are n + 1 people. Each shakes hands with n others, which counts every handshake twice, so the total is (n + 1) times n divided by 2.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-party-handshakes-1",
+        "params": {
+          "n": 12
+        },
+        "answer": "78"
+      },
+      {
+        "id": "logic-party-handshakes-2",
+        "params": {
+          "n": 15
+        },
+        "answer": "120"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "(n+1)*n/2"
+  },
+  {
+    "id": "logic-grid-squares",
+    "subject": "logic",
+    "kind": "counting",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "How many squares of any size can you find in a {n} by {n} grid of small squares? Count the small squares, the 2 by 2 squares, the 3 by 3 squares and so on.",
+    "hints": [
+      "Count the squares of side 1 first. Then count the squares of side 2: where can the top left corner go?",
+      "A square of side s fits in (n - s + 1) by (n - s + 1) positions. Add up all the sizes."
+    ],
+    "explanation": "A square of side s can be placed in (n - s + 1) times (n - s + 1) ways. Add these for every side from 1 to n; the total equals the sum of the squares 1, 4, 9, ... up to n squared.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-grid-squares-1",
+        "params": {
+          "n": 6
+        },
+        "answer": "91"
+      },
+      {
+        "id": "logic-grid-squares-2",
+        "params": {
+          "n": 8
+        },
+        "answer": "204"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "n*(n+1)*(2*n+1)/6"
+  },
+  {
+    "id": "logic-outfits-not-red-green",
+    "subject": "logic",
+    "kind": "counting",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Mia has {a} T-shirts, {b} pairs of shorts and {c} hats. An outfit is one T-shirt, one pair of shorts and one hat. She never wears her red T-shirt with her green shorts, whichever hat she picks. How many different outfits can she make?",
+    "hints": [
+      "First count all the outfits as if there were no rule.",
+      "Then count the outfits that break the rule: the red T-shirt and the green shorts are fixed, and only the hat can change."
+    ],
+    "explanation": "All outfits: T-shirts times shorts times hats. The banned outfits use the red T-shirt and the green shorts with any hat, so there are as many banned outfits as hats. Subtract.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-outfits-not-red-green-1",
+        "params": {
+          "a": 4,
+          "b": 3,
+          "c": 5
+        },
+        "answer": "55"
+      },
+      {
+        "id": "logic-outfits-not-red-green-2",
+        "params": {
+          "a": 6,
+          "b": 4,
+          "c": 3
+        },
+        "answer": "69"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "a*b*c - c"
+  },
+  {
+    "id": "logic-balance-cubes-cones",
+    "subject": "logic",
+    "kind": "balance",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "On a balance scale, {a} cubes weigh the same as {b} balls, and {c} balls weigh the same as {d} cones. One cone weighs {w} g. How many grams does one cube weigh?",
+    "hints": [
+      "Start from the cone: work out how much one ball weighs.",
+      "Then use the cubes-and-balls balance to find one cube."
+    ],
+    "explanation": "From c balls = d cones, one ball weighs d times the cone weight divided by c. From a cubes = b balls, one cube weighs b times the ball weight divided by a.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-balance-cubes-cones-1",
+        "params": {
+          "a": 2,
+          "b": 3,
+          "c": 4,
+          "d": 6,
+          "w": 8
+        },
+        "answer": "18"
+      },
+      {
+        "id": "logic-balance-cubes-cones-2",
+        "params": {
+          "a": 3,
+          "b": 4,
+          "c": 5,
+          "d": 10,
+          "w": 9
+        },
+        "answer": "24"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "b*d*w/(a*c)"
+  },
+  {
+    "id": "logic-melon-apples",
+    "subject": "logic",
+    "kind": "balance",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "One melon and 1 apple weigh {s1} g together. One melon and 3 apples weigh {s2} g together. What do 2 melons and 5 apples weigh together, in grams?",
+    "hints": [
+      "Compare the two weighings. What is the only difference between them?",
+      "The extra weight in the second weighing is 2 apples. Find the weight of one apple, then one melon."
+    ],
+    "explanation": "The second weighing has 2 more apples than the first, so 2 apples weigh s2 minus s1 and one apple weighs half of that. One melon weighs s1 minus one apple. Then add up 2 melons and 5 apples.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-melon-apples-1",
+        "params": {
+          "s1": 500,
+          "s2": 700
+        },
+        "answer": "1300"
+      },
+      {
+        "id": "logic-melon-apples-2",
+        "params": {
+          "s1": 620,
+          "s2": 840
+        },
+        "answer": "1570"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 3000,
+      "step": 1
+    },
+    "verify": "2*s1 + 3*(s2-s1)/2"
+  },
+  {
+    "id": "logic-think-of-number",
+    "subject": "logic",
+    "kind": "working_backwards",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "I think of a number. I multiply it by {a}, subtract {b}, divide the result by {c} and then add {d}. My answer is {r}. What number did I think of?",
+    "hints": [
+      "Work backwards: undo the last step first.",
+      "Undo each step in the opposite order, using the opposite operation (add instead of subtract, multiply instead of divide)."
+    ],
+    "explanation": "Reverse the steps in the opposite order: subtract d, multiply by c, add b, divide by a. The result is the number thought of.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-think-of-number-1",
+        "params": {
+          "a": 3,
+          "b": 6,
+          "c": 4,
+          "d": 7,
+          "r": 16
+        },
+        "answer": "14"
+      },
+      {
+        "id": "logic-think-of-number-2",
+        "params": {
+          "a": 5,
+          "b": 10,
+          "c": 3,
+          "d": 2,
+          "r": 32
+        },
+        "answer": "20"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 300,
+      "step": 1
+    },
+    "verify": "((r-d)*c + b)/a"
+  },
+  {
+    "id": "logic-zoe-money",
+    "subject": "logic",
+    "kind": "working_backwards",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Zoe spent half of her pocket money on a book, then {a} pounds on lunch. She then gave one third of what was left to her brother. She now has {r} pounds. How many pounds did she start with?",
+    "hints": [
+      "Work backwards from what she has now. If she gave away one third, what fraction of the money before that did she keep?",
+      "Before giving to her brother she had one and a half times what she has now. Add back the lunch, then undo the book."
+    ],
+    "explanation": "After giving away one third she keeps two thirds, so before that she had r divided by two thirds, which is one and a half times r. Add back the lunch money. That amount was half of her start, so double it.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-zoe-money-1",
+        "params": {
+          "a": 5,
+          "r": 20
+        },
+        "answer": "70"
+      },
+      {
+        "id": "logic-zoe-money-2",
+        "params": {
+          "a": 8,
+          "r": 36
+        },
+        "answer": "124"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "3*r + 2*a"
+  },
+  {
+    "id": "logic-homework-finish",
+    "subject": "logic",
+    "kind": "clock_calendar",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Ellie starts her homework at {s} minutes past 3 o'clock. She works for {n} sessions of {w} minutes each, with a {b}-minute break between each pair of sessions and no break after the last one. How many minutes past 3 o'clock is it when she finishes?",
+    "hints": [
+      "Count the work minutes first, then the breaks. If there are n sessions, how many breaks are there?",
+      "Add the work time and the break time to the start time."
+    ],
+    "explanation": "There are n sessions of w minutes and one fewer break than sessions. Total time is the start minutes plus n times w plus (n - 1) times b.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-homework-finish-1",
+        "params": {
+          "s": 45,
+          "n": 7,
+          "w": 25,
+          "b": 10
+        },
+        "answer": "280"
+      },
+      {
+        "id": "logic-homework-finish-2",
+        "params": {
+          "s": 30,
+          "n": 9,
+          "w": 20,
+          "b": 5
+        },
+        "answer": "250"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "verify": "s + n*w + (n-1)*b"
+  },
+  {
+    "id": "logic-bell-strikes",
+    "subject": "logic",
+    "kind": "clock_calendar",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A clock strikes evenly spaced chimes. To strike {n} o'clock, the time from the start of the first chime to the start of the last chime is {t} seconds. How many seconds does it take, from the start of the first chime to the start of the last chime, to strike {m} o'clock?",
+    "hints": [
+      "Striking n times has fewer gaps between chimes than n. How many gaps are there?",
+      "Find the length of one gap from the first clue, then count the gaps for the new time."
+    ],
+    "explanation": "Striking n times leaves n - 1 gaps, so each gap lasts t divided by (n - 1) seconds. Striking m times has m - 1 gaps, so multiply the gap length by m - 1.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-bell-strikes-1",
+        "params": {
+          "n": 6,
+          "t": 10,
+          "m": 12
+        },
+        "answer": "22"
+      },
+      {
+        "id": "logic-bell-strikes-2",
+        "params": {
+          "n": 4,
+          "t": 12,
+          "m": 10
+        },
+        "answer": "36"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "t*(m-1)/(n-1)"
+  },
+  {
+    "id": "logic-last-sunday",
+    "subject": "logic",
+    "kind": "clock_calendar",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "A month has {len} days and the 1st of the month is a {day}. What is the date of the last Sunday in the month?",
+    "hints": [
+      "Find the date of the first Sunday by counting forward from the 1st.",
+      "Sundays are 7 days apart. Keep adding 7 while the date is still inside the month."
+    ],
+    "explanation": "Find the first Sunday by counting from the 1st, then keep adding 7 days while the date does not pass the last day of the month. The last date reached is the last Sunday.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-last-sunday-1",
+        "params": {
+          "len": 31,
+          "day": "Friday",
+          "sun": 3
+        },
+        "answer": "31"
+      },
+      {
+        "id": "logic-last-sunday-2",
+        "params": {
+          "len": 30,
+          "day": "Tuesday",
+          "sun": 6
+        },
+        "answer": "27"
+      },
+      {
+        "id": "logic-last-sunday-3",
+        "params": {
+          "len": 28,
+          "day": "Sunday",
+          "sun": 1
+        },
+        "answer": "22"
+      }
+    ],
+    "plausible": {
+      "min": 1,
+      "max": 31,
+      "step": 1
+    },
+    "verify": "sun + 7*((len - sun)//7)"
+  },
+  {
+    "id": "logic-cows-chickens",
+    "subject": "logic",
+    "kind": "heads_and_legs",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A farm has {h} animals, and every animal is a cow or a chicken. Altogether they have {l} legs. How many cows are there?",
+    "hints": [
+      "Pretend all the animals are chickens. How many legs would that be?",
+      "Each cow has 2 legs more than a chicken. How many extra legs do you need to explain?"
+    ],
+    "explanation": "If all animals were chickens there would be 2 times h legs. The extra legs come from cows, each adding 2 legs, so the number of cows is (l minus 2h) divided by 2.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-cows-chickens-1",
+        "params": {
+          "h": 20,
+          "l": 56
+        },
+        "answer": "8"
+      },
+      {
+        "id": "logic-cows-chickens-2",
+        "params": {
+          "h": 35,
+          "l": 100
+        },
+        "answer": "15"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "(l - 2*h)/2"
+  },
+  {
+    "id": "logic-coin-jar",
+    "subject": "logic",
+    "kind": "heads_and_legs",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Sam has {n} coins and every coin is a 5p coin or a 20p coin. Their total value is {v}p. How many 20p coins does Sam have?",
+    "hints": [
+      "Pretend all the coins are 5p coins. What would the total be?",
+      "Swapping one 5p coin for a 20p coin adds 15p. How many swaps do you need?"
+    ],
+    "explanation": "If every coin were 5p the total would be 5 times n. Each 20p coin adds 15p more than a 5p coin, so the number of 20p coins is (v minus 5n) divided by 15.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-coin-jar-1",
+        "params": {
+          "n": 12,
+          "v": 120
+        },
+        "answer": "4"
+      },
+      {
+        "id": "logic-coin-jar-2",
+        "params": {
+          "n": 20,
+          "v": 220
+        },
+        "answer": "8"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "(v - 5*n)/15"
+  },
+  {
+    "id": "logic-multiples-or",
+    "subject": "logic",
+    "kind": "number_theory",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "How many whole numbers from 1 to {n} are multiples of {a} or multiples of {b}, or both? (Hint: {l} is the smallest number that is a multiple of both {a} and {b}.)",
+    "hints": [
+      "Count the multiples of the first number, then of the second. Some numbers are counted twice.",
+      "The numbers counted twice are the multiples of the common multiple given in the question. Subtract them once."
+    ],
+    "explanation": "Count the multiples of a (n divided by a, rounded down) and of b. Numbers that are multiples of both are counted twice; they are the multiples of the common multiple l, so subtract that count once.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-multiples-or-1",
+        "params": {
+          "n": 100,
+          "a": 4,
+          "b": 6,
+          "l": 12
+        },
+        "answer": "33"
+      },
+      {
+        "id": "logic-multiples-or-2",
+        "params": {
+          "n": 200,
+          "a": 6,
+          "b": 9,
+          "l": 18
+        },
+        "answer": "44"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 300,
+      "step": 1
+    },
+    "verify": "n//a + n//b - n//l"
+  },
+  {
+    "id": "logic-race-medals",
+    "subject": "logic",
+    "kind": "counting",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "{n} runners take part in a race and there are no ties. Gold, silver and bronze medals go to the first three runners. In how many different ways can the three medals be given out?",
+    "hints": [
+      "Pick the gold medallist first. How many choices are there?",
+      "Then pick the silver medallist from those who are left, and then the bronze."
+    ],
+    "explanation": "There are n choices for gold, then n - 1 for silver and n - 2 for bronze, so multiply n times (n - 1) times (n - 2).",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-race-medals-1",
+        "params": {
+          "n": 8
+        },
+        "answer": "336"
+      },
+      {
+        "id": "logic-race-medals-2",
+        "params": {
+          "n": 10
+        },
+        "answer": "720"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "verify": "n*(n-1)*(n-2)"
+  },
+  {
+    "id": "logic-bee-and-cyclists",
+    "subject": "logic",
+    "kind": "speed_time",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Two cyclists start {d} km apart and ride towards each other at {a} km/h and {b} km/h. A bee flies back and forth between them at {v} km/h until they meet. How many kilometres does the bee fly altogether?",
+    "hints": [
+      "Do not try to follow every trip of the bee. Ask for how long the bee is flying.",
+      "The cyclists close the gap at a + b km/h. How long until they meet?"
+    ],
+    "explanation": "The bee flies for exactly as long as it takes the cyclists to meet. They close the gap at a + b km per hour, so the time is d divided by (a + b) hours. Multiply that time by the bee's speed.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-bee-and-cyclists-1",
+        "params": {
+          "d": 60,
+          "a": 12,
+          "b": 18,
+          "v": 40
+        },
+        "answer": "80"
+      },
+      {
+        "id": "logic-bee-and-cyclists-2",
+        "params": {
+          "d": 90,
+          "a": 7,
+          "b": 8,
+          "v": 24
+        },
+        "answer": "144"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "v*d/(a+b)"
+  },
+  {
+    "id": "logic-rectangle-area",
+    "subject": "logic",
+    "kind": "geometry_numeric",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "A rectangle is {k} times as long as it is wide. Its perimeter is {p} cm. What is its area in square centimetres?",
+    "hints": [
+      "Call the width one unit. How many units is the length? How many units go round the perimeter?",
+      "Divide the perimeter by the number of units to find the width. Then find the length and multiply."
+    ],
+    "explanation": "The perimeter is 2 times (width + length) = 2 times (k + 1) widths. Divide the perimeter by 2(k + 1) to get the width, the length is k times that, and the area is length times width.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-rectangle-area-1",
+        "params": {
+          "k": 2,
+          "p": 60
+        },
+        "answer": "200"
+      },
+      {
+        "id": "logic-rectangle-area-2",
+        "params": {
+          "k": 3,
+          "p": 96
+        },
+        "answer": "432"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "k*(p/(2*(k+1)))**2"
+  },
+  {
+    "id": "logic-sixth-number",
+    "subject": "logic",
+    "kind": "averages",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "The average of 5 numbers is {a}. When a sixth number is added, the average of all 6 numbers is {b}. What is the sixth number?",
+    "hints": [
+      "An average times the amount of numbers gives the total. What is the total of the first 5 numbers?",
+      "What is the total of all 6 numbers? What is the difference?"
+    ],
+    "explanation": "The first five numbers add up to 5 times a. All six add up to 6 times b. The sixth number is the difference between these two totals.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-sixth-number-1",
+        "params": {
+          "a": 15,
+          "b": 17
+        },
+        "answer": "27"
+      },
+      {
+        "id": "logic-sixth-number-2",
+        "params": {
+          "a": 20,
+          "b": 18
+        },
+        "answer": "8"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "6*b - 5*a"
+  },
+  {
+    "id": "logic-queue-heights",
+    "subject": "logic",
+    "kind": "ordering",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Six children, Ana, Ben, Cara, Dev, Eli and Fay, stand in a single queue at the ice-cream van. Nobody shares a place. You are told:\n- Exactly one child stands between Ana and Fay.\n- Exactly two children stand between Fay and Ben.\n- Fay stands immediately ahead of Eli, with nobody between them.\n- Dev and Ben stand right next to each other.\n- Dev and Cara stand right next to each other.\n- Exactly three children stand between Eli and Ben.\nWho is third in the queue?",
+    "hints": [
+      "Look first for clues that give an exact place or an exact number of children in between.",
+      "Fix those children, then fit the 'ahead of' clues around them.",
+      "Draw six empty boxes numbered 1 to 6 and write the names in as you decide them."
+    ],
+    "explanation": "Only one queue satisfies every clue: 1 Ben, 2 Dev, 3 Cara, 4 Fay, 5 Eli, 6 Ana. So the third child is Cara.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-queue-heights-1",
+        "params": {},
+        "answer": "c"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Fay"
+      },
+      {
+        "id": "b",
+        "text": "Ana"
+      },
+      {
+        "id": "c",
+        "text": "Cara"
+      },
+      {
+        "id": "d",
+        "text": "Ben"
+      },
+      {
+        "id": "e",
+        "text": "Eli"
+      },
+      {
+        "id": "f",
+        "text": "Dev"
+      }
+    ]
+  },
+  {
+    "id": "logic-windowsill-pots",
+    "subject": "logic",
+    "kind": "ordering",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Six plant pots stand in a row on a windowsill. Each pot holds a different plant: Cactus, Fern, Ivy, Mint, Rose and Tulip. You are told:\n- The Tulip pot is immediately to the left of the Rose pot.\n- Exactly one pot stands between the Fern pot and the Cactus pot.\n- The Rose pot is immediately to the left of the Fern pot.\n- Exactly one pot stands between the Ivy pot and the Rose pot.\n- The Ivy pot and the Cactus pot are right next to each other.\n- The Cactus pot and the Mint pot are right next to each other.\nWhich plant is in the fourth pot from the left?",
+    "hints": [
+      "Find the clue that gives the exact number of pots in between two plants, and try both ways round.",
+      "Use the 'immediately to the left' clues to build short chains of pots, then slide the chains into the row.",
+      "The chains can only fit one way once the 'not the ... pot' clues are used."
+    ],
+    "explanation": "Reading the pots from left to right, the only arrangement that fits every clue is: 1 Tulip, 2 Rose, 3 Fern, 4 Ivy, 5 Cactus, 6 Mint. So the fourth pot holds the Ivy.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-windowsill-pots-1",
+        "params": {},
+        "answer": "b"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Rose"
+      },
+      {
+        "id": "b",
+        "text": "Ivy"
+      },
+      {
+        "id": "c",
+        "text": "Mint"
+      },
+      {
+        "id": "d",
+        "text": "Tulip"
+      },
+      {
+        "id": "e",
+        "text": "Fern"
+      },
+      {
+        "id": "f",
+        "text": "Cactus"
+      }
+    ]
+  },
+  {
+    "id": "logic-cinema-row",
+    "subject": "logic",
+    "kind": "seating",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Six friends, Asha, Ben, Cleo, Dan, Ella and Finn, sit in a row of six cinema seats numbered 1 to 6 from left to right. Each seat holds exactly one friend. You are told:\n- Exactly two seats separate Finn and Cleo.\n- Exactly one seat separates Asha and Finn.\n- Cleo and Asha sit in seats right next to each other.\n- Finn sits in the seat immediately to the left of Ella.\n- Dan and Asha sit in seats right next to each other.\n- Exactly one seat separates Ben and Finn.\nWho sits in seat 5?",
+    "hints": [
+      "Start with the clues that fix a seat number or an exact gap.",
+      "For 'next to each other' clues, think about the two seats they could take, then test each against the other clues.",
+      "Keep a small table of which seats are still possible for each friend."
+    ],
+    "explanation": "Writing the seats 1 to 6 in order, the only seating that fits every clue is: 1 Cleo, 2 Asha, 3 Dan, 4 Finn, 5 Ella, 6 Ben. So seat 5 is Ella.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-cinema-row-1",
+        "params": {},
+        "answer": "e"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Ben"
+      },
+      {
+        "id": "b",
+        "text": "Finn"
+      },
+      {
+        "id": "c",
+        "text": "Asha"
+      },
+      {
+        "id": "d",
+        "text": "Cleo"
+      },
+      {
+        "id": "e",
+        "text": "Ella"
+      },
+      {
+        "id": "f",
+        "text": "Dan"
+      }
+    ]
+  },
+  {
+    "id": "logic-round-table",
+    "subject": "logic",
+    "kind": "seating",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Six people, Priya, Quinn, Rosa, Sam, Tara and Umar, sit at a round table. The seats are numbered 1 to 6 going clockwise, and seat 6 is next to seat 1. Seats 1 and 4 face each other, as do seats 2 and 5, and seats 3 and 6. You are told:\n- Exactly one seat is between Sam and Umar (counting the short way round).\n- Rosa sits directly opposite Tara.\n- Exactly one seat is between Tara and Umar (counting the short way round).\n- Sam sits in seat 4.\n- Going clockwise round the table, Umar sits immediately after Quinn.\nWho sits in seat 3?",
+    "hints": [
+      "The table is a circle, so seat 6 is next to seat 1. 'Opposite' means three seats apart.",
+      "Use the clue that names an exact seat to pin down one person, then work outwards from that seat.",
+      "Check each remaining person against the 'next to' and 'not next to' clues."
+    ],
+    "explanation": "Going round the seats 1 to 6, the only arrangement that fits every clue is: 1 Quinn, 2 Umar, 3 Rosa, 4 Sam, 5 Priya, 6 Tara. So seat 3 is Rosa.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-round-table-1",
+        "params": {},
+        "answer": "c"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Tara"
+      },
+      {
+        "id": "b",
+        "text": "Priya"
+      },
+      {
+        "id": "c",
+        "text": "Rosa"
+      },
+      {
+        "id": "d",
+        "text": "Sam"
+      },
+      {
+        "id": "e",
+        "text": "Umar"
+      },
+      {
+        "id": "f",
+        "text": "Quinn"
+      }
+    ]
+  },
+  {
+    "id": "logic-pets-sports",
+    "subject": "logic",
+    "kind": "grid_deduction",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Five children, Mia, Noah, Olive, Pablo and Quinn, each own a different pet (cat, dog, rabbit, parrot or hamster) and each play a different sport (tennis, swimming, judo, football or chess). You are told:\n- Pablo does not own the dog.\n- The child who owns the cat plays judo.\n- The child who owns the parrot plays football.\n- The child who owns the hamster plays tennis.\n- Pablo does not play chess.\n- Quinn plays tennis.\n- Olive plays judo.\n- Noah owns the parrot.\nWho owns the rabbit?",
+    "hints": [
+      "Draw a grid with the five children down one side and pets and sports across the top. Mark 'yes' and 'no' as you go.",
+      "A clue that says 'does not' still helps: it crosses out a square, and a row or column with one square left must be 'yes'.",
+      "When a clue links a pet to a sport, remember that both belong to the same child."
+    ],
+    "explanation": "Matching up all the clues gives: Mia owns the dog and plays chess; Noah owns the parrot and plays football; Olive owns the cat and plays judo; Pablo owns the rabbit and plays swimming; Quinn owns the hamster and plays tennis. So the rabbit belongs to Pablo.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-pets-sports-1",
+        "params": {},
+        "answer": "c"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Olive"
+      },
+      {
+        "id": "b",
+        "text": "Mia"
+      },
+      {
+        "id": "c",
+        "text": "Pablo"
+      },
+      {
+        "id": "d",
+        "text": "Noah"
+      },
+      {
+        "id": "e",
+        "text": "Quinn"
+      }
+    ]
+  },
+  {
+    "id": "logic-fruit-shirts",
+    "subject": "logic",
+    "kind": "grid_deduction",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Five children, Zara, Yuri, Xena, Wes and Vera, each like a different fruit best (apple, banana, grape, kiwi or plum) and each wear a different shirt colour (red, blue, green, yellow or purple). You are told:\n- Xena likes grapes best.\n- Wes likes apples best.\n- Wes wears a yellow shirt.\n- The child who likes bananas best does not wear a purple shirt.\n- Yuri likes kiwis best.\n- The child who likes kiwis best wears a red shirt.\n- Xena does not wear a purple shirt.\n- Vera wears a green shirt.\nWhat colour shirt does the child who likes grapes best wear?",
+    "hints": [
+      "Make a table with the children, fruits and shirt colours. Cross out what the 'does not' clues rule out.",
+      "A clue about 'the child who likes ... best' joins a fruit and a colour. Follow that child through the other clues.",
+      "Find the child who likes grapes first, then read off the colour."
+    ],
+    "explanation": "Matching up all the clues gives: Zara likes plums and wears purple; Yuri likes kiwis and wears red; Xena likes grapes and wears blue; Wes likes apples and wears yellow; Vera likes bananas and wears green. So the grape fan wears blue.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-fruit-shirts-1",
+        "params": {},
+        "answer": "d"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "yellow"
+      },
+      {
+        "id": "b",
+        "text": "purple"
+      },
+      {
+        "id": "c",
+        "text": "green"
+      },
+      {
+        "id": "d",
+        "text": "blue"
+      },
+      {
+        "id": "e",
+        "text": "red"
+      }
+    ]
+  },
+  {
+    "id": "logic-five-houses",
+    "subject": "logic",
+    "kind": "grid_deduction",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 6,
+    "prompt": "Five houses stand in a row, numbered 1 to 5 from the left. Each house has a different colour (red, blue, green, white or yellow) and a different pet lives in each (cat, dog, fish, bird or mouse). You are told:\n- The house with the fish is directly to the left of the yellow house.\n- The house with the fish is directly to the left of the house with the dog.\n- The house with the bird is directly to the left of the house with the fish.\n- The yellow house is directly to the left of the house with the cat.\n- The bird lives in the blue house.\n- The red house is directly to the left of the white house.\nWhat colour is the house with the fish?",
+    "hints": [
+      "Draw five boxes in a row for the houses. Put clues that give an exact house number in first.",
+      "'Directly to the left' means the very next house; 'next to' could be either side.",
+      "Each colour and each pet appears exactly once, so use that to rule out places."
+    ],
+    "explanation": "Reading the houses from the left, the only arrangement that fits is: house 1 is blue with the bird; house 2 is green with the fish; house 3 is yellow with the dog; house 4 is red with the cat; house 5 is white with the mouse. So the fish lives in the green house.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-five-houses-1",
+        "params": {},
+        "answer": "e"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "white"
+      },
+      {
+        "id": "b",
+        "text": "red"
+      },
+      {
+        "id": "c",
+        "text": "blue"
+      },
+      {
+        "id": "d",
+        "text": "yellow"
+      },
+      {
+        "id": "e",
+        "text": "green"
+      }
+    ]
+  },
+  {
+    "id": "logic-missing-cookies",
+    "subject": "logic",
+    "kind": "truth_teller",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "One of five children, Ava, Bo, Cal, Dee and Eve, ate the last cookie. Each child says one sentence, in this order:\n- Ava: \"It was not Cal.\"\n- Bo: \"Ava is telling the truth.\"\n- Cal: \"It was not Dee.\"\n- Dee: \"It was Cal.\"\n- Eve: \"Cal is lying.\"\nExactly two of the five statements are true. Who ate the cookie?",
+    "hints": [
+      "Pick one child as the culprit and count how many statements would then be true.",
+      "A statement like 'X is lying' is true only if X's own statement is false, so work from the top.",
+      "Only one choice of culprit gives exactly the right number of true statements."
+    ],
+    "explanation": "Test each suspect and count the true statements (a statement about someone else's honesty depends on that person's statement): if it was Ava, three true; if it was Bo, three true; if it was Cal, two true; if it was Dee, three true; if it was Eve, three true. Only Cal gives exactly two true statements, so it was Cal.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-missing-cookies-1",
+        "params": {},
+        "answer": "d"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Ava"
+      },
+      {
+        "id": "b",
+        "text": "Bo"
+      },
+      {
+        "id": "c",
+        "text": "Eve"
+      },
+      {
+        "id": "d",
+        "text": "Cal"
+      },
+      {
+        "id": "e",
+        "text": "Dee"
+      }
+    ]
+  },
+  {
+    "id": "logic-broken-window",
+    "subject": "logic",
+    "kind": "truth_teller",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "A window was broken by exactly one of five children, Faye, Gus, Hana, Ivan and Jade. Each child makes one statement, in this order:\n- Faye: \"It was Gus.\"\n- Gus: \"It was either Faye or Hana.\"\n- Hana: \"Gus is lying.\"\n- Ivan: \"Faye is lying.\"\n- Jade: \"It was Ivan.\"\nExactly three of the five statements are true. Who broke the window?",
+    "hints": [
+      "Try each child as the one who broke the window and count the true statements each time.",
+      "Statements about someone lying or telling the truth depend on that other child's statement, so check those carefully.",
+      "Only one child leads to exactly the right number of true statements."
+    ],
+    "explanation": "Test each suspect and count the true statements (a statement about someone else's honesty depends on that person's statement): if it was Faye, two true; if it was Gus, two true; if it was Hana, two true; if it was Ivan, three true; if it was Jade, two true. Only Ivan gives exactly three true statements, so it was Ivan.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-broken-window-1",
+        "params": {},
+        "answer": "b"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Hana"
+      },
+      {
+        "id": "b",
+        "text": "Ivan"
+      },
+      {
+        "id": "c",
+        "text": "Jade"
+      },
+      {
+        "id": "d",
+        "text": "Faye"
+      },
+      {
+        "id": "e",
+        "text": "Gus"
+      }
+    ]
+  },
+  {
+    "id": "logic-island-knights",
+    "subject": "logic",
+    "kind": "truth_teller",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "On an island, every person is either a knight (always tells the truth) or a knave (always lies). Five islanders, Ada, Bram, Cora, Dov and Edie, say:\n- Ada says: \"Bram is a knight.\"\n- Bram says: \"Dov is a knight.\"\n- Cora says: \"Dov is a knave.\"\n- Dov says: \"Bram and Cora are the same type (both knights or both knaves).\"\n- Edie says: \"Bram is a knight.\"\nWhich of them is the only knight?",
+    "hints": [
+      "Knights always tell the truth and knaves always lie. Try assuming one person is a knight and see whether the statements fit.",
+      "If a statement would have to be true but is not, or false but is true, the assumption fails.",
+      "Only one choice of who is a knight, and who is a knave, avoids every contradiction."
+    ],
+    "explanation": "Testing every possibility, the only assignment with no contradiction has knight(s): Cora, and knave(s): Ada, Bram, Dov, Edie. So the only knight is Cora.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-island-knights-1",
+        "params": {},
+        "answer": "a"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Cora"
+      },
+      {
+        "id": "b",
+        "text": "Bram"
+      },
+      {
+        "id": "c",
+        "text": "Dov"
+      },
+      {
+        "id": "d",
+        "text": "Edie"
+      },
+      {
+        "id": "e",
+        "text": "Ada"
+      }
+    ]
+  }
+]

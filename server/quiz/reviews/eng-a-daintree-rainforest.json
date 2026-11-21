@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-daintree-rainforest",
+  "content_hash": "7b8bd3817008f319820fa4c503f9c5a3e578a716413a4a7531e968f9e6c7b722",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:33:14Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Clear, age-appropriate questions with accurate rainforest and cassowary facts."
+}

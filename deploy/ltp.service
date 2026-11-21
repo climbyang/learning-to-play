@@ -1,0 +1,16 @@
+[Unit]
+Description=Learning-to-Play TV monitor (LG webOS quota + Telegram)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# @SERVER_DIR@ and @UV@ are filled in by deploy/deploy.sh.
+WorkingDirectory=@SERVER_DIR@
+ExecStart=@UV@ run --frozen --no-dev ltp run
+Restart=always
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target

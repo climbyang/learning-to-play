@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-street-fish",
+  "content_hash": "b150fba14bcf6f183a76172f77930105679804818dec03ea8f089665bbbb24eb",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:40:08Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "The clues yield one unique arrangement, with Lily as the fish owner; wording and content suit Grade 5."
+}

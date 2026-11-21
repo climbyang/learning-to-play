@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-bushfire-banksia",
+  "content_hash": "e1909bbaa9f612128f4ea84cf22dd23d2fe18077233cbd4342aadc4f7f8fdbcd",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:33:14Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "All answers are uniquely supported; the simplified fire-ecology claims are broadly accurate."
+}

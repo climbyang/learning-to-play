@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-camping-by-the-river",
+  "content_hash": "40af05c6e9d531efa986043440e64e8f70af80ef0d81e6f92ae12c668d012a54",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:34:12Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Questions and vocabulary items are clear; the simplified Milky Way description remains accurate for this level."
+}

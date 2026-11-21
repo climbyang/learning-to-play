@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-fruit-shirts",
+  "content_hash": "266d02f64249a13d894f7aec99d57ca1c5c26141aab5a2d529ff0427962f1cb3",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:37:08Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "The colour clues uniquely show that Xena, the grape fan, wears blue."
+}

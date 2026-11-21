@@ -1,0 +1,20 @@
+{
+  "name": "ltp-quiz-tv-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "package": "ares-package dist -o out",
+    "install-tv": "ares-install -d tv out/*.ipk"
+  },
+  "devDependencies": {
+    "esbuild": "0.21.5",
+    "es-check": "7.2.1",
+    "jsdom": "24.1.0",
+    "typescript": "5.4.5",
+    "vitest": "1.6.0"
+  }
+}

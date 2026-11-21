@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-cinema-row",
+  "content_hash": "1aba3d8ce80c45c49e66816f1be909dbf8ea9eef7c20c89d228f7f67ae15166b",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:36:41Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "The seating clues have one solution, with Ella uniquely in seat 5."
+}

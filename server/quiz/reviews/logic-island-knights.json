@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-island-knights",
+  "content_hash": "763271b74b2c4262e1d85de1df7c18fe9e9f53da6957958b1b91f118504dcae3",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:37:22Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "The statements uniquely make Cora the only knight; knight and knave are clearly defined, and the fictional premise is suitable and internally consistent."
+}

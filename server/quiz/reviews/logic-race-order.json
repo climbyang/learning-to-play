@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-race-order",
+  "content_hash": "fe1cef9da245640a1ab716626e9a0c137d81d1f0b18f1178bcdfd1c3a0af70e3",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:36:04Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "唯一完赛顺序为 Una、Priya、Sam、Omar、Lena、Tia、Raj，第五名是 Lena，答案 c 正确。"
+}

@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-ant-colony",
+  "content_hash": "191c7ad3559f3160b3db0b6cc0bc71bd009e282aff0032bc801b90c99836ed62",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:32:37Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The questions follow the passage clearly; general ant-colony statements are reasonable and both sentences match verbatim."
+}

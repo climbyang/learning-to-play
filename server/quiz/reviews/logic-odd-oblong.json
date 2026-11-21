@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-odd-oblong",
+  "content_hash": "4b5bc267f82078a43e87b1f626f21958ba4f6f8925e9f034fae6aa31550ba7d8",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:36:41Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Only 64 cannot be written as n × (n + 1); the example and explanation are accurate."
+}

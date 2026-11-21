@@ -1,0 +1,12 @@
+{
+  "id": "com.learningtoplay.quiz",
+  "version": "0.1.0",
+  "vendor": "Learning-to-Play",
+  "type": "web",
+  "main": "index.html",
+  "title": "LTP Quiz",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "disallowScrollingInMainFrame": true,
+  "disableBackHistoryAPI": true
+}

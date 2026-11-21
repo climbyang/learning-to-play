@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-queue-heights",
+  "content_hash": "fc602caa44b1bb7eedf6239da1bc54c38b078af183c01f91a76f2c7b6cdbdeaa",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:36:41Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "The clues produce one queue, with Cara uniquely third."
+}

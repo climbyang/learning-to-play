@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-banquet-table",
+  "content_hash": "e4ccea7ea8a84efda457edfed5bf261184cd5e7e81ea70dfb19a39932c726ba4",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:41:03Z",
+  "pass": 2,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "按顺时针及短路程解释枚举后只有一个解，6号座位唯一是Cyra。"
+}

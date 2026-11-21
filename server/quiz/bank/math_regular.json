@@ -1,0 +1,1957 @@
+[
+  {
+    "id": "math-pencils-shared",
+    "subject": "math",
+    "kind": "multi_step",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 3,
+    "prompt": "A school buys {boxes} boxes of pencils with {per_box} pencils in each box. Each of {classes} classes is given {each} pencils. How many pencils are left over?",
+    "hints": [
+      "First find how many pencils the school buys altogether.",
+      "Then find how many pencils are given out in total."
+    ],
+    "explanation": "Pencils bought = boxes x per_box. Pencils given out = classes x each. Left over = bought - given out.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-pencils-shared-1",
+        "params": {
+          "boxes": 12,
+          "per_box": 24,
+          "classes": 9,
+          "each": 5
+        },
+        "answer": "243"
+      },
+      {
+        "id": "math-pencils-shared-2",
+        "params": {
+          "boxes": 15,
+          "per_box": 36,
+          "classes": 8,
+          "each": 17
+        },
+        "answer": "404"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "boxes * per_box - classes * each"
+  },
+  {
+    "id": "math-change-decimal",
+    "subject": "math",
+    "kind": "money",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "Maya buys 3 notebooks at $2.35 each and 2 pens at $1.20 each. She pays with a $20 note. How much change does she get, in dollars? Write your answer as a decimal, for example 4.50.",
+    "hints": [
+      "Work out the cost of the notebooks and the cost of the pens separately.",
+      "Add the two costs, then take the total away from $20."
+    ],
+    "explanation": "Notebooks cost 3 x 2.35 = 7.05. Pens cost 2 x 1.20 = 2.40. Total is 9.45, so the change is 20 - 9.45 = 10.55.",
+    "answer_type": "decimal",
+    "instances": [
+      {
+        "id": "math-change-decimal-1",
+        "params": {},
+        "answer": "10.55"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 20,
+      "step": 0.05
+    },
+    "verify": "20 - 3 * 2.35 - 2 * 1.2"
+  },
+  {
+    "id": "math-rows-seats",
+    "subject": "math",
+    "kind": "multi_step",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 3,
+    "prompt": "A hall has {rows} rows with {seats} seats in each row. {taken} seats are already taken and {reserved} more seats are reserved. How many seats are still free?",
+    "hints": [
+      "Find the total number of seats in the hall first.",
+      "Add the taken seats and the reserved seats, then subtract that from the total."
+    ],
+    "explanation": "Total seats = rows x seats. Seats not free = taken + reserved. Free seats = total - not free.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-rows-seats-1",
+        "params": {
+          "rows": 14,
+          "seats": 18,
+          "taken": 97,
+          "reserved": 25
+        },
+        "answer": "130"
+      },
+      {
+        "id": "math-rows-seats-2",
+        "params": {
+          "rows": 22,
+          "seats": 15,
+          "taken": 140,
+          "reserved": 36
+        },
+        "answer": "154"
+      },
+      {
+        "id": "math-rows-seats-3",
+        "params": {
+          "rows": 16,
+          "seats": 24,
+          "taken": 205,
+          "reserved": 48
+        },
+        "answer": "131"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "verify": "rows * seats - taken - reserved"
+  },
+  {
+    "id": "math-trays-cookies",
+    "subject": "math",
+    "kind": "multi_step",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Sam bakes {trays} trays with {per} cookies on each tray. He packs the cookies into bags of {bag}, and only full bags are sold. Each full bag sells for ${price}. How many dollars does Sam earn if he sells every full bag?",
+    "hints": [
+      "Find how many cookies Sam bakes altogether.",
+      "Work out how many full bags he can make. Ignore any cookies left over.",
+      "Multiply the number of full bags by the price of one bag."
+    ],
+    "explanation": "Cookies = trays x per. Full bags = whole number of times the bag size fits into the cookies. Earnings = full bags x price.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-trays-cookies-1",
+        "params": {
+          "trays": 6,
+          "per": 24,
+          "bag": 8,
+          "price": 5
+        },
+        "answer": "90"
+      },
+      {
+        "id": "math-trays-cookies-2",
+        "params": {
+          "trays": 7,
+          "per": 25,
+          "bag": 10,
+          "price": 3
+        },
+        "answer": "51"
+      },
+      {
+        "id": "math-trays-cookies-3",
+        "params": {
+          "trays": 9,
+          "per": 18,
+          "bag": 7,
+          "price": 4
+        },
+        "answer": "92"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "(trays * per) // bag * price"
+  },
+  {
+    "id": "math-library-books",
+    "subject": "math",
+    "kind": "multi_step",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "prompt": "A school library has {shelves} shelves with {books} books on each shelf. On Monday {out} books are borrowed. On Tuesday {back} books are returned and {out2} more books are borrowed. How many books are on the shelves at the end of Tuesday?",
+    "hints": [
+      "Start with the total number of books on the shelves.",
+      "Take away books that leave and add books that come back, in the order they happened."
+    ],
+    "explanation": "Start = shelves x books. Monday takes away out. Tuesday adds back and takes away out2.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-library-books-1",
+        "params": {
+          "shelves": 12,
+          "books": 45,
+          "out": 68,
+          "back": 30,
+          "out2": 52
+        },
+        "answer": "450"
+      },
+      {
+        "id": "math-library-books-2",
+        "params": {
+          "shelves": 15,
+          "books": 38,
+          "out": 90,
+          "back": 41,
+          "out2": 63
+        },
+        "answer": "458"
+      },
+      {
+        "id": "math-library-books-3",
+        "params": {
+          "shelves": 18,
+          "books": 26,
+          "out": 75,
+          "back": 22,
+          "out2": 49
+        },
+        "answer": "366"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "shelves * books - out + back - out2"
+  },
+  {
+    "id": "math-marbles-friends",
+    "subject": "math",
+    "kind": "multi_step",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Zoe has {a} marbles. Liam has {k} times as many marbles as Zoe. They put all their marbles together and share them equally among {n} friends. How many marbles does each friend get?",
+    "hints": [
+      "How many marbles does Liam have?",
+      "Add Zoe's and Liam's marbles together, then share the total equally."
+    ],
+    "explanation": "Liam = a x k. Together = a + Liam. Each friend gets the total divided by the number of friends.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-marbles-friends-1",
+        "params": {
+          "a": 24,
+          "k": 3,
+          "n": 8
+        },
+        "answer": "12"
+      },
+      {
+        "id": "math-marbles-friends-2",
+        "params": {
+          "a": 36,
+          "k": 4,
+          "n": 10
+        },
+        "answer": "18"
+      },
+      {
+        "id": "math-marbles-friends-3",
+        "params": {
+          "a": 45,
+          "k": 3,
+          "n": 12
+        },
+        "answer": "15"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "(a + a * k) / n"
+  },
+  {
+    "id": "math-canteen-lunch",
+    "subject": "math",
+    "kind": "money",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "At the school canteen a sandwich costs ${s}, a juice costs ${j} and a fruit cup costs ${f}. {n} students each buy one sandwich, one juice and one fruit cup. How much do they spend altogether, in dollars? Write your answer as a decimal, for example 12.30.",
+    "hints": [
+      "Find the cost of one student's lunch first.",
+      "Multiply that by the number of students."
+    ],
+    "explanation": "One lunch costs s + j + f. The total is that cost multiplied by n.",
+    "answer_type": "decimal",
+    "instances": [
+      {
+        "id": "math-canteen-lunch-1",
+        "params": {
+          "s": 3.45,
+          "j": 1.85,
+          "f": 2.35,
+          "n": 24
+        },
+        "answer": "183.60"
+      },
+      {
+        "id": "math-canteen-lunch-2",
+        "params": {
+          "s": 4.25,
+          "j": 1.65,
+          "f": 2.45,
+          "n": 18
+        },
+        "answer": "150.30"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 0.01
+    },
+    "verify": "n * (s + j + f)"
+  },
+  {
+    "id": "math-sale-shirts",
+    "subject": "math",
+    "kind": "money",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A shirt usually costs ${p}. In a sale every shirt is {pct}% off. Mia buys {n} shirts at the sale price and pays with ${note}. How many dollars of change does she get?",
+    "hints": [
+      "Find the amount of the discount on one shirt, then the sale price of one shirt.",
+      "Multiply by the number of shirts, then subtract from the money Mia paid."
+    ],
+    "explanation": "Sale price = p x (100 - pct) / 100. Cost of shirts = n x sale price. Change = note - cost.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-sale-shirts-1",
+        "params": {
+          "p": 40,
+          "pct": 25,
+          "n": 3,
+          "note": 100
+        },
+        "answer": "10"
+      },
+      {
+        "id": "math-sale-shirts-2",
+        "params": {
+          "p": 60,
+          "pct": 20,
+          "n": 2,
+          "note": 100
+        },
+        "answer": "4"
+      },
+      {
+        "id": "math-sale-shirts-3",
+        "params": {
+          "p": 80,
+          "pct": 15,
+          "n": 3,
+          "note": 250
+        },
+        "answer": "46"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "note - n * p * (100 - pct) / 100"
+  },
+  {
+    "id": "math-saving-weeks",
+    "subject": "math",
+    "kind": "money",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Ethan wants to buy a bike that costs ${cost}. He has already saved ${saved}. Each week he gets ${pocket} pocket money and spends ${spend} of it. After how many weeks will he have exactly enough money for the bike?",
+    "hints": [
+      "How much more money does Ethan still need?",
+      "How much does he add to his savings each week after spending?",
+      "Share the money he still needs into weekly amounts."
+    ],
+    "explanation": "Still needed = cost - saved. Saved per week = pocket - spend. Weeks = still needed divided by saved per week.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-saving-weeks-1",
+        "params": {
+          "cost": 240,
+          "saved": 60,
+          "pocket": 15,
+          "spend": 6
+        },
+        "answer": "20"
+      },
+      {
+        "id": "math-saving-weeks-2",
+        "params": {
+          "cost": 350,
+          "saved": 95,
+          "pocket": 18,
+          "spend": 3
+        },
+        "answer": "17"
+      },
+      {
+        "id": "math-saving-weeks-3",
+        "params": {
+          "cost": 180,
+          "saved": 36,
+          "pocket": 12,
+          "spend": 4
+        },
+        "answer": "18"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "(cost - saved) / (pocket - spend)"
+  },
+  {
+    "id": "math-ribbon-cuts",
+    "subject": "math",
+    "kind": "measurement",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 3,
+    "prompt": "A roll of ribbon is {len} metres long. {n} pieces of ribbon, each {each} centimetres long, are cut from the roll. How many centimetres of ribbon are left on the roll?",
+    "hints": [
+      "Change the length of the roll from metres to centimetres.",
+      "Find the total length of the pieces that were cut off."
+    ],
+    "explanation": "1 metre = 100 centimetres. Ribbon left = len x 100 - n x each.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-ribbon-cuts-1",
+        "params": {
+          "len": 12,
+          "n": 15,
+          "each": 64
+        },
+        "answer": "240"
+      },
+      {
+        "id": "math-ribbon-cuts-2",
+        "params": {
+          "len": 9,
+          "n": 8,
+          "each": 85
+        },
+        "answer": "220"
+      },
+      {
+        "id": "math-ribbon-cuts-3",
+        "params": {
+          "len": 15,
+          "n": 12,
+          "each": 110
+        },
+        "answer": "180"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "len * 100 - n * each"
+  },
+  {
+    "id": "math-water-tank",
+    "subject": "math",
+    "kind": "measurement",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A water tank holds {cap} litres when it is full. At the moment it is {pct}% full. Dad pours in {buckets} buckets of water, each holding {size} litres. How many more litres are needed to fill the tank to the top?",
+    "hints": [
+      "Find how many litres are in the tank now.",
+      "Add the water from the buckets, then compare with the full amount."
+    ],
+    "explanation": "Water now = cap x pct / 100. Bucket water = buckets x size. Litres still needed = cap - water now - bucket water.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-water-tank-1",
+        "params": {
+          "cap": 200,
+          "pct": 40,
+          "buckets": 5,
+          "size": 6
+        },
+        "answer": "90"
+      },
+      {
+        "id": "math-water-tank-2",
+        "params": {
+          "cap": 500,
+          "pct": 35,
+          "buckets": 8,
+          "size": 12
+        },
+        "answer": "229"
+      },
+      {
+        "id": "math-water-tank-3",
+        "params": {
+          "cap": 360,
+          "pct": 25,
+          "buckets": 6,
+          "size": 15
+        },
+        "answer": "180"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "verify": "cap - cap * pct / 100 - buckets * size"
+  },
+  {
+    "id": "math-parcel-mass",
+    "subject": "math",
+    "kind": "measurement",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A parcel holds {n} books that each have a mass of {g} grams. The empty box has a mass of {box} grams. What is the total mass of the parcel in kilograms? Write your answer as a decimal.",
+    "hints": [
+      "Find the mass of all the books in grams.",
+      "Add the box, then change grams to kilograms (1 kilogram = 1000 grams)."
+    ],
+    "explanation": "Mass in grams = n x g + box. Divide by 1000 to change to kilograms.",
+    "answer_type": "decimal",
+    "instances": [
+      {
+        "id": "math-parcel-mass-1",
+        "params": {
+          "n": 14,
+          "g": 275,
+          "box": 650
+        },
+        "answer": "4.50"
+      },
+      {
+        "id": "math-parcel-mass-2",
+        "params": {
+          "n": 9,
+          "g": 420,
+          "box": 420
+        },
+        "answer": "4.20"
+      },
+      {
+        "id": "math-parcel-mass-3",
+        "params": {
+          "n": 16,
+          "g": 185,
+          "box": 640
+        },
+        "answer": "3.60"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 50,
+      "step": 0.1
+    },
+    "verify": "(n * g + box) / 1000"
+  },
+  {
+    "id": "math-park-laps",
+    "subject": "math",
+    "kind": "measurement",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "The track around a park is {m} metres long. Ravi runs {laps} laps of the track and then walks another {extra} metres. How many kilometres has he travelled altogether? Write your answer as a decimal.",
+    "hints": [
+      "Find how many metres he runs in the laps.",
+      "Add the walk, then change metres to kilometres (1 kilometre = 1000 metres)."
+    ],
+    "explanation": "Distance in metres = m x laps + extra. Divide by 1000 to get kilometres.",
+    "answer_type": "decimal",
+    "instances": [
+      {
+        "id": "math-park-laps-1",
+        "params": {
+          "m": 450,
+          "laps": 7,
+          "extra": 250
+        },
+        "answer": "3.40"
+      },
+      {
+        "id": "math-park-laps-2",
+        "params": {
+          "m": 380,
+          "laps": 5,
+          "extra": 650
+        },
+        "answer": "2.55"
+      },
+      {
+        "id": "math-park-laps-3",
+        "params": {
+          "m": 620,
+          "laps": 4,
+          "extra": 120
+        },
+        "answer": "2.60"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 20,
+      "step": 0.01
+    },
+    "verify": "(m * laps + extra) / 1000"
+  },
+  {
+    "id": "math-homework-time",
+    "subject": "math",
+    "kind": "time",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 3,
+    "prompt": "Rosa starts her homework at 4:{m} pm. She spends {a} minutes on maths, {b} minutes on reading and then has a {brk} minute break. How many minutes past 5:00 pm is it when she finishes?",
+    "hints": [
+      "Add up all the minutes from the start of homework to the end of the break.",
+      "Take away 60 minutes to see how far past 5:00 pm it is."
+    ],
+    "explanation": "Total minutes after 4:00 pm = m + a + b + brk. Subtract 60 to count the minutes after 5:00 pm.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-homework-time-1",
+        "params": {
+          "m": 40,
+          "a": 15,
+          "b": 20,
+          "brk": 5
+        },
+        "answer": "20"
+      },
+      {
+        "id": "math-homework-time-2",
+        "params": {
+          "m": 25,
+          "a": 30,
+          "b": 20,
+          "brk": 10
+        },
+        "answer": "25"
+      },
+      {
+        "id": "math-homework-time-3",
+        "params": {
+          "m": 50,
+          "a": 12,
+          "b": 18,
+          "brk": 15
+        },
+        "answer": "35"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 59,
+      "step": 1
+    },
+    "verify": "m + a + b + brk - 60"
+  },
+  {
+    "id": "math-train-bus-trip",
+    "subject": "math",
+    "kind": "time",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A train leaves at {h1}:{m1} am and arrives at {h2}:{m2} am. After getting off the train, Chen catches a bus and travels for another {bus} minutes. How many minutes did the whole trip take, from the train leaving to the end of the bus ride?",
+    "hints": [
+      "Find how many minutes the train journey took. Change hours to minutes to help.",
+      "Add the bus journey to the train journey."
+    ],
+    "explanation": "Train time = (h2 x 60 + m2) - (h1 x 60 + m1). Whole trip = train time + bus minutes.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-train-bus-trip-1",
+        "params": {
+          "h1": 7,
+          "m1": 40,
+          "h2": 9,
+          "m2": 15,
+          "bus": 25
+        },
+        "answer": "120"
+      },
+      {
+        "id": "math-train-bus-trip-2",
+        "params": {
+          "h1": 8,
+          "m1": 25,
+          "h2": 10,
+          "m2": 10,
+          "bus": 40
+        },
+        "answer": "145"
+      },
+      {
+        "id": "math-train-bus-trip-3",
+        "params": {
+          "h1": 6,
+          "m1": 50,
+          "h2": 9,
+          "m2": 20,
+          "bus": 35
+        },
+        "answer": "185"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 600,
+      "step": 1
+    },
+    "verify": "(h2 * 60 + m2) - (h1 * 60 + m1) + bus"
+  },
+  {
+    "id": "math-term-hours",
+    "subject": "math",
+    "kind": "time",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A school term has {w} weeks. Each week has 5 school days, but {off} days are pupil-free days with no teaching. On every other day there are {mins} minutes of teaching. How many hours of teaching are there in the term?",
+    "hints": [
+      "How many school days are in the term altogether? Take away the pupil-free days.",
+      "Find the total minutes of teaching, then change minutes to hours."
+    ],
+    "explanation": "Teaching days = w x 5 - off. Total minutes = teaching days x mins. Hours = total minutes / 60.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-term-hours-1",
+        "params": {
+          "w": 10,
+          "off": 3,
+          "mins": 300
+        },
+        "answer": "235"
+      },
+      {
+        "id": "math-term-hours-2",
+        "params": {
+          "w": 9,
+          "off": 4,
+          "mins": 240
+        },
+        "answer": "164"
+      },
+      {
+        "id": "math-term-hours-3",
+        "params": {
+          "w": 8,
+          "off": 5,
+          "mins": 180
+        },
+        "answer": "105"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "verify": "(w * 5 - off) * mins / 60"
+  },
+  {
+    "id": "math-swim-laps",
+    "subject": "math",
+    "kind": "time",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Kai swims {laps} laps of the pool. The first {first} laps each take {t1} seconds. Every remaining lap takes {t2} seconds. How many minutes does Kai swim for in total?",
+    "hints": [
+      "Find the time for the first laps, in seconds.",
+      "How many laps are left? Find their time, then add the two times.",
+      "Change seconds to minutes by dividing by 60."
+    ],
+    "explanation": "Seconds = first x t1 + (laps - first) x t2. Minutes = seconds / 60.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-swim-laps-1",
+        "params": {
+          "laps": 10,
+          "first": 4,
+          "t1": 45,
+          "t2": 60
+        },
+        "answer": "9"
+      },
+      {
+        "id": "math-swim-laps-2",
+        "params": {
+          "laps": 12,
+          "first": 5,
+          "t1": 48,
+          "t2": 60
+        },
+        "answer": "11"
+      },
+      {
+        "id": "math-swim-laps-3",
+        "params": {
+          "laps": 9,
+          "first": 3,
+          "t1": 50,
+          "t2": 65
+        },
+        "answer": "9"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "verify": "(first * t1 + (laps - first) * t2) / 60"
+  },
+  {
+    "id": "math-fraction-spending",
+    "subject": "math",
+    "kind": "fractions",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Nina has ${amt}. She spends {n1}/{d1} of her money on a game. She then spends {n2}/{d2} of the money she has left on a snack. How many dollars does Nina have left now?",
+    "hints": [
+      "Find the amount spent on the game and the money left after it.",
+      "Find the fraction of the remaining money spent on the snack.",
+      "Take that away from the money she had left."
+    ],
+    "explanation": "Left after the game = amt - amt x n1/d1. Snack = left x n2/d2. Money now = left - snack.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-fraction-spending-1",
+        "params": {
+          "amt": 120,
+          "n1": 3,
+          "d1": 8,
+          "n2": 2,
+          "d2": 5
+        },
+        "answer": "45"
+      },
+      {
+        "id": "math-fraction-spending-2",
+        "params": {
+          "amt": 180,
+          "n1": 5,
+          "d1": 12,
+          "n2": 1,
+          "d2": 3
+        },
+        "answer": "70"
+      },
+      {
+        "id": "math-fraction-spending-3",
+        "params": {
+          "amt": 96,
+          "n1": 3,
+          "d1": 4,
+          "n2": 3,
+          "d2": 8
+        },
+        "answer": "15"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 300,
+      "step": 1
+    },
+    "verify": "(amt - amt * n1 / d1) * (1 - n2 / d2)"
+  },
+  {
+    "id": "math-pizza-slices",
+    "subject": "math",
+    "kind": "fractions",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 3,
+    "prompt": "{n} pizzas are each cut into {d} equal slices. A family eats {a}/{b} of all the slices. How many slices are left?",
+    "hints": [
+      "How many slices are there altogether?",
+      "Find that fraction of the total, then take that away."
+    ],
+    "explanation": "Total slices = n x d. Slices eaten = total x a/b. Slices left = total - eaten.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-pizza-slices-1",
+        "params": {
+          "n": 4,
+          "d": 8,
+          "a": 3,
+          "b": 4
+        },
+        "answer": "8"
+      },
+      {
+        "id": "math-pizza-slices-2",
+        "params": {
+          "n": 5,
+          "d": 6,
+          "a": 2,
+          "b": 3
+        },
+        "answer": "10"
+      },
+      {
+        "id": "math-pizza-slices-3",
+        "params": {
+          "n": 6,
+          "d": 8,
+          "a": 5,
+          "b": 8
+        },
+        "answer": "18"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "n * d - n * d * a / b"
+  },
+  {
+    "id": "math-jug-glasses",
+    "subject": "math",
+    "kind": "fractions",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A jug holds {l} litres of juice. {a}/{b} of the juice is poured into glasses that each hold {ml} millilitres. How many glasses are filled completely?",
+    "hints": [
+      "Change the litres of juice into millilitres.",
+      "Find the fraction of the juice that is poured.",
+      "Divide the poured amount by the size of one glass."
+    ],
+    "explanation": "Millilitres = l x 1000. Poured = millilitres x a/b. Glasses = poured / ml.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-jug-glasses-1",
+        "params": {
+          "l": 3,
+          "a": 3,
+          "b": 5,
+          "ml": 200
+        },
+        "answer": "9"
+      },
+      {
+        "id": "math-jug-glasses-2",
+        "params": {
+          "l": 4,
+          "a": 5,
+          "b": 8,
+          "ml": 250
+        },
+        "answer": "10"
+      },
+      {
+        "id": "math-jug-glasses-3",
+        "params": {
+          "l": 6,
+          "a": 1,
+          "b": 4,
+          "ml": 300
+        },
+        "answer": "5"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "l * 1000 * a / b / ml"
+  },
+  {
+    "id": "math-camp-activities",
+    "subject": "math",
+    "kind": "fractions",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "On a school camp, 1/{a} of the {n} students chose canoeing and 1/{b} of the students chose archery. Everyone else chose climbing. How many students chose climbing?",
+    "hints": [
+      "Find how many students chose canoeing and how many chose archery.",
+      "Take both away from the total number of students."
+    ],
+    "explanation": "Canoeing = n/a. Archery = n/b. Climbing = n - canoeing - archery.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-camp-activities-1",
+        "params": {
+          "n": 60,
+          "a": 3,
+          "b": 4
+        },
+        "answer": "25"
+      },
+      {
+        "id": "math-camp-activities-2",
+        "params": {
+          "n": 72,
+          "a": 4,
+          "b": 6
+        },
+        "answer": "42"
+      },
+      {
+        "id": "math-camp-activities-3",
+        "params": {
+          "n": 48,
+          "a": 2,
+          "b": 8
+        },
+        "answer": "18"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "n - n / a - n / b"
+  },
+  {
+    "id": "math-garden-path",
+    "subject": "math",
+    "kind": "area_perimeter",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "A rectangular garden is {l} metres long and {w} metres wide. A path {p} metres wide goes all the way around the outside of the garden. What is the area of the path in square metres?",
+    "hints": [
+      "Draw the garden and the path. The garden plus the path makes a bigger rectangle.",
+      "How much longer and wider is the bigger rectangle? Remember the path is on both sides.",
+      "Subtract the area of the garden from the area of the bigger rectangle."
+    ],
+    "explanation": "The bigger rectangle is (l + 2p) by (w + 2p). Path area = bigger area - garden area.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-garden-path-1",
+        "params": {
+          "l": 12,
+          "w": 8,
+          "p": 1
+        },
+        "answer": "44"
+      },
+      {
+        "id": "math-garden-path-2",
+        "params": {
+          "l": 15,
+          "w": 10,
+          "p": 2
+        },
+        "answer": "116"
+      },
+      {
+        "id": "math-garden-path-3",
+        "params": {
+          "l": 20,
+          "w": 9,
+          "p": 3
+        },
+        "answer": "210"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "verify": "(l + 2 * p) * (w + 2 * p) - l * w"
+  },
+  {
+    "id": "math-fence-posts",
+    "subject": "math",
+    "kind": "area_perimeter",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A rectangular paddock is {l} metres long and {w} metres wide. Fence posts are placed every {gap} metres around the whole edge of the paddock, including one post at each corner. How many posts are needed?",
+    "hints": [
+      "Find the distance all the way around the paddock.",
+      "How many gaps of the given size fit in that distance? Around a closed loop, the number of posts equals the number of gaps."
+    ],
+    "explanation": "Perimeter = 2 x (l + w). Around a closed loop, posts = perimeter / gap.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-fence-posts-1",
+        "params": {
+          "l": 40,
+          "w": 20,
+          "gap": 5
+        },
+        "answer": "24"
+      },
+      {
+        "id": "math-fence-posts-2",
+        "params": {
+          "l": 60,
+          "w": 30,
+          "gap": 6
+        },
+        "answer": "30"
+      },
+      {
+        "id": "math-fence-posts-3",
+        "params": {
+          "l": 45,
+          "w": 30,
+          "gap": 5
+        },
+        "answer": "30"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "2 * (l + w) / gap"
+  },
+  {
+    "id": "math-floor-tiles",
+    "subject": "math",
+    "kind": "area_perimeter",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "A floor is {l} metres long and {w} metres wide. It is covered with square tiles that are {t} centimetres on each side. How many tiles are needed to cover the floor exactly?",
+    "hints": [
+      "Work in centimetres. Change the floor length and width into centimetres.",
+      "Find the area of the floor and the area of one tile, then divide."
+    ],
+    "explanation": "Floor in centimetres = (l x 100) by (w x 100). Tiles = floor area / (t x t).",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-floor-tiles-1",
+        "params": {
+          "l": 4,
+          "w": 3,
+          "t": 50
+        },
+        "answer": "48"
+      },
+      {
+        "id": "math-floor-tiles-2",
+        "params": {
+          "l": 6,
+          "w": 5,
+          "t": 20
+        },
+        "answer": "750"
+      },
+      {
+        "id": "math-floor-tiles-3",
+        "params": {
+          "l": 3,
+          "w": 2,
+          "t": 25
+        },
+        "answer": "96"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 5000,
+      "step": 1
+    },
+    "verify": "(l * 100) * (w * 100) / (t * t)"
+  },
+  {
+    "id": "math-l-shape-area",
+    "subject": "math",
+    "kind": "area_perimeter",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 3,
+    "prompt": "A rectangle is {a} centimetres long and {b} centimetres wide. A smaller rectangle {c} centimetres by {d} centimetres is cut out of one corner to make an L shape. What is the area of the L shape in square centimetres?",
+    "hints": [
+      "Find the area of the big rectangle.",
+      "Find the area of the piece that was cut out and take it away."
+    ],
+    "explanation": "L shape area = a x b - c x d.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-l-shape-area-1",
+        "params": {
+          "a": 20,
+          "b": 14,
+          "c": 8,
+          "d": 5
+        },
+        "answer": "240"
+      },
+      {
+        "id": "math-l-shape-area-2",
+        "params": {
+          "a": 18,
+          "b": 12,
+          "c": 6,
+          "d": 6
+        },
+        "answer": "180"
+      },
+      {
+        "id": "math-l-shape-area-3",
+        "params": {
+          "a": 25,
+          "b": 16,
+          "c": 10,
+          "d": 7
+        },
+        "answer": "330"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "a * b - c * d"
+  },
+  {
+    "id": "math-matchstick-squares",
+    "subject": "math",
+    "kind": "patterns",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "prompt": "Matchsticks are used to make a row of squares. One square uses 4 matchsticks, two squares joined in a row use 7 matchsticks, and three squares joined in a row use 10 matchsticks. The pattern keeps going. How many matchsticks are needed for a row of {n} squares?",
+    "hints": [
+      "Look at how many matchsticks are added each time another square is joined on.",
+      "The first square needs 4 and every extra square adds the same amount."
+    ],
+    "explanation": "Each extra square adds 3 matchsticks. Matchsticks = 4 + 3 x (n - 1).",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-matchstick-squares-1",
+        "params": {
+          "n": 15
+        },
+        "answer": "46"
+      },
+      {
+        "id": "math-matchstick-squares-2",
+        "params": {
+          "n": 20
+        },
+        "answer": "61"
+      },
+      {
+        "id": "math-matchstick-squares-3",
+        "params": {
+          "n": 32
+        },
+        "answer": "97"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "4 + 3 * (n - 1)"
+  },
+  {
+    "id": "math-number-sequence",
+    "subject": "math",
+    "kind": "patterns",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 3,
+    "prompt": "A number pattern starts at {a} and goes up by {d} each time: {a}, then {a} plus {d}, and so on. What is the number in position {n} of the pattern (position 1 is {a})?",
+    "hints": [
+      "How many times is the step added to reach that position?",
+      "The first number is already position 1, so be careful with the count."
+    ],
+    "explanation": "Position n = a + d x (n - 1).",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-number-sequence-1",
+        "params": {
+          "a": 7,
+          "d": 6,
+          "n": 25
+        },
+        "answer": "151"
+      },
+      {
+        "id": "math-number-sequence-2",
+        "params": {
+          "a": 12,
+          "d": 9,
+          "n": 40
+        },
+        "answer": "363"
+      },
+      {
+        "id": "math-number-sequence-3",
+        "params": {
+          "a": 5,
+          "d": 11,
+          "n": 18
+        },
+        "answer": "192"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "verify": "a + d * (n - 1)"
+  },
+  {
+    "id": "math-cup-stack",
+    "subject": "math",
+    "kind": "patterns",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "Cups are stacked in rows. The first row has {a} cups and each new row has {d} more cups than the row before it. How many cups are there altogether in {n} rows?",
+    "hints": [
+      "Write out the number of cups in each of the first few rows.",
+      "Find the number in the last row, then add all the rows. Pairing the first and last rows can help."
+    ],
+    "explanation": "Last row = a + d x (n - 1). Total = n x (first row + last row) / 2.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-cup-stack-1",
+        "params": {
+          "a": 3,
+          "d": 2,
+          "n": 8
+        },
+        "answer": "80"
+      },
+      {
+        "id": "math-cup-stack-2",
+        "params": {
+          "a": 5,
+          "d": 3,
+          "n": 10
+        },
+        "answer": "185"
+      },
+      {
+        "id": "math-cup-stack-3",
+        "params": {
+          "a": 2,
+          "d": 4,
+          "n": 9
+        },
+        "answer": "162"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "n * (2 * a + (n - 1) * d) / 2"
+  },
+  {
+    "id": "math-double-and-add",
+    "subject": "math",
+    "kind": "patterns",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "A number machine does this to a number: double it, then add {k}. Start with {s} and put it through the machine {n} times, using each answer as the next input. What number comes out at the end?",
+    "hints": [
+      "Do the first pass: double the starting number, then add the extra amount.",
+      "Keep going, one pass at a time, until you have done every pass."
+    ],
+    "explanation": "Each pass changes x into 2x + k. Apply the rule n times in a row.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-double-and-add-1",
+        "params": {
+          "s": 3,
+          "k": 1,
+          "n": 4
+        },
+        "answer": "63"
+      },
+      {
+        "id": "math-double-and-add-2",
+        "params": {
+          "s": 2,
+          "k": 3,
+          "n": 5
+        },
+        "answer": "157"
+      },
+      {
+        "id": "math-double-and-add-3",
+        "params": {
+          "s": 5,
+          "k": 2,
+          "n": 3
+        },
+        "answer": "54"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "s * 2 ** n + (2 ** n - 1) * k"
+  },
+  {
+    "id": "math-data-books-read",
+    "subject": "math",
+    "kind": "data",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "prompt": "The bar chart shows how many books five students read this term. The school donates ${price} to charity for every book read by Ava, Cara and Eli. How many dollars is donated altogether?",
+    "hints": [
+      "Read the number of books for Ava, for Cara and for Eli from the chart.",
+      "Add those three numbers, then multiply by the donation for each book."
+    ],
+    "explanation": "Ava read 12, Cara read 15 and Eli read 9, which is 36 books. Donation = 36 x price.",
+    "answer_type": "integer",
+    "figure": "{\"type\": \"bar\", \"data\": [{\"label\": \"Ava\", \"value\": 12}, {\"label\": \"Ben\", \"value\": 8}, {\"label\": \"Cara\", \"value\": 15}, {\"label\": \"Dan\", \"value\": 6}, {\"label\": \"Eli\", \"value\": 9}]}",
+    "instances": [
+      {
+        "id": "math-data-books-read-1",
+        "params": {
+          "price": 3
+        },
+        "answer": "108"
+      },
+      {
+        "id": "math-data-books-read-2",
+        "params": {
+          "price": 5
+        },
+        "answer": "180"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "(12 + 15 + 9) * price"
+  },
+  {
+    "id": "math-data-canteen-profit",
+    "subject": "math",
+    "kind": "data",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "The table shows what the canteen sold on one day. The canteen's costs for the day were ${cost}. How many dollars of profit did the canteen make? (Profit = money taken minus costs.)",
+    "hints": [
+      "For each item, multiply the price by the number sold.",
+      "Add the four amounts to get the money taken, then take away the costs."
+    ],
+    "explanation": "Pies 4 x 35 = 140, wraps 5 x 28 = 140, salads 6 x 15 = 90 and juices 2 x 60 = 120. Money taken = 490. Profit = 490 - cost.",
+    "answer_type": "integer",
+    "figure": "{\"type\": \"table\", \"headers\": [\"Item\", \"Price ($)\", \"Number sold\"], \"rows\": [[\"Pie\", 4, 35], [\"Wrap\", 5, 28], [\"Salad\", 6, 15], [\"Juice\", 2, 60]]}",
+    "instances": [
+      {
+        "id": "math-data-canteen-profit-1",
+        "params": {
+          "cost": 310
+        },
+        "answer": "180"
+      },
+      {
+        "id": "math-data-canteen-profit-2",
+        "params": {
+          "cost": 275
+        },
+        "answer": "215"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "4 * 35 + 5 * 28 + 6 * 15 + 2 * 60 - cost"
+  },
+  {
+    "id": "math-data-rainfall",
+    "subject": "math",
+    "kind": "data",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "The bar chart shows the rainfall, in millimetres, in each of six months. A farmer needs {target} millimetres of rain over the six months. By how many millimetres did the total rainfall for the six months exceed what the farmer needed?",
+    "hints": [
+      "Read each bar carefully and write down the six values.",
+      "Add them all together, then compare with the target."
+    ],
+    "explanation": "Total rainfall = 45 + 60 + 85 + 30 + 20 + 40 = 280 millimetres. Excess = 280 - target.",
+    "answer_type": "integer",
+    "figure": "{\"type\": \"bar\", \"data\": [{\"label\": \"Jan\", \"value\": 45}, {\"label\": \"Feb\", \"value\": 60}, {\"label\": \"Mar\", \"value\": 85}, {\"label\": \"Apr\", \"value\": 30}, {\"label\": \"May\", \"value\": 20}, {\"label\": \"Jun\", \"value\": 40}]}",
+    "instances": [
+      {
+        "id": "math-data-rainfall-1",
+        "params": {
+          "target": 250
+        },
+        "answer": "30"
+      },
+      {
+        "id": "math-data-rainfall-2",
+        "params": {
+          "target": 200
+        },
+        "answer": "80"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 300,
+      "step": 1
+    },
+    "verify": "45 + 60 + 85 + 30 + 20 + 40 - target"
+  },
+  {
+    "id": "math-data-house-points",
+    "subject": "math",
+    "kind": "data",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "The table shows the points each house earned in three terms. How many more points did the house with the highest total score than the house with the lowest total?",
+    "hints": [
+      "Add the three terms for each house to get four totals.",
+      "Find the largest and smallest totals and subtract."
+    ],
+    "explanation": "Red 355, Blue 345, Green 365, Gold 350. The difference between the highest (365) and the lowest (345) is 20.",
+    "answer_type": "integer",
+    "figure": "{\"type\": \"table\", \"headers\": [\"House\", \"Term 1\", \"Term 2\", \"Term 3\"], \"rows\": [[\"Red\", 120, 95, 140], [\"Blue\", 110, 130, 105], [\"Green\", 90, 150, 125], [\"Gold\", 135, 100, 115]]}",
+    "instances": [
+      {
+        "id": "math-data-house-points-1",
+        "params": {},
+        "answer": "20"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "(90 + 150 + 125) - (110 + 130 + 105)"
+  },
+  {
+    "id": "math-printer-booklets",
+    "subject": "math",
+    "kind": "rates",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A printer prints {p} pages every minute. A school needs {n} copies of a booklet that has {pg} pages. How many minutes will the printer take?",
+    "hints": [
+      "Find the total number of pages to print.",
+      "Divide the total pages by the pages printed each minute."
+    ],
+    "explanation": "Total pages = n x pg. Minutes = total pages / p.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-printer-booklets-1",
+        "params": {
+          "p": 20,
+          "n": 30,
+          "pg": 16
+        },
+        "answer": "24"
+      },
+      {
+        "id": "math-printer-booklets-2",
+        "params": {
+          "p": 15,
+          "n": 25,
+          "pg": 18
+        },
+        "answer": "30"
+      },
+      {
+        "id": "math-printer-booklets-3",
+        "params": {
+          "p": 12,
+          "n": 18,
+          "pg": 10
+        },
+        "answer": "15"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "n * pg / p"
+  },
+  {
+    "id": "math-car-fuel-cost",
+    "subject": "math",
+    "kind": "rates",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "A car uses {l} litres of fuel for every 100 kilometres. Fuel costs {c} cents per litre. How much does the fuel cost for a trip of {km} kilometres, in dollars? Write your answer as a decimal, for example 38.50.",
+    "hints": [
+      "How many litres of fuel are used on the whole trip?",
+      "Find the cost in cents, then change cents to dollars."
+    ],
+    "explanation": "Litres used = l x km / 100. Cost in cents = litres x c. Dollars = cents / 100.",
+    "answer_type": "decimal",
+    "instances": [
+      {
+        "id": "math-car-fuel-cost-1",
+        "params": {
+          "l": 8,
+          "km": 250,
+          "c": 190
+        },
+        "answer": "38.00"
+      },
+      {
+        "id": "math-car-fuel-cost-2",
+        "params": {
+          "l": 6,
+          "km": 150,
+          "c": 210
+        },
+        "answer": "18.90"
+      },
+      {
+        "id": "math-car-fuel-cost-3",
+        "params": {
+          "l": 9,
+          "km": 300,
+          "c": 185
+        },
+        "answer": "49.95"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 0.01
+    },
+    "verify": "l * km / 100 * c / 100"
+  },
+  {
+    "id": "math-leaky-bucket",
+    "subject": "math",
+    "kind": "rates",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A tap fills a bucket at {r} litres per minute. The bucket holds {cap} litres, but it has a leak that loses {leak} litres every minute. How many minutes does it take to fill the bucket?",
+    "hints": [
+      "How much water does the bucket gain each minute after the leak?",
+      "Divide the size of the bucket by the amount gained each minute."
+    ],
+    "explanation": "Gain per minute = r - leak. Minutes = cap / gain per minute.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-leaky-bucket-1",
+        "params": {
+          "r": 9,
+          "cap": 60,
+          "leak": 3
+        },
+        "answer": "10"
+      },
+      {
+        "id": "math-leaky-bucket-2",
+        "params": {
+          "r": 12,
+          "cap": 150,
+          "leak": 2
+        },
+        "answer": "15"
+      },
+      {
+        "id": "math-leaky-bucket-3",
+        "params": {
+          "r": 8,
+          "cap": 72,
+          "leak": 5
+        },
+        "answer": "24"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "cap / (r - leak)"
+  },
+  {
+    "id": "math-cyclist-trip",
+    "subject": "math",
+    "kind": "rates",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "A cyclist rides at {v} kilometres per hour for {h} hours. Then she rides at {v2} kilometres per hour for {m} minutes. How many kilometres does she ride altogether?",
+    "hints": [
+      "Find the distance for the first part of the ride.",
+      "Work out what fraction of an hour the second ride's minutes make, then find the second distance."
+    ],
+    "explanation": "First distance = v x h. Second distance = v2 x m / 60. Add them.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-cyclist-trip-1",
+        "params": {
+          "v": 15,
+          "h": 2,
+          "v2": 12,
+          "m": 30
+        },
+        "answer": "36"
+      },
+      {
+        "id": "math-cyclist-trip-2",
+        "params": {
+          "v": 18,
+          "h": 3,
+          "v2": 20,
+          "m": 45
+        },
+        "answer": "69"
+      },
+      {
+        "id": "math-cyclist-trip-3",
+        "params": {
+          "v": 12,
+          "h": 2,
+          "v2": 16,
+          "m": 15
+        },
+        "answer": "28"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 300,
+      "step": 1
+    },
+    "verify": "v * h + v2 * m / 60"
+  },
+  {
+    "id": "math-place-value-tenfold",
+    "subject": "math",
+    "kind": "place_value",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "prompt": "A number has {a} ten thousands, {b} hundreds and {c} ones, and every other digit is zero. A second number is 10 times as big as the first. What is the difference between the two numbers?",
+    "hints": [
+      "Write the first number down using zeros as placeholders.",
+      "Multiply by 10 to get the second number, then subtract."
+    ],
+    "explanation": "First number = a x 10000 + b x 100 + c. The second is 10 times it. Difference = 10 x first - first = 9 x first.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-place-value-tenfold-1",
+        "params": {
+          "a": 3,
+          "b": 5,
+          "c": 7
+        },
+        "answer": "274563"
+      },
+      {
+        "id": "math-place-value-tenfold-2",
+        "params": {
+          "a": 6,
+          "b": 2,
+          "c": 4
+        },
+        "answer": "541836"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 10000000,
+      "step": 1
+    },
+    "verify": "10 * (a * 10000 + b * 100 + c) - (a * 10000 + b * 100 + c)"
+  },
+  {
+    "id": "math-place-value-decimal",
+    "subject": "math",
+    "kind": "place_value",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "A decimal number is made of {a} tens, {b} ones, {c} tenths and {d} hundredths. What number is {n} hundredths more than it? Write your answer as a decimal.",
+    "hints": [
+      "Write the decimal number using the place values.",
+      "Each hundredth is 1/100, so the extra hundredths are that number divided by 100. Add it to the decimal."
+    ],
+    "explanation": "Number = 10a + b + c/10 + d/100. Adding n hundredths means adding n/100.",
+    "answer_type": "decimal",
+    "instances": [
+      {
+        "id": "math-place-value-decimal-1",
+        "params": {
+          "a": 4,
+          "b": 7,
+          "c": 3,
+          "d": 6,
+          "n": 25
+        },
+        "answer": "47.61"
+      },
+      {
+        "id": "math-place-value-decimal-2",
+        "params": {
+          "a": 2,
+          "b": 9,
+          "c": 5,
+          "d": 8,
+          "n": 47
+        },
+        "answer": "30.05"
+      },
+      {
+        "id": "math-place-value-decimal-3",
+        "params": {
+          "a": 6,
+          "b": 0,
+          "c": 9,
+          "d": 5,
+          "n": 15
+        },
+        "answer": "61.10"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 0.01
+    },
+    "verify": "10 * a + b + c / 10 + d / 100 + n / 100"
+  },
+  {
+    "id": "math-count-multiples",
+    "subject": "math",
+    "kind": "number_sense",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 5,
+    "prompt": "How many whole numbers from {lo} to {hi}, including {lo} and {hi}, are multiples of {m}?",
+    "hints": [
+      "Count how many multiples of the given number there are from 1 up to the last number.",
+      "Take away the multiples of the given number that are smaller than the first number."
+    ],
+    "explanation": "Multiples up to hi = hi divided by m, ignoring the remainder. Multiples below lo = (lo - 1) divided by m, ignoring the remainder. Subtract.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-count-multiples-1",
+        "params": {
+          "lo": 100,
+          "hi": 500,
+          "m": 7
+        },
+        "answer": "57"
+      },
+      {
+        "id": "math-count-multiples-2",
+        "params": {
+          "lo": 50,
+          "hi": 400,
+          "m": 12
+        },
+        "answer": "29"
+      },
+      {
+        "id": "math-count-multiples-3",
+        "params": {
+          "lo": 200,
+          "hi": 1000,
+          "m": 25
+        },
+        "answer": "33"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "hi // m - (lo - 1) // m"
+  }
+]

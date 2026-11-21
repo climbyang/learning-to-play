@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-b-chess-club",
+  "content_hash": "f61735b084cbacbb65aefc694aac70068b0f20e66cd250ff85f34c68fe1188a7",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:39:24Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "All keyed answers are uniquely correct; chess facts and verbatim vocabulary sentences check out."
+}

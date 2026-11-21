@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-five-houses",
+  "content_hash": "a8d1e059e055f81d076807a41198d964fd7b82e356ec05054b5c17785fc0b86b",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:37:08Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "The consecutive-position and colour clues uniquely put the fish in the green house."
+}

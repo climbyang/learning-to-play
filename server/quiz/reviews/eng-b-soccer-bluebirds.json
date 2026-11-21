@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-b-soccer-bluebirds",
+  "content_hash": "50e1bf0fa9f28f5d3d13444e4179c0cc22772b1c758c59710a4f79a84cfdd5e9",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:36:13Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "All keyed answers are uniquely supported; wording and vocab sentence suit the age group."
+}

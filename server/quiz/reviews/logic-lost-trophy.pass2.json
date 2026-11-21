@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-lost-trophy",
+  "content_hash": "98ec22cf0a7e77686d8f0b1d3a1b713a5514ed2c90e5eac1659fab6fc772b4f2",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:38:39Z",
+  "pass": 2,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Only Bea produces exactly three true statements; the key, explanation, hints, and options are consistent."
+}

@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-shearwater-migration",
+  "content_hash": "5e4554f174161c56d3f33469e01b404c3c9aadaff9445885ccd47bcb6a58f02b",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:32:37Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Sequence, migration facts, options, and both verbatim vocabulary sentences are sound."
+}

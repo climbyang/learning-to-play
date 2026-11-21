@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-b-first-olympics",
+  "content_hash": "c13939ef0a4e33255cf0cc445f381dda01caa2942f77ecb673effaae45a49cba",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:38:23Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Answers are distinct and the simplified historical account is accurate."
+}

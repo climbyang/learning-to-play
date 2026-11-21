@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-b-castles",
+  "content_hash": "52099c5ad4f99da338a33c3ed4dc87b6ab0b7779a36a4e2d49d97e3cea064c8f",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:34:53Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "内容是适龄且合理的概述，答案唯一，词汇例句逐字出现。"
+}

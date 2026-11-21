@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-c-story-fog-on-the-ridge",
+  "content_hash": "266b64604fa0e1d9158386d4080d0f4b6ed9bf937d773f5b323efcf1099035b3",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:44:27Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "All answers are uniquely supported, and both vocabulary sentences appear verbatim."
+}

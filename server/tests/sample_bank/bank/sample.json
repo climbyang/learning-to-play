@@ -1,0 +1,305 @@
+[
+  {
+    "id": "math-pencils-shared",
+    "subject": "math",
+    "kind": "multi_step",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 3,
+    "prompt": "A school buys {boxes} boxes of pencils with {per_box} pencils in each box. Each of {classes} classes is given {each} pencils. How many pencils are left over?",
+    "hints": [
+      "First find how many pencils the school buys altogether.",
+      "Then find how many pencils are given out in total."
+    ],
+    "explanation": "Pencils bought = boxes x per_box. Pencils given out = classes x each. Left over = bought - given out.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-pencils-shared-1",
+        "params": {
+          "boxes": 12,
+          "per_box": 24,
+          "classes": 9,
+          "each": 5
+        },
+        "answer": "243"
+      },
+      {
+        "id": "math-pencils-shared-2",
+        "params": {
+          "boxes": 15,
+          "per_box": 36,
+          "classes": 8,
+          "each": 17
+        },
+        "answer": "404"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "boxes * per_box - classes * each"
+  },
+  {
+    "id": "math-change-decimal",
+    "subject": "math",
+    "kind": "money",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "Maya buys 3 notebooks at $2.35 each and 2 pens at $1.20 each. She pays with a $20 note. How much change does she get, in dollars? Write your answer as a decimal, for example 4.50.",
+    "hints": [
+      "Work out the cost of the notebooks and the cost of the pens separately.",
+      "Add the two costs, then take the total away from $20."
+    ],
+    "explanation": "Notebooks cost 3 x 2.35 = 7.05. Pens cost 2 x 1.20 = 2.40. Total is 9.45, so the change is 20 - 9.45 = 10.55.",
+    "answer_type": "decimal",
+    "instances": [
+      {
+        "id": "math-change-decimal-1",
+        "params": {},
+        "answer": "10.55"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 20,
+      "step": 0.05
+    },
+    "verify": "20 - 3 * 2.35 - 2 * 1.2"
+  },
+  {
+    "id": "math-tickets-challenge",
+    "subject": "math",
+    "kind": "multi_stage_word_problem",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A school concert sold {total} tickets altogether. Adult tickets cost ${adult} each and child tickets cost ${child} each, and the school collected ${cash} in total. Afterwards, one third of the adult tickets and one fifth of the child tickets were refunded at their full price. How many dollars did the school keep after the refunds?",
+    "hints": [
+      "Imagine every ticket sold had been a child ticket. How much money would that be, and how far is it from the real total?",
+      "Each swap of one child ticket for one adult ticket changes the total by a fixed amount. Use that to find how many of each ticket there were.",
+      "Once you know the number of each type, treat the refunds as a separate calculation."
+    ],
+    "explanation": "If all 240 tickets were child tickets the takings would be 1200, which is 270 short of 1470. Each adult ticket adds 3 more, so there were 270 / 3 = 90 adult and 150 child tickets. Refunds: one third of 90 = 30 adult tickets = 240 dollars, one fifth of 150 = 30 child tickets = 150 dollars. The school kept 1470 - 240 - 150 = 1080.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-tickets-challenge-1",
+        "params": {
+          "total": 240,
+          "adult": 8,
+          "child": 5,
+          "cash": 1470
+        },
+        "answer": "1080"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 3000,
+      "step": 1
+    },
+    "verify": "cash - ((cash - child * total) / (adult - child)) / 3 * adult - (total - (cash - child * total) / (adult - child)) / 5 * child"
+  },
+  {
+    "id": "logic-stickers",
+    "subject": "logic",
+    "kind": "reasoning_numeric",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 4,
+    "prompt": "Ava, Ben and Chloe have {total} stickers altogether. Ben has twice as many stickers as Ava. Chloe has {extra} more stickers than Ben. How many stickers does Ava have?",
+    "hints": [
+      "Call Ava's number of stickers one unit. How many units is Ben's? How many is Chloe's?",
+      "Take away the extra stickers first, then share what is left into equal units."
+    ],
+    "explanation": "Ava = 1 unit, Ben = 2 units, Chloe = 2 units + extra. So 5 units + extra = total, and 5 units = total - extra = 105, giving 21.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-stickers-1",
+        "params": {
+          "total": 120,
+          "extra": 15
+        },
+        "answer": "21"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "(total - extra) / 5"
+  },
+  {
+    "id": "logic-race-order",
+    "subject": "logic",
+    "kind": "ordering",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 3,
+    "prompt": "Seven runners finished a race with no ties: Una, Priya, Sam, Omar, Lena, Tia and Raj. These facts are known.\n- Raj finished after Tia, and Tia finished after Lena.\n- Exactly two runners finished between Una and Omar.\n- Sam finished immediately before Omar.\n- Priya finished before Sam.\n- Lena finished immediately after Omar.\n- Una finished before Priya.\nWho finished fifth?",
+    "hints": [
+      "Some clues only link two runners. Others give exact gaps. Start with the gaps.",
+      "Build the middle of the order first, then attach the runners who must come before or after it."
+    ],
+    "explanation": "Sam is immediately before Omar and Lena is immediately after Omar, giving Sam, Omar, Lena in a row. Tia then Raj come after Lena. Una and Priya come before Sam, with Una first. Exactly two runners (Priya and Sam) are between Una and Omar. The order is Una, Priya, Sam, Omar, Lena, Tia, Raj, so Lena was fifth.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-race-order-1",
+        "params": {},
+        "answer": "c"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Omar"
+      },
+      {
+        "id": "b",
+        "text": "Sam"
+      },
+      {
+        "id": "c",
+        "text": "Lena"
+      },
+      {
+        "id": "d",
+        "text": "Tia"
+      },
+      {
+        "id": "e",
+        "text": "Priya"
+      }
+    ]
+  },
+  {
+    "id": "logic-ages-challenge",
+    "subject": "logic",
+    "kind": "age_puzzle",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A mother and her son have ages that add up to {total}. In {yrs} years' time, the mother will be {mult} times as old as her son will be then. The boy's grandmother is {gmult} times as old as the mother was on the day the boy was born. How old will the grandmother be on the day the boy turns {target}?",
+    "hints": [
+      "Try writing the mother's age using the son's age and the 'in some years' clue, then use the total to find both ages today.",
+      "Think about what the mother's age was on the day her son was born: how many years ago was that?",
+      "Work out the grandmother's age today before moving forward in time to the boy's birthday."
+    ],
+    "explanation": "Let the son be S now. In 4 years: 44 - S + 4 = 3 x (S + 4), so 48 - S = 3S + 12 and S = 9, mother = 35. When the boy was born the mother was 35 - 9 = 26, so the grandmother is 3 x 26 = 78 now. The boy turns 21 in 12 years, so she will be 78 + 12 = 90.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-ages-challenge-1",
+        "params": {
+          "total": 44,
+          "yrs": 4,
+          "mult": 3,
+          "gmult": 3,
+          "target": 21
+        },
+        "answer": "90"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "gmult * (total - 2 * ((total + yrs - mult * yrs) / (mult + 1))) + target - ((total + yrs - mult * yrs) / (mult + 1))"
+  },
+  {
+    "id": "english-bakery-inference",
+    "subject": "english",
+    "kind": "reading_inference",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 2,
+    "prompt": "Read the passage.\n\nMr Okafor's bakery had stood on Mill Street for forty years. Every morning before sunrise, the smell of warm bread drifted down the road, and the neighbours joked that they never needed an alarm clock.\n\nLast spring, a large supermarket opened at the end of the street. Each week, Mr Okafor noticed fewer people at his counter. He did not lower his prices and he did not complain. Instead, he began leaving a tray of biscuit pieces on the front step for the children walking to school. The pieces were not leftovers: each morning he broke the first, perfect biscuits from the oven by hand.\n\nBy winter, the supermarket's bread was still cheaper, but the children were arriving early to see whether the tray was out. Their parents, hurrying along behind, often stepped inside to buy a loaf 'just this once'. By December, the queue was out of the door again.\n\nWhat is the most likely reason Mr Okafor put out the tray of biscuit pieces?",
+    "hints": [
+      "Think about who the tray was left for, and who usually pays for the bread.",
+      "The passage tells you what he did not do. What does that leave as his goal?"
+    ],
+    "explanation": "Mr Okafor did not lower his prices or complain, and the pieces were broken by hand from perfect biscuits, so this was not about waste or saving food. Nothing suggests the children were poor or that he wanted fame. The children arrived early for the tray and their parents followed them into the shop, so the tray was a gift that brought families back to the bakery rather than an attempt to match the supermarket's prices.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "english-bakery-inference-1",
+        "params": {},
+        "answer": "b"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "He wanted to be known as the most generous shopkeeper on Mill Street."
+      },
+      {
+        "id": "b",
+        "text": "He hoped that kindness to the children would bring their families back into his shop without trying to match the supermarket's low prices."
+      },
+      {
+        "id": "c",
+        "text": "He felt sorry for children who could not afford any breakfast."
+      },
+      {
+        "id": "d",
+        "text": "He wanted to make sure that no broken biscuits were wasted."
+      },
+      {
+        "id": "e",
+        "text": "He hoped the supermarket would notice and copy his idea."
+      }
+    ]
+  },
+  {
+    "id": "english-storm-figurative",
+    "subject": "english",
+    "kind": "figurative_language",
+    "tier": "regular",
+    "grade": 5,
+    "est_minutes": 2,
+    "prompt": "Read the passage.\n\nThe storm crept into the village after dark, a hungry animal prowling between the houses. It rattled every door handle and tore at the thatch on the roofs. When it found the shutters locked, it howled in frustration and shook them until the nails groaned.\n\nAt dawn, it slunk away over the hills. Along the lanes it left broken branches like scraps of a meal.\n\nWhich animal comparison does the author's language support best?",
+    "hints": [
+      "List the words the author uses for how the storm arrives, what it does, and how it leaves.",
+      "Test each animal against all three parts of the passage, not just one word."
+    ],
+    "explanation": "The storm creeps in quietly, prowls between the houses, tests every door and shutter for a weakness, tears at what it can reach and leaves scraps like the remains of a meal before slinking away at dawn. That matches a patient hunter, not a protector, a trapped or wounded animal, or a playful one.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "english-storm-figurative-1",
+        "params": {},
+        "answer": "a"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "A patient hunter that sneaks in, searches for a weakness, attacks and then leaves."
+      },
+      {
+        "id": "b",
+        "text": "A wounded animal that thrashes at everything near it because it is in pain."
+      },
+      {
+        "id": "c",
+        "text": "A guard animal that patrols the village to protect the people inside."
+      },
+      {
+        "id": "d",
+        "text": "A trapped animal that paces the village desperately looking for a way out."
+      },
+      {
+        "id": "e",
+        "text": "A playful animal that wanders the village testing things for fun."
+      }
+    ]
+  }
+]

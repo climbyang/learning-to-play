@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-c-ocean-sea-turtles",
+  "content_hash": "c6034afed57ac7c03e4085cbfdbfa6ce7c9c000cbf9c91ba8904e6bd4d9a6982",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:50:14Z",
+  "pass": 2,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Keys, explanations, and hints agree with the passage; distractors are clearly incorrect, and both vocabulary sentences appear verbatim."
+}

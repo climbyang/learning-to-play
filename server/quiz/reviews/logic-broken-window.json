@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-broken-window",
+  "content_hash": "bcf8d528f964493ac2f210ed68bd567ccd4f8ca9a29146e4d6ecefe0e0a33e24",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:37:22Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Only Ivan makes exactly three statements true; all options are distinct and the child-friendly fictional scenario contains no inaccurate factual claims."
+}

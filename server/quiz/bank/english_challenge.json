@@ -1,0 +1,1790 @@
+[
+  {
+    "id": "eng-c-egypt-who-built-pyramids",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "The Great Pyramid of Khufu was finished about 4,500 years ago, and it remained the tallest human-made structure on Earth for nearly four thousand years. How such a monument was built has fascinated people for centuries.\n\nIn the fifth century BC, a Greek traveller named Herodotus visited Egypt and wrote that 100,000 people were forced to haul stones for twenty years. He arrived about two thousand years after the pyramid was finished, and he repeated what local guides told him. For this reason, many modern scholars treat his account with caution. Still, his story shaped books and films for a very long time.\n\nIn the 1990s, archaeologists uncovered a large settlement and cemeteries close to the Giza pyramids. They found bakeries, breweries and sleeping halls, together with thousands of animal bones, which suggest the builders ate plenty of beef. The workers' tombs were built beside the king's own monument, an honour that was not normally given to slaves. Some tombs even show the names of work crews, such as \"Friends of Khufu\".\n\nExperts now estimate that the workforce was perhaps 20,000 to 30,000 people, organised into rotating crews. Some may have been farmers who joined the project during the Nile flood, when their fields were underwater. Others were skilled stonecutters. This does not mean the work was easy, because skeletons show injuries from heavy lifting. However, the evidence suggests that the pyramid was a national project rather than a prison sentence. Today, researchers keep digging, so our picture of the pyramid builders may keep changing as new clues are found.",
+    "parts": [
+      {
+        "id": "eng-c-egypt-who-built-pyramids-q1",
+        "prompt": "Why do many scholars treat the account of Herodotus with caution?",
+        "options": [
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q1a",
+            "text": "He had never visited Egypt"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q1b",
+            "text": "He wrote in a language nobody could read"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q1c",
+            "text": "He was one of the pyramid's builders"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q1d",
+            "text": "He wrote about two thousand years after the pyramid was built and repeated what guides said"
+          }
+        ],
+        "answer": "eng-c-egypt-who-built-pyramids-q1d",
+        "explanation": "The passage says he came long after the pyramid was finished and repeated what local guides told him."
+      },
+      {
+        "id": "eng-c-egypt-who-built-pyramids-q2",
+        "prompt": "Which evidence best supports the idea that the builders were respected?",
+        "options": [
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q2a",
+            "text": "They worked in rotating crews"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q2b",
+            "text": "They farmed during the Nile flood"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q2c",
+            "text": "Their tombs were built beside the king's monument"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q2d",
+            "text": "Their skeletons show injuries"
+          }
+        ],
+        "answer": "eng-c-egypt-who-built-pyramids-q2c",
+        "explanation": "Tombs near the king were an honour not normally given to slaves."
+      },
+      {
+        "id": "eng-c-egypt-who-built-pyramids-q3",
+        "prompt": "Why might farmers have worked on the pyramid during the Nile flood?",
+        "options": [
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q3a",
+            "text": "Their fields were underwater, so they could not farm"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q3b",
+            "text": "The pharaoh ordered them to stop farming forever"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q3c",
+            "text": "They wanted to avoid the cold"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q3d",
+            "text": "The flood carried the stone blocks to them"
+          }
+        ],
+        "answer": "eng-c-egypt-who-built-pyramids-q3a",
+        "explanation": "The passage says the fields were underwater during the flood."
+      },
+      {
+        "id": "eng-c-egypt-who-built-pyramids-q4",
+        "prompt": "What is the author's main purpose?",
+        "options": [
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q4a",
+            "text": "To persuade readers to visit Giza"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q4b",
+            "text": "To describe how to cut stone"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q4c",
+            "text": "To prove that Herodotus was a liar"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q4d",
+            "text": "To explain how new evidence has changed ideas about who built the pyramid"
+          }
+        ],
+        "answer": "eng-c-egypt-who-built-pyramids-q4d",
+        "explanation": "The passage compares an old story with recent discoveries."
+      },
+      {
+        "id": "eng-c-egypt-who-built-pyramids-q5",
+        "prompt": "In the passage, the word \"caution\" means",
+        "options": [
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q5a",
+            "text": "extra care about whether something is true"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q5b",
+            "text": "loud excitement"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q5c",
+            "text": "great fear of danger"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-q5d",
+            "text": "a polite greeting"
+          }
+        ],
+        "answer": "eng-c-egypt-who-built-pyramids-q5a",
+        "explanation": "Scholars are careful, not fully trusting, of his story."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-c-egypt-who-built-pyramids-v1",
+        "word": "archaeologists",
+        "meaning": "scientists who study the past by digging up old objects and buildings",
+        "sentence": "In the 1990s, archaeologists uncovered a large settlement and cemeteries close to the Giza pyramids.",
+        "check_prompt": "What do archaeologists do?",
+        "options": [
+          {
+            "id": "eng-c-egypt-who-built-pyramids-v1a",
+            "text": "Dig up and study evidence from the past"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-v1b",
+            "text": "Predict the weather"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-v1c",
+            "text": "Design new cars"
+          }
+        ],
+        "answer": "eng-c-egypt-who-built-pyramids-v1a"
+      },
+      {
+        "id": "eng-c-egypt-who-built-pyramids-v2",
+        "word": "monument",
+        "meaning": "a large structure built to remember a person or event",
+        "sentence": "The workers' tombs were built beside the king's own monument, an honour that was not normally given to slaves.",
+        "check_prompt": "Which is a monument?",
+        "options": [
+          {
+            "id": "eng-c-egypt-who-built-pyramids-v2a",
+            "text": "A broken pencil"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-v2b",
+            "text": "A small paper cup"
+          },
+          {
+            "id": "eng-c-egypt-who-built-pyramids-v2c",
+            "text": "A giant statue built to honour a hero"
+          }
+        ],
+        "answer": "eng-c-egypt-who-built-pyramids-v2c"
+      }
+    ],
+    "hints": [
+      "Ask who is telling each story and how long after the event."
+    ]
+  },
+  {
+    "id": "eng-c-cook-two-views",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "In April 1770, the Endeavour anchored in Botany Bay on the east coast of Australia. Two very different kinds of record describe what happened next, and historians learn the most by reading both.\n\nThe ship's records are written down. Lieutenant James Cook and the botanist Joseph Banks kept detailed journals about the coast, the weather, the plants and the animals they saw. Banks collected so many new plants that the bay was later named Botany Bay. In these journals, the voyage is often described as a \"discovery\", because the writers were describing places that were new to Europeans.\n\nThe other records are spoken. For the Gweagal people of Kamay, the bay was not a new place. It was Country that had been known, named and cared for for tens of thousands of years. Oral histories, which are passed from one generation to the next, preserve memories of the ship's arrival. Many First Nations people today point out that the word \"discovery\" leaves out those who already lived here.\n\nJournals have the advantage of recording dates, measurements and daily events in the writers' own words. Oral histories have the advantage of carrying the viewpoint of the local people and have been kept alive for generations through careful teaching. Neither source tells the whole story alone. By placing them side by side, historians can see that one event can look very different depending on who is telling it.\n\nBecause of this, many museums now display journals and oral histories together. In this way, visitors can think about more than one point of view.",
+    "parts": [
+      {
+        "id": "eng-c-cook-two-views-q1",
+        "prompt": "Why do many First Nations people question the word \"discovery\"?",
+        "options": [
+          {
+            "id": "eng-c-cook-two-views-q1a",
+            "text": "People had already lived in and cared for the land for a very long time"
+          },
+          {
+            "id": "eng-c-cook-two-views-q1b",
+            "text": "The ship arrived in the wrong month"
+          },
+          {
+            "id": "eng-c-cook-two-views-q1c",
+            "text": "The journals were lost at sea"
+          },
+          {
+            "id": "eng-c-cook-two-views-q1d",
+            "text": "Cook never wrote about the bay"
+          }
+        ],
+        "answer": "eng-c-cook-two-views-q1a",
+        "explanation": "The passage says the word leaves out those who already lived here."
+      },
+      {
+        "id": "eng-c-cook-two-views-q2",
+        "prompt": "What is one advantage of the journals?",
+        "options": [
+          {
+            "id": "eng-c-cook-two-views-q2a",
+            "text": "They were passed on by Elders"
+          },
+          {
+            "id": "eng-c-cook-two-views-q2b",
+            "text": "They record dates, measurements and daily events in the writers' words"
+          },
+          {
+            "id": "eng-c-cook-two-views-q2c",
+            "text": "They were written before the ship sailed"
+          },
+          {
+            "id": "eng-c-cook-two-views-q2d",
+            "text": "They describe the Gweagal viewpoint"
+          }
+        ],
+        "answer": "eng-c-cook-two-views-q2b",
+        "explanation": "The passage lists dates, measurements and daily events as the journals' strength."
+      },
+      {
+        "id": "eng-c-cook-two-views-q3",
+        "prompt": "What is the author's main purpose?",
+        "options": [
+          {
+            "id": "eng-c-cook-two-views-q3a",
+            "text": "To show that one event can be understood differently through different sources"
+          },
+          {
+            "id": "eng-c-cook-two-views-q3b",
+            "text": "To explain how to build a ship"
+          },
+          {
+            "id": "eng-c-cook-two-views-q3c",
+            "text": "To prove that Banks was the best botanist"
+          },
+          {
+            "id": "eng-c-cook-two-views-q3d",
+            "text": "To argue that journals are always better than stories"
+          }
+        ],
+        "answer": "eng-c-cook-two-views-q3a",
+        "explanation": "The author compares both source types and concludes neither tells the whole story."
+      },
+      {
+        "id": "eng-c-cook-two-views-q4",
+        "prompt": "How did Botany Bay get its name?",
+        "options": [
+          {
+            "id": "eng-c-cook-two-views-q4a",
+            "text": "It was a hobby of local farmers"
+          },
+          {
+            "id": "eng-c-cook-two-views-q4b",
+            "text": "Cook planted a garden there"
+          },
+          {
+            "id": "eng-c-cook-two-views-q4c",
+            "text": "Banks collected so many new plants there"
+          },
+          {
+            "id": "eng-c-cook-two-views-q4d",
+            "text": "It was named after a ship"
+          }
+        ],
+        "answer": "eng-c-cook-two-views-q4c",
+        "explanation": "The passage says Banks collected so many new plants that the bay was named for them."
+      },
+      {
+        "id": "eng-c-cook-two-views-q5",
+        "prompt": "Why do many museums now display journals and oral histories together?",
+        "options": [
+          {
+            "id": "eng-c-cook-two-views-q5a",
+            "text": "Oral histories are written down more quickly"
+          },
+          {
+            "id": "eng-c-cook-two-views-q5b",
+            "text": "Visitors prefer short texts"
+          },
+          {
+            "id": "eng-c-cook-two-views-q5c",
+            "text": "Journals are too old to display alone"
+          },
+          {
+            "id": "eng-c-cook-two-views-q5d",
+            "text": "Together they give a fuller picture of the past"
+          }
+        ],
+        "answer": "eng-c-cook-two-views-q5d",
+        "explanation": "The passage says neither source tells the whole story alone."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-c-cook-two-views-v1",
+        "word": "oral",
+        "meaning": "spoken, not written",
+        "sentence": "Oral histories, which are passed from one generation to the next, preserve memories of the ship's arrival.",
+        "check_prompt": "An oral history is a story that is",
+        "options": [
+          {
+            "id": "eng-c-cook-two-views-v1a",
+            "text": "Told aloud and passed down"
+          },
+          {
+            "id": "eng-c-cook-two-views-v1b",
+            "text": "Written on a computer"
+          },
+          {
+            "id": "eng-c-cook-two-views-v1c",
+            "text": "Painted on the roof"
+          }
+        ],
+        "answer": "eng-c-cook-two-views-v1a"
+      },
+      {
+        "id": "eng-c-cook-two-views-v2",
+        "word": "generation",
+        "meaning": "all the people born around the same time",
+        "sentence": "Oral histories, which are passed from one generation to the next, preserve memories of the ship's arrival.",
+        "check_prompt": "Which two people are from different generations?",
+        "options": [
+          {
+            "id": "eng-c-cook-two-views-v2a",
+            "text": "A grandmother and her grandson"
+          },
+          {
+            "id": "eng-c-cook-two-views-v2b",
+            "text": "Two friends in the same class"
+          },
+          {
+            "id": "eng-c-cook-two-views-v2c",
+            "text": "Two twin sisters"
+          }
+        ],
+        "answer": "eng-c-cook-two-views-v2a"
+      }
+    ],
+    "hints": [
+      "Make a two-column list in your head: written sources and spoken sources."
+    ]
+  },
+  {
+    "id": "eng-c-first-nations-sky-knowledge",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "Long before telescopes, Aboriginal and Torres Strait Islander peoples were studying the sky. Their observations were not just for wonder. The sky was a tool for living well on the land and sea.\n\nIn some Aboriginal communities, the dark shape of the Emu in the Sky tells people when to collect emu eggs. When the emu appears to be running along the horizon in the evening, the egg-laying season is starting. Because the emu is made from dark patches of the Milky Way, not from bright stars, it can be seen best on clear, moonless nights away from city lights.\n\nIn the Torres Strait, the Tagai constellation shows a fisherman standing in his canoe. Its position in the sky helps people know the seasons, including when to plant gardens and when to fish. Because the islands are surrounded by sea, careful knowledge of the stars also helped people navigate between islands.\n\nIn northern Australia, some Yolngu stories link the Moon to the tides. People noticed that the tides rise and fall in time with the Moon, and the stories carry that knowledge. Scientists today agree that the Moon's gravity causes tides.\n\nEach nation has its own sky stories, and each story belongs to its own people. Knowledge was shared in song, dance and ceremony, so it could be remembered without books. When we read about this knowledge, it is important to show respect, and to remember that these are living cultures, not just history. Learning about it can change how we look at the night sky.",
+    "parts": [
+      {
+        "id": "eng-c-first-nations-sky-knowledge-q1",
+        "prompt": "What is the main idea of the passage?",
+        "options": [
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q1a",
+            "text": "Telescopes were invented in the Torres Strait"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q1b",
+            "text": "First Nations sky knowledge has practical uses and has been carefully passed down"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q1c",
+            "text": "The Moon is the brightest object in the sky"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q1d",
+            "text": "Stars only matter in the dark"
+          }
+        ],
+        "answer": "eng-c-first-nations-sky-knowledge-q1b",
+        "explanation": "The passage shows how sky knowledge helped with seasons, food, travel and tides."
+      },
+      {
+        "id": "eng-c-first-nations-sky-knowledge-q2",
+        "prompt": "Why is the Emu in the Sky best seen away from city lights?",
+        "options": [
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q2a",
+            "text": "It is made from dark patches that are hard to see when the sky is bright"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q2b",
+            "text": "City lights move the Milky Way"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q2c",
+            "text": "It only appears in the daytime"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q2d",
+            "text": "It is made from planets"
+          }
+        ],
+        "answer": "eng-c-first-nations-sky-knowledge-q2a",
+        "explanation": "The passage says the emu is made of dark patches, not bright stars."
+      },
+      {
+        "id": "eng-c-first-nations-sky-knowledge-q3",
+        "prompt": "How did knowledge of the stars help people in the Torres Strait?",
+        "options": [
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q3a",
+            "text": "It told them how to build telescopes"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q3b",
+            "text": "It made the tides weaker"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q3c",
+            "text": "It kept emus away"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q3d",
+            "text": "It helped them know the seasons and navigate between islands"
+          }
+        ],
+        "answer": "eng-c-first-nations-sky-knowledge-q3d",
+        "explanation": "The Tagai constellation helps with seasons, and star knowledge helps with navigating between islands."
+      },
+      {
+        "id": "eng-c-first-nations-sky-knowledge-q4",
+        "prompt": "Why does the author finish by mentioning respect?",
+        "options": [
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q4a",
+            "text": "To say that the Moon is a god"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q4b",
+            "text": "To remind readers that these stories belong to living cultures"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q4c",
+            "text": "To suggest that the stories are false"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q4d",
+            "text": "To end with a funny comment"
+          }
+        ],
+        "answer": "eng-c-first-nations-sky-knowledge-q4b",
+        "explanation": "The last paragraph says each story belongs to its own people and these are living cultures."
+      },
+      {
+        "id": "eng-c-first-nations-sky-knowledge-q5",
+        "prompt": "In the passage, the word \"navigate\" means",
+        "options": [
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q5a",
+            "text": "to tell a story"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q5b",
+            "text": "to hide in the dark"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q5c",
+            "text": "to find your way"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-q5d",
+            "text": "to grow food"
+          }
+        ],
+        "answer": "eng-c-first-nations-sky-knowledge-q5c",
+        "explanation": "Star knowledge helped people find their way between islands."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-c-first-nations-sky-knowledge-v1",
+        "word": "constellation",
+        "meaning": "a group of stars that forms a pattern in the sky",
+        "sentence": "In the Torres Strait, the Tagai constellation shows a fisherman standing in his canoe.",
+        "check_prompt": "A constellation is",
+        "options": [
+          {
+            "id": "eng-c-first-nations-sky-knowledge-v1a",
+            "text": "A pattern made by a group of stars"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-v1b",
+            "text": "A bright cloud"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-v1c",
+            "text": "A kind of boat"
+          }
+        ],
+        "answer": "eng-c-first-nations-sky-knowledge-v1a"
+      },
+      {
+        "id": "eng-c-first-nations-sky-knowledge-v2",
+        "word": "observations",
+        "meaning": "things you notice by watching carefully",
+        "sentence": "Their observations were not just for wonder.",
+        "check_prompt": "Which is an observation?",
+        "options": [
+          {
+            "id": "eng-c-first-nations-sky-knowledge-v2a",
+            "text": "I saw the Moon rise later each night"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-v2b",
+            "text": "I think the Moon is made of cheese"
+          },
+          {
+            "id": "eng-c-first-nations-sky-knowledge-v2c",
+            "text": "I wish I had a pet"
+          }
+        ],
+        "answer": "eng-c-first-nations-sky-knowledge-v2a"
+      }
+    ],
+    "hints": [
+      "Match each example (emu, Tagai, Moon) to what it helps people know."
+    ]
+  },
+  {
+    "id": "eng-c-castle-design",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "Many early castles in Europe were not built from stone. Around 1066, soldiers could raise a wooden tower on a mound of earth fairly quickly. These early castles were quick to build, but wood had a problem. It rotted over time, and attackers could set it on fire.\n\nFor this reason, lords began to rebuild their castles in stone. A stone keep, or main tower, could last for hundreds of years. However, the new walls created a new challenge. Attackers learned to dig tunnels under the corners of square towers, which weakened them until they fell. To solve this, builders began making towers round. A round tower has no sharp corner to dig under, and its curved surface is better at turning aside stones thrown by war machines.\n\nDefenders also invented clever features. Narrow windows allowed archers to shoot while staying safe. Overhanging platforms let guards drop stones on attackers who came too close. A deep moat made it difficult to dig tunnels or place ladders against the walls.\n\nIn the fifteenth century, cannons using gunpowder changed everything. Cannons could batter even thick stone walls. A tall wall, once a strength, now made a bigger target. Over time, lords decided that castles were not worth the expense. Many moved into comfortable manor houses with large windows and gardens. Castles became ruins, museums or tourist attractions, remembered as clever solutions to old problems. Visitors who walk through them today can still spot the moats, narrow windows and round towers. Each one tells a small story about how people solved problems with the tools they had.",
+    "parts": [
+      {
+        "id": "eng-c-castle-design-q1",
+        "prompt": "Why did lords stop building castles from wood?",
+        "options": [
+          {
+            "id": "eng-c-castle-design-q1a",
+            "text": "Wood was too heavy to lift"
+          },
+          {
+            "id": "eng-c-castle-design-q1b",
+            "text": "Stone was easier to find in every place"
+          },
+          {
+            "id": "eng-c-castle-design-q1c",
+            "text": "Wood rotted over time and could be burned"
+          },
+          {
+            "id": "eng-c-castle-design-q1d",
+            "text": "Cannons could not harm wood"
+          }
+        ],
+        "answer": "eng-c-castle-design-q1c",
+        "explanation": "The first paragraph says wood rotted and attackers could set it on fire."
+      },
+      {
+        "id": "eng-c-castle-design-q2",
+        "prompt": "Why did builders make towers round?",
+        "options": [
+          {
+            "id": "eng-c-castle-design-q2a",
+            "text": "Round towers had more windows"
+          },
+          {
+            "id": "eng-c-castle-design-q2b",
+            "text": "Round towers were cheaper to build"
+          },
+          {
+            "id": "eng-c-castle-design-q2c",
+            "text": "Archers preferred circles"
+          },
+          {
+            "id": "eng-c-castle-design-q2d",
+            "text": "There were no sharp corners for attackers to dig under"
+          }
+        ],
+        "answer": "eng-c-castle-design-q2d",
+        "explanation": "Tunnellers weakened square corners, and a round tower has none."
+      },
+      {
+        "id": "eng-c-castle-design-q3",
+        "prompt": "What caused castles to become less useful?",
+        "options": [
+          {
+            "id": "eng-c-castle-design-q3a",
+            "text": "Moats dried up"
+          },
+          {
+            "id": "eng-c-castle-design-q3b",
+            "text": "Archers stopped practising"
+          },
+          {
+            "id": "eng-c-castle-design-q3c",
+            "text": "Cannons could batter even thick walls"
+          },
+          {
+            "id": "eng-c-castle-design-q3d",
+            "text": "Lords began to farm"
+          }
+        ],
+        "answer": "eng-c-castle-design-q3c",
+        "explanation": "The passage says cannons using gunpowder changed everything."
+      },
+      {
+        "id": "eng-c-castle-design-q4",
+        "prompt": "What is the author's main purpose?",
+        "options": [
+          {
+            "id": "eng-c-castle-design-q4a",
+            "text": "To describe how to make gunpowder"
+          },
+          {
+            "id": "eng-c-castle-design-q4b",
+            "text": "To tell a story about one king"
+          },
+          {
+            "id": "eng-c-castle-design-q4c",
+            "text": "To persuade readers to visit castles"
+          },
+          {
+            "id": "eng-c-castle-design-q4d",
+            "text": "To explain how castle designs changed as attackers' methods changed"
+          }
+        ],
+        "answer": "eng-c-castle-design-q4d",
+        "explanation": "The passage shows each change as an answer to a problem."
+      },
+      {
+        "id": "eng-c-castle-design-q5",
+        "prompt": "In the passage, \"batter\" means",
+        "options": [
+          {
+            "id": "eng-c-castle-design-q5a",
+            "text": "to hold up"
+          },
+          {
+            "id": "eng-c-castle-design-q5b",
+            "text": "to hit again and again"
+          },
+          {
+            "id": "eng-c-castle-design-q5c",
+            "text": "to mix a cake"
+          },
+          {
+            "id": "eng-c-castle-design-q5d",
+            "text": "to paint"
+          }
+        ],
+        "answer": "eng-c-castle-design-q5b",
+        "explanation": "Cannons hit walls with great force repeatedly."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-c-castle-design-v1",
+        "word": "defenders",
+        "meaning": "people who protect a place from attack",
+        "sentence": "Defenders also invented clever features.",
+        "check_prompt": "Who are the defenders of a castle?",
+        "options": [
+          {
+            "id": "eng-c-castle-design-v1a",
+            "text": "The visitors who tour it"
+          },
+          {
+            "id": "eng-c-castle-design-v1b",
+            "text": "The people attacking it"
+          },
+          {
+            "id": "eng-c-castle-design-v1c",
+            "text": "The people protecting it"
+          }
+        ],
+        "answer": "eng-c-castle-design-v1c"
+      },
+      {
+        "id": "eng-c-castle-design-v2",
+        "word": "expense",
+        "meaning": "the cost of something",
+        "sentence": "Over time, lords decided that castles were not worth the expense.",
+        "check_prompt": "If something is not worth the expense, it",
+        "options": [
+          {
+            "id": "eng-c-castle-design-v2a",
+            "text": "Is free for everyone"
+          },
+          {
+            "id": "eng-c-castle-design-v2b",
+            "text": "Costs too much for what you get"
+          },
+          {
+            "id": "eng-c-castle-design-v2c",
+            "text": "Is too small to see"
+          }
+        ],
+        "answer": "eng-c-castle-design-v2b"
+      }
+    ],
+    "hints": [
+      "Each paragraph describes a problem and an answer to it."
+    ]
+  },
+  {
+    "id": "eng-c-weather-rain-shadow",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "People often use the words weather and climate as if they mean the same thing, but they do not. Weather is what is happening outside today: sunny, windy or wet. Climate is the pattern of weather in a place measured over many years. Sydney might have a rainy week in summer, but its climate is still warm and mostly mild.\n\nClimate depends on many causes. One is distance from the sea. Water heats up and cools down slowly, so places on the coast usually have gentler temperatures than places far inland. Another cause is mountains.\n\nImagine wet air blowing in from the ocean towards a mountain range. The wind is forced upwards along the slope. As it rises, the air cools, and the water vapour in it condenses into clouds. The clouds release rain or snow on the side of the mountain facing the wind. By the time the air crosses the top and sinks down the other side, most of its water is gone. The air becomes warmer and drier, so the far side of the mountain receives little rain. Scientists call this a rain shadow.\n\nAustralia's Great Dividing Range is a good example. Moist winds from the Pacific Ocean drop rain on the coast side, which is why many eastern coastal areas are green. Inland on the western side, the land becomes much drier, and farmers there must plan carefully for dry spells.\n\nUnderstanding climate helps people decide where to build towns, grow crops and store water. Weather forecasts help us plan the week, but climate helps us plan for the years ahead.",
+    "parts": [
+      {
+        "id": "eng-c-weather-rain-shadow-q1",
+        "prompt": "What is the difference between weather and climate?",
+        "options": [
+          {
+            "id": "eng-c-weather-rain-shadow-q1a",
+            "text": "Weather lasts years, while climate lasts a day"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q1b",
+            "text": "Weather is what happens today, while climate is the pattern over many years"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q1c",
+            "text": "Weather is always wet, while climate is always dry"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q1d",
+            "text": "Weather is for cities, while climate is for farms"
+          }
+        ],
+        "answer": "eng-c-weather-rain-shadow-q1b",
+        "explanation": "The passage defines weather as today's conditions and climate as a long-term pattern."
+      },
+      {
+        "id": "eng-c-weather-rain-shadow-q2",
+        "prompt": "Why does the far side of a mountain range often receive little rain?",
+        "options": [
+          {
+            "id": "eng-c-weather-rain-shadow-q2a",
+            "text": "Clouds cannot form near the ocean"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q2b",
+            "text": "The mountain makes the wind blow backwards"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q2c",
+            "text": "The air has already lost most of its water on the windward side"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q2d",
+            "text": "The air becomes colder and heavier"
+          }
+        ],
+        "answer": "eng-c-weather-rain-shadow-q2c",
+        "explanation": "As the air rises it cools and rains out, so it is dry by the time it sinks."
+      },
+      {
+        "id": "eng-c-weather-rain-shadow-q3",
+        "prompt": "Why are coastal areas usually gentler in temperature?",
+        "options": [
+          {
+            "id": "eng-c-weather-rain-shadow-q3a",
+            "text": "The Sun is weaker near the sea"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q3b",
+            "text": "Sand is always warm"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q3c",
+            "text": "Water heats up and cools down slowly"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q3d",
+            "text": "Mountains block all wind"
+          }
+        ],
+        "answer": "eng-c-weather-rain-shadow-q3c",
+        "explanation": "The passage says slowly changing water gives gentler temperatures."
+      },
+      {
+        "id": "eng-c-weather-rain-shadow-q4",
+        "prompt": "Which sentence is the best summary of the third paragraph?",
+        "options": [
+          {
+            "id": "eng-c-weather-rain-shadow-q4a",
+            "text": "Rising air cools and drops its rain on one side of a mountain, leaving the other side dry."
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q4b",
+            "text": "Mountains are tallest near the coast."
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q4c",
+            "text": "Wind blows only towards mountains."
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q4d",
+            "text": "Snow is a form of weather."
+          }
+        ],
+        "answer": "eng-c-weather-rain-shadow-q4a",
+        "explanation": "The paragraph describes the rain shadow process."
+      },
+      {
+        "id": "eng-c-weather-rain-shadow-q5",
+        "prompt": "What is the author's purpose in the last sentence?",
+        "options": [
+          {
+            "id": "eng-c-weather-rain-shadow-q5a",
+            "text": "To argue that farmers are wrong"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q5b",
+            "text": "To show why understanding climate is useful"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q5c",
+            "text": "To tell a joke"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-q5d",
+            "text": "To describe a day at the beach"
+          }
+        ],
+        "answer": "eng-c-weather-rain-shadow-q5b",
+        "explanation": "The sentence explains why climate knowledge helps people decide where to build and grow."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-c-weather-rain-shadow-v1",
+        "word": "climate",
+        "meaning": "the usual pattern of weather in a place over many years",
+        "sentence": "Climate is the pattern of weather in a place measured over many years.",
+        "check_prompt": "Which statement is about climate?",
+        "options": [
+          {
+            "id": "eng-c-weather-rain-shadow-v1a",
+            "text": "Darwin is hot and wet for much of the year"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-v1b",
+            "text": "It rained on Tuesday afternoon"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-v1c",
+            "text": "There is a breeze right now"
+          }
+        ],
+        "answer": "eng-c-weather-rain-shadow-v1a"
+      },
+      {
+        "id": "eng-c-weather-rain-shadow-v2",
+        "word": "condenses",
+        "meaning": "changes from a gas into tiny drops of liquid",
+        "sentence": "As it rises, the air cools, and the water vapour in it condenses into clouds.",
+        "check_prompt": "When water vapour condenses, it",
+        "options": [
+          {
+            "id": "eng-c-weather-rain-shadow-v2a",
+            "text": "Disappears completely"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-v2b",
+            "text": "Turns into ice cubes in a freezer"
+          },
+          {
+            "id": "eng-c-weather-rain-shadow-v2c",
+            "text": "Turns into drops of liquid"
+          }
+        ],
+        "answer": "eng-c-weather-rain-shadow-v2c"
+      }
+    ],
+    "hints": [
+      "Follow the air step by step up and over the mountain."
+    ]
+  },
+  {
+    "id": "eng-c-volcano-trade-offs",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "In 79 AD, Mount Vesuvius in Italy erupted and buried the Roman town of Pompeii under ash and pumice. Surprisingly, many people now live around that same volcano. Hundreds of thousands live in the zone that scientists consider the most at risk. Why would anyone choose to live there?\n\nOne reason is the soil. When ash and lava break down, they release minerals that plants need. Vineyards, olive groves and vegetable farms flourish on the slopes of Vesuvius, and the region produces some of Italy's finest food. Another reason is that the ruins of Pompeii, which were preserved by the ash, now attract millions of visitors each year, which provides jobs.\n\nVolcanoes can also provide energy. In Iceland, hot rock beneath the ground heats water that is piped to homes and greenhouses. This geothermal energy is clean and cheap, so most Icelandic homes are warmed without burning fuel.\n\nOf course, living near a volcano needs careful planning. Scientists monitor the volcano with instruments that measure tiny earthquakes, changes in the ground and gases. If signs suggest an eruption, authorities have plans to move people to safety. Because of this monitoring, an eruption is less likely to take people by surprise.\n\nOverall, living near a volcano is a trade-off. People accept some risk in return for fertile land, work and energy. With good science and planning, many communities believe the benefits are worth it. The people of Vesuvius show that, with respect for nature, communities can live alongside even powerful volcanoes. Scientists will keep studying them closely.",
+    "parts": [
+      {
+        "id": "eng-c-volcano-trade-offs-q1",
+        "prompt": "Why do many people choose to live near Vesuvius?",
+        "options": [
+          {
+            "id": "eng-c-volcano-trade-offs-q1a",
+            "text": "The ruins protect the town from lava"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q1b",
+            "text": "The volcano has not erupted for a million years"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q1c",
+            "text": "The soil is fertile and there are jobs and food from the land"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q1d",
+            "text": "The area is empty and quiet"
+          }
+        ],
+        "answer": "eng-c-volcano-trade-offs-q1c",
+        "explanation": "The passage explains rich soil, farms and tourism jobs."
+      },
+      {
+        "id": "eng-c-volcano-trade-offs-q2",
+        "prompt": "What is the best meaning of \"trade-off\" in the last paragraph?",
+        "options": [
+          {
+            "id": "eng-c-volcano-trade-offs-q2a",
+            "text": "Accepting a downside in order to gain something good"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q2b",
+            "text": "Moving to another country"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q2c",
+            "text": "Selling goods at a market"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q2d",
+            "text": "Swapping houses with a neighbour"
+          }
+        ],
+        "answer": "eng-c-volcano-trade-offs-q2a",
+        "explanation": "People accept some risk in return for benefits."
+      },
+      {
+        "id": "eng-c-volcano-trade-offs-q3",
+        "prompt": "How does monitoring help people who live near a volcano?",
+        "options": [
+          {
+            "id": "eng-c-volcano-trade-offs-q3a",
+            "text": "It stops the volcano from erupting"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q3b",
+            "text": "It can warn them in time to move to safety"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q3c",
+            "text": "It cools the lava"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q3d",
+            "text": "It makes the ash fall slowly"
+          }
+        ],
+        "answer": "eng-c-volcano-trade-offs-q3b",
+        "explanation": "The passage says scientists watch for signs and authorities can move people in time."
+      },
+      {
+        "id": "eng-c-volcano-trade-offs-q4",
+        "prompt": "Which detail shows a way volcanoes can help with energy?",
+        "options": [
+          {
+            "id": "eng-c-volcano-trade-offs-q4a",
+            "text": "Vesuvius buried Pompeii"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q4b",
+            "text": "In Iceland hot rock heats water for homes"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q4c",
+            "text": "Vineyards grow on the slopes"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q4d",
+            "text": "Scientists measure tiny earthquakes"
+          }
+        ],
+        "answer": "eng-c-volcano-trade-offs-q4b",
+        "explanation": "Geothermal energy uses heat from underground."
+      },
+      {
+        "id": "eng-c-volcano-trade-offs-q5",
+        "prompt": "What is the author's point of view?",
+        "options": [
+          {
+            "id": "eng-c-volcano-trade-offs-q5a",
+            "text": "Iceland is the best country in the world"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q5b",
+            "text": "Volcanoes are completely safe"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q5c",
+            "text": "Living near a volcano has both risks and benefits that must be weighed"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-q5d",
+            "text": "Nobody should ever live near a volcano"
+          }
+        ],
+        "answer": "eng-c-volcano-trade-offs-q5c",
+        "explanation": "The ending says that with good science and planning many communities believe the benefits are worth it."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-c-volcano-trade-offs-v1",
+        "word": "monitor",
+        "meaning": "to watch and check something over time",
+        "sentence": "Scientists monitor the volcano with instruments that measure tiny earthquakes, changes in the ground and gases.",
+        "check_prompt": "What does it mean to monitor a volcano?",
+        "options": [
+          {
+            "id": "eng-c-volcano-trade-offs-v1a",
+            "text": "To make it erupt"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-v1b",
+            "text": "To keep watching it for changes"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-v1c",
+            "text": "To paint it"
+          }
+        ],
+        "answer": "eng-c-volcano-trade-offs-v1b"
+      },
+      {
+        "id": "eng-c-volcano-trade-offs-v2",
+        "word": "flourish",
+        "meaning": "to grow strongly and healthily",
+        "sentence": "Vineyards, olive groves and vegetable farms flourish on the slopes of Vesuvius, and the region produces some of Italy's finest food.",
+        "check_prompt": "If plants flourish, they",
+        "options": [
+          {
+            "id": "eng-c-volcano-trade-offs-v2a",
+            "text": "Wither and die"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-v2b",
+            "text": "Turn into stone"
+          },
+          {
+            "id": "eng-c-volcano-trade-offs-v2c",
+            "text": "Grow well"
+          }
+        ],
+        "answer": "eng-c-volcano-trade-offs-v2c"
+      }
+    ],
+    "hints": [
+      "List the benefits and the risks separately."
+    ]
+  },
+  {
+    "id": "eng-c-story-the-substitute",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "Theo sat on the bench with his chin in his hands. Every Saturday it was the same. Coach Pham named the starting players, and every Saturday, Theo's name was not on the list. He was the substitute.\n\n\"It isn't fair,\" he muttered. He watched his best friend, Ravi, run onto the field wearing the number nine shirt that Theo wanted. Part of him hoped that Ravi would miss an easy shot. As soon as the thought arrived, he felt uncomfortable, as if he had swallowed something sour.\n\nRavi did not miss. He scored twice before half-time, and Theo clapped, though his hands felt heavy. During the break, Coach Pham sat down beside him. \"Do you know why I like having you on the bench?\" she asked. Theo shook his head. \"Because you watch the game. Yesterday you told me that the other team's left side is slow. That tip is why we are winning.\"\n\nTheo had not thought of it that way. In the second half he called out helpful messages from the sideline, and when a defender was injured near the end, the coach sent him on. He wasn't brilliant, but he stayed calm and passed the ball quickly. The final whistle blew with the score at 3-1.\n\nWalking home, Ravi patted him on the back. \"Thanks for the tip,\" he said. Theo smiled. He still wanted the number nine shirt, but he no longer felt sour. He realised that being part of a team meant helping everyone win, not only himself.",
+    "parts": [
+      {
+        "id": "eng-c-story-the-substitute-q1",
+        "prompt": "How did Theo feel when he hoped that Ravi would miss a shot?",
+        "options": [
+          {
+            "id": "eng-c-story-the-substitute-q1a",
+            "text": "Too tired to care"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q1b",
+            "text": "Uncomfortable, because the thought was unkind"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q1c",
+            "text": "Proud of his clever idea"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q1d",
+            "text": "Relaxed and happy"
+          }
+        ],
+        "answer": "eng-c-story-the-substitute-q1b",
+        "explanation": "The passage says he felt uncomfortable as if he had swallowed something sour."
+      },
+      {
+        "id": "eng-c-story-the-substitute-q2",
+        "prompt": "Why did Coach Pham say she liked having Theo on the bench?",
+        "options": [
+          {
+            "id": "eng-c-story-the-substitute-q2a",
+            "text": "He never asked to play"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q2b",
+            "text": "He was the fastest runner"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q2c",
+            "text": "He was her favourite player"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q2d",
+            "text": "He watched the game carefully and noticed useful things"
+          }
+        ],
+        "answer": "eng-c-story-the-substitute-q2d",
+        "explanation": "She praised his tip about the slow left side."
+      },
+      {
+        "id": "eng-c-story-the-substitute-q3",
+        "prompt": "Which event happened last?",
+        "options": [
+          {
+            "id": "eng-c-story-the-substitute-q3a",
+            "text": "The coach spoke to Theo at the break"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q3b",
+            "text": "Ravi thanked Theo for the tip"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q3c",
+            "text": "Theo clapped for Ravi's goals"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q3d",
+            "text": "A defender was injured"
+          }
+        ],
+        "answer": "eng-c-story-the-substitute-q3b",
+        "explanation": "Ravi thanked him while they walked home after the game."
+      },
+      {
+        "id": "eng-c-story-the-substitute-q4",
+        "prompt": "What lesson does the story teach?",
+        "options": [
+          {
+            "id": "eng-c-story-the-substitute-q4a",
+            "text": "Being part of a team means helping everyone succeed, not only yourself"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q4b",
+            "text": "Substitutes are never useful"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q4c",
+            "text": "Friends should not play on the same team"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q4d",
+            "text": "Number nine is the best shirt"
+          }
+        ],
+        "answer": "eng-c-story-the-substitute-q4a",
+        "explanation": "Theo realised that being part of a team meant helping everyone win."
+      },
+      {
+        "id": "eng-c-story-the-substitute-q5",
+        "prompt": "In the passage, the word \"muttered\" suggests that Theo spoke",
+        "options": [
+          {
+            "id": "eng-c-story-the-substitute-q5a",
+            "text": "in a singing voice"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q5b",
+            "text": "in a foreign language"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q5c",
+            "text": "in a loud, excited voice"
+          },
+          {
+            "id": "eng-c-story-the-substitute-q5d",
+            "text": "in a low, unhappy voice"
+          }
+        ],
+        "answer": "eng-c-story-the-substitute-q5d",
+        "explanation": "Muttered means to speak quietly, often when annoyed."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-c-story-the-substitute-v1",
+        "word": "substitute",
+        "meaning": "a player who takes another player's place",
+        "sentence": "He was the substitute.",
+        "check_prompt": "A substitute in a team is",
+        "options": [
+          {
+            "id": "eng-c-story-the-substitute-v1a",
+            "text": "A player who joins the game to replace someone"
+          },
+          {
+            "id": "eng-c-story-the-substitute-v1b",
+            "text": "The person who owns the ball"
+          },
+          {
+            "id": "eng-c-story-the-substitute-v1c",
+            "text": "The referee"
+          }
+        ],
+        "answer": "eng-c-story-the-substitute-v1a"
+      }
+    ],
+    "hints": [
+      "Notice how Theo's feelings change from the start to the end."
+    ]
+  },
+  {
+    "id": "eng-c-story-fog-on-the-ridge",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "Nadia and her cousin Sam were on a school camp hike along a ridge in the bush. The group had been walking for two hours when a thick fog rolled in. In a few minutes, they could not see the leader ahead, or the trees ten steps away.\n\nNadia had stopped to tie her shoelace, and when she stood, the others had disappeared into the white. \"Hello?\" she called. Only the dripping of leaves answered. Sam, who had been walking behind her, caught up. His eyes were wide.\n\n\"Which way did they go?\" he asked. \"Let's run. We can catch up.\"\n\nNadia remembered what Ms Lee had told them that morning. If you lose the group, stop, think and stay together. She took a long breath. \"Running might take us the wrong way,\" she said. \"Let's work out what we know.\" They stood close together, shouted as loudly as they could, and then listened. \"Let's stay here and keep listening,\" said Nadia.\n\nThey waited side by side and called out every few seconds. Between calls, they listened hard while the cold fog pressed around them and their hearts thumped. After a few minutes, they heard a whistle, then voices. Ms Lee had stopped the group when she counted heads and had been blowing her whistle to guide them back.\n\n\"Well done for staying calm,\" she said. Nadia smiled. The fog had not changed, but she felt as clear as the morning. Panic would have made them lose their way, while a calm plan had found it.",
+    "parts": [
+      {
+        "id": "eng-c-story-fog-on-the-ridge-q1",
+        "prompt": "Why did Nadia and Sam become separated from the group?",
+        "options": [
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q1a",
+            "text": "They were chasing an animal"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q1b",
+            "text": "Nadia stopped to tie her shoelace and fog hid the others"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q1c",
+            "text": "The leader sent them ahead"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q1d",
+            "text": "They decided to take a shortcut"
+          }
+        ],
+        "answer": "eng-c-story-fog-on-the-ridge-q1b",
+        "explanation": "Nadia stopped to tie her shoelace, and when she stood, the fog had hidden the group."
+      },
+      {
+        "id": "eng-c-story-fog-on-the-ridge-q2",
+        "prompt": "Why did Nadia decide not to run?",
+        "options": [
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q2a",
+            "text": "She did not like Sam's idea because it was his"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q2b",
+            "text": "She wanted to stay in the bush"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q2c",
+            "text": "She was too tired"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q2d",
+            "text": "Running might take them in the wrong direction"
+          }
+        ],
+        "answer": "eng-c-story-fog-on-the-ridge-q2d",
+        "explanation": "She said running might take them the wrong way."
+      },
+      {
+        "id": "eng-c-story-fog-on-the-ridge-q3",
+        "prompt": "Which sequence is correct?",
+        "options": [
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q3a",
+            "text": "They heard the whistle, fog came, Nadia remembered Ms Lee's advice, they called out together"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q3b",
+            "text": "Fog came, Nadia remembered Ms Lee's advice, they called out together, they heard the whistle"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q3c",
+            "text": "Fog came, they heard the whistle, they called out together, Nadia remembered Ms Lee's advice"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q3d",
+            "text": "They called out together, fog came, they heard the whistle, Nadia remembered Ms Lee's advice"
+          }
+        ],
+        "answer": "eng-c-story-fog-on-the-ridge-q3b",
+        "explanation": "The events happen in that order in the story."
+      },
+      {
+        "id": "eng-c-story-fog-on-the-ridge-q4",
+        "prompt": "What is the theme of the story?",
+        "options": [
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q4a",
+            "text": "Cousins should walk faster than the group"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q4b",
+            "text": "Staying calm and thinking carefully helps in a difficult situation"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q4c",
+            "text": "Shouting is never useful on a hike"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q4d",
+            "text": "Fog is dangerous on every hike"
+          }
+        ],
+        "answer": "eng-c-story-fog-on-the-ridge-q4b",
+        "explanation": "The last paragraph says panic would have lost them, but a calm plan found the way."
+      },
+      {
+        "id": "eng-c-story-fog-on-the-ridge-q5",
+        "prompt": "In the passage, \"as clear as the morning\" means Nadia felt",
+        "options": [
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q5a",
+            "text": "angry at Sam"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q5b",
+            "text": "hungry for breakfast"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q5c",
+            "text": "cold and tired"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-q5d",
+            "text": "calm and sure of herself"
+          }
+        ],
+        "answer": "eng-c-story-fog-on-the-ridge-q5d",
+        "explanation": "The fog had not changed but her mind had become clear."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-c-story-fog-on-the-ridge-v1",
+        "word": "ridge",
+        "meaning": "a long, narrow strip of high ground",
+        "sentence": "Nadia and her cousin Sam were on a school camp hike along a ridge in the bush.",
+        "check_prompt": "A ridge is",
+        "options": [
+          {
+            "id": "eng-c-story-fog-on-the-ridge-v1a",
+            "text": "A deep pond"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-v1b",
+            "text": "A kind of tent"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-v1c",
+            "text": "A long narrow stretch of high land"
+          }
+        ],
+        "answer": "eng-c-story-fog-on-the-ridge-v1c"
+      },
+      {
+        "id": "eng-c-story-fog-on-the-ridge-v2",
+        "word": "panic",
+        "meaning": "a sudden strong fear that stops you thinking clearly",
+        "sentence": "Panic would have made them lose their way, while a calm plan had found it.",
+        "check_prompt": "What might panic make a person do?",
+        "options": [
+          {
+            "id": "eng-c-story-fog-on-the-ridge-v2a",
+            "text": "Make a careful plan"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-v2b",
+            "text": "Fall asleep"
+          },
+          {
+            "id": "eng-c-story-fog-on-the-ridge-v2c",
+            "text": "Rush around without thinking"
+          }
+        ],
+        "answer": "eng-c-story-fog-on-the-ridge-v2c"
+      }
+    ],
+    "hints": [
+      "Look for what Nadia remembered and the sensible steps she took."
+    ]
+  },
+  {
+    "id": "eng-c-olympics-behind-the-medal",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "During the Olympic Games, television screens fill with Olympic athletes standing on podiums with medals around their necks. What viewers rarely see is everything that happened before that moment.\n\nMany Olympic athletes begin training when they are young and keep going for many years. They practise nearly every day, often before school or work. A swimmer might spend hours in the pool, then more hours lifting weights and stretching. Coaches watch closely and suggest small changes, such as a different arm movement or a slightly earlier start. Over months, these tiny improvements can add up to a faster time.\n\nRest matters just as much as effort. Athletes who train without enough sleep or recovery can become tired or injured. For this reason, many follow a careful routine that includes healthy meals, plenty of sleep and days off. Some also learn to manage nerves by breathing slowly or picturing a good performance in their minds.\n\nSetbacks are common. An athlete may miss a team by a fraction of a second, or an injury may force a long break from competing. Many describe these times as the hardest part of their careers. Yet a lot of them say the disappointment taught them patience and determination.\n\nAthletes also rely on other people. Families drive them to practice, teammates push them to improve, and volunteers help to run events. Only a few athletes in each event win a medal, but thousands take part, and many are proud simply to have reached the Games. The story behind a medal is rarely about one person or one lucky day. It is about steady work, support and the courage to keep trying.",
+    "parts": [
+      {
+        "id": "eng-c-olympics-behind-the-medal-q1",
+        "prompt": "What is the main idea of the passage?",
+        "options": [
+          {
+            "id": "eng-c-olympics-behind-the-medal-q1a",
+            "text": "Medals are given to athletes who are lucky"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q1b",
+            "text": "Behind an Olympic performance are years of training, rest and support"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q1c",
+            "text": "Athletes should never take a day off"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q1d",
+            "text": "Coaches decide who wins each event"
+          }
+        ],
+        "answer": "eng-c-olympics-behind-the-medal-q1b",
+        "explanation": "The passage explains the long preparation and support behind a medal."
+      },
+      {
+        "id": "eng-c-olympics-behind-the-medal-q2",
+        "prompt": "Why does the author say rest matters \"just as much as effort\"?",
+        "options": [
+          {
+            "id": "eng-c-olympics-behind-the-medal-q2a",
+            "text": "Athletes who do not recover can become tired or injured"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q2b",
+            "text": "Rest is the only way to win a medal"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q2c",
+            "text": "Coaches do not allow training on most days"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q2d",
+            "text": "Athletes who rest never feel nervous"
+          }
+        ],
+        "answer": "eng-c-olympics-behind-the-medal-q2a",
+        "explanation": "The passage says training without enough sleep or recovery can lead to tiredness or injury."
+      },
+      {
+        "id": "eng-c-olympics-behind-the-medal-q3",
+        "prompt": "What can you infer about athletes who do not win a medal?",
+        "options": [
+          {
+            "id": "eng-c-olympics-behind-the-medal-q3a",
+            "text": "They should stop competing"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q3b",
+            "text": "They did not work hard"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q3c",
+            "text": "Many are still proud to have reached the Games"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q3d",
+            "text": "They have no support from others"
+          }
+        ],
+        "answer": "eng-c-olympics-behind-the-medal-q3c",
+        "explanation": "The passage says many are proud simply to have reached the Games."
+      },
+      {
+        "id": "eng-c-olympics-behind-the-medal-q4",
+        "prompt": "How does the author organise paragraphs two to five?",
+        "options": [
+          {
+            "id": "eng-c-olympics-behind-the-medal-q4a",
+            "text": "Each paragraph describes a different part of what lies behind success"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q4b",
+            "text": "They list events in order from the oldest to the newest"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q4c",
+            "text": "Each one describes a different Olympic sport"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q4d",
+            "text": "They compare two athletes' lives"
+          }
+        ],
+        "answer": "eng-c-olympics-behind-the-medal-q4a",
+        "explanation": "Training, rest, setbacks and support are each covered in their own paragraph."
+      },
+      {
+        "id": "eng-c-olympics-behind-the-medal-q5",
+        "prompt": "In the passage, the word \"setbacks\" most nearly means",
+        "options": [
+          {
+            "id": "eng-c-olympics-behind-the-medal-q5a",
+            "text": "Problems that slow progress"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q5b",
+            "text": "Prizes that are shared"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q5c",
+            "text": "Early starts to a day"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-q5d",
+            "text": "Quick wins"
+          }
+        ],
+        "answer": "eng-c-olympics-behind-the-medal-q5a",
+        "explanation": "Missing a team or an injury are examples of problems that slow an athlete down."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-c-olympics-behind-the-medal-v1",
+        "word": "determination",
+        "meaning": "a firm decision to keep going even when something is hard",
+        "sentence": "Yet a lot of them say the disappointment taught them patience and determination.",
+        "check_prompt": "Which person is showing determination?",
+        "options": [
+          {
+            "id": "eng-c-olympics-behind-the-medal-v1a",
+            "text": "A runner who stops at the first sign of rain"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-v1b",
+            "text": "A swimmer who keeps practising after a poor race"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-v1c",
+            "text": "A player who watches from the seats"
+          }
+        ],
+        "answer": "eng-c-olympics-behind-the-medal-v1b"
+      },
+      {
+        "id": "eng-c-olympics-behind-the-medal-v2",
+        "word": "routine",
+        "meaning": "a regular set of things you do in the same order",
+        "sentence": "For this reason, many follow a careful routine that includes healthy meals, plenty of sleep and days off.",
+        "check_prompt": "Which is an example of a routine?",
+        "options": [
+          {
+            "id": "eng-c-olympics-behind-the-medal-v2a",
+            "text": "Brushing your teeth every morning and every night"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-v2b",
+            "text": "Finding a coin on the street"
+          },
+          {
+            "id": "eng-c-olympics-behind-the-medal-v2c",
+            "text": "Seeing a rainbow once"
+          }
+        ],
+        "answer": "eng-c-olympics-behind-the-medal-v2a"
+      }
+    ],
+    "hints": [
+      "Look for what the author says about training, rest and support."
+    ]
+  },
+  {
+    "id": "eng-c-ocean-sea-turtles",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 12,
+    "answer_type": "passage",
+    "text": "On a warm night, a female sea turtle drags herself slowly up a sandy beach. She is huge compared with the hatchlings that will later crawl out of her nest, and the journey from the water has left her tired. Using her back flippers, she digs a deep hole and lays around a hundred soft, round eggs. Then she covers the nest with sand and returns to the sea. Her work is finished, and the nest is left to the warm sand.\n\nAbout two months later, the eggs begin to hatch. The baby turtles, called hatchlings, are smaller than a human hand. They wait underground until the sand cools at night, then burst out together. Scientists believe that emerging at night helps hatchlings avoid hot sand and some daytime predators such as gulls.\n\nThe hatchlings must now reach the water. They usually move towards the lowest, brightest horizon, which on a natural beach is the open sea, because land is darker and often has dunes or trees. However, bright lights from roads, hotels and houses can confuse them. Instead of heading to the ocean, some crawl towards the lights and become lost or exhausted. In some places, communities now switch off beach lights during hatching season or use special lamps that are easier on turtles.\n\nEven a hatchling that reaches the water faces many dangers. Crabs, fish and seabirds eat the young turtles, and only a small number survive to adulthood. Those that do may live for many decades. Some females are thought to return to lay their own eggs on or near the beach where they hatched, even after travelling thousands of kilometres.\n\nPeople can help sea turtles in simple ways. Picking up rubbish from beaches, keeping lights low on turtle beaches at night and giving nests space all make a difference. A small action on land can protect an animal whose life begins in the sand and continues across the ocean.",
+    "parts": [
+      {
+        "id": "eng-c-ocean-sea-turtles-q1",
+        "prompt": "What is the main idea of the passage?",
+        "options": [
+          {
+            "id": "eng-c-ocean-sea-turtles-q1a",
+            "text": "Sea turtles are the largest animals in the ocean"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q1b",
+            "text": "Sea turtles begin life with many dangers, and people can help them"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q1c",
+            "text": "Hatchlings are safest during the day"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q1d",
+            "text": "Turtles never return to land after hatching"
+          }
+        ],
+        "answer": "eng-c-ocean-sea-turtles-q1b",
+        "explanation": "The passage describes the dangers hatchlings face and ways people can help."
+      },
+      {
+        "id": "eng-c-ocean-sea-turtles-q2",
+        "prompt": "Why can bright lights near a beach be a problem for hatchlings?",
+        "options": [
+          {
+            "id": "eng-c-ocean-sea-turtles-q2a",
+            "text": "The lights can confuse them so they crawl the wrong way"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q2b",
+            "text": "The lights make the sand too cold"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q2c",
+            "text": "The lights wake the mother turtle"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q2d",
+            "text": "The lights make the eggs hatch late"
+          }
+        ],
+        "answer": "eng-c-ocean-sea-turtles-q2a",
+        "explanation": "Hatchlings head for the brightest horizon, so artificial lights can lead them away from the sea."
+      },
+      {
+        "id": "eng-c-ocean-sea-turtles-q3",
+        "prompt": "What can you infer about why only a small number of hatchlings survive?",
+        "options": [
+          {
+            "id": "eng-c-ocean-sea-turtles-q3a",
+            "text": "Most are not strong enough to dig"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q3b",
+            "text": "Many are eaten by predators or face other dangers"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q3c",
+            "text": "They all swim back to the beach"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q3d",
+            "text": "They stay under the sand forever"
+          }
+        ],
+        "answer": "eng-c-ocean-sea-turtles-q3b",
+        "explanation": "The passage says crabs, fish and seabirds eat young turtles and only a few survive."
+      },
+      {
+        "id": "eng-c-ocean-sea-turtles-q4",
+        "prompt": "Which detail is a fact rather than an opinion?",
+        "options": [
+          {
+            "id": "eng-c-ocean-sea-turtles-q4a",
+            "text": "Sea turtles are the most beautiful animals"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q4b",
+            "text": "Lights should never be allowed near a beach"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q4c",
+            "text": "A female digs a hole with her back flippers and lays eggs"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q4d",
+            "text": "Helping turtles is the only job that matters"
+          }
+        ],
+        "answer": "eng-c-ocean-sea-turtles-q4c",
+        "explanation": "The egg-laying detail is described as something that happens and can be checked."
+      },
+      {
+        "id": "eng-c-ocean-sea-turtles-q5",
+        "prompt": "In the passage, the word \"emerging\" most nearly means",
+        "options": [
+          {
+            "id": "eng-c-ocean-sea-turtles-q5a",
+            "text": "Coming out into view"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q5b",
+            "text": "Falling asleep"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q5c",
+            "text": "Swimming away"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-q5d",
+            "text": "Being buried"
+          }
+        ],
+        "answer": "eng-c-ocean-sea-turtles-q5a",
+        "explanation": "The hatchlings burst out of the sand."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-c-ocean-sea-turtles-v1",
+        "word": "hatchlings",
+        "meaning": "baby animals that have just come out of eggs",
+        "sentence": "The baby turtles, called hatchlings, are smaller than a human hand.",
+        "check_prompt": "What is a hatchling?",
+        "options": [
+          {
+            "id": "eng-c-ocean-sea-turtles-v1a",
+            "text": "A baby animal that has just come out of an egg"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-v1b",
+            "text": "A very old turtle"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-v1c",
+            "text": "A kind of beach"
+          }
+        ],
+        "answer": "eng-c-ocean-sea-turtles-v1a"
+      },
+      {
+        "id": "eng-c-ocean-sea-turtles-v2",
+        "word": "predators",
+        "meaning": "animals that hunt and eat other animals",
+        "sentence": "Scientists believe that emerging at night helps hatchlings avoid hot sand and some daytime predators such as gulls.",
+        "check_prompt": "Which animal is a predator?",
+        "options": [
+          {
+            "id": "eng-c-ocean-sea-turtles-v2a",
+            "text": "A hawk that catches mice"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-v2b",
+            "text": "A rock on the beach"
+          },
+          {
+            "id": "eng-c-ocean-sea-turtles-v2c",
+            "text": "A leaf on a tree"
+          }
+        ],
+        "answer": "eng-c-ocean-sea-turtles-v2a"
+      }
+    ],
+    "hints": [
+      "Reread what the passage says about lights and about predators."
+    ]
+  }
+]

@@ -1,0 +1,4415 @@
+[
+  {
+    "id": "eng-a-platypus",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "The platypus looks like it was put together from spare parts. It has a flat bill like a duck, a tail like a beaver, and webbed feet for paddling. Yet it is a mammal, and it lives in rivers and creeks along the east coast of Australia and in Tasmania. During the day, the platypus rests in a burrow it digs in the muddy bank. At dusk it slips into the water to hunt for insect larvae, shrimp and worms on the bottom of the stream. Strangely, it shuts its eyes, ears and nose underwater. Instead, it finds its prey using its sensitive bill, which can feel tiny electrical signals given off by moving animals. Female platypuses lay soft, leathery eggs, which is very unusual for a mammal. Because platypuses need clean water, scientists check rivers for them as a sign of a healthy habitat.",
+    "parts": [
+      {
+        "id": "eng-a-platypus-q1",
+        "prompt": "How does a platypus find food underwater?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It feels electrical signals with its bill."
+          },
+          {
+            "id": "b",
+            "text": "It sees its prey with sharp eyes."
+          },
+          {
+            "id": "c",
+            "text": "It listens for splashes with its ears."
+          },
+          {
+            "id": "d",
+            "text": "It smells worms through its nose."
+          }
+        ],
+        "answer": "a",
+        "explanation": "The passage says it shuts its eyes, ears and nose and uses its bill to feel tiny electrical signals."
+      },
+      {
+        "id": "eng-a-platypus-q2",
+        "prompt": "Why do scientists check rivers for platypuses?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They are the only animals that live in rivers."
+          },
+          {
+            "id": "b",
+            "text": "They clean the pollution out of the water."
+          },
+          {
+            "id": "c",
+            "text": "Finding them suggests the water is clean."
+          },
+          {
+            "id": "d",
+            "text": "They are easy to count from the bank."
+          }
+        ],
+        "answer": "c",
+        "explanation": "Platypuses need clean water, so seeing them is a sign of a healthy habitat."
+      },
+      {
+        "id": "eng-a-platypus-q3",
+        "prompt": "What is the main idea of the passage?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The platypus is really a kind of duck."
+          },
+          {
+            "id": "b",
+            "text": "The platypus is an unusual mammal with special ways of living and hunting."
+          },
+          {
+            "id": "c",
+            "text": "Tasmania is the best place to see wildlife."
+          },
+          {
+            "id": "d",
+            "text": "All mammals lay leathery eggs."
+          }
+        ],
+        "answer": "b",
+        "explanation": "Most details describe the platypus's odd body, home, hunting and eggs."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-platypus-v1",
+        "word": "habitat",
+        "meaning": "the natural home of an animal or plant",
+        "sentence": "Because platypuses need clean water, scientists check rivers for them as a sign of a healthy habitat.",
+        "check_prompt": "Which place is a platypus's habitat?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A sandy desert dune"
+          },
+          {
+            "id": "b",
+            "text": "A busy city rooftop"
+          },
+          {
+            "id": "c",
+            "text": "A muddy river bank and creek"
+          }
+        ],
+        "answer": "c"
+      }
+    ],
+    "hints": [
+      "Think about what the platypus does when its eyes, ears and nose are shut."
+    ]
+  },
+  {
+    "id": "eng-a-wombat",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "A wombat is a sturdy, furry animal that spends much of its life underground. Its strong front paws and long claws are perfect for digging tunnels, some of which stretch for more than twenty metres. Wombats sleep in these burrows during the day and come out at night to graze on grasses, roots and bark. Their teeth never stop growing, so chewing tough plants helps wear them down. A wombat also has an unusual way of protecting itself. If danger comes close, it dives into its tunnel and blocks the entrance with its hard, tough rump. A predator that tries to follow finds it difficult to squeeze past. Wombats are also famous for their droppings, which are shaped like small cubes. Scientists believe the cube shape stops the droppings from rolling away, so the wombat can use them to mark its territory on rocks and logs.",
+    "parts": [
+      {
+        "id": "eng-a-wombat-q1",
+        "prompt": "According to scientists, why are wombat droppings shaped like cubes?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The shape stops them from rolling away from where they are left."
+          },
+          {
+            "id": "b",
+            "text": "The shape makes them easier to bury."
+          },
+          {
+            "id": "c",
+            "text": "The shape keeps the wombat's burrow warm."
+          },
+          {
+            "id": "d",
+            "text": "The shape helps young wombats to grow teeth."
+          }
+        ],
+        "answer": "a",
+        "explanation": "The last sentence says the cube shape stops the droppings from rolling away."
+      },
+      {
+        "id": "eng-a-wombat-q2",
+        "prompt": "Why does a wombat block its tunnel with its rump?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It wants to keep the tunnel warm."
+          },
+          {
+            "id": "b",
+            "text": "It is hiding its cube-shaped droppings."
+          },
+          {
+            "id": "c",
+            "text": "Its hard rump makes it hard for a predator to get past."
+          },
+          {
+            "id": "d",
+            "text": "It is stopping other wombats from sleeping."
+          }
+        ],
+        "answer": "c",
+        "explanation": "The passage says a predator that follows finds it difficult to squeeze past."
+      },
+      {
+        "id": "eng-a-wombat-q3",
+        "prompt": "Why did the author most likely write this passage?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To persuade readers to keep wombats as pets"
+          },
+          {
+            "id": "b",
+            "text": "To explain how wombats live and protect themselves"
+          },
+          {
+            "id": "c",
+            "text": "To tell a funny story about a lost wombat"
+          },
+          {
+            "id": "d",
+            "text": "To show readers how to dig a tunnel"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The passage gives facts about wombat burrows, defence and droppings."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-wombat-v1",
+        "word": "predator",
+        "meaning": "an animal that hunts and eats other animals",
+        "sentence": "A predator that tries to follow finds it difficult to squeeze past.",
+        "check_prompt": "Which animal is acting as a predator?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A cow eating grass"
+          },
+          {
+            "id": "b",
+            "text": "A fox chasing a rabbit"
+          },
+          {
+            "id": "c",
+            "text": "A bee visiting a flower"
+          }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "eng-a-wombat-v2",
+        "word": "territory",
+        "meaning": "an area that an animal treats as its own",
+        "sentence": "Scientists believe the cube shape stops the droppings from rolling away, so the wombat can use them to mark its territory on rocks and logs.",
+        "check_prompt": "What is a wombat's territory?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The area it marks as its own"
+          },
+          {
+            "id": "b",
+            "text": "The food it eats at night"
+          },
+          {
+            "id": "c",
+            "text": "The tunnel door it closes"
+          }
+        ],
+        "answer": "a"
+      }
+    ],
+    "hints": [
+      "Reread the sentences about danger and the tunnel entrance."
+    ]
+  },
+  {
+    "id": "eng-a-shearwater-migration",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "Every September, millions of short-tailed shearwaters arrive on the islands off southern Australia. These dark brown seabirds have flown all the way from the cold waters near Alaska, a journey of about fifteen thousand kilometres. Amazingly, each bird returns to the very same burrow it used the year before. After repairing the tunnel, the pair lay a single egg and take turns sitting on it. While one parent guards the egg, the other flies out to sea for days to find fish and krill. When the chick hatches, it is fed rich, oily meals until it grows plump. In autumn the adults leave first, and the young bird is left behind to practise flapping its wings. Finally, one night it launches itself toward the sea and begins its own long migration north, guided by instinct rather than by anything it was taught.",
+    "parts": [
+      {
+        "id": "eng-a-shearwater-migration-q1",
+        "prompt": "What do the shearwater pair do right after they repair their burrow?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They lay a single egg."
+          },
+          {
+            "id": "b",
+            "text": "The chick learns to fly."
+          },
+          {
+            "id": "c",
+            "text": "The adults leave for Alaska."
+          },
+          {
+            "id": "d",
+            "text": "They feed the chick oily meals."
+          }
+        ],
+        "answer": "a",
+        "explanation": "After repairing the tunnel, the pair lay a single egg."
+      },
+      {
+        "id": "eng-a-shearwater-migration-q2",
+        "prompt": "Why does the author say the young bird is guided by instinct?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It follows its parents all the way north."
+          },
+          {
+            "id": "b",
+            "text": "It reads a map left in the burrow."
+          },
+          {
+            "id": "c",
+            "text": "It copies the other chicks in the nest."
+          },
+          {
+            "id": "d",
+            "text": "No one shows it the route, yet it still finds its way."
+          }
+        ],
+        "answer": "d",
+        "explanation": "The adults leave first, so the chick must find its way without being taught."
+      },
+      {
+        "id": "eng-a-shearwater-migration-q3",
+        "prompt": "Which sentence best sums up the passage?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Shearwaters are the only birds that dig burrows."
+          },
+          {
+            "id": "b",
+            "text": "Alaska is the best place in the world to find fish."
+          },
+          {
+            "id": "c",
+            "text": "Shearwaters make an extraordinary yearly journey and raise their chick in a burrow."
+          },
+          {
+            "id": "d",
+            "text": "Shearwater chicks are raised by scientists."
+          }
+        ],
+        "answer": "c",
+        "explanation": "The passage follows the birds' long journey and the raising of their chick."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-shearwater-migration-v1",
+        "word": "migration",
+        "meaning": "a long journey that animals make each year to find food or a place to breed",
+        "sentence": "Finally, one night it launches itself toward the sea and begins its own long migration north, guided by instinct rather than by anything it was taught.",
+        "check_prompt": "Which is an example of migration?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A bird building a nest in a tree"
+          },
+          {
+            "id": "b",
+            "text": "A dog walking around the block"
+          },
+          {
+            "id": "c",
+            "text": "Birds flying thousands of kilometres to a new feeding place"
+          }
+        ],
+        "answer": "c"
+      },
+      {
+        "id": "eng-a-shearwater-migration-v2",
+        "word": "instinct",
+        "meaning": "a natural way of behaving that an animal does not have to be taught",
+        "sentence": "Finally, one night it launches itself toward the sea and begins its own long migration north, guided by instinct rather than by anything it was taught.",
+        "check_prompt": "What is an instinct?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Knowing what to do without being taught"
+          },
+          {
+            "id": "b",
+            "text": "A skill learnt from a teacher"
+          },
+          {
+            "id": "c",
+            "text": "A game played with friends"
+          }
+        ],
+        "answer": "a"
+      }
+    ],
+    "hints": [
+      "Look at who leaves first in autumn."
+    ]
+  },
+  {
+    "id": "eng-a-ant-colony",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "An ant colony works like a tiny, well-organised town. At its heart lives the queen, whose main job is to lay eggs, sometimes thousands in a single day. Most of the other ants are workers, and they are always busy. Some workers look after the eggs and the young, while others dig tunnels or defend the nest. Foragers go outside to search for food such as seeds, dead insects and sweet drops from plants. When a forager finds something good, it leaves a trail of scent on the ground as it hurries home. Nestmates follow the scent to the food, and each ant that returns adds a little more, so the trail grows stronger. If the food runs out, the ants stop adding scent, and the trail gradually fades away. No ant is in charge of the others, yet together they get everything done.",
+    "parts": [
+      {
+        "id": "eng-a-ant-colony-q1",
+        "prompt": "What does a forager leave on the ground as it hurries home?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A pile of seeds"
+          },
+          {
+            "id": "b",
+            "text": "A trail of scent"
+          },
+          {
+            "id": "c",
+            "text": "A buzzing sound"
+          },
+          {
+            "id": "d",
+            "text": "A tiny tunnel"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The forager leaves a scent trail for its nestmates."
+      },
+      {
+        "id": "eng-a-ant-colony-q2",
+        "prompt": "What can you infer about a very strong scent trail?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Many ants have found good food and carried it home."
+          },
+          {
+            "id": "b",
+            "text": "The queen is walking along it."
+          },
+          {
+            "id": "c",
+            "text": "The food has already run out."
+          },
+          {
+            "id": "d",
+            "text": "The ants are digging a new tunnel."
+          }
+        ],
+        "answer": "a",
+        "explanation": "Each returning ant adds more scent, so a strong trail means plenty of ants found food."
+      },
+      {
+        "id": "eng-a-ant-colony-q3",
+        "prompt": "What is the main idea of the passage?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The queen ant tells all the others what to do."
+          },
+          {
+            "id": "b",
+            "text": "Ants only eat sweet food from plants."
+          },
+          {
+            "id": "c",
+            "text": "Ant tunnels can be twenty metres long."
+          },
+          {
+            "id": "d",
+            "text": "Ants cooperate, each with a job, to keep their colony running."
+          }
+        ],
+        "answer": "d",
+        "explanation": "The passage describes jobs shared among ants with no single ant in charge."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-ant-colony-v1",
+        "word": "colony",
+        "meaning": "a large group of animals that live together",
+        "sentence": "An ant colony works like a tiny, well-organised town.",
+        "check_prompt": "Which is a colony?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A single ant on a leaf"
+          },
+          {
+            "id": "b",
+            "text": "Thousands of ants living in one nest"
+          },
+          {
+            "id": "c",
+            "text": "A bird flying alone"
+          }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "eng-a-ant-colony-v2",
+        "word": "gradually",
+        "meaning": "slowly, a little at a time",
+        "sentence": "If the food runs out, the ants stop adding scent, and the trail gradually fades away.",
+        "check_prompt": "Which change happens gradually?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A candle melting a little each minute"
+          },
+          {
+            "id": "b",
+            "text": "A balloon popping"
+          },
+          {
+            "id": "c",
+            "text": "A light switching on"
+          }
+        ],
+        "answer": "a"
+      }
+    ],
+    "hints": [
+      "Think about what happens each time an ant comes home with food."
+    ]
+  },
+  {
+    "id": "eng-a-great-barrier-reef",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "The Great Barrier Reef stretches for more than two thousand kilometres along the coast of Queensland. It is so large that it can be seen in pictures taken from space. Surprisingly, the reef is not one living thing but thousands of separate reefs and islands. It is built by coral polyps, tiny soft animals that make hard cup-shaped skeletons around their bodies. When polyps die, their skeletons stay behind, and new polyps grow on top, building the reef slowly over thousands of years. Tiny algae live inside the coral and give it its bright colours. In return, the coral gives the algae a safe home. If the sea becomes too warm, the coral pushes the algae out and turns pale, which is called bleaching. Bleached coral is not dead, but it is weak, and it needs cooler water to recover. Rangers and scientists monitor the reef carefully so they can protect this natural wonder.",
+    "parts": [
+      {
+        "id": "eng-a-great-barrier-reef-q1",
+        "prompt": "What gives coral its bright colours?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The sand on the sea floor"
+          },
+          {
+            "id": "b",
+            "text": "Tiny algae living inside it"
+          },
+          {
+            "id": "c",
+            "text": "The skeletons of old polyps"
+          },
+          {
+            "id": "d",
+            "text": "The warm water of Queensland"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The passage says tiny algae live inside the coral and give it its colours."
+      },
+      {
+        "id": "eng-a-great-barrier-reef-q2",
+        "prompt": "What can you infer about how long the reef took to form?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Only a few years, because polyps grow fast"
+          },
+          {
+            "id": "b",
+            "text": "One night, when the polyps died"
+          },
+          {
+            "id": "c",
+            "text": "A very long time, because it grows slowly"
+          },
+          {
+            "id": "d",
+            "text": "A short time, because people built it"
+          }
+        ],
+        "answer": "c",
+        "explanation": "New polyps build on old skeletons slowly, over thousands of years."
+      },
+      {
+        "id": "eng-a-great-barrier-reef-q3",
+        "prompt": "In the passage, the word \"monitor\" most nearly means",
+        "options": [
+          {
+            "id": "a",
+            "text": "watch and check"
+          },
+          {
+            "id": "b",
+            "text": "paint and decorate"
+          },
+          {
+            "id": "c",
+            "text": "feed and clean"
+          },
+          {
+            "id": "d",
+            "text": "move and rebuild"
+          }
+        ],
+        "answer": "a",
+        "explanation": "Rangers and scientists watch the reef carefully to protect it."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-great-barrier-reef-v1",
+        "word": "bleaching",
+        "meaning": "when coral turns pale because it has pushed out the algae that live in it",
+        "sentence": "If the sea becomes too warm, the coral pushes the algae out and turns pale, which is called bleaching.",
+        "check_prompt": "What is happening when coral is bleaching?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It is growing taller very quickly"
+          },
+          {
+            "id": "b",
+            "text": "It is turning pale in water that is too warm"
+          },
+          {
+            "id": "c",
+            "text": "It is being cleaned by fish"
+          }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "eng-a-great-barrier-reef-v2",
+        "word": "recover",
+        "meaning": "to get better after being weak or ill",
+        "sentence": "Bleached coral is not dead, but it is weak, and it needs cooler water to recover.",
+        "check_prompt": "Which animal is recovering?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A sick bird that is getting stronger each day"
+          },
+          {
+            "id": "b",
+            "text": "A bird that has just hatched"
+          },
+          {
+            "id": "c",
+            "text": "A bird that has flown away"
+          }
+        ],
+        "answer": "a"
+      }
+    ],
+    "hints": [
+      "Reread the sentences about algae and warm water."
+    ]
+  },
+  {
+    "id": "eng-a-bushfire-banksia",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "In many parts of Australia, summer brings the risk of bushfires. Eucalyptus leaves are full of oil, and dry weather makes the forest floor crackle with fallen bark and twigs. Long before towns were built, fires swept through the bush, and the plants and animals found ways to survive. A banksia cone, for example, keeps its seeds locked tightly inside woody pods. The heat of a fire makes the pods open, and the seeds fall onto ground that has been cleared and fertilised by ash. Within weeks, green shoots can appear on blackened trunks, because many eucalypts have buds hidden safely beneath their thick bark. Animals cope too, since some shelter in burrows or hollow logs while others move away ahead of the flames. Today, fire services and country families prepare each season by clearing dry material and making a plan. Careful planning helps people stay safe while the bush does what it has always done: recover.",
+    "parts": [
+      {
+        "id": "eng-a-bushfire-banksia-q1",
+        "prompt": "What makes a banksia's woody pods open?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Heavy rain in spring"
+          },
+          {
+            "id": "b",
+            "text": "Birds pecking at the cone"
+          },
+          {
+            "id": "c",
+            "text": "The heat of a fire"
+          },
+          {
+            "id": "d",
+            "text": "Cold winter nights"
+          }
+        ],
+        "answer": "c",
+        "explanation": "The passage says the heat of a fire makes the pods open."
+      },
+      {
+        "id": "eng-a-bushfire-banksia-q2",
+        "prompt": "Why can green shoots appear on blackened eucalypt trunks so soon after a fire?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Buds protected under thick bark survive the heat."
+          },
+          {
+            "id": "b",
+            "text": "Ash turns instantly into new leaves."
+          },
+          {
+            "id": "c",
+            "text": "New trees grow from the burrows."
+          },
+          {
+            "id": "d",
+            "text": "The fire waters the trunks."
+          }
+        ],
+        "answer": "a",
+        "explanation": "Many eucalypts have buds hidden beneath their thick bark."
+      },
+      {
+        "id": "eng-a-bushfire-banksia-q3",
+        "prompt": "What was the author's main purpose?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To persuade people to light fires"
+          },
+          {
+            "id": "b",
+            "text": "To explain how nature and people deal with bushfires"
+          },
+          {
+            "id": "c",
+            "text": "To tell the story of one family's escape"
+          },
+          {
+            "id": "d",
+            "text": "To describe how to grow a banksia"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The passage explains how plants, animals and people cope with fire."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-bushfire-banksia-v1",
+        "word": "survive",
+        "meaning": "to stay alive through a difficult or dangerous time",
+        "sentence": "Long before towns were built, fires swept through the bush, and the plants and animals found ways to survive.",
+        "check_prompt": "Which animal manages to survive a dry summer?",
+        "options": [
+          {
+            "id": "a",
+            "text": "One that shelters in a cool burrow"
+          },
+          {
+            "id": "b",
+            "text": "One that stands in the sun all day"
+          },
+          {
+            "id": "c",
+            "text": "One that stops eating forever"
+          }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "eng-a-bushfire-banksia-v2",
+        "word": "recover",
+        "meaning": "to get better and become healthy again",
+        "sentence": "Careful planning helps people stay safe while the bush does what it has always done: recover.",
+        "check_prompt": "What does it mean if the bush recovers?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It disappears for ever"
+          },
+          {
+            "id": "b",
+            "text": "It grows back after a fire"
+          },
+          {
+            "id": "c",
+            "text": "It is moved to another place"
+          }
+        ],
+        "answer": "b"
+      }
+    ],
+    "hints": [
+      "Think about where the buds are kept on a eucalypt."
+    ]
+  },
+  {
+    "id": "eng-a-outback-survivors",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "The Australian outback is a vast region of red earth, scrubby bushes and wide open sky. Much of it receives very little rain, and some places may go for months without a single drop. You might think nothing could live there, but the outback is full of clever survivors. The thorny devil, a small lizard, collects water with its spiny skin, because dew gathers on its body and tiny channels carry the water to its mouth. Red kangaroos rest in the shade during the heat of the day and graze at dawn and dusk. Some desert frogs bury themselves deep underground and wait for months until rain arrives. When a storm finally comes, dry creek beds fill with water, and the desert bursts into green leaves and wildflowers. Within days, the frogs emerge, birds arrive in huge flocks, and the outback seems like a different place.",
+    "parts": [
+      {
+        "id": "eng-a-outback-survivors-q1",
+        "prompt": "How does the thorny devil get water?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Dew gathers on its body and flows to its mouth."
+          },
+          {
+            "id": "b",
+            "text": "It digs down to an underground spring."
+          },
+          {
+            "id": "c",
+            "text": "It licks water from the kangaroos."
+          },
+          {
+            "id": "d",
+            "text": "It catches rain in its tail."
+          }
+        ],
+        "answer": "a",
+        "explanation": "Tiny channels on its spiny body carry the water to its mouth."
+      },
+      {
+        "id": "eng-a-outback-survivors-q2",
+        "prompt": "What happens first after a storm finally comes?",
+        "options": [
+          {
+            "id": "a",
+            "text": "The frogs dig down underground."
+          },
+          {
+            "id": "b",
+            "text": "Dry creek beds fill with water."
+          },
+          {
+            "id": "c",
+            "text": "Birds arrive in huge flocks."
+          },
+          {
+            "id": "d",
+            "text": "Kangaroos begin to graze at dawn."
+          }
+        ],
+        "answer": "b",
+        "explanation": "The creek beds fill first, then plants grow, and within days frogs and birds appear."
+      },
+      {
+        "id": "eng-a-outback-survivors-q3",
+        "prompt": "Which title fits the passage best?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A Day at the Beach"
+          },
+          {
+            "id": "b",
+            "text": "The Kangaroo Who Lost Her Way"
+          },
+          {
+            "id": "c",
+            "text": "How to Dig a Well"
+          },
+          {
+            "id": "d",
+            "text": "Clever Survivors of the Outback"
+          }
+        ],
+        "answer": "d",
+        "explanation": "The passage describes how outback animals survive in a dry land."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-outback-survivors-v1",
+        "word": "vast",
+        "meaning": "extremely large",
+        "sentence": "The Australian outback is a vast region of red earth, scrubby bushes and wide open sky.",
+        "check_prompt": "Which of these is vast?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A pebble in your pocket"
+          },
+          {
+            "id": "b",
+            "text": "A small garden pond"
+          },
+          {
+            "id": "c",
+            "text": "A huge desert that goes on for kilometres"
+          }
+        ],
+        "answer": "c"
+      },
+      {
+        "id": "eng-a-outback-survivors-v2",
+        "word": "emerge",
+        "meaning": "to come out from somewhere hidden",
+        "sentence": "Within days, the frogs emerge, birds arrive in huge flocks, and the outback seems like a different place.",
+        "check_prompt": "When might a frog emerge?",
+        "options": [
+          {
+            "id": "a",
+            "text": "When it comes up out of the ground after rain"
+          },
+          {
+            "id": "b",
+            "text": "When it goes deeper underground"
+          },
+          {
+            "id": "c",
+            "text": "When it falls asleep"
+          }
+        ],
+        "answer": "a"
+      }
+    ],
+    "hints": [
+      "Reread the sentence about what happens within days of the storm."
+    ]
+  },
+  {
+    "id": "eng-a-daintree-rainforest",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "The Daintree Rainforest in Queensland is one of the oldest rainforests on Earth, older even than the Amazon. Walk beneath its tall trees and you will notice it is dim, damp and full of sound. The forest grows in layers. The tallest trees poke above the rest and catch the most sunshine. Below them, a thick canopy of leaves forms a green roof, where many of the birds, tree frogs and possums live. Down on the forest floor it is much darker, so plants there grow large leaves to catch whatever light trickles down. Fallen leaves rot quickly in the warm, wet air, and their goodness is soaked up again by roots. The southern cassowary, a tall bird with a bright blue neck, helps the forest by eating fruit and spreading seeds in its droppings. Because many rainforest plants rely on it, scientists call the cassowary a gardener of the forest.",
+    "parts": [
+      {
+        "id": "eng-a-daintree-rainforest-q1",
+        "prompt": "Why do plants on the forest floor have large leaves?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To keep the rain off their roots"
+          },
+          {
+            "id": "b",
+            "text": "To catch the little light that reaches the ground"
+          },
+          {
+            "id": "c",
+            "text": "To hide from the cassowary"
+          },
+          {
+            "id": "d",
+            "text": "To reach the tops of the tallest trees"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The forest floor is dark, so large leaves catch whatever light trickles down."
+      },
+      {
+        "id": "eng-a-daintree-rainforest-q2",
+        "prompt": "Why do scientists call the cassowary a gardener of the forest?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It spreads seeds so that new plants can grow."
+          },
+          {
+            "id": "b",
+            "text": "It pulls weeds out of the soil."
+          },
+          {
+            "id": "c",
+            "text": "It waters the plants with its beak."
+          },
+          {
+            "id": "d",
+            "text": "It builds a roof of leaves."
+          }
+        ],
+        "answer": "a",
+        "explanation": "The cassowary eats fruit and spreads seeds in its droppings."
+      },
+      {
+        "id": "eng-a-daintree-rainforest-q3",
+        "prompt": "In the passage, the word \"trickles\" means",
+        "options": [
+          {
+            "id": "a",
+            "text": "crashes down with a loud noise"
+          },
+          {
+            "id": "b",
+            "text": "shines very brightly"
+          },
+          {
+            "id": "c",
+            "text": "falls in a thin, slow stream"
+          },
+          {
+            "id": "d",
+            "text": "bounces off the leaves"
+          }
+        ],
+        "answer": "c",
+        "explanation": "Only a little light reaches the dark forest floor, so it arrives in a thin stream."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-daintree-rainforest-v1",
+        "word": "canopy",
+        "meaning": "the roof-like layer of leaves and branches high in a forest",
+        "sentence": "Below them, a thick canopy of leaves forms a green roof, where many of the birds, tree frogs and possums live.",
+        "check_prompt": "Where would you find the canopy?",
+        "options": [
+          {
+            "id": "a",
+            "text": "High above, among the treetops"
+          },
+          {
+            "id": "b",
+            "text": "Deep under the soil"
+          },
+          {
+            "id": "c",
+            "text": "On the forest floor"
+          }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "eng-a-daintree-rainforest-v2",
+        "word": "rely",
+        "meaning": "to need something and depend on it",
+        "sentence": "Because many rainforest plants rely on it, scientists call the cassowary a gardener of the forest.",
+        "check_prompt": "Which animal relies on its mother?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A fish swimming alone"
+          },
+          {
+            "id": "b",
+            "text": "A baby bird waiting to be fed"
+          },
+          {
+            "id": "c",
+            "text": "A snake sleeping in the sun"
+          }
+        ],
+        "answer": "b"
+      }
+    ],
+    "hints": [
+      "Think about how much light reaches each layer of the forest."
+    ]
+  },
+  {
+    "id": "eng-a-mars-red-planet",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "Mars is called the Red Planet because its dusty soil contains a lot of rusty iron. It is smaller than Earth, and it is much colder, with an average temperature of about minus sixty degrees Celsius. A day on Mars is almost the same length as a day on Earth, but a year there lasts nearly twice as long. Mars has the tallest volcano in the solar system, Olympus Mons, which is about three times higher than Mount Everest. Its thin atmosphere is mostly carbon dioxide, so humans could not breathe it. Robots have been exploring the planet for many years. The rovers roll slowly across the rocky ground, take photographs and drill into stones to look for signs that water once flowed there. Scientists believe that long ago Mars had rivers and lakes. Learning what happened to that water might help us understand how planets change over time.",
+    "parts": [
+      {
+        "id": "eng-a-mars-red-planet-q1",
+        "prompt": "Why is Mars called the Red Planet?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Its dusty soil contains rusty iron."
+          },
+          {
+            "id": "b",
+            "text": "Its sky is filled with red clouds."
+          },
+          {
+            "id": "c",
+            "text": "It is the hottest planet nearby."
+          },
+          {
+            "id": "d",
+            "text": "Its volcanoes glow red at night."
+          }
+        ],
+        "answer": "a",
+        "explanation": "The first sentence gives rusty iron in the soil as the reason."
+      },
+      {
+        "id": "eng-a-mars-red-planet-q2",
+        "prompt": "What can you infer about Mars long ago?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It was exactly the same as it is today."
+          },
+          {
+            "id": "b",
+            "text": "It was covered by thick forests."
+          },
+          {
+            "id": "c",
+            "text": "It was warmer than Earth."
+          },
+          {
+            "id": "d",
+            "text": "It was probably wetter than it is today."
+          }
+        ],
+        "answer": "d",
+        "explanation": "Scientists believe it had rivers and lakes, so it was probably wetter."
+      },
+      {
+        "id": "eng-a-mars-red-planet-q3",
+        "prompt": "Which sentence is the best summary of the passage?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Mars is the biggest planet in the solar system."
+          },
+          {
+            "id": "b",
+            "text": "Mars is a cold, dusty planet that robots are exploring to learn about its past."
+          },
+          {
+            "id": "c",
+            "text": "Humans have already built homes on Mars."
+          },
+          {
+            "id": "d",
+            "text": "Mars has a day that is twice as long as Earth's."
+          }
+        ],
+        "answer": "b",
+        "explanation": "The passage describes Mars and the robots studying its history."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-mars-red-planet-v1",
+        "word": "average",
+        "meaning": "the usual or typical amount; what you get when you share a total equally",
+        "sentence": "It is smaller than Earth, and it is much colder, with an average temperature of about minus sixty degrees Celsius.",
+        "check_prompt": "If a place has an average temperature of 10 degrees, what does that mean?",
+        "options": [
+          {
+            "id": "a",
+            "text": "That is its usual temperature over time"
+          },
+          {
+            "id": "b",
+            "text": "That it is never colder than 10"
+          },
+          {
+            "id": "c",
+            "text": "That it is always exactly 10"
+          }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "eng-a-mars-red-planet-v2",
+        "word": "atmosphere",
+        "meaning": "the layer of gases around a planet",
+        "sentence": "Its thin atmosphere is mostly carbon dioxide, so humans could not breathe it.",
+        "check_prompt": "What is an atmosphere?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A deep hole in the ground"
+          },
+          {
+            "id": "b",
+            "text": "A kind of space rock"
+          },
+          {
+            "id": "c",
+            "text": "The layer of gases around a planet"
+          }
+        ],
+        "answer": "c"
+      }
+    ],
+    "hints": [
+      "Think about why scientists send rovers to drill into stones."
+    ]
+  },
+  {
+    "id": "eng-a-saturn-rings",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "Saturn is the second-largest planet in our solar system, and it is famous for its beautiful rings. From a distance, the rings look like solid hoops, but they are really made of billions of pieces of ice and rock. Some pieces are as tiny as grains of sand, while others are as big as houses. Saturn itself is a gas giant, which means it has no solid surface to stand on. It is made mostly of hydrogen and helium, and it is so light for its size that, if you could find a bathtub big enough, it would float. Winds on Saturn blow much faster than any storm on Earth. More than two hundred moons orbit the planet, and the biggest, Titan, has thick orange clouds and seas of liquid methane. In 2004, a spacecraft called Cassini arrived at Saturn and spent thirteen years studying it.",
+    "parts": [
+      {
+        "id": "eng-a-saturn-rings-q1",
+        "prompt": "What are Saturn's rings really made of?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Solid hoops of metal"
+          },
+          {
+            "id": "b",
+            "text": "Thick orange clouds"
+          },
+          {
+            "id": "c",
+            "text": "Billions of pieces of ice and rock"
+          },
+          {
+            "id": "d",
+            "text": "Frozen seas of methane"
+          }
+        ],
+        "answer": "c",
+        "explanation": "The second sentence says they are billions of pieces of ice and rock."
+      },
+      {
+        "id": "eng-a-saturn-rings-q2",
+        "prompt": "Why does the author say Saturn would float in a big enough bathtub?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To show that Saturn is very light for its size"
+          },
+          {
+            "id": "b",
+            "text": "To show that Saturn is covered in water"
+          },
+          {
+            "id": "c",
+            "text": "To show that Saturn is smaller than Earth"
+          },
+          {
+            "id": "d",
+            "text": "To show that bathtubs are used in space"
+          }
+        ],
+        "answer": "a",
+        "explanation": "Saturn is made mostly of light gases, so it is lighter than water for its size."
+      },
+      {
+        "id": "eng-a-saturn-rings-q3",
+        "prompt": "Which sentence best sums up the passage?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Saturn is the biggest planet in the solar system."
+          },
+          {
+            "id": "b",
+            "text": "Saturn is a light gas giant with amazing rings and many moons."
+          },
+          {
+            "id": "c",
+            "text": "Saturn is a rocky planet with a solid surface."
+          },
+          {
+            "id": "d",
+            "text": "Saturn was only discovered in 2004."
+          }
+        ],
+        "answer": "b",
+        "explanation": "The passage describes Saturn's rings, makeup, winds and moons."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-saturn-rings-v1",
+        "word": "solid",
+        "meaning": "hard and firm, not a gas or a liquid",
+        "sentence": "Saturn itself is a gas giant, which means it has no solid surface to stand on.",
+        "check_prompt": "Which of these is solid?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A puff of steam"
+          },
+          {
+            "id": "b",
+            "text": "A rock"
+          },
+          {
+            "id": "c",
+            "text": "A splash of water"
+          }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "eng-a-saturn-rings-v2",
+        "word": "orbit",
+        "meaning": "to travel around a larger object in space",
+        "sentence": "More than two hundred moons orbit the planet, and the biggest, Titan, has thick orange clouds and seas of liquid methane.",
+        "check_prompt": "What does it mean for a moon to orbit a planet?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It lands on the planet"
+          },
+          {
+            "id": "b",
+            "text": "It pulls the planet along"
+          },
+          {
+            "id": "c",
+            "text": "It travels around the planet"
+          }
+        ],
+        "answer": "c"
+      }
+    ],
+    "hints": [
+      "Think about what is lighter than water."
+    ]
+  },
+  {
+    "id": "eng-a-bicycle-story",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "The first bicycle did not have pedals at all. In 1817, a German inventor named Karl von Drais built a wooden machine with two wheels, and riders pushed it along by running with their feet on the ground. It was nicknamed the hobby horse, and it was fun but tiring. Decades later, French workers added pedals to the front wheel, and the bicycle became faster. However, the ride was very bumpy, and a huge front wheel could throw riders off. In the 1880s, inventors changed the design again by placing a chain between the pedals and the back wheel. Now riders could sit low, close to the ground, and both wheels could be the same size. Rubber tyres filled with air soon made the journey smoother, too. This safer design is very similar to the bicycles we ride today.",
+    "parts": [
+      {
+        "id": "eng-a-bicycle-story-q1",
+        "prompt": "How did riders move the first bicycle?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They pushed it along with their feet."
+          },
+          {
+            "id": "b",
+            "text": "They turned pedals on the front wheel."
+          },
+          {
+            "id": "c",
+            "text": "They pulled a chain by hand."
+          },
+          {
+            "id": "d",
+            "text": "They were pushed by a friend."
+          }
+        ],
+        "answer": "a",
+        "explanation": "Riders ran along the ground with their feet to push the wooden machine."
+      },
+      {
+        "id": "eng-a-bicycle-story-q2",
+        "prompt": "Which order of bicycle designs is correct?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Chain to the back wheel, push-along wooden machine, pedals on the front wheel"
+          },
+          {
+            "id": "b",
+            "text": "Pedals on the front wheel, chain to the back wheel, push-along wooden machine"
+          },
+          {
+            "id": "c",
+            "text": "Push-along wooden machine, pedals on the front wheel, chain to the back wheel"
+          },
+          {
+            "id": "d",
+            "text": "Push-along wooden machine, chain to the back wheel, pedals on the front wheel"
+          }
+        ],
+        "answer": "c",
+        "explanation": "The passage describes the hobby horse, then front-wheel pedals, then the chain."
+      },
+      {
+        "id": "eng-a-bicycle-story-q3",
+        "prompt": "Why did the chain-driven bicycle become popular?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It had no wheels to break."
+          },
+          {
+            "id": "b",
+            "text": "It was safer and more comfortable to ride."
+          },
+          {
+            "id": "c",
+            "text": "It was cheaper than walking."
+          },
+          {
+            "id": "d",
+            "text": "It was faster than any machine."
+          }
+        ],
+        "answer": "b",
+        "explanation": "Riders sat low, wheels matched, and air-filled tyres gave a smoother, safer ride."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-bicycle-story-v1",
+        "word": "inventor",
+        "meaning": "a person who thinks up and makes something new",
+        "sentence": "In 1817, a German inventor named Karl von Drais built a wooden machine with two wheels, and riders pushed it along by running with their feet on the ground.",
+        "check_prompt": "Who is an inventor?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Someone who repairs an old shoe"
+          },
+          {
+            "id": "b",
+            "text": "Someone who designs a brand new machine"
+          },
+          {
+            "id": "c",
+            "text": "Someone who counts coins"
+          }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "eng-a-bicycle-story-v2",
+        "word": "design",
+        "meaning": "the plan or shape of how something is made",
+        "sentence": "In the 1880s, inventors changed the design again by placing a chain between the pedals and the back wheel.",
+        "check_prompt": "What does a bicycle's design describe?",
+        "options": [
+          {
+            "id": "a",
+            "text": "How its parts are shaped and fit together"
+          },
+          {
+            "id": "b",
+            "text": "How loud its bell is"
+          },
+          {
+            "id": "c",
+            "text": "Where it is parked"
+          }
+        ],
+        "answer": "a"
+      }
+    ],
+    "hints": [
+      "Check the order of the dates and words like decades later."
+    ]
+  },
+  {
+    "id": "eng-a-printing-press",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "Before the 1400s, every book in Europe was copied out by hand. A monk or scribe might spend a year writing out one Bible, so books were rare and very expensive. Then, around 1450, a German goldsmith named Johannes Gutenberg had a clever idea. He made small metal blocks, each carved with a single letter, that could be arranged into words and lines. Once a page was set, ink was rolled over the letters and a heavy press squeezed paper against them. The same letters could then be taken apart and used again for the next page. A print shop could now produce many copies far more quickly than any scribe. Books became cheaper, more people learned to read, and new ideas spread across the continent faster than ever before. Many historians consider the printing press one of the most important inventions in history.",
+    "parts": [
+      {
+        "id": "eng-a-printing-press-q1",
+        "prompt": "What was special about Gutenberg's metal letters?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They were carved with a whole page of words."
+          },
+          {
+            "id": "b",
+            "text": "They could be rearranged and used again."
+          },
+          {
+            "id": "c",
+            "text": "They were made of gold."
+          },
+          {
+            "id": "d",
+            "text": "They never needed ink."
+          }
+        ],
+        "answer": "b",
+        "explanation": "Letters were taken apart and reused for the next page."
+      },
+      {
+        "id": "eng-a-printing-press-q2",
+        "prompt": "Why did more people learn to read after the printing press?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Books became cheaper and easier to get."
+          },
+          {
+            "id": "b",
+            "text": "Scribes began teaching in every town."
+          },
+          {
+            "id": "c",
+            "text": "Books were given away free."
+          },
+          {
+            "id": "d",
+            "text": "Fewer books were written."
+          }
+        ],
+        "answer": "a",
+        "explanation": "The passage says books became cheaper, and more people learned to read."
+      },
+      {
+        "id": "eng-a-printing-press-q3",
+        "prompt": "Why does the author mention that books were once copied by hand?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To explain how to become a monk"
+          },
+          {
+            "id": "b",
+            "text": "To say that handwriting is better than print"
+          },
+          {
+            "id": "c",
+            "text": "To describe how paper is made"
+          },
+          {
+            "id": "d",
+            "text": "To show why the printing press was such a big change"
+          }
+        ],
+        "answer": "d",
+        "explanation": "Hand copying was slow and costly, which makes the press look like a big improvement."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-printing-press-v1",
+        "word": "scribe",
+        "meaning": "a person whose job was to copy writing by hand",
+        "sentence": "A monk or scribe might spend a year writing out one Bible, so books were rare and very expensive.",
+        "check_prompt": "What did a scribe do?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Copied books out by hand"
+          },
+          {
+            "id": "b",
+            "text": "Printed pages with a machine"
+          },
+          {
+            "id": "c",
+            "text": "Sold paper at a market"
+          }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "eng-a-printing-press-v2",
+        "word": "continent",
+        "meaning": "one of the very large areas of land on Earth, such as Europe or Asia",
+        "sentence": "Books became cheaper, more people learned to read, and new ideas spread across the continent faster than ever before.",
+        "check_prompt": "Which of these is a continent?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sydney"
+          },
+          {
+            "id": "b",
+            "text": "Africa"
+          },
+          {
+            "id": "c",
+            "text": "The Pacific Ocean"
+          }
+        ],
+        "answer": "b"
+      }
+    ],
+    "hints": [
+      "Compare how long one scribe took with how fast a press worked."
+    ]
+  },
+  {
+    "id": "eng-a-lightbulb-invention",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "Long ago, people lit their homes with candles and oil lamps, which were smoky and could easily start fires. In the 1800s, inventors tried to make light from electricity instead. The idea was to send electricity through a thin thread, called a filament, until it glowed. The difficulty was that most filaments burned out in minutes or even seconds. Thomas Edison and his team tested thousands of materials, including bamboo and cotton thread, searching for one that would last. In 1879 they found that a carbon filament inside a glass bulb with the air removed glowed for more than thirteen hours. Other inventors, such as Joseph Swan in England, were building similar bulbs at the same time. Over time, electric bulbs replaced candles and lamps in homes and streets around the world. Their patience shows that a great invention often comes from trying again and again.",
+    "parts": [
+      {
+        "id": "eng-a-lightbulb-invention-q1",
+        "prompt": "What was the main problem with early filaments?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They were too heavy to hold."
+          },
+          {
+            "id": "b",
+            "text": "They would not glow at all."
+          },
+          {
+            "id": "c",
+            "text": "They burned out very quickly."
+          },
+          {
+            "id": "d",
+            "text": "They cost too much to buy."
+          }
+        ],
+        "answer": "c",
+        "explanation": "Most filaments burned out in minutes or even seconds."
+      },
+      {
+        "id": "eng-a-lightbulb-invention-q2",
+        "prompt": "What can you infer about Edison's team?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They were patient and kept trying."
+          },
+          {
+            "id": "b",
+            "text": "They gave up after a few tests."
+          },
+          {
+            "id": "c",
+            "text": "They found the answer on the first try."
+          },
+          {
+            "id": "d",
+            "text": "They worked alone with no other inventors in the world."
+          }
+        ],
+        "answer": "a",
+        "explanation": "They tested thousands of materials before one lasted."
+      },
+      {
+        "id": "eng-a-lightbulb-invention-q3",
+        "prompt": "Why does the author begin by describing candles and oil lamps?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To explain how to make a candle"
+          },
+          {
+            "id": "b",
+            "text": "To show what people used before and why a change was wanted"
+          },
+          {
+            "id": "c",
+            "text": "To say that candles are better than bulbs"
+          },
+          {
+            "id": "d",
+            "text": "To list the materials Edison tested"
+          }
+        ],
+        "answer": "b",
+        "explanation": "Candles and lamps were smoky and risky, which explains the search for electric light."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-lightbulb-invention-v1",
+        "word": "filament",
+        "meaning": "a very thin thread, such as the one inside a light bulb that glows",
+        "sentence": "The idea was to send electricity through a thin thread, called a filament, until it glowed.",
+        "check_prompt": "What does a filament do inside a bulb?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It glows when electricity passes through it"
+          },
+          {
+            "id": "b",
+            "text": "It keeps the glass cool"
+          },
+          {
+            "id": "c",
+            "text": "It holds the bulb in place"
+          }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "eng-a-lightbulb-invention-v2",
+        "word": "patience",
+        "meaning": "the ability to keep trying or waiting calmly without giving up",
+        "sentence": "Their patience shows that a great invention often comes from trying again and again.",
+        "check_prompt": "Who is showing patience?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A boy who quits after one try"
+          },
+          {
+            "id": "b",
+            "text": "A dog that chases its tail"
+          },
+          {
+            "id": "c",
+            "text": "A girl who tries again after her tower falls"
+          }
+        ],
+        "answer": "c"
+      }
+    ],
+    "hints": [
+      "Reread the sentences that tell what Edison tested."
+    ]
+  },
+  {
+    "id": "eng-a-school-fair-lucky-dip",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "On Saturday morning, the school oval was crowded with stalls, balloons and the smell of sausages sizzling on the barbecue. Mia was in charge of the lucky dip, and she was determined to do a perfect job. She arranged the wrapped prizes in a big barrel and taped a bright sign to the front. By ten o'clock, a long line of children had gathered. Everything went smoothly until her little brother, Sam, tripped over the barrel and sent the prizes tumbling across the grass. Mia took a deep breath, because she felt like shouting, but then she saw Sam's wobbly lip. \"It's all right,\" she said, and she handed him a spare bag to help pick the prizes up. Soon the whole queue joined in, and the prizes were back in the barrel faster than Mia had ever expected. At the end of the day, Mia counted the money and smiled, because the lucky dip had raised more than any other stall.",
+    "parts": [
+      {
+        "id": "eng-a-school-fair-lucky-dip-q1",
+        "prompt": "What was Mia's job at the fair?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Cooking sausages on the barbecue"
+          },
+          {
+            "id": "b",
+            "text": "Running the lucky dip"
+          },
+          {
+            "id": "c",
+            "text": "Selling balloons"
+          },
+          {
+            "id": "d",
+            "text": "Counting the money from every stall"
+          }
+        ],
+        "answer": "b",
+        "explanation": "The story says Mia was in charge of the lucky dip."
+      },
+      {
+        "id": "eng-a-school-fair-lucky-dip-q2",
+        "prompt": "How did Mia feel when the prizes spilled, and what did she do?",
+        "options": [
+          {
+            "id": "a",
+            "text": "She felt like shouting but chose to be kind."
+          },
+          {
+            "id": "b",
+            "text": "She felt happy and laughed at Sam."
+          },
+          {
+            "id": "c",
+            "text": "She felt bored and walked away."
+          },
+          {
+            "id": "d",
+            "text": "She felt nothing and ignored Sam."
+          }
+        ],
+        "answer": "a",
+        "explanation": "She wanted to shout but saw Sam's wobbly lip and helped him instead."
+      },
+      {
+        "id": "eng-a-school-fair-lucky-dip-q3",
+        "prompt": "What lesson does the story show?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Little brothers should stay at home."
+          },
+          {
+            "id": "b",
+            "text": "The biggest stall always wins."
+          },
+          {
+            "id": "c",
+            "text": "Staying calm and kind can solve a problem."
+          },
+          {
+            "id": "d",
+            "text": "Prizes should never be put in a barrel."
+          }
+        ],
+        "answer": "c",
+        "explanation": "Mia's kind reaction led everyone to help, and the problem was fixed quickly."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-school-fair-lucky-dip-v1",
+        "word": "determined",
+        "meaning": "having made up your mind to do something and not giving up",
+        "sentence": "Mia was in charge of the lucky dip, and she was determined to do a perfect job.",
+        "check_prompt": "Who is determined?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A child who forgets her homework"
+          },
+          {
+            "id": "b",
+            "text": "A runner who keeps training to win the race"
+          },
+          {
+            "id": "c",
+            "text": "A cat asleep on a sofa"
+          }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "eng-a-school-fair-lucky-dip-v2",
+        "word": "gathered",
+        "meaning": "came together in one place",
+        "sentence": "By ten o'clock, a long line of children had gathered.",
+        "check_prompt": "When would people have gathered?",
+        "options": [
+          {
+            "id": "a",
+            "text": "When a crowd came together at the gate"
+          },
+          {
+            "id": "b",
+            "text": "When they all went home"
+          },
+          {
+            "id": "c",
+            "text": "When they got lost one by one"
+          }
+        ],
+        "answer": "a"
+      }
+    ],
+    "hints": [
+      "Notice what Mia saw just before she decided what to say."
+    ]
+  },
+  {
+    "id": "eng-a-lost-dog-biscuit",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "Ben's dog, Biscuit, was missing. He had slipped out through a gap in the gate while the family unloaded the shopping. Ben searched the garden, the street and the park, calling Biscuit's name until his voice grew hoarse. When he got home, his mother suggested making posters. Together they printed a clear photo and wrote their phone number in large, bold letters. Ben pinned one poster to the notice board outside the shop. That evening, the phone rang. A girl named Priya had found a brown dog with a blue collar sitting outside the library. She had spotted the poster near the shop and recognised the dog straight away. Ben raced over, and Biscuit leapt into his arms, wagging his whole body. That night, Ben fixed the gate with a new latch, so the gap would never trick them again.",
+    "parts": [
+      {
+        "id": "eng-a-lost-dog-biscuit-q1",
+        "prompt": "What did Ben and his mother do after he came home from searching?",
+        "options": [
+          {
+            "id": "a",
+            "text": "They made posters."
+          },
+          {
+            "id": "b",
+            "text": "They searched the library."
+          },
+          {
+            "id": "c",
+            "text": "They bought a new collar."
+          },
+          {
+            "id": "d",
+            "text": "They fixed the gate."
+          }
+        ],
+        "answer": "a",
+        "explanation": "His mother suggested posters, and they printed a photo with their phone number."
+      },
+      {
+        "id": "eng-a-lost-dog-biscuit-q2",
+        "prompt": "How did Priya know whose dog Biscuit was?",
+        "options": [
+          {
+            "id": "a",
+            "text": "She had met Ben at school."
+          },
+          {
+            "id": "b",
+            "text": "She had seen the poster near the shop."
+          },
+          {
+            "id": "c",
+            "text": "She read the name on his collar."
+          },
+          {
+            "id": "d",
+            "text": "Biscuit led her to Ben's house."
+          }
+        ],
+        "answer": "b",
+        "explanation": "Priya spotted the poster and recognised the dog."
+      },
+      {
+        "id": "eng-a-lost-dog-biscuit-q3",
+        "prompt": "Which title fits the story best?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A Trip to the Library"
+          },
+          {
+            "id": "b",
+            "text": "How to Print a Poster"
+          },
+          {
+            "id": "c",
+            "text": "The Shopping Disaster"
+          },
+          {
+            "id": "d",
+            "text": "Biscuit Comes Home"
+          }
+        ],
+        "answer": "d",
+        "explanation": "The story is about searching for Biscuit and finding him."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-lost-dog-biscuit-v1",
+        "word": "hoarse",
+        "meaning": "having a rough, weak voice, often from shouting",
+        "sentence": "Ben searched the garden, the street and the park, calling Biscuit's name until his voice grew hoarse.",
+        "check_prompt": "Why might a voice be hoarse?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It has been calling loudly for a long time"
+          },
+          {
+            "id": "b",
+            "text": "It has been asleep all night"
+          },
+          {
+            "id": "c",
+            "text": "It has been whispering a little"
+          }
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "eng-a-lost-dog-biscuit-v2",
+        "word": "recognised",
+        "meaning": "knew who or what someone or something was because you had seen it before",
+        "sentence": "She had spotted the poster near the shop and recognised the dog straight away.",
+        "check_prompt": "When do you recognise someone?",
+        "options": [
+          {
+            "id": "a",
+            "text": "When you have never met them"
+          },
+          {
+            "id": "b",
+            "text": "When you know who they are by their face"
+          },
+          {
+            "id": "c",
+            "text": "When they are far away and hidden"
+          }
+        ],
+        "answer": "b"
+      }
+    ],
+    "hints": [
+      "Think about what Priya saw near the shop."
+    ]
+  },
+  {
+    "id": "eng-a-learning-to-swim",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "Zoe stood at the edge of the pool, gripping her towel and staring at the water. Everyone else in her class had already learnt to swim, but she was nervous about putting her face under. \"Start small,\" said Mr Lee, her instructor. \"Just blow bubbles.\" So Zoe crouched in the shallow end and blew a stream of bubbles that tickled her chin. The next week, she dipped her whole face in and counted to three. Then she learnt to kick while holding a foam board, and then to float on her back with her eyes on the sky. Each lesson felt a little easier than the last. On the final day of term, Mr Lee asked the class to swim one length of the pool. Zoe's arms were trembling, yet she pushed off the wall. Kick, breathe, reach. Kick, breathe, reach. When her hand finally touched the far wall, she popped up grinning. She had not become a champion, but she had done something she once thought impossible.",
+    "parts": [
+      {
+        "id": "eng-a-learning-to-swim-q1",
+        "prompt": "What did Zoe learn right after she dipped her whole face in the water?",
+        "options": [
+          {
+            "id": "a",
+            "text": "To kick while holding a foam board"
+          },
+          {
+            "id": "b",
+            "text": "To swim a full length"
+          },
+          {
+            "id": "c",
+            "text": "To float on her back"
+          },
+          {
+            "id": "d",
+            "text": "To blow bubbles"
+          }
+        ],
+        "answer": "a",
+        "explanation": "After the face dip came kicking with a foam board, then floating."
+      },
+      {
+        "id": "eng-a-learning-to-swim-q2",
+        "prompt": "Why did Mr Lee tell Zoe to start small?",
+        "options": [
+          {
+            "id": "a",
+            "text": "He wanted her to finish the lesson early."
+          },
+          {
+            "id": "b",
+            "text": "He thought she was too young to swim."
+          },
+          {
+            "id": "c",
+            "text": "He needed the pool for another class."
+          },
+          {
+            "id": "d",
+            "text": "Small steps would help her feel less nervous."
+          }
+        ],
+        "answer": "d",
+        "explanation": "Zoe was nervous about putting her face under, so he gave her an easy first step."
+      },
+      {
+        "id": "eng-a-learning-to-swim-q3",
+        "prompt": "What is the main message of the story?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Only champions should swim a length."
+          },
+          {
+            "id": "b",
+            "text": "Small steps can help you do things that seem too hard."
+          },
+          {
+            "id": "c",
+            "text": "Swimming lessons are always easy."
+          },
+          {
+            "id": "d",
+            "text": "It is best to wait until you are older."
+          }
+        ],
+        "answer": "b",
+        "explanation": "Zoe's small steps led her to swim a length."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-learning-to-swim-v1",
+        "word": "instructor",
+        "meaning": "a person who teaches a skill",
+        "sentence": "\"Start small,\" said Mr Lee, her instructor. \"Just blow bubbles.\"",
+        "check_prompt": "What does an instructor do?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Cleans the pool each night"
+          },
+          {
+            "id": "b",
+            "text": "Teaches people how to do something"
+          },
+          {
+            "id": "c",
+            "text": "Sells tickets at the door"
+          }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "eng-a-learning-to-swim-v2",
+        "word": "shallow",
+        "meaning": "not deep",
+        "sentence": "So Zoe crouched in the shallow end and blew a stream of bubbles that tickled her chin.",
+        "check_prompt": "Where is the water shallow?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Near the edge of the pool, where you can stand"
+          },
+          {
+            "id": "b",
+            "text": "At the bottom of the sea"
+          },
+          {
+            "id": "c",
+            "text": "In the middle of a deep lake"
+          }
+        ],
+        "answer": "a"
+      }
+    ],
+    "hints": [
+      "Look at the order of Zoe's lessons."
+    ]
+  },
+  {
+    "id": "eng-a-camping-by-the-river",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "The Harris family drove for three hours before they reached the campground beside a quiet river. Dad and Leo spent the first hour putting up the tent, though the wind kept snatching the fabric out of their hands. Finally, the last peg was hammered in, and the tent stood firm. As the sun sank, Mum lit the camp stove and cooked sausages and corn, which tasted better than anything at home. After dinner, Leo's sister, Nina, pointed upward and cried, \"Look!\" Away from the city lights, thousands of stars glittered across the sky, and a pale smear of light stretched from one side to the other. Dad explained that this was the Milky Way, a huge group of stars of which our sun is only one. Later, tucked into sleeping bags, Leo heard a soft rustling outside. He peeked through the flap and saw a possum, sniffing around the picnic table. It found nothing, because the food was safely locked in the car, and it scampered up a tree. Leo smiled in the dark and decided that camping was his favourite kind of holiday.",
+    "parts": [
+      {
+        "id": "eng-a-camping-by-the-river-q1",
+        "prompt": "What can you infer about why the food was locked in the car?",
+        "options": [
+          {
+            "id": "a",
+            "text": "It was too hot to leave outside."
+          },
+          {
+            "id": "b",
+            "text": "The family had run out of room in the tent."
+          },
+          {
+            "id": "c",
+            "text": "Dad wanted to save it for the morning."
+          },
+          {
+            "id": "d",
+            "text": "It kept hungry animals like possums from getting it."
+          }
+        ],
+        "answer": "d",
+        "explanation": "The possum found nothing because the food was safely locked away."
+      },
+      {
+        "id": "eng-a-camping-by-the-river-q2",
+        "prompt": "What happened right after dinner?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Nina pointed at the stars."
+          },
+          {
+            "id": "b",
+            "text": "Leo saw a possum."
+          },
+          {
+            "id": "c",
+            "text": "Dad and Leo put up the tent."
+          },
+          {
+            "id": "d",
+            "text": "Mum lit the camp stove."
+          }
+        ],
+        "answer": "a",
+        "explanation": "After dinner, Nina pointed upward and cried \"Look!\"."
+      },
+      {
+        "id": "eng-a-camping-by-the-river-q3",
+        "prompt": "How did Leo feel about camping by the end of the story?",
+        "options": [
+          {
+            "id": "a",
+            "text": "He was bored and wanted to go home."
+          },
+          {
+            "id": "b",
+            "text": "He was frightened of the possum."
+          },
+          {
+            "id": "c",
+            "text": "He loved it and thought it was his favourite holiday."
+          },
+          {
+            "id": "d",
+            "text": "He felt cold and wished for a hotel."
+          }
+        ],
+        "answer": "c",
+        "explanation": "The last sentence says he decided camping was his favourite kind of holiday."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-camping-by-the-river-v1",
+        "word": "glittered",
+        "meaning": "shone with small, bright flashes of light",
+        "sentence": "Away from the city lights, thousands of stars glittered across the sky, and a pale smear of light stretched from one side to the other.",
+        "check_prompt": "Which thing glittered?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A rock in the mud"
+          },
+          {
+            "id": "b",
+            "text": "Stars twinkling in a dark sky"
+          },
+          {
+            "id": "c",
+            "text": "A closed book"
+          }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "eng-a-camping-by-the-river-v2",
+        "word": "rustling",
+        "meaning": "a soft, dry sound like leaves moving",
+        "sentence": "Later, tucked into sleeping bags, Leo heard a soft rustling outside.",
+        "check_prompt": "What might make a rustling sound?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Leaves moving in a light breeze"
+          },
+          {
+            "id": "b",
+            "text": "A trumpet playing loudly"
+          },
+          {
+            "id": "c",
+            "text": "A door slamming shut"
+          }
+        ],
+        "answer": "a"
+      }
+    ],
+    "hints": [
+      "Think about what might want to eat the family's food."
+    ]
+  },
+  {
+    "id": "eng-a-grandpas-garden",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 4,
+    "answer_type": "passage",
+    "text": "Every Sunday, Ava visited her grandfather's garden, which seemed to grow bigger each time. Grandpa had planted tomatoes, beans and rows of curly lettuce, as well as a crooked lemon tree older than Ava's mum. \"The secret to a good garden,\" he liked to say, \"is patience.\" Ava did not like waiting, and she had planted a pumpkin seed three weeks ago, but nothing had happened. \"Look closer,\" said Grandpa, kneeling beside the dark soil. Ava peered down and saw a tiny green curl poking through, as thin as a thread. \"Roots first, then shoots,\" he explained. \"The best work happens where you cannot see it.\" Ava watered the seedling gently and promised to visit it every week. By summer, the vine had spread across the fence, and a fat orange pumpkin sat in the sun. Ava carried it into the kitchen with both arms, and together they made a soup that tasted of the garden.",
+    "parts": [
+      {
+        "id": "eng-a-grandpas-garden-q1",
+        "prompt": "What was the tiny green curl that Ava saw?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A bean from the vine"
+          },
+          {
+            "id": "b",
+            "text": "A curl of lettuce"
+          },
+          {
+            "id": "c",
+            "text": "Her pumpkin seedling"
+          },
+          {
+            "id": "d",
+            "text": "A shoot of the lemon tree"
+          }
+        ],
+        "answer": "c",
+        "explanation": "Ava had planted a pumpkin seed, and the green curl was the seedling poking through."
+      },
+      {
+        "id": "eng-a-grandpas-garden-q2",
+        "prompt": "What did Grandpa mean by \"The best work happens where you cannot see it\"?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Plants grow roots underground before shoots appear."
+          },
+          {
+            "id": "b",
+            "text": "Gardeners work best at night."
+          },
+          {
+            "id": "c",
+            "text": "The soil does all the work by itself."
+          },
+          {
+            "id": "d",
+            "text": "Gardens grow only in the dark."
+          }
+        ],
+        "answer": "a",
+        "explanation": "Roots grow first under the soil, out of sight, before the shoot shows."
+      },
+      {
+        "id": "eng-a-grandpas-garden-q3",
+        "prompt": "What lesson does Ava learn?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Pumpkins grow faster than beans."
+          },
+          {
+            "id": "b",
+            "text": "Good things take time and care."
+          },
+          {
+            "id": "c",
+            "text": "Gardens are only for grandparents."
+          },
+          {
+            "id": "d",
+            "text": "Seeds should be dug up to check them."
+          }
+        ],
+        "answer": "b",
+        "explanation": "Her patience and watering led to a big pumpkin by summer."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-a-grandpas-garden-v1",
+        "word": "patience",
+        "meaning": "the ability to wait calmly without getting upset",
+        "sentence": "\"The secret to a good garden,\" he liked to say, \"is patience.\"",
+        "check_prompt": "Who is showing patience?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A girl who shouts to hurry things up"
+          },
+          {
+            "id": "b",
+            "text": "A boy waiting calmly for his turn"
+          },
+          {
+            "id": "c",
+            "text": "A man who storms off in a rush"
+          }
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "eng-a-grandpas-garden-v2",
+        "word": "seedling",
+        "meaning": "a very young plant that has grown from a seed",
+        "sentence": "Ava watered the seedling gently and promised to visit it every week.",
+        "check_prompt": "What is a seedling?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A baby plant that has just grown from a seed"
+          },
+          {
+            "id": "b",
+            "text": "A tall old tree"
+          },
+          {
+            "id": "c",
+            "text": "A bag of dry seeds"
+          }
+        ],
+        "answer": "a"
+      }
+    ],
+    "hints": [
+      "Think about what grows first, before you can see the shoot."
+    ]
+  },
+  {
+    "id": "eng-b-egypt-pyramids",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Over four thousand years ago, the rulers of ancient Egypt were called pharaohs. The Egyptians believed that a pharaoh became a god after he died, so they built huge tombs to protect him. The most famous tombs are the pyramids at Giza. The Great Pyramid is made from more than two million blocks of stone. Workers cut the blocks from quarries, dragged them on wooden sledges, and pushed them into place. Historians once thought that slaves built the pyramids, but they now believe that skilled Egyptian workers did the job. These workers were given food, housing and medical care. They may even have felt proud to help build a home for their king. Today, the pyramids still stand beside the desert, and visitors travel from all around the world to see them.",
+    "parts": [
+      {
+        "id": "eng-b-egypt-pyramids-q1",
+        "prompt": "Why did the Egyptians build the pyramids?",
+        "options": [
+          {
+            "id": "eng-b-egypt-pyramids-q1a",
+            "text": "To store grain for the whole kingdom"
+          },
+          {
+            "id": "eng-b-egypt-pyramids-q1b",
+            "text": "To give workers a place to live"
+          },
+          {
+            "id": "eng-b-egypt-pyramids-q1c",
+            "text": "To watch for enemies coming across the desert"
+          },
+          {
+            "id": "eng-b-egypt-pyramids-q1d",
+            "text": "To protect the body of a pharaoh who was believed to become a god"
+          }
+        ],
+        "answer": "eng-b-egypt-pyramids-q1d",
+        "explanation": "The passage says they built huge tombs to protect the pharaoh, who they believed became a god."
+      },
+      {
+        "id": "eng-b-egypt-pyramids-q2",
+        "prompt": "What do historians now believe about the people who built the pyramids?",
+        "options": [
+          {
+            "id": "eng-b-egypt-pyramids-q2a",
+            "text": "They were soldiers from other countries"
+          },
+          {
+            "id": "eng-b-egypt-pyramids-q2b",
+            "text": "They were skilled workers who were looked after"
+          },
+          {
+            "id": "eng-b-egypt-pyramids-q2c",
+            "text": "They were the pharaoh's own children"
+          },
+          {
+            "id": "eng-b-egypt-pyramids-q2d",
+            "text": "They were slaves who received no food"
+          }
+        ],
+        "answer": "eng-b-egypt-pyramids-q2b",
+        "explanation": "Historians now think skilled Egyptian workers did the job and were given food, housing and medical care."
+      },
+      {
+        "id": "eng-b-egypt-pyramids-q3",
+        "prompt": "Which sentence best tells the main idea of the passage?",
+        "options": [
+          {
+            "id": "eng-b-egypt-pyramids-q3a",
+            "text": "The pyramids were built as tombs by skilled workers and still amaze people today."
+          },
+          {
+            "id": "eng-b-egypt-pyramids-q3b",
+            "text": "Visitors are not allowed near the pyramids."
+          },
+          {
+            "id": "eng-b-egypt-pyramids-q3c",
+            "text": "Stone is the best material for building houses."
+          },
+          {
+            "id": "eng-b-egypt-pyramids-q3d",
+            "text": "Pharaohs were afraid of the desert."
+          }
+        ],
+        "answer": "eng-b-egypt-pyramids-q3a",
+        "explanation": "The passage explains why and how the pyramids were built and why people still visit them."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-egypt-pyramids-v1",
+        "word": "quarries",
+        "meaning": "places where stone is dug out of the ground",
+        "sentence": "Workers cut the blocks from quarries, dragged them on wooden sledges, and pushed them into place.",
+        "check_prompt": "What is a quarry?",
+        "options": [
+          {
+            "id": "eng-b-egypt-pyramids-v1a",
+            "text": "A kind of wooden sledge"
+          },
+          {
+            "id": "eng-b-egypt-pyramids-v1b",
+            "text": "A place where stone is dug out"
+          },
+          {
+            "id": "eng-b-egypt-pyramids-v1c",
+            "text": "A room inside a tomb"
+          }
+        ],
+        "answer": "eng-b-egypt-pyramids-v1b"
+      }
+    ],
+    "hints": [
+      "Look for the sentence that says why tombs were built."
+    ]
+  },
+  {
+    "id": "eng-b-egypt-hieroglyphs",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Ancient Egyptians wrote using pictures and symbols called hieroglyphs. There were hundreds of them, such as an owl, a reed and a wavy line for water. Some signs stood for objects, and others stood for sounds, a bit like letters. Writing was hard to learn, so only a few people, called scribes, could do it. Scribes began training as young boys and spent years copying texts. They wrote on papyrus, a paper-like material made from reeds that grew beside the Nile. For hundreds of years after the Egyptian empire ended, nobody could read hieroglyphs. Then, in 1799, soldiers found a stone with the same message written in three scripts, including Greek. Scholars could read Greek, so they used it as a key to unlock the picture writing. The stone is now called the Rosetta Stone.",
+    "parts": [
+      {
+        "id": "eng-b-egypt-hieroglyphs-q1",
+        "prompt": "Why could only a few people write in ancient Egypt?",
+        "options": [
+          {
+            "id": "eng-b-egypt-hieroglyphs-q1a",
+            "text": "Papyrus was too expensive for anyone to buy"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-q1b",
+            "text": "Only soldiers were allowed to use the signs"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-q1c",
+            "text": "There were only ten hieroglyphs to remember"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-q1d",
+            "text": "Writing was hard to learn and took years of training"
+          }
+        ],
+        "answer": "eng-b-egypt-hieroglyphs-q1d",
+        "explanation": "The passage says writing was hard to learn, and scribes trained for years."
+      },
+      {
+        "id": "eng-b-egypt-hieroglyphs-q2",
+        "prompt": "What was papyrus made from?",
+        "options": [
+          {
+            "id": "eng-b-egypt-hieroglyphs-q2a",
+            "text": "Stone from quarries"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-q2b",
+            "text": "Clay from the desert"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-q2c",
+            "text": "Animal skins"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-q2d",
+            "text": "Reeds that grew beside the Nile"
+          }
+        ],
+        "answer": "eng-b-egypt-hieroglyphs-q2d",
+        "explanation": "It was made from reeds growing beside the Nile."
+      },
+      {
+        "id": "eng-b-egypt-hieroglyphs-q3",
+        "prompt": "In the passage, the word \"key\" is used to mean something that",
+        "options": [
+          {
+            "id": "eng-b-egypt-hieroglyphs-q3a",
+            "text": "is played on a piano"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-q3b",
+            "text": "shows a place on a map"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-q3c",
+            "text": "helps solve a puzzle"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-q3d",
+            "text": "opens a metal lock"
+          }
+        ],
+        "answer": "eng-b-egypt-hieroglyphs-q3c",
+        "explanation": "Greek helped scholars work out the meaning of the hieroglyphs, like a key that solves a puzzle."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-egypt-hieroglyphs-v1",
+        "word": "scholars",
+        "meaning": "people who study a subject very carefully",
+        "sentence": "Scholars could read Greek, so they used it as a key to unlock the picture writing.",
+        "check_prompt": "Which person is most like a scholar?",
+        "options": [
+          {
+            "id": "eng-b-egypt-hieroglyphs-v1a",
+            "text": "A person who builds boats"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-v1b",
+            "text": "A person who spends years studying old writing"
+          },
+          {
+            "id": "eng-b-egypt-hieroglyphs-v1c",
+            "text": "A person who sells paper in a shop"
+          }
+        ],
+        "answer": "eng-b-egypt-hieroglyphs-v1b"
+      }
+    ],
+    "hints": [
+      "The word key is not about a real door in this passage."
+    ]
+  },
+  {
+    "id": "eng-b-cook-endeavour",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "In 1768, a British ship called the Endeavour left Plymouth under the command of Lieutenant James Cook. Its first job was scientific. Astronomers wanted to watch the planet Venus cross in front of the Sun, and Tahiti was a good place to see it. After the observation in 1769, Cook sailed south and then west. He made detailed maps of the coast of New Zealand. In April 1770 the crew sighted the east coast of Australia, a land that had been home to First Nations peoples for tens of thousands of years. The ship stopped at Botany Bay, where local people watched from the shore. Cook then sailed north, mapping the coast as he went. In June 1770 the Endeavour struck the Great Barrier Reef and had to be repaired. The voyage changed how Europeans saw the world, and it changed life for the people who already lived on these shores.",
+    "parts": [
+      {
+        "id": "eng-b-cook-endeavour-q1",
+        "prompt": "What was the first job of the Endeavour's voyage?",
+        "options": [
+          {
+            "id": "eng-b-cook-endeavour-q1a",
+            "text": "To carry settlers to Australia"
+          },
+          {
+            "id": "eng-b-cook-endeavour-q1b",
+            "text": "To fight a battle at sea"
+          },
+          {
+            "id": "eng-b-cook-endeavour-q1c",
+            "text": "To help scientists watch Venus cross the Sun"
+          },
+          {
+            "id": "eng-b-cook-endeavour-q1d",
+            "text": "To find gold in New Zealand"
+          }
+        ],
+        "answer": "eng-b-cook-endeavour-q1c",
+        "explanation": "The passage says its first job was scientific, watching Venus cross in front of the Sun."
+      },
+      {
+        "id": "eng-b-cook-endeavour-q2",
+        "prompt": "Which event happened last?",
+        "options": [
+          {
+            "id": "eng-b-cook-endeavour-q2a",
+            "text": "The ship struck the Great Barrier Reef."
+          },
+          {
+            "id": "eng-b-cook-endeavour-q2b",
+            "text": "The crew mapped New Zealand."
+          },
+          {
+            "id": "eng-b-cook-endeavour-q2c",
+            "text": "The ship stopped at Botany Bay."
+          },
+          {
+            "id": "eng-b-cook-endeavour-q2d",
+            "text": "The ship left Plymouth."
+          }
+        ],
+        "answer": "eng-b-cook-endeavour-q2a",
+        "explanation": "The reef was struck in June 1770, after the other events."
+      },
+      {
+        "id": "eng-b-cook-endeavour-q3",
+        "prompt": "What does the last sentence suggest?",
+        "options": [
+          {
+            "id": "eng-b-cook-endeavour-q3a",
+            "text": "The voyage was quickly forgotten."
+          },
+          {
+            "id": "eng-b-cook-endeavour-q3b",
+            "text": "Only sailors were affected by the voyage."
+          },
+          {
+            "id": "eng-b-cook-endeavour-q3c",
+            "text": "Nobody lived in Australia before 1770."
+          },
+          {
+            "id": "eng-b-cook-endeavour-q3d",
+            "text": "The voyage had big effects for both Europeans and First Nations peoples."
+          }
+        ],
+        "answer": "eng-b-cook-endeavour-q3d",
+        "explanation": "It says the voyage changed life for the people who already lived here as well as how Europeans saw the world."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-cook-endeavour-v1",
+        "word": "astronomers",
+        "meaning": "scientists who study stars, planets and space",
+        "sentence": "Astronomers wanted to watch the planet Venus cross in front of the Sun, and Tahiti was a good place to see it.",
+        "check_prompt": "What do astronomers study?",
+        "options": [
+          {
+            "id": "eng-b-cook-endeavour-v1a",
+            "text": "Stars, planets and space"
+          },
+          {
+            "id": "eng-b-cook-endeavour-v1b",
+            "text": "Sea animals"
+          },
+          {
+            "id": "eng-b-cook-endeavour-v1c",
+            "text": "Rocks and soil"
+          }
+        ],
+        "answer": "eng-b-cook-endeavour-v1a"
+      }
+    ],
+    "hints": [
+      "Look at the dates in the passage to put events in order."
+    ]
+  },
+  {
+    "id": "eng-b-first-nations-emu-sky",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Aboriginal and Torres Strait Islander peoples have studied the night sky for tens of thousands of years, which makes them some of the world's oldest astronomers. Many nations see shapes not only in the bright stars but also in the dark patches of the Milky Way. One famous shape is the Emu in the Sky. Its head is near the Southern Cross, and its long neck and body stretch across the sky. In some communities, the emu's position tells people when it is time to collect emu eggs. When the emu appears to be running along the horizon in the evening, the egg-laying season has begun. In this way the sky works like a calendar, and knowledge about it is passed down through stories and ceremony. Each nation has its own stories, and they should be shared with respect.",
+    "parts": [
+      {
+        "id": "eng-b-first-nations-emu-sky-q1",
+        "prompt": "What is unusual about the Emu in the Sky?",
+        "options": [
+          {
+            "id": "eng-b-first-nations-emu-sky-q1a",
+            "text": "It is made from the brightest planets"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-q1b",
+            "text": "It can only be seen in daylight"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-q1c",
+            "text": "It is drawn on the Moon"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-q1d",
+            "text": "It is made from dark patches, not only bright stars"
+          }
+        ],
+        "answer": "eng-b-first-nations-emu-sky-q1d",
+        "explanation": "The passage says shapes are seen in the dark patches of the Milky Way as well as the stars."
+      },
+      {
+        "id": "eng-b-first-nations-emu-sky-q2",
+        "prompt": "How does the sky work like a calendar?",
+        "options": [
+          {
+            "id": "eng-b-first-nations-emu-sky-q2a",
+            "text": "The Moon never changes shape"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-q2b",
+            "text": "The stars have numbers written on them"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-q2c",
+            "text": "The emu's position shows when it is the right season for a task"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-q2d",
+            "text": "The Sun rises at the same time each day"
+          }
+        ],
+        "answer": "eng-b-first-nations-emu-sky-q2c",
+        "explanation": "The emu's position tells people when to collect eggs."
+      },
+      {
+        "id": "eng-b-first-nations-emu-sky-q3",
+        "prompt": "What is the author's main purpose?",
+        "options": [
+          {
+            "id": "eng-b-first-nations-emu-sky-q3a",
+            "text": "To explain how First Nations peoples use the night sky for knowledge"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-q3b",
+            "text": "To describe how emus lay eggs"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-q3c",
+            "text": "To tell a funny story about the stars"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-q3d",
+            "text": "To persuade readers to buy a telescope"
+          }
+        ],
+        "answer": "eng-b-first-nations-emu-sky-q3a",
+        "explanation": "The passage explains the long study of the sky and how knowledge is shared."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-first-nations-emu-sky-v1",
+        "word": "horizon",
+        "meaning": "the line where the land or sea seems to meet the sky",
+        "sentence": "When the emu appears to be running along the horizon in the evening, the egg-laying season has begun.",
+        "check_prompt": "Where would you see the horizon?",
+        "options": [
+          {
+            "id": "eng-b-first-nations-emu-sky-v1a",
+            "text": "Inside a cave"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-v1b",
+            "text": "Far away, where the sky seems to touch the land"
+          },
+          {
+            "id": "eng-b-first-nations-emu-sky-v1c",
+            "text": "Directly above your head"
+          }
+        ],
+        "answer": "eng-b-first-nations-emu-sky-v1b"
+      }
+    ],
+    "hints": [
+      "The question is about what makes this shape different from most star pictures."
+    ]
+  },
+  {
+    "id": "eng-b-dreaming-stories",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "For many Aboriginal and Torres Strait Islander peoples, Dreaming stories explain how the land, animals and people came to be. They are not just tales for bedtime. They hold law, history and knowledge about how to care for Country. A story might tell how a river was made by a great serpent moving across the land, and it might also teach where to find water in dry times. Elders have the right to decide how and when stories are shared. Some can be told to everyone, while others are only for certain people. Artists paint stories using dots, lines and symbols, and each pattern can carry meaning. When we listen to a Dreaming story, we should listen carefully and remember that it belongs to the people whose Country it comes from.",
+    "parts": [
+      {
+        "id": "eng-b-dreaming-stories-q1",
+        "prompt": "Why does the author say Dreaming stories are \"not just tales for bedtime\"?",
+        "options": [
+          {
+            "id": "eng-b-dreaming-stories-q1a",
+            "text": "They are too long to finish in one night"
+          },
+          {
+            "id": "eng-b-dreaming-stories-q1b",
+            "text": "They are only told in the morning"
+          },
+          {
+            "id": "eng-b-dreaming-stories-q1c",
+            "text": "They also hold law, history and knowledge"
+          },
+          {
+            "id": "eng-b-dreaming-stories-q1d",
+            "text": "They are about sleeping"
+          }
+        ],
+        "answer": "eng-b-dreaming-stories-q1c",
+        "explanation": "The passage says they hold law, history and knowledge about caring for Country."
+      },
+      {
+        "id": "eng-b-dreaming-stories-q2",
+        "prompt": "Who has the right to decide how Dreaming stories are shared?",
+        "options": [
+          {
+            "id": "eng-b-dreaming-stories-q2a",
+            "text": "Anyone who has read a book"
+          },
+          {
+            "id": "eng-b-dreaming-stories-q2b",
+            "text": "Elders"
+          },
+          {
+            "id": "eng-b-dreaming-stories-q2c",
+            "text": "Visitors who paint with dots"
+          },
+          {
+            "id": "eng-b-dreaming-stories-q2d",
+            "text": "Only young children"
+          }
+        ],
+        "answer": "eng-b-dreaming-stories-q2b",
+        "explanation": "Elders have the right to decide how and when stories are shared."
+      },
+      {
+        "id": "eng-b-dreaming-stories-q3",
+        "prompt": "What should a listener remember?",
+        "options": [
+          {
+            "id": "eng-b-dreaming-stories-q3a",
+            "text": "The story can be changed to be more exciting"
+          },
+          {
+            "id": "eng-b-dreaming-stories-q3b",
+            "text": "The story is only a made-up game"
+          },
+          {
+            "id": "eng-b-dreaming-stories-q3c",
+            "text": "The story belongs to the people whose Country it comes from"
+          },
+          {
+            "id": "eng-b-dreaming-stories-q3d",
+            "text": "The story has no meaning in the pattern"
+          }
+        ],
+        "answer": "eng-b-dreaming-stories-q3c",
+        "explanation": "The final sentence says it belongs to the people whose Country it comes from."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-dreaming-stories-v1",
+        "word": "symbols",
+        "meaning": "pictures or shapes that stand for ideas",
+        "sentence": "Artists paint stories using dots, lines and symbols, and each pattern can carry meaning.",
+        "check_prompt": "Which is a symbol?",
+        "options": [
+          {
+            "id": "eng-b-dreaming-stories-v1a",
+            "text": "A plain white wall"
+          },
+          {
+            "id": "eng-b-dreaming-stories-v1b",
+            "text": "A heart shape that stands for love"
+          },
+          {
+            "id": "eng-b-dreaming-stories-v1c",
+            "text": "A loud noise"
+          }
+        ],
+        "answer": "eng-b-dreaming-stories-v1b"
+      }
+    ],
+    "hints": [
+      "Reread the sentence that follows the words \"not just\"."
+    ]
+  },
+  {
+    "id": "eng-b-first-olympics",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "The first Olympic Games were held in Olympia, Greece, almost 2,800 years ago. They were part of a festival to honour Zeus, king of the Greek gods. At first there was only one event, a race of about 190 metres called the stadion. Later, events such as wrestling, long jump, javelin and chariot racing were added. Only free Greek men could compete, and athletes trained for months before the Games. When the Games began, Greek cities agreed to a truce so that visitors could travel safely. Winners did not receive gold medals. Instead they were given a wreath made from olive leaves, and their home town treated them like heroes. The ancient Games ended around 1,600 years ago, and the modern Olympics began in Athens in 1896.",
+    "parts": [
+      {
+        "id": "eng-b-first-olympics-q1",
+        "prompt": "Why did Greek cities agree to a truce when the Games began?",
+        "options": [
+          {
+            "id": "eng-b-first-olympics-q1a",
+            "text": "So that visitors could travel safely"
+          },
+          {
+            "id": "eng-b-first-olympics-q1b",
+            "text": "Because the cities ran out of food"
+          },
+          {
+            "id": "eng-b-first-olympics-q1c",
+            "text": "Because soldiers wanted to compete"
+          },
+          {
+            "id": "eng-b-first-olympics-q1d",
+            "text": "Because Zeus ordered the wars to end"
+          }
+        ],
+        "answer": "eng-b-first-olympics-q1a",
+        "explanation": "The passage says the cities agreed to a truce so visitors could travel safely."
+      },
+      {
+        "id": "eng-b-first-olympics-q2",
+        "prompt": "How were ancient winners rewarded?",
+        "options": [
+          {
+            "id": "eng-b-first-olympics-q2a",
+            "text": "With a new chariot"
+          },
+          {
+            "id": "eng-b-first-olympics-q2b",
+            "text": "With a large sum of money"
+          },
+          {
+            "id": "eng-b-first-olympics-q2c",
+            "text": "With a wreath of olive leaves"
+          },
+          {
+            "id": "eng-b-first-olympics-q2d",
+            "text": "With a gold medal"
+          }
+        ],
+        "answer": "eng-b-first-olympics-q2c",
+        "explanation": "The passage says winners were given a wreath made from olive leaves."
+      },
+      {
+        "id": "eng-b-first-olympics-q3",
+        "prompt": "What was the only event at the first Games?",
+        "options": [
+          {
+            "id": "eng-b-first-olympics-q3a",
+            "text": "A short running race called the stadion"
+          },
+          {
+            "id": "eng-b-first-olympics-q3b",
+            "text": "Javelin throwing"
+          },
+          {
+            "id": "eng-b-first-olympics-q3c",
+            "text": "Wrestling"
+          },
+          {
+            "id": "eng-b-first-olympics-q3d",
+            "text": "Chariot racing"
+          }
+        ],
+        "answer": "eng-b-first-olympics-q3a",
+        "explanation": "At first there was only the stadion race; other events were added later."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-first-olympics-v1",
+        "word": "compete",
+        "meaning": "to try to win against others",
+        "sentence": "Only free Greek men could compete, and athletes trained for months before the Games.",
+        "check_prompt": "What does it mean to compete?",
+        "options": [
+          {
+            "id": "eng-b-first-olympics-v1a",
+            "text": "To build a stadium"
+          },
+          {
+            "id": "eng-b-first-olympics-v1b",
+            "text": "To try to win a contest"
+          },
+          {
+            "id": "eng-b-first-olympics-v1c",
+            "text": "To watch a game quietly"
+          }
+        ],
+        "answer": "eng-b-first-olympics-v1b"
+      },
+      {
+        "id": "eng-b-first-olympics-v2",
+        "word": "wreath",
+        "meaning": "a ring of leaves or flowers",
+        "sentence": "Instead they were given a wreath made from olive leaves, and their home town treated them like heroes.",
+        "check_prompt": "A wreath is best described as",
+        "options": [
+          {
+            "id": "eng-b-first-olympics-v2a",
+            "text": "A type of race"
+          },
+          {
+            "id": "eng-b-first-olympics-v2b",
+            "text": "A ring made of leaves"
+          },
+          {
+            "id": "eng-b-first-olympics-v2c",
+            "text": "A heavy metal medal"
+          }
+        ],
+        "answer": "eng-b-first-olympics-v2b"
+      }
+    ],
+    "hints": [
+      "Look for the words \"at first\" and \"instead\"."
+    ]
+  },
+  {
+    "id": "eng-b-castles",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Castles were built in Europe mostly between about 1000 and 1500 to protect the people who lived in them. A lord often built a castle on a hill so that guards could see enemies coming from far away. Thick stone walls were hard to knock down, and many castles were surrounded by a deep ditch called a moat, which was often filled with water. The only way across was a drawbridge that could be pulled up. Inside, a castle was like a small town. It had a kitchen, a chapel, stables for horses, and a great hall where people ate together. Life there was not very comfortable. Rooms were cold and dark, and windows were narrow slits so that archers could shoot from them. Today many castles are ruins that visitors enjoy exploring.",
+    "parts": [
+      {
+        "id": "eng-b-castles-q1",
+        "prompt": "Why was a castle often built on a hill?",
+        "options": [
+          {
+            "id": "eng-b-castles-q1a",
+            "text": "It was easier to carry stone uphill"
+          },
+          {
+            "id": "eng-b-castles-q1b",
+            "text": "It made the rooms warmer"
+          },
+          {
+            "id": "eng-b-castles-q1c",
+            "text": "The soil was better for farming"
+          },
+          {
+            "id": "eng-b-castles-q1d",
+            "text": "Guards could see enemies coming from far away"
+          }
+        ],
+        "answer": "eng-b-castles-q1d",
+        "explanation": "The passage says a hill let guards see enemies from far away."
+      },
+      {
+        "id": "eng-b-castles-q2",
+        "prompt": "What was the purpose of a drawbridge?",
+        "options": [
+          {
+            "id": "eng-b-castles-q2a",
+            "text": "To be pulled up so enemies could not cross the moat"
+          },
+          {
+            "id": "eng-b-castles-q2b",
+            "text": "To keep the horses dry"
+          },
+          {
+            "id": "eng-b-castles-q2c",
+            "text": "To let boats sail into the kitchen"
+          },
+          {
+            "id": "eng-b-castles-q2d",
+            "text": "To hold the castle's flag"
+          }
+        ],
+        "answer": "eng-b-castles-q2a",
+        "explanation": "It was the only way across the moat and could be pulled up."
+      },
+      {
+        "id": "eng-b-castles-q3",
+        "prompt": "Why were castle windows narrow slits?",
+        "options": [
+          {
+            "id": "eng-b-castles-q3a",
+            "text": "The builders ran out of glass"
+          },
+          {
+            "id": "eng-b-castles-q3b",
+            "text": "They let in as much light as possible"
+          },
+          {
+            "id": "eng-b-castles-q3c",
+            "text": "Archers could shoot out while staying protected"
+          },
+          {
+            "id": "eng-b-castles-q3d",
+            "text": "They were used for hanging washing"
+          }
+        ],
+        "answer": "eng-b-castles-q3c",
+        "explanation": "The passage says the slits let archers shoot from them."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-castles-v1",
+        "word": "moat",
+        "meaning": "a deep ditch, often filled with water, around a castle",
+        "sentence": "Thick stone walls were hard to knock down, and many castles were surrounded by a deep ditch called a moat, which was often filled with water.",
+        "check_prompt": "What was a moat for?",
+        "options": [
+          {
+            "id": "eng-b-castles-v1a",
+            "text": "To make it harder for enemies to reach the walls"
+          },
+          {
+            "id": "eng-b-castles-v1b",
+            "text": "To grow vegetables"
+          },
+          {
+            "id": "eng-b-castles-v1c",
+            "text": "To store armour"
+          }
+        ],
+        "answer": "eng-b-castles-v1a"
+      },
+      {
+        "id": "eng-b-castles-v2",
+        "word": "ruins",
+        "meaning": "the broken remains of old buildings",
+        "sentence": "Today many castles are ruins that visitors enjoy exploring.",
+        "check_prompt": "Which is a ruin?",
+        "options": [
+          {
+            "id": "eng-b-castles-v2a",
+            "text": "An old castle with fallen walls"
+          },
+          {
+            "id": "eng-b-castles-v2b",
+            "text": "A brand new house"
+          },
+          {
+            "id": "eng-b-castles-v2c",
+            "text": "A tidy school classroom"
+          }
+        ],
+        "answer": "eng-b-castles-v2a"
+      }
+    ],
+    "hints": [
+      "The passage gives a reason right after each feature of the castle."
+    ]
+  },
+  {
+    "id": "eng-b-water-cycle",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Water never stops moving around our planet. This journey is called the water cycle. First, the Sun warms oceans, lakes and rivers, and some of the water turns into an invisible gas called water vapour. This is called evaporation. The vapour rises into the cooler air high above the ground. There it changes back into tiny drops of liquid water, which gather to form clouds. This step is called condensation. When the drops grow heavy, they fall as rain, hail or snow, which is known as precipitation. The water runs into streams, soaks into the soil, or collects in the sea. Then the Sun warms it again, and the cycle starts over. The water you drink today may have fallen as rain thousands of years ago.",
+    "parts": [
+      {
+        "id": "eng-b-water-cycle-q1",
+        "prompt": "What causes evaporation?",
+        "options": [
+          {
+            "id": "eng-b-water-cycle-q1a",
+            "text": "Cold air makes rain heavy"
+          },
+          {
+            "id": "eng-b-water-cycle-q1b",
+            "text": "Rivers flow into the sea"
+          },
+          {
+            "id": "eng-b-water-cycle-q1c",
+            "text": "The Sun warms the water"
+          },
+          {
+            "id": "eng-b-water-cycle-q1d",
+            "text": "Wind pushes clouds together"
+          }
+        ],
+        "answer": "eng-b-water-cycle-q1c",
+        "explanation": "The passage says the Sun warms the water and some of it turns into vapour."
+      },
+      {
+        "id": "eng-b-water-cycle-q2",
+        "prompt": "What happens during condensation?",
+        "options": [
+          {
+            "id": "eng-b-water-cycle-q2a",
+            "text": "Rain falls onto the ground"
+          },
+          {
+            "id": "eng-b-water-cycle-q2b",
+            "text": "Liquid water turns into steam above a fire"
+          },
+          {
+            "id": "eng-b-water-cycle-q2c",
+            "text": "Water vapour changes back into tiny drops that form clouds"
+          },
+          {
+            "id": "eng-b-water-cycle-q2d",
+            "text": "Water soaks into the soil"
+          }
+        ],
+        "answer": "eng-b-water-cycle-q2c",
+        "explanation": "Condensation is vapour changing back into liquid drops to form clouds."
+      },
+      {
+        "id": "eng-b-water-cycle-q3",
+        "prompt": "Which is the correct order?",
+        "options": [
+          {
+            "id": "eng-b-water-cycle-q3a",
+            "text": "Precipitation, evaporation, condensation"
+          },
+          {
+            "id": "eng-b-water-cycle-q3b",
+            "text": "Evaporation, precipitation, condensation"
+          },
+          {
+            "id": "eng-b-water-cycle-q3c",
+            "text": "Evaporation, condensation, precipitation"
+          },
+          {
+            "id": "eng-b-water-cycle-q3d",
+            "text": "Condensation, precipitation, evaporation"
+          }
+        ],
+        "answer": "eng-b-water-cycle-q3c",
+        "explanation": "Water first evaporates, then condenses into clouds, then falls as precipitation."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-water-cycle-v1",
+        "word": "precipitation",
+        "meaning": "water falling from clouds as rain, hail or snow",
+        "sentence": "When the drops grow heavy, they fall as rain, hail or snow, which is known as precipitation.",
+        "check_prompt": "Which is an example of precipitation?",
+        "options": [
+          {
+            "id": "eng-b-water-cycle-v1a",
+            "text": "Water vapour rising from a lake"
+          },
+          {
+            "id": "eng-b-water-cycle-v1b",
+            "text": "Snow falling from the sky"
+          },
+          {
+            "id": "eng-b-water-cycle-v1c",
+            "text": "A puddle drying in the Sun"
+          }
+        ],
+        "answer": "eng-b-water-cycle-v1b"
+      }
+    ],
+    "hints": [
+      "Find the words First, There and Then to track the order."
+    ]
+  },
+  {
+    "id": "eng-b-magnets",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "A magnet is an object that pulls some metals towards it. This pulling force is called magnetism. Magnets attract many things made of iron, nickel and cobalt, but they do not attract wood, plastic or glass. Every magnet has two ends, called poles: a north pole and a south pole. If you hold two magnets close together, opposite poles pull toward each other, but poles that are the same push each other away. Earth itself acts like a giant magnet, which is why a compass needle usually swings to point towards the north. Sailors used compasses for hundreds of years to find their way across the oceans. Magnets are also found in fridge doors, speakers and the motors of electric cars. Even a tiny fridge magnet uses the same invisible force.",
+    "parts": [
+      {
+        "id": "eng-b-magnets-q1",
+        "prompt": "Which object would a magnet pick up?",
+        "options": [
+          {
+            "id": "eng-b-magnets-q1a",
+            "text": "A plastic ruler"
+          },
+          {
+            "id": "eng-b-magnets-q1b",
+            "text": "An iron nail"
+          },
+          {
+            "id": "eng-b-magnets-q1c",
+            "text": "A wooden spoon"
+          },
+          {
+            "id": "eng-b-magnets-q1d",
+            "text": "A glass marble"
+          }
+        ],
+        "answer": "eng-b-magnets-q1b",
+        "explanation": "Magnets attract iron but not plastic, glass or wood."
+      },
+      {
+        "id": "eng-b-magnets-q2",
+        "prompt": "What happens when two north poles are held close together?",
+        "options": [
+          {
+            "id": "eng-b-magnets-q2a",
+            "text": "They lose their magnetism"
+          },
+          {
+            "id": "eng-b-magnets-q2b",
+            "text": "They push each other away"
+          },
+          {
+            "id": "eng-b-magnets-q2c",
+            "text": "They turn into south poles"
+          },
+          {
+            "id": "eng-b-magnets-q2d",
+            "text": "They pull together"
+          }
+        ],
+        "answer": "eng-b-magnets-q2b",
+        "explanation": "Poles that are the same push each other away."
+      },
+      {
+        "id": "eng-b-magnets-q3",
+        "prompt": "Why does a compass needle point north?",
+        "options": [
+          {
+            "id": "eng-b-magnets-q3a",
+            "text": "Fridge doors make it turn"
+          },
+          {
+            "id": "eng-b-magnets-q3b",
+            "text": "The ocean pulls it"
+          },
+          {
+            "id": "eng-b-magnets-q3c",
+            "text": "Sailors push it north"
+          },
+          {
+            "id": "eng-b-magnets-q3d",
+            "text": "Earth acts like a giant magnet"
+          }
+        ],
+        "answer": "eng-b-magnets-q3d",
+        "explanation": "The passage says Earth acts like a giant magnet, so the needle swings to point north."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-magnets-v1",
+        "word": "attract",
+        "meaning": "to pull something closer",
+        "sentence": "Magnets attract many things made of iron, nickel and cobalt, but they do not attract wood, plastic or glass.",
+        "check_prompt": "What does a magnet do when it attracts a nail?",
+        "options": [
+          {
+            "id": "eng-b-magnets-v1a",
+            "text": "It pulls the nail towards it"
+          },
+          {
+            "id": "eng-b-magnets-v1b",
+            "text": "It melts the nail"
+          },
+          {
+            "id": "eng-b-magnets-v1c",
+            "text": "It pushes the nail away"
+          }
+        ],
+        "answer": "eng-b-magnets-v1a"
+      }
+    ],
+    "hints": [
+      "Think about which materials the passage says magnets cannot attract."
+    ]
+  },
+  {
+    "id": "eng-b-volcanoes",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "A volcano is an opening in Earth's crust where hot melted rock can escape. Deep underground, rock is so hot that it melts into a thick liquid called magma. Because magma is lighter than the solid rock around it, it slowly rises. When pressure builds up, the magma bursts out through the opening in an eruption. Once it reaches the surface, it is called lava. As lava cools, it hardens into new rock, and over many eruptions it can build a tall, cone-shaped mountain. Volcanoes can be dangerous, so scientists called volcanologists watch for small earthquakes and gas that show an eruption may be near. Yet volcanic ash makes soil very rich, so farmers have grown crops on the slopes of volcanoes for thousands of years.",
+    "parts": [
+      {
+        "id": "eng-b-volcanoes-q1",
+        "prompt": "What is the difference between magma and lava?",
+        "options": [
+          {
+            "id": "eng-b-volcanoes-q1a",
+            "text": "Magma is made of ash, while lava is made of water"
+          },
+          {
+            "id": "eng-b-volcanoes-q1b",
+            "text": "Magma is cold, while lava is hot"
+          },
+          {
+            "id": "eng-b-volcanoes-q1c",
+            "text": "Magma is underground, while lava has reached the surface"
+          },
+          {
+            "id": "eng-b-volcanoes-q1d",
+            "text": "Magma is a gas, while lava is a liquid"
+          }
+        ],
+        "answer": "eng-b-volcanoes-q1c",
+        "explanation": "The passage says melted rock is magma underground and called lava once it reaches the surface."
+      },
+      {
+        "id": "eng-b-volcanoes-q2",
+        "prompt": "Why does magma slowly rise?",
+        "options": [
+          {
+            "id": "eng-b-volcanoes-q2a",
+            "text": "Wind pulls it upward"
+          },
+          {
+            "id": "eng-b-volcanoes-q2b",
+            "text": "It is lighter than the solid rock around it"
+          },
+          {
+            "id": "eng-b-volcanoes-q2c",
+            "text": "Volcanologists push it"
+          },
+          {
+            "id": "eng-b-volcanoes-q2d",
+            "text": "Earthquakes pour water on it"
+          }
+        ],
+        "answer": "eng-b-volcanoes-q2b",
+        "explanation": "The passage says magma rises because it is lighter than the solid rock."
+      },
+      {
+        "id": "eng-b-volcanoes-q3",
+        "prompt": "Why have farmers lived near volcanoes for thousands of years?",
+        "options": [
+          {
+            "id": "eng-b-volcanoes-q3a",
+            "text": "Eruptions never happen"
+          },
+          {
+            "id": "eng-b-volcanoes-q3b",
+            "text": "Volcano slopes are flat and easy to plough"
+          },
+          {
+            "id": "eng-b-volcanoes-q3c",
+            "text": "Volcanic ash makes the soil rich for crops"
+          },
+          {
+            "id": "eng-b-volcanoes-q3d",
+            "text": "Lava keeps the animals warm"
+          }
+        ],
+        "answer": "eng-b-volcanoes-q3c",
+        "explanation": "The last sentence says ash makes the soil very rich."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-volcanoes-v1",
+        "word": "eruption",
+        "meaning": "a sudden burst of lava, ash and gas from a volcano",
+        "sentence": "When pressure builds up, the magma bursts out through the opening in an eruption.",
+        "check_prompt": "What happens during an eruption?",
+        "options": [
+          {
+            "id": "eng-b-volcanoes-v1a",
+            "text": "A mountain slowly sinks into the sea"
+          },
+          {
+            "id": "eng-b-volcanoes-v1b",
+            "text": "Hot material bursts out of a volcano"
+          },
+          {
+            "id": "eng-b-volcanoes-v1c",
+            "text": "Rain begins to fall"
+          }
+        ],
+        "answer": "eng-b-volcanoes-v1b"
+      }
+    ],
+    "hints": [
+      "Remember that some lines explain what happens underground."
+    ]
+  },
+  {
+    "id": "eng-b-plants-food",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Unlike animals, plants make their own food. They do it through a process called photosynthesis. A plant needs three things: sunlight, water and carbon dioxide, a gas in the air. The roots take in water from the soil and send it up the stem. Tiny holes in the leaves let in carbon dioxide. Leaves also contain a green substance called chlorophyll, which captures energy from sunlight. Using that energy, the plant turns water and carbon dioxide into a sugar that feeds it. As a bonus, the plant releases oxygen, the gas that people and animals need to breathe. This is why forests are sometimes called the lungs of the Earth. A plant kept in a dark cupboard soon turns pale and weak because it cannot make its food without light.",
+    "parts": [
+      {
+        "id": "eng-b-plants-food-q1",
+        "prompt": "What do the roots of a plant do?",
+        "options": [
+          {
+            "id": "eng-b-plants-food-q1a",
+            "text": "Capture sunlight"
+          },
+          {
+            "id": "eng-b-plants-food-q1b",
+            "text": "Release oxygen"
+          },
+          {
+            "id": "eng-b-plants-food-q1c",
+            "text": "Take in water from the soil"
+          },
+          {
+            "id": "eng-b-plants-food-q1d",
+            "text": "Let in carbon dioxide"
+          }
+        ],
+        "answer": "eng-b-plants-food-q1c",
+        "explanation": "The passage says roots take in water from the soil and send it up the stem."
+      },
+      {
+        "id": "eng-b-plants-food-q2",
+        "prompt": "What does chlorophyll do?",
+        "options": [
+          {
+            "id": "eng-b-plants-food-q2a",
+            "text": "It sends water up the stem"
+          },
+          {
+            "id": "eng-b-plants-food-q2b",
+            "text": "It makes leaves fall in autumn"
+          },
+          {
+            "id": "eng-b-plants-food-q2c",
+            "text": "It captures energy from sunlight"
+          },
+          {
+            "id": "eng-b-plants-food-q2d",
+            "text": "It lets in carbon dioxide"
+          }
+        ],
+        "answer": "eng-b-plants-food-q2c",
+        "explanation": "Chlorophyll is the green substance that captures sunlight's energy."
+      },
+      {
+        "id": "eng-b-plants-food-q3",
+        "prompt": "Why does a plant in a dark cupboard become weak?",
+        "options": [
+          {
+            "id": "eng-b-plants-food-q3a",
+            "text": "It has too much water"
+          },
+          {
+            "id": "eng-b-plants-food-q3b",
+            "text": "It breathes in too much oxygen"
+          },
+          {
+            "id": "eng-b-plants-food-q3c",
+            "text": "It cannot make food without sunlight"
+          },
+          {
+            "id": "eng-b-plants-food-q3d",
+            "text": "Its roots grow too fast"
+          }
+        ],
+        "answer": "eng-b-plants-food-q3c",
+        "explanation": "Without light the plant cannot carry out photosynthesis to make food."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-plants-food-v1",
+        "word": "releases",
+        "meaning": "lets something go out into the air or water",
+        "sentence": "As a bonus, the plant releases oxygen, the gas that people and animals need to breathe.",
+        "check_prompt": "What does a plant release during photosynthesis?",
+        "options": [
+          {
+            "id": "eng-b-plants-food-v1a",
+            "text": "Sugar from the soil"
+          },
+          {
+            "id": "eng-b-plants-food-v1b",
+            "text": "Oxygen"
+          },
+          {
+            "id": "eng-b-plants-food-v1c",
+            "text": "Chlorophyll"
+          }
+        ],
+        "answer": "eng-b-plants-food-v1b"
+      }
+    ],
+    "hints": [
+      "Match each plant part to its job in the passage."
+    ]
+  },
+  {
+    "id": "eng-b-human-heart",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Your heart is a muscle about the size of your fist. It sits in the middle of your chest, slightly to the left. Its job is to pump blood around your body through tubes called blood vessels. Blood carries oxygen and nutrients to every part of you, from your brain to your toes. The heart has four rooms called chambers. The top two chambers receive blood, and the bottom two push it out. Valves inside the heart act like doors that open and close so blood moves in only one direction. Each time the heart squeezes, you can feel a beat in your wrist or neck. This beat is your pulse. A child's heart beats about 80 times a minute at rest, and faster when you run because your muscles need more oxygen.",
+    "parts": [
+      {
+        "id": "eng-b-human-heart-q1",
+        "prompt": "What is the main job of the heart?",
+        "options": [
+          {
+            "id": "eng-b-human-heart-q1a",
+            "text": "To fight germs"
+          },
+          {
+            "id": "eng-b-human-heart-q1b",
+            "text": "To digest food"
+          },
+          {
+            "id": "eng-b-human-heart-q1c",
+            "text": "To help you breathe in air"
+          },
+          {
+            "id": "eng-b-human-heart-q1d",
+            "text": "To pump blood around the body"
+          }
+        ],
+        "answer": "eng-b-human-heart-q1d",
+        "explanation": "The passage says its job is to pump blood around your body."
+      },
+      {
+        "id": "eng-b-human-heart-q2",
+        "prompt": "What do the valves do?",
+        "options": [
+          {
+            "id": "eng-b-human-heart-q2a",
+            "text": "They make the heartbeat louder"
+          },
+          {
+            "id": "eng-b-human-heart-q2b",
+            "text": "They make sure blood moves in only one direction"
+          },
+          {
+            "id": "eng-b-human-heart-q2c",
+            "text": "They connect the heart to the brain"
+          },
+          {
+            "id": "eng-b-human-heart-q2d",
+            "text": "They store oxygen"
+          }
+        ],
+        "answer": "eng-b-human-heart-q2b",
+        "explanation": "Valves act like doors so blood moves in one direction."
+      },
+      {
+        "id": "eng-b-human-heart-q3",
+        "prompt": "Why does your heart beat faster when you run?",
+        "options": [
+          {
+            "id": "eng-b-human-heart-q3a",
+            "text": "Your heart gets bigger"
+          },
+          {
+            "id": "eng-b-human-heart-q3b",
+            "text": "Your pulse stops"
+          },
+          {
+            "id": "eng-b-human-heart-q3c",
+            "text": "Your blood vessels turn into chambers"
+          },
+          {
+            "id": "eng-b-human-heart-q3d",
+            "text": "Your muscles need more oxygen"
+          }
+        ],
+        "answer": "eng-b-human-heart-q3d",
+        "explanation": "The passage says it beats faster because your muscles need more oxygen."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-human-heart-v1",
+        "word": "valves",
+        "meaning": "parts that open and close to let something flow one way",
+        "sentence": "Valves inside the heart act like doors that open and close so blood moves in only one direction.",
+        "check_prompt": "What does a valve do?",
+        "options": [
+          {
+            "id": "eng-b-human-heart-v1a",
+            "text": "It keeps the heart warm"
+          },
+          {
+            "id": "eng-b-human-heart-v1b",
+            "text": "It opens and closes to control flow"
+          },
+          {
+            "id": "eng-b-human-heart-v1c",
+            "text": "It makes blood red"
+          }
+        ],
+        "answer": "eng-b-human-heart-v1b"
+      },
+      {
+        "id": "eng-b-human-heart-v2",
+        "word": "pulse",
+        "meaning": "the beat you can feel as your heart pumps blood",
+        "sentence": "This beat is your pulse.",
+        "check_prompt": "Where can you feel your pulse?",
+        "options": [
+          {
+            "id": "eng-b-human-heart-v2a",
+            "text": "On your hair"
+          },
+          {
+            "id": "eng-b-human-heart-v2b",
+            "text": "On your wrist"
+          },
+          {
+            "id": "eng-b-human-heart-v2c",
+            "text": "In your teeth"
+          }
+        ],
+        "answer": "eng-b-human-heart-v2b"
+      }
+    ],
+    "hints": [
+      "Find where the passage explains why the heart speeds up."
+    ]
+  },
+  {
+    "id": "eng-b-soccer-bluebirds",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "The Bluebirds had lost every game this season. On Saturday, Mia stood in goal as the rain fell and the other team's striker raced towards her. She dived and caught the ball, but she knew her teammates were tired and discouraged. At half-time, Coach Rana did not talk about the score. Instead, she asked each player to name one thing a teammate did well. Jack said Mia's save was brilliant. Mia said Leo's passing was getting sharper. Soon everyone was smiling, and the muddy huddle grew louder. In the second half, the Bluebirds passed the ball to each other instead of kicking it wildly. They lost 2-1, but they had scored their first goal of the season. Walking off the field, Mia realised that she felt prouder than if they had won by luck.",
+    "parts": [
+      {
+        "id": "eng-b-soccer-bluebirds-q1",
+        "prompt": "Why did Coach Rana ask players to say something good about a teammate?",
+        "options": [
+          {
+            "id": "eng-b-soccer-bluebirds-q1a",
+            "text": "To waste time before the game restarted"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-q1b",
+            "text": "To find out who should leave the team"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-q1c",
+            "text": "To decide who would play in goal"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-q1d",
+            "text": "To lift the team's spirits"
+          }
+        ],
+        "answer": "eng-b-soccer-bluebirds-q1d",
+        "explanation": "The team was discouraged, and the compliments made everyone smile."
+      },
+      {
+        "id": "eng-b-soccer-bluebirds-q2",
+        "prompt": "What lesson does the story teach?",
+        "options": [
+          {
+            "id": "eng-b-soccer-bluebirds-q2a",
+            "text": "The best player should take every shot"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-q2b",
+            "text": "Rain always spoils a game"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-q2c",
+            "text": "Encouraging each other and working together matters more than winning"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-q2d",
+            "text": "Games are only fun when you win"
+          }
+        ],
+        "answer": "eng-b-soccer-bluebirds-q2c",
+        "explanation": "Mia felt proud even though they lost, because the team played well together."
+      },
+      {
+        "id": "eng-b-soccer-bluebirds-q3",
+        "prompt": "What happened in the second half?",
+        "options": [
+          {
+            "id": "eng-b-soccer-bluebirds-q3a",
+            "text": "The team passed to each other and scored its first goal of the season"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-q3b",
+            "text": "The game was called off because of rain"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-q3c",
+            "text": "The team won the game 2-1"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-q3d",
+            "text": "Mia left the field in tears"
+          }
+        ],
+        "answer": "eng-b-soccer-bluebirds-q3a",
+        "explanation": "The Bluebirds lost 2-1 but scored their first goal."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-soccer-bluebirds-v1",
+        "word": "discouraged",
+        "meaning": "having lost hope or confidence",
+        "sentence": "She dived and caught the ball, but she knew her teammates were tired and discouraged.",
+        "check_prompt": "Who is most likely to feel discouraged?",
+        "options": [
+          {
+            "id": "eng-b-soccer-bluebirds-v1a",
+            "text": "A player eating lunch"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-v1b",
+            "text": "A player who just won a trophy"
+          },
+          {
+            "id": "eng-b-soccer-bluebirds-v1c",
+            "text": "A player who has lost every game"
+          }
+        ],
+        "answer": "eng-b-soccer-bluebirds-v1c"
+      }
+    ],
+    "hints": [
+      "Think about how the players felt before and after half-time."
+    ]
+  },
+  {
+    "id": "eng-b-chess-club",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Every Tuesday lunchtime, Room 12 turns into the chess club. Players sit opposite each other with a board of 64 squares and 16 pieces each. The goal is to attack the opponent's king so that it cannot escape, which is called checkmate. Each piece moves in its own way. Rooks slide in straight lines, bishops glide diagonally, and knights jump in an L shape over other pieces. Pawns are the smallest pieces, but they have a special power: if a pawn walks all the way to the far side of the board, it can be promoted, usually to a queen. Beginners learn to think ahead, because a quick move can lose a piece. Mr Okafor, who runs the club, tells members that losing is useful. \"Every game teaches you something,\" he says. \"A mistake you understand is a lesson you won't forget.\"",
+    "parts": [
+      {
+        "id": "eng-b-chess-club-q1",
+        "prompt": "How does a knight move?",
+        "options": [
+          {
+            "id": "eng-b-chess-club-q1a",
+            "text": "Diagonally across the board"
+          },
+          {
+            "id": "eng-b-chess-club-q1b",
+            "text": "In an L shape, jumping over other pieces"
+          },
+          {
+            "id": "eng-b-chess-club-q1c",
+            "text": "One square at a time in any direction"
+          },
+          {
+            "id": "eng-b-chess-club-q1d",
+            "text": "In straight lines only"
+          }
+        ],
+        "answer": "eng-b-chess-club-q1b",
+        "explanation": "The passage says knights jump in an L shape over other pieces."
+      },
+      {
+        "id": "eng-b-chess-club-q2",
+        "prompt": "What is the goal of chess?",
+        "options": [
+          {
+            "id": "eng-b-chess-club-q2a",
+            "text": "To finish the game in the shortest time"
+          },
+          {
+            "id": "eng-b-chess-club-q2b",
+            "text": "To attack the opponent's king so it cannot escape"
+          },
+          {
+            "id": "eng-b-chess-club-q2c",
+            "text": "To move every piece across the board"
+          },
+          {
+            "id": "eng-b-chess-club-q2d",
+            "text": "To capture all of the pawns"
+          }
+        ],
+        "answer": "eng-b-chess-club-q2b",
+        "explanation": "The goal is checkmate, which means attacking the opponent's king so that it cannot escape."
+      },
+      {
+        "id": "eng-b-chess-club-q3",
+        "prompt": "What does Mr Okafor believe about losing?",
+        "options": [
+          {
+            "id": "eng-b-chess-club-q3a",
+            "text": "It means you should quit the club"
+          },
+          {
+            "id": "eng-b-chess-club-q3b",
+            "text": "It never happens to good players"
+          },
+          {
+            "id": "eng-b-chess-club-q3c",
+            "text": "It can help you learn"
+          },
+          {
+            "id": "eng-b-chess-club-q3d",
+            "text": "It is only caused by bad luck"
+          }
+        ],
+        "answer": "eng-b-chess-club-q3c",
+        "explanation": "He says every game teaches you something and a mistake you understand is a lesson you won't forget."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-chess-club-v1",
+        "word": "diagonally",
+        "meaning": "in a slanting line, like the corner of a square",
+        "sentence": "Rooks slide in straight lines, bishops glide diagonally, and knights jump in an L shape over other pieces.",
+        "check_prompt": "Which move is diagonal?",
+        "options": [
+          {
+            "id": "eng-b-chess-club-v1a",
+            "text": "Going straight up"
+          },
+          {
+            "id": "eng-b-chess-club-v1b",
+            "text": "Going from one corner of a square to the opposite corner"
+          },
+          {
+            "id": "eng-b-chess-club-v1c",
+            "text": "Going straight across"
+          }
+        ],
+        "answer": "eng-b-chess-club-v1b"
+      },
+      {
+        "id": "eng-b-chess-club-v2",
+        "word": "opponent",
+        "meaning": "a person you play against",
+        "sentence": "The goal is to attack the opponent's king so that it cannot escape, which is called checkmate.",
+        "check_prompt": "Who is your opponent in a chess game?",
+        "options": [
+          {
+            "id": "eng-b-chess-club-v2a",
+            "text": "Your coach"
+          },
+          {
+            "id": "eng-b-chess-club-v2b",
+            "text": "Your teammate"
+          },
+          {
+            "id": "eng-b-chess-club-v2c",
+            "text": "The person playing against you"
+          }
+        ],
+        "answer": "eng-b-chess-club-v2c"
+      }
+    ],
+    "hints": [
+      "Look for the sentence that describes each piece's move."
+    ]
+  },
+  {
+    "id": "eng-b-build-robot",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Zara and her brother Ali decided to build a robot for the school science fair. First, they drew a plan on paper showing a small car with a claw at the front. Then they collected parts: two motors, four wheels, a battery and a tiny computer board. Next, they connected the parts with wires, and Ali wrote a program that told the motors when to spin. When they tested the robot, it drove in circles. Zara realised that one wheel was spinning faster than the other, so they fixed the wiring and tried again. The second test worked, and the robot rolled straight across the floor. Finally, they taught it to pick up a pencil with its claw. Zara learned that engineers rarely get things right the first time. They test, find the problem, and improve.",
+    "parts": [
+      {
+        "id": "eng-b-build-robot-q1",
+        "prompt": "What did Zara and Ali do right after they connected the parts with wires?",
+        "options": [
+          {
+            "id": "eng-b-build-robot-q1a",
+            "text": "Ali wrote a program for the motors"
+          },
+          {
+            "id": "eng-b-build-robot-q1b",
+            "text": "They drew a plan on paper"
+          },
+          {
+            "id": "eng-b-build-robot-q1c",
+            "text": "They fixed the spinning wheel"
+          },
+          {
+            "id": "eng-b-build-robot-q1d",
+            "text": "They taught the robot to pick up a pencil"
+          }
+        ],
+        "answer": "eng-b-build-robot-q1a",
+        "explanation": "The passage says that after connecting the parts, Ali wrote a program."
+      },
+      {
+        "id": "eng-b-build-robot-q2",
+        "prompt": "Why did the robot drive in circles at first?",
+        "options": [
+          {
+            "id": "eng-b-build-robot-q2a",
+            "text": "The battery was too small"
+          },
+          {
+            "id": "eng-b-build-robot-q2b",
+            "text": "One wheel was spinning faster than the other"
+          },
+          {
+            "id": "eng-b-build-robot-q2c",
+            "text": "The floor was wet"
+          },
+          {
+            "id": "eng-b-build-robot-q2d",
+            "text": "The claw was too heavy"
+          }
+        ],
+        "answer": "eng-b-build-robot-q2b",
+        "explanation": "Zara realised one wheel was spinning faster than the other."
+      },
+      {
+        "id": "eng-b-build-robot-q3",
+        "prompt": "What is the main idea of the passage?",
+        "options": [
+          {
+            "id": "eng-b-build-robot-q3a",
+            "text": "Brothers should always work alone"
+          },
+          {
+            "id": "eng-b-build-robot-q3b",
+            "text": "Building something often means testing and fixing mistakes"
+          },
+          {
+            "id": "eng-b-build-robot-q3c",
+            "text": "Science fairs are held in the first week of term"
+          },
+          {
+            "id": "eng-b-build-robot-q3d",
+            "text": "Robots are only made from wheels"
+          }
+        ],
+        "answer": "eng-b-build-robot-q3b",
+        "explanation": "The ending says engineers test, find the problem and improve."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-build-robot-v1",
+        "word": "engineers",
+        "meaning": "people who design and build machines or structures",
+        "sentence": "Zara learned that engineers rarely get things right the first time.",
+        "check_prompt": "What does an engineer do?",
+        "options": [
+          {
+            "id": "eng-b-build-robot-v1a",
+            "text": "Reads bedtime stories"
+          },
+          {
+            "id": "eng-b-build-robot-v1b",
+            "text": "Designs and builds things"
+          },
+          {
+            "id": "eng-b-build-robot-v1c",
+            "text": "Sells fruit at a market"
+          }
+        ],
+        "answer": "eng-b-build-robot-v1b"
+      },
+      {
+        "id": "eng-b-build-robot-v2",
+        "word": "improve",
+        "meaning": "to make something better",
+        "sentence": "They test, find the problem, and improve.",
+        "check_prompt": "What does it mean to improve your drawing?",
+        "options": [
+          {
+            "id": "eng-b-build-robot-v2a",
+            "text": "To hide it in a drawer"
+          },
+          {
+            "id": "eng-b-build-robot-v2b",
+            "text": "To rub it out"
+          },
+          {
+            "id": "eng-b-build-robot-v2c",
+            "text": "To make it better"
+          }
+        ],
+        "answer": "eng-b-build-robot-v2c"
+      }
+    ],
+    "hints": [
+      "Use the words First, Then, Next and Finally to find the order."
+    ]
+  },
+  {
+    "id": "eng-b-ocean-zones",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Oceans cover more than 70 per cent of our planet, and most of that water is salty. The sunlit zone, near the surface, is where most sea creatures live, because light lets phytoplankton, tiny floating living things that make their own food, grow. Phytoplankton are food for tiny sea animals, which in turn feed fish, whales and many others. Deeper down is the twilight zone, where only faint light arrives and the water is colder. Below about 1,000 metres lies the midnight zone, where it is completely dark. Some animals there make their own light, a trick called bioluminescence. The deepest part of the ocean, the Mariana Trench, is nearly 11,000 metres deep. If Mount Everest were placed inside it, the mountain's peak would still be about two kilometres below the surface.",
+    "parts": [
+      {
+        "id": "eng-b-ocean-zones-q1",
+        "prompt": "Why do most sea creatures live in the sunlit zone?",
+        "options": [
+          {
+            "id": "eng-b-ocean-zones-q1a",
+            "text": "It is the only place with fish"
+          },
+          {
+            "id": "eng-b-ocean-zones-q1b",
+            "text": "It is the deepest part of the ocean"
+          },
+          {
+            "id": "eng-b-ocean-zones-q1c",
+            "text": "The water there is the saltiest"
+          },
+          {
+            "id": "eng-b-ocean-zones-q1d",
+            "text": "Light helps phytoplankton grow, which is food for other animals"
+          }
+        ],
+        "answer": "eng-b-ocean-zones-q1d",
+        "explanation": "Light lets phytoplankton grow, and they feed many animals."
+      },
+      {
+        "id": "eng-b-ocean-zones-q2",
+        "prompt": "What is special about the midnight zone?",
+        "options": [
+          {
+            "id": "eng-b-ocean-zones-q2a",
+            "text": "It is warmer than the surface"
+          },
+          {
+            "id": "eng-b-ocean-zones-q2b",
+            "text": "It is full of plankton"
+          },
+          {
+            "id": "eng-b-ocean-zones-q2c",
+            "text": "It is where Mount Everest stands"
+          },
+          {
+            "id": "eng-b-ocean-zones-q2d",
+            "text": "It is completely dark"
+          }
+        ],
+        "answer": "eng-b-ocean-zones-q2d",
+        "explanation": "The passage says the midnight zone is completely dark."
+      },
+      {
+        "id": "eng-b-ocean-zones-q3",
+        "prompt": "What is the purpose of the Mount Everest example?",
+        "options": [
+          {
+            "id": "eng-b-ocean-zones-q3a",
+            "text": "To show how very deep the Mariana Trench is"
+          },
+          {
+            "id": "eng-b-ocean-zones-q3b",
+            "text": "To explain how plankton make food"
+          },
+          {
+            "id": "eng-b-ocean-zones-q3c",
+            "text": "To show that mountains grow in the sea"
+          },
+          {
+            "id": "eng-b-ocean-zones-q3d",
+            "text": "To prove that the ocean is salty"
+          }
+        ],
+        "answer": "eng-b-ocean-zones-q3a",
+        "explanation": "Even the world's tallest mountain would be hidden, which shows how deep the trench is."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-ocean-zones-v1",
+        "word": "faint",
+        "meaning": "weak and hard to see or hear",
+        "sentence": "Deeper down is the twilight zone, where only faint light arrives and the water is colder.",
+        "check_prompt": "What is a faint light?",
+        "options": [
+          {
+            "id": "eng-b-ocean-zones-v1a",
+            "text": "A flashing red light"
+          },
+          {
+            "id": "eng-b-ocean-zones-v1b",
+            "text": "A very bright floodlight"
+          },
+          {
+            "id": "eng-b-ocean-zones-v1c",
+            "text": "A light that is weak and dim"
+          }
+        ],
+        "answer": "eng-b-ocean-zones-v1c"
+      },
+      {
+        "id": "eng-b-ocean-zones-v2",
+        "word": "phytoplankton",
+        "meaning": "tiny living things that drift in the sea",
+        "sentence": "The sunlit zone, near the surface, is where most sea creatures live, because light lets phytoplankton, tiny floating living things that make their own food, grow.",
+        "check_prompt": "Plankton are",
+        "options": [
+          {
+            "id": "eng-b-ocean-zones-v2a",
+            "text": "Large sharks"
+          },
+          {
+            "id": "eng-b-ocean-zones-v2b",
+            "text": "Tiny living things that float in the sea"
+          },
+          {
+            "id": "eng-b-ocean-zones-v2c",
+            "text": "Rocks on the sea floor"
+          }
+        ],
+        "answer": "eng-b-ocean-zones-v2b"
+      }
+    ],
+    "hints": [
+      "Reread the sentences about each zone to match light and life."
+    ]
+  },
+  {
+    "id": "eng-b-fable-heron-pond",
+    "subject": "english",
+    "kind": "reading",
+    "tier": "regular",
+    "grade": 4,
+    "est_minutes": 8,
+    "answer_type": "passage",
+    "text": "Long ago, a pond in the hills began to dry up in the summer heat. A heron, a frog and a turtle lived there. \"I can fly to the great river,\" said the heron. \"Goodbye!\" The frog begged for help. The turtle, who was slow, said, \"We should dig deeper where the ground is still damp.\" The heron laughed. \"Digging is hard work,\" he said, and he flew away. The frog and the turtle dug day after day, taking turns, until cool water seeped into the hole. Soon they had a small, clear pool. Weeks later, the heron returned, tired and thirsty, because the river was crowded and muddy. The frog and the turtle shared their pool with him. \"You left when things got hard,\" said the turtle, \"but we will not do the same to you.\" The heron felt ashamed.",
+    "parts": [
+      {
+        "id": "eng-b-fable-heron-pond-q1",
+        "prompt": "Why did the heron leave the pond?",
+        "options": [
+          {
+            "id": "eng-b-fable-heron-pond-q1a",
+            "text": "He wanted to find his family"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-q1b",
+            "text": "He was chased away by the turtle"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-q1c",
+            "text": "He was afraid of the frog"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-q1d",
+            "text": "He did not want to do the hard work of digging"
+          }
+        ],
+        "answer": "eng-b-fable-heron-pond-q1d",
+        "explanation": "The heron said digging was hard work and flew away."
+      },
+      {
+        "id": "eng-b-fable-heron-pond-q2",
+        "prompt": "What does the turtle's last speech show about him?",
+        "options": [
+          {
+            "id": "eng-b-fable-heron-pond-q2a",
+            "text": "He is too slow to leave the pond"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-q2b",
+            "text": "He does not care about the river"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-q2c",
+            "text": "He wants revenge on the heron"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-q2d",
+            "text": "He is kind and fair, even to someone who let him down"
+          }
+        ],
+        "answer": "eng-b-fable-heron-pond-q2d",
+        "explanation": "The turtle shares the pool and refuses to treat the heron as the heron treated them."
+      },
+      {
+        "id": "eng-b-fable-heron-pond-q3",
+        "prompt": "Which lesson best fits this fable?",
+        "options": [
+          {
+            "id": "eng-b-fable-heron-pond-q3a",
+            "text": "Working together through hard times can solve problems"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-q3b",
+            "text": "Flying is better than walking"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-q3c",
+            "text": "It is best to hurry away from every problem"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-q3d",
+            "text": "Rivers are always better than ponds"
+          }
+        ],
+        "answer": "eng-b-fable-heron-pond-q3a",
+        "explanation": "The frog and turtle solved the problem by teamwork and effort, while the heron left."
+      }
+    ],
+    "vocab": [
+      {
+        "id": "eng-b-fable-heron-pond-v1",
+        "word": "seeped",
+        "meaning": "flowed slowly through a small gap",
+        "sentence": "The frog and the turtle dug day after day, taking turns, until cool water seeped into the hole.",
+        "check_prompt": "If water seeped into a boot, it",
+        "options": [
+          {
+            "id": "eng-b-fable-heron-pond-v1a",
+            "text": "Came in slowly"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-v1b",
+            "text": "Froze solid"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-v1c",
+            "text": "Burst in suddenly"
+          }
+        ],
+        "answer": "eng-b-fable-heron-pond-v1a"
+      },
+      {
+        "id": "eng-b-fable-heron-pond-v2",
+        "word": "ashamed",
+        "meaning": "feeling bad about something you did",
+        "sentence": "The heron felt ashamed.",
+        "check_prompt": "Why might the heron feel ashamed?",
+        "options": [
+          {
+            "id": "eng-b-fable-heron-pond-v2a",
+            "text": "He had left his friends when they needed help"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-v2b",
+            "text": "He had flown too fast"
+          },
+          {
+            "id": "eng-b-fable-heron-pond-v2c",
+            "text": "He had caught too many fish"
+          }
+        ],
+        "answer": "eng-b-fable-heron-pond-v2a"
+      }
+    ],
+    "hints": [
+      "Think about what each animal chose to do when the pond dried up."
+    ]
+  }
+]

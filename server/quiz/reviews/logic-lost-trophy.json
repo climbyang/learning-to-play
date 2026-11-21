@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-lost-trophy",
+  "content_hash": "98ec22cf0a7e77686d8f0b1d3a1b713a5514ed2c90e5eac1659fab6fc772b4f2",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:36:04Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "逐一检验嫌疑人后，只有 Bea 会使恰好三句话为真，答案 a 正确。"
+}

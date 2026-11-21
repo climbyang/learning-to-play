@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-wombat",
+  "content_hash": "43872dcc2d6e2a54f1d05e9ce091ed446df3f4625115f02d5cf442c9f5a9dfc7",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:32:37Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "All answers are clear; the cube-shape explanation is appropriately presented as a scientific belief, not certainty."
+}

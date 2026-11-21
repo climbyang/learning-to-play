@@ -1,0 +1,615 @@
+[
+  {
+    "id": "math-tickets-challenge",
+    "subject": "math",
+    "kind": "multi_stage_word_problem",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A school concert sold {total} tickets altogether. Adult tickets cost ${adult} each and child tickets cost ${child} each, and the school collected ${cash} in total. Afterwards, one third of the adult tickets and one fifth of the child tickets were refunded at their full price. How many dollars did the school keep after the refunds?",
+    "hints": [
+      "Imagine every ticket sold had been a child ticket. How much money would that be, and how far is it from the real total?",
+      "Each swap of one child ticket for one adult ticket changes the total by a fixed amount. Use that to find how many of each ticket there were.",
+      "Once you know the number of each type, treat the refunds as a separate calculation."
+    ],
+    "explanation": "If all 240 tickets were child tickets the takings would be 1200, which is 270 short of 1470. Each adult ticket adds 3 more, so there were 270 / 3 = 90 adult and 150 child tickets. Refunds: one third of 90 = 30 adult tickets = 240 dollars, one fifth of 150 = 30 child tickets = 150 dollars. The school kept 1470 - 240 - 150 = 1080.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-tickets-challenge-1",
+        "params": {
+          "total": 240,
+          "adult": 8,
+          "child": 5,
+          "cash": 1470
+        },
+        "answer": "1080"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 3000,
+      "step": 1
+    },
+    "verify": "cash - ((cash - child * total) / (adult - child)) / 3 * adult - (total - (cash - child * total) / (adult - child)) / 5 * child"
+  },
+  {
+    "id": "math-c-two-trains",
+    "subject": "math",
+    "kind": "rates",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "Two towns are {d} kilometres apart on a straight railway line. A train leaves the first town and travels towards the second at {a} kilometres per hour. Exactly {delay} hours later, a second train leaves the second town and travels towards the first at {b} kilometres per hour. How many kilometres from the first town are the two trains when they meet?",
+    "hints": [
+      "How far has the first train gone by the time the second train sets off? How far apart are the trains then?",
+      "After that, the trains are closing the gap together. How fast is the gap shrinking?",
+      "Find how long it takes to meet, then how far the first train goes in total."
+    ],
+    "explanation": "In the head start the first train covers a x delay. The gap left is d - a x delay and it closes at a + b kilometres per hour, so the meeting takes (gap) / (a + b) hours. The first train travels a x delay + a x that time.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-two-trains-1",
+        "params": {
+          "d": 260,
+          "a": 40,
+          "b": 50,
+          "delay": 2
+        },
+        "answer": "160"
+      },
+      {
+        "id": "math-c-two-trains-2",
+        "params": {
+          "d": 390,
+          "a": 45,
+          "b": 55,
+          "delay": 2
+        },
+        "answer": "225"
+      },
+      {
+        "id": "math-c-two-trains-3",
+        "params": {
+          "d": 360,
+          "a": 30,
+          "b": 60,
+          "delay": 3
+        },
+        "answer": "180"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "verify": "a * delay + a * (d - a * delay) / (a + b)"
+  },
+  {
+    "id": "math-c-coin-jar",
+    "subject": "math",
+    "kind": "money",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A jar holds {n} coins. Every coin is either a 20 cent coin or a 50 cent coin, and the jar holds {cents} cents altogether. Hana swaps every 50 cent coin for 20 cent coins, with 5 of the 20 cent coins for every 2 of the 50 cent coins so the value stays the same. How many 20 cent coins are in the jar after the swap?",
+    "hints": [
+      "Imagine all the coins were 20 cent coins. How many cents would that be, and how far from the real amount?",
+      "Each swap of a 20 cent coin for a 50 cent coin adds 30 cents. Use that to find the number of 50 cent coins.",
+      "Work out the number of 20 cent coins to begin with, then what the 50 cent coins turn into."
+    ],
+    "explanation": "If all coins were 20 cents the total would be 20 x n. The extra amount divided by 30 gives the number of 50 cent coins. The 20 cent coins to begin with are n minus that. Each 2 of the 50 cent coins become 5 of the 20 cent coins, so m 50 cent coins become 5m/2 of them.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-coin-jar-1",
+        "params": {
+          "n": 40,
+          "cents": 1280
+        },
+        "answer": "64"
+      },
+      {
+        "id": "math-c-coin-jar-2",
+        "params": {
+          "n": 45,
+          "cents": 1200
+        },
+        "answer": "60"
+      },
+      {
+        "id": "math-c-coin-jar-3",
+        "params": {
+          "n": 30,
+          "cents": 960
+        },
+        "answer": "48"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 300,
+      "step": 1
+    },
+    "verify": "(n - (cents - 20 * n) / 30) + (cents - 20 * n) / 30 * 5 / 2"
+  },
+  {
+    "id": "math-c-lawn-and-fence",
+    "subject": "math",
+    "kind": "area_perimeter",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A rectangular yard is {l} metres long and {w} metres wide. A square pond with sides of {s} metres is built inside it, and the rest of the yard is covered with turf at ${turf} per square metre. A fence is also built around the outside edge of the yard at ${fence} per metre. What is the total cost of the turf and the fence, in dollars?",
+    "hints": [
+      "Find the area of the yard and the area of the pond. How much area needs turf?",
+      "Find the distance around the outside of the yard for the fence.",
+      "Work out each cost separately, then add them."
+    ],
+    "explanation": "Turf area = l x w - s x s. Turf cost = turf area x turf. Fence length = 2 x (l + w). Fence cost = length x fence. Add the two costs.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-lawn-and-fence-1",
+        "params": {
+          "l": 24,
+          "w": 15,
+          "s": 6,
+          "turf": 8,
+          "fence": 12
+        },
+        "answer": "3528"
+      },
+      {
+        "id": "math-c-lawn-and-fence-2",
+        "params": {
+          "l": 30,
+          "w": 18,
+          "s": 8,
+          "turf": 5,
+          "fence": 9
+        },
+        "answer": "3244"
+      },
+      {
+        "id": "math-c-lawn-and-fence-3",
+        "params": {
+          "l": 20,
+          "w": 16,
+          "s": 4,
+          "turf": 12,
+          "fence": 10
+        },
+        "answer": "4368"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 20000,
+      "step": 1
+    },
+    "verify": "(l * w - s * s) * turf + 2 * (l + w) * fence"
+  },
+  {
+    "id": "math-c-sweets-share",
+    "subject": "math",
+    "kind": "fractions",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A bag has {n} sweets. 1/{a} of the sweets are red. Then 1/{b} of the sweets that are not red are green. Then 1/{c} of the sweets that are still left are yellow. All the remaining sweets are orange, and the orange sweets are shared equally among {k} children. How many orange sweets does each child get?",
+    "hints": [
+      "Take away the red sweets first. What fraction and how many sweets are left?",
+      "Do the same for the green sweets, and then for the yellow sweets, each time using only the sweets still left.",
+      "Divide the orange sweets equally among the children."
+    ],
+    "explanation": "After red, sweets left = n x (a - 1)/a. Then multiply by (b - 1)/b for green and (c - 1)/c for yellow. Share what is left by k.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-sweets-share-1",
+        "params": {
+          "n": 120,
+          "a": 4,
+          "b": 3,
+          "c": 5,
+          "k": 6
+        },
+        "answer": "8"
+      },
+      {
+        "id": "math-c-sweets-share-2",
+        "params": {
+          "n": 180,
+          "a": 3,
+          "b": 4,
+          "c": 5,
+          "k": 9
+        },
+        "answer": "8"
+      },
+      {
+        "id": "math-c-sweets-share-3",
+        "params": {
+          "n": 240,
+          "a": 5,
+          "b": 4,
+          "c": 3,
+          "k": 12
+        },
+        "answer": "8"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "n * (a - 1) / a * (b - 1) / b * (c - 1) / c / k"
+  },
+  {
+    "id": "math-c-bus-revenue",
+    "subject": "math",
+    "kind": "time",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "Buses leave a depot every {g} minutes. The first bus leaves at 6:00 am, and the last bus of the morning leaves {hh} hours and {mm} minutes after 6:00 am. Each bus carries {pax} passengers and every seat is filled. Each passenger pays ${p}. How many dollars do the buses take altogether?",
+    "hints": [
+      "Change the time from 6:00 am to the last bus into minutes.",
+      "How many gaps between buses fit in that time? The first bus at 6:00 am is one extra bus.",
+      "Find the total number of passengers and multiply by the fare."
+    ],
+    "explanation": "Minutes = hh x 60 + mm. Gaps = minutes / g. Buses = gaps + 1. Money = buses x pax x p.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-bus-revenue-1",
+        "params": {
+          "hh": 3,
+          "mm": 40,
+          "g": 20,
+          "pax": 35,
+          "p": 4
+        },
+        "answer": "1680"
+      },
+      {
+        "id": "math-c-bus-revenue-2",
+        "params": {
+          "hh": 2,
+          "mm": 45,
+          "g": 15,
+          "pax": 28,
+          "p": 3
+        },
+        "answer": "1008"
+      },
+      {
+        "id": "math-c-bus-revenue-3",
+        "params": {
+          "hh": 4,
+          "mm": 30,
+          "g": 30,
+          "pax": 40,
+          "p": 5
+        },
+        "answer": "2000"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 10000,
+      "step": 1
+    },
+    "verify": "((hh * 60 + mm) / g + 1) * pax * p"
+  },
+  {
+    "id": "math-c-flour-packs",
+    "subject": "math",
+    "kind": "ratio",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A recipe for {p} people uses {flour} grams of flour. A cook scales the recipe up to feed {q} people. Flour is sold only in packs of {pack} grams and each pack costs ${cost}. How many dollars does the cook have to spend on flour, buying just enough whole packs?",
+    "hints": [
+      "Find how much flour is needed for one person, or the number of times the recipe is scaled up.",
+      "Find the total flour for the bigger group, then how many whole packs cover it (a part pack still has to be bought whole).",
+      "Multiply the number of packs by the cost of a pack."
+    ],
+    "explanation": "Flour needed = flour x q / p. Packs = that amount divided by the pack size, rounded up to a whole number. Cost = packs x cost.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-flour-packs-1",
+        "params": {
+          "p": 4,
+          "flour": 250,
+          "q": 18,
+          "pack": 500,
+          "cost": 3
+        },
+        "answer": "9"
+      },
+      {
+        "id": "math-c-flour-packs-2",
+        "params": {
+          "p": 6,
+          "flour": 300,
+          "q": 20,
+          "pack": 750,
+          "cost": 4
+        },
+        "answer": "8"
+      },
+      {
+        "id": "math-c-flour-packs-3",
+        "params": {
+          "p": 4,
+          "flour": 180,
+          "q": 30,
+          "pack": 1000,
+          "cost": 5
+        },
+        "answer": "10"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "((flour * q / p + pack - 1) // pack) * cost"
+  },
+  {
+    "id": "math-c-paint-mix",
+    "subject": "math",
+    "kind": "ratio",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "Red and white paint are mixed in the ratio {r} : {w} to make {T} litres of pink paint. Then {x} litres of white paint is added by mistake. How many litres of red paint must now be added to get the mixture back to the ratio {r} : {w}? Once that is done, how many litres of paint are in the tin altogether?",
+    "hints": [
+      "After the mistake, how many litres of white paint are in the tin? Use the original ratio to find the red paint first.",
+      "For the ratio to be right again, the red paint must be the red part of the ratio divided by the white part, times the white paint.",
+      "Finally add the original mixture, the extra white and the extra red."
+    ],
+    "explanation": "Adding x litres of white needs x x r / w litres of red to keep the ratio. The final tin has T + x + x x r / w litres.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-paint-mix-1",
+        "params": {
+          "T": 40,
+          "r": 3,
+          "w": 5,
+          "x": 10
+        },
+        "answer": "56"
+      },
+      {
+        "id": "math-c-paint-mix-2",
+        "params": {
+          "T": 60,
+          "r": 2,
+          "w": 3,
+          "x": 12
+        },
+        "answer": "80"
+      },
+      {
+        "id": "math-c-paint-mix-3",
+        "params": {
+          "T": 72,
+          "r": 5,
+          "w": 4,
+          "x": 8
+        },
+        "answer": "90"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "T + x + x * r / w"
+  },
+  {
+    "id": "math-c-netball-points",
+    "subject": "math",
+    "kind": "multi_step",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "In a netball season a team plays {g} games. A win earns 3 points, a draw earns 1 point and a loss earns 0 points. The team won {w} games and lost {k} times as many games as it drew. How many points did the team earn?",
+    "hints": [
+      "How many games were not wins?",
+      "Those games were draws and losses. If draws are one part, how many parts are the losses?",
+      "Find the number of draws, then the points from wins and draws."
+    ],
+    "explanation": "Games not won = g - w. This is d + k x d = (k + 1) x d, so d = (g - w) / (k + 1). Points = 3 x w + d.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-netball-points-1",
+        "params": {
+          "g": 20,
+          "w": 8,
+          "k": 2
+        },
+        "answer": "28"
+      },
+      {
+        "id": "math-c-netball-points-2",
+        "params": {
+          "g": 18,
+          "w": 6,
+          "k": 3
+        },
+        "answer": "21"
+      },
+      {
+        "id": "math-c-netball-points-3",
+        "params": {
+          "g": 22,
+          "w": 10,
+          "k": 2
+        },
+        "answer": "34"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "3 * w + (g - w) / (k + 1)"
+  },
+  {
+    "id": "math-c-digit-clues",
+    "subject": "math",
+    "kind": "place_value",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A four-digit number has these clues. The thousands digit is {a}. The hundreds digit is {k} times the thousands digit. The tens digit is {b} less than the hundreds digit. The ones digit is the thousands digit plus the tens digit. What is the number?",
+    "hints": [
+      "Find the hundreds digit, then the tens digit.",
+      "Use the tens digit to find the ones digit.",
+      "Write the four digits side by side in order."
+    ],
+    "explanation": "Hundreds = a x k. Tens = hundreds - b. Ones = a + tens. The number is 1000a + 100 x hundreds + 10 x tens + ones.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-digit-clues-1",
+        "params": {
+          "a": 2,
+          "k": 3,
+          "b": 2
+        },
+        "answer": "2646"
+      },
+      {
+        "id": "math-c-digit-clues-2",
+        "params": {
+          "a": 1,
+          "k": 5,
+          "b": 3
+        },
+        "answer": "1523"
+      },
+      {
+        "id": "math-c-digit-clues-3",
+        "params": {
+          "a": 3,
+          "k": 2,
+          "b": 4
+        },
+        "answer": "3625"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 9999,
+      "step": 1
+    },
+    "verify": "1000 * a + 100 * (k * a) + 10 * (k * a - b) + (a + k * a - b)"
+  },
+  {
+    "id": "math-c-cinema-takings",
+    "subject": "math",
+    "kind": "data",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "The table shows how many tickets a cinema sold over a weekend. The cost of each type of ticket is in the heading. The cinema pays ${cost} each day in running costs for all three days. How many dollars of profit did the cinema make over the three days? (Profit = money taken minus costs.)",
+    "hints": [
+      "Find the total number of adult, child and family tickets over the three days.",
+      "Multiply each total by the ticket price in the heading, then add the three amounts.",
+      "Take away the running costs for three days."
+    ],
+    "explanation": "Adult tickets 275 x 12 = 3300, child tickets 235 x 7 = 1645, family tickets 100 x 30 = 3000. Money taken = 7945. Costs for three days = 3 x cost. Profit = 7945 - 3 x cost.",
+    "answer_type": "integer",
+    "figure": "{\"type\": \"table\", \"headers\": [\"Day\", \"Adult ($12)\", \"Child ($7)\", \"Family ($30)\"], \"rows\": [[\"Friday\", 85, 60, 20], [\"Saturday\", 120, 95, 45], [\"Sunday\", 70, 80, 35]]}",
+    "instances": [
+      {
+        "id": "math-c-cinema-takings-1",
+        "params": {
+          "cost": 1800
+        },
+        "answer": "2545"
+      },
+      {
+        "id": "math-c-cinema-takings-2",
+        "params": {
+          "cost": 2000
+        },
+        "answer": "1945"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 10000,
+      "step": 1
+    },
+    "verify": "(85 + 120 + 70) * 12 + (60 + 95 + 80) * 7 + (20 + 45 + 35) * 30 - 3 * cost"
+  },
+  {
+    "id": "math-c-painters",
+    "subject": "math",
+    "kind": "rates",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "{a} painters can paint a fence in {d} days if they all work at the same speed. They work together for {k} days. Then {m} more painters join them, working at the same speed. How many days does the whole job take, counting from the start?",
+    "hints": [
+      "Think of the job as a number of painter-days. How many painter-days does the whole fence need?",
+      "How many painter-days were done in the days before the new painters join? How many are left?",
+      "After the new painters join, how many painters are working? How many days to do the rest?"
+    ],
+    "explanation": "Whole job = a x d painter-days. After k days, a x k are done, leaving a x (d - k). With a + m painters the rest takes a x (d - k) / (a + m) days. Total days = k + that.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "math-c-painters-1",
+        "params": {
+          "a": 4,
+          "d": 12,
+          "k": 3,
+          "m": 2
+        },
+        "answer": "9"
+      },
+      {
+        "id": "math-c-painters-2",
+        "params": {
+          "a": 5,
+          "d": 14,
+          "k": 4,
+          "m": 5
+        },
+        "answer": "9"
+      },
+      {
+        "id": "math-c-painters-3",
+        "params": {
+          "a": 3,
+          "d": 16,
+          "k": 4,
+          "m": 3
+        },
+        "answer": "10"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "verify": "k + a * (d - k) / (a + m)"
+  }
+]

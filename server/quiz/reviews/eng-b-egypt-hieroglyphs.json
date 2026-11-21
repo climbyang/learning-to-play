@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-b-egypt-hieroglyphs",
+  "content_hash": "4625614e82d79722e6d3c2ba934a3ef211a69a62b9fc4aa07fafea71310dbb6b",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:34:12Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The hieroglyph, papyrus, and Rosetta Stone claims are suitably simplified and accurate; the vocabulary sentence is verbatim."
+}

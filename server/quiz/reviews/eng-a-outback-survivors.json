@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-outback-survivors",
+  "content_hash": "56782fcc31e856570fbe8284883b826d1bad21a784a051332365748465efe203",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:38:23Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Answers are uniquely supported; facts and vocabulary sentences are accurate."
+}

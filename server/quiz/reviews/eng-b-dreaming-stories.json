@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-b-dreaming-stories",
+  "content_hash": "1ab0690090c007f8ed86f004d55d4f8dc06d85b2940e6fda2e7ef92e9ba9c87e",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:38:23Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Respectful, age-appropriate treatment with answers directly supported by the passage."
+}

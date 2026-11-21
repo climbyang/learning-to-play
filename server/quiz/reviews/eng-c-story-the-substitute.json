@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-c-story-the-substitute",
+  "content_hash": "0f402cafd2947c997a5c9956affb842a5c1ad26c742bdba37abb88dd05837338",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:31:22Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "故事、答案和干扰项清楚且适龄，词汇例句逐字出现。"
+}

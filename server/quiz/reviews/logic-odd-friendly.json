@@ -1,0 +1,17 @@
+{
+  "template_id": "logic-odd-friendly",
+  "content_hash": "a9adcf1231a53158f11ab0176b83164e3abc77ea1010150f362a1cd0ba4962cc",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:36:41Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Only 75 is not divisible by its digit sum; the rule is clearly explained."
+}

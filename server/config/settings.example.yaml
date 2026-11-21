@@ -1,0 +1,59 @@
+# Learning-to-Play runtime config.
+# Copy to server/config/settings.yaml and adjust. Secrets live in server/.env, not here.
+timezone: UTC                # IANA name of the household's time zone, e.g. Europe/London
+
+# observe = only record + notify (never touches the TV); enforce = close apps / power off.
+mode: observe
+
+quota:
+  free_minutes: 20          # daily free entertainment
+  daily_cap_minutes: 60     # cap for free + quiz rewards (parent grants bypass the cap)
+  warn_minutes: [5, 1]      # on-screen warnings before time is up
+
+curfew:
+  enabled: true
+  start: "20:30"
+  end: "07:00"
+
+enforcement:
+  violation_count: 3        # re-opens after time-up within the window -> power off
+  violation_window_minutes: 10
+
+# Foreground apps that never count as entertainment ("" = nothing in front).
+exempt_apps:
+  - ""
+  - com.webos.app.home
+  - com.webos.app.homeconnect
+  - com.webos.app.launcher
+  - com.webos.app.softwareupdate
+  - com.webos.app.screensaver
+
+notify:
+  app_switch: false         # message on every app switch (noisy)
+  daily_summary_at: "20:00" # null to disable
+  power_on_debounce_minutes: 5
+
+tick_seconds: 10
+db_path: data/ltp.db        # relative to server/
+
+# TV quiz service (needs the quiz app on the TV). Tokens come from QUIZ_TOKENS in .env.
+quiz:
+  enabled: false
+  app_id: com.learningtoplay.quiz
+  bind: 0.0.0.0
+  port: 8765
+#   allowed_ips: ["192.168.1.50"]    # default: only LG_TV_IP
+#   regular_minutes: 10
+#   challenge_minutes: 25
+#   write_rate_per_min: 10
+#   read_rate_per_min: 60
+
+# Developer-mode session keep-alive (on by default; needs LG_TV_IP and the SSH key below).
+# devmode:
+#   enabled: true
+#   ssh_key: ~/.ssh/ltp_tv_webos      # or DEVMODE_SSH_KEY in .env
+#   ssh_port: 9922
+#   ssh_user: prisoner
+#   app_id: com.palmdts.devmode       # presence-checked daily
+#   renew_below_hours: 24
+#   alert_below_hours: 12

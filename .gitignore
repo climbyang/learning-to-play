@@ -1,0 +1,20 @@
+# Local secrets and per-install config
+.env
+server/config/settings.yaml
+
+# Runtime data
+data/
+*.db
+*.db-*
+*.sqlite
+
+# Python
+__pycache__/
+.venv/
+.pytest_cache/
+
+# Node / build output
+node_modules/
+dist/
+
+*.stackdump

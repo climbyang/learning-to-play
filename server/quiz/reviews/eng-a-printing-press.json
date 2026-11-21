@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-printing-press",
+  "content_hash": "72daa5efb27e246f666e41d04eb849b1e60bd17a424a8288bce76aa2814a1e6f",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:33:39Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Questions and vocabulary are clear; the account of Gutenberg and movable type is suitably accurate."
+}

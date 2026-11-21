@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-b-volcanoes",
+  "content_hash": "a5903b7e862cf13dd19061cc72094f1161312194ab7d96ddb1fac58bc35f3874",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:35:25Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Answers are clear and unique; the simplified volcano facts are suitable and accurate for this level."
+}

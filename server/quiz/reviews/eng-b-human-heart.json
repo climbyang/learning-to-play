@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-b-human-heart",
+  "content_hash": "cdd16883aa30e0cc3c2cc5be3cbe6a53e9a1a7fd29ccd0aa3b8617268096950e",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:35:25Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The heart facts, including an approximate resting rate of 80 beats per minute, are reasonable for children; both vocab sentences appear verbatim."
+}

@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-b-plants-food",
+  "content_hash": "3f28aecb546d50da922b0c24f4c58e7994f57a9c91845e50444d2f03c80ee69f",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:35:25Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The photosynthesis content is accurate at this level, all answers are distinct, and the vocab sentence matches exactly."
+}

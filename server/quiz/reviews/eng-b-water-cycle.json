@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-b-water-cycle",
+  "content_hash": "ae8bf32e3000f74e2cb6b1137c19c33b3c4e123977707816282cd19fea73a0f5",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:35:25Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "Answers are unique, wording is age-appropriate, and the water-cycle facts and vocab sentence are accurate."
+}

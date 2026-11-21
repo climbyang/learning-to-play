@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-c-volcano-trade-offs",
+  "content_hash": "009fd76c5b3af385bb129bc8cede344e527b170fb22e4e48bf786f8ec042376c",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:41:02Z",
+  "pass": 2,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "答案和干扰项清楚；火山土壤、监测、旅游及冰岛地热供暖的概述合理。"
+}

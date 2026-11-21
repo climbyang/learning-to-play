@@ -1,0 +1,17 @@
+{
+  "template_id": "english-storm-figurative",
+  "content_hash": "ed20b96b2cd37843d1a155745f60bcba67ec7002958edc51effe4a1ac9d25191",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:26:29Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true
+  },
+  "notes": "Words such as crept, prowling, hungry, tore, and slunk uniquely support the patient-hunter comparison."
+}

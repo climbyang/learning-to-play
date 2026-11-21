@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-grandpas-garden",
+  "content_hash": "339279c43df8ffe6fb51d96daacaba73fe9694af9245b22a61181367c4953841",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:34:12Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The plant-growth facts and keyed inferences are sound, with vocabulary sentences reproduced exactly."
+}

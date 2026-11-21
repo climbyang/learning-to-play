@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-a-school-fair-lucky-dip",
+  "content_hash": "a57cb5a5d6cfc0ea08c9b7e6c17ae1c3a2aa4a9371177e904e07e805d85a4df3",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:33:39Z",
+  "pass": 1,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "All answers are clearly supported, and both vocabulary sentences match the passage exactly."
+}

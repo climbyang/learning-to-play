@@ -1,0 +1,517 @@
+[
+  {
+    "id": "logic-ages-challenge",
+    "subject": "logic",
+    "kind": "age_puzzle",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A mother and her son have ages that add up to {total}. In {yrs} years' time, the mother will be {mult} times as old as her son will be then. The boy's grandmother is {gmult} times as old as the mother was on the day the boy was born. How old will the grandmother be on the day the boy turns {target}?",
+    "hints": [
+      "Try writing the mother's age using the son's age and the 'in some years' clue, then use the total to find both ages today.",
+      "Think about what the mother's age was on the day her son was born: how many years ago was that?",
+      "Work out the grandmother's age today before moving forward in time to the boy's birthday."
+    ],
+    "explanation": "Let the son be S now. In 4 years: 44 - S + 4 = 3 x (S + 4), so 48 - S = 3S + 12 and S = 9, mother = 35. When the boy was born the mother was 35 - 9 = 26, so the grandmother is 3 x 26 = 78 now. The boy turns 21 in 12 years, so she will be 78 + 12 = 90.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-ages-challenge-1",
+        "params": {
+          "total": 44,
+          "yrs": 4,
+          "mult": 3,
+          "gmult": 3,
+          "target": 21
+        },
+        "answer": "90"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "gmult * (total - 2 * ((total + yrs - mult * yrs) / (mult + 1))) + target - ((total + yrs - mult * yrs) / (mult + 1))"
+  },
+  {
+    "id": "logic-marble-rounds",
+    "subject": "logic",
+    "kind": "working_backwards",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "Alex, Beth and Carl have some marbles. First Alex gives Beth and Carl as many marbles as each of them already has. Then Beth gives Alex and Carl as many marbles as each of them now has. Finally Carl gives Alex and Beth as many marbles as each of them now has. After this, all three have exactly {f} marbles. How many marbles did Alex have at the very start?",
+    "hints": [
+      "Work backwards from the end: all three have the same number. Carl's last gift doubled Alex's and Beth's marbles, so what did they have before it?",
+      "Undo each step in reverse order and keep the total number of marbles the same.",
+      "After undoing the last two steps, you know the marbles after Alex's gift. Undo Alex's gift last: Beth and Carl each had half of what they have then, and Alex had the rest."
+    ],
+    "explanation": "The total never changes. Undo Carl's gift: Alex and Beth halve, Carl gets what they gave back. Undo Beth's gift the same way, then Alex's. Starting from f, f, f, the starting amounts work out to 13, 7 and 4 parts of f divided by 8, so Alex began with 13 times f divided by 8.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-marble-rounds-1",
+        "params": {
+          "f": 24
+        },
+        "answer": "39"
+      },
+      {
+        "id": "logic-marble-rounds-2",
+        "params": {
+          "f": 40
+        },
+        "answer": "65"
+      },
+      {
+        "id": "logic-marble-rounds-3",
+        "params": {
+          "f": 64
+        },
+        "answer": "104"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 500,
+      "step": 1
+    },
+    "verify": "13*f/8"
+  },
+  {
+    "id": "logic-two-ages-father",
+    "subject": "logic",
+    "kind": "age_puzzle",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "{y1} years ago a father was {m1} times as old as his son. In {y2} years' time the father will be {m2} times as old as his son. How old is the father now?",
+    "hints": [
+      "Write the son's age now as a letter and express the father's age both ways using the two clues.",
+      "The difference between father's age and son's age never changes. Use it to link the two clues.",
+      "Set the two expressions for the age gap equal, solve for the son's age, then find the father's age."
+    ],
+    "explanation": "Let the son be S now. The father is m1(S - y1) + y1 now, from the first clue, and m2(S + y2) - y2 from the second. Setting these equal gives S, and then the father's age follows.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-two-ages-father-1",
+        "params": {
+          "y1": 3,
+          "y2": 6,
+          "m1": 6,
+          "m2": 3
+        },
+        "answer": "39"
+      },
+      {
+        "id": "logic-two-ages-father-2",
+        "params": {
+          "y1": 3,
+          "y2": 4,
+          "m1": 5,
+          "m2": 3
+        },
+        "answer": "38"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "verify": "m1*((m2*y2+m1*y1-y1-y2)/(m1-m2) - y1) + y1"
+  },
+  {
+    "id": "logic-even-digit-numbers",
+    "subject": "logic",
+    "kind": "counting",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "Using the digits 1 to {n}, each digit used at most once in a number, how many different even 4-digit numbers can be made?",
+    "hints": [
+      "A number is even when its last digit is even. How many even digits are available?",
+      "Choose the last digit first, then fill the first digit, then the second, then the third from the digits that remain.",
+      "Multiply the number of choices at each step."
+    ],
+    "explanation": "Choose the last digit from the even digits (n divided by 2, rounded down choices). Then there are n - 1 choices for the first digit, n - 2 for the second and n - 3 for the third. Multiply them all.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-even-digit-numbers-1",
+        "params": {
+          "n": 7
+        },
+        "answer": "360"
+      },
+      {
+        "id": "logic-even-digit-numbers-2",
+        "params": {
+          "n": 9
+        },
+        "answer": "1344"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "(n//2)*(n-1)*(n-2)*(n-3)"
+  },
+  {
+    "id": "logic-faulty-clock",
+    "subject": "logic",
+    "kind": "clock_calendar",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A faulty clock gains {m} minutes every real hour. It was set to the correct time and then left running. Later it shows that {w} minutes have passed since it was set. How many real minutes have actually passed?",
+    "hints": [
+      "In 60 real minutes, how many minutes does the faulty clock show?",
+      "The clock runs faster than real time. Find the ratio of real time to clock time and use it."
+    ],
+    "explanation": "In 60 real minutes the faulty clock shows 60 + m minutes. So real time divided by clock time is 60 divided by (60 + m). Multiply the clock time w by this ratio.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-faulty-clock-1",
+        "params": {
+          "m": 12,
+          "w": 720
+        },
+        "answer": "600"
+      },
+      {
+        "id": "logic-faulty-clock-2",
+        "params": {
+          "m": 20,
+          "w": 1080
+        },
+        "answer": "810"
+      },
+      {
+        "id": "logic-faulty-clock-3",
+        "params": {
+          "m": 15,
+          "w": 900
+        },
+        "answer": "720"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 2000,
+      "step": 1
+    },
+    "verify": "w*60/(60+m)"
+  },
+  {
+    "id": "logic-weaving-sum",
+    "subject": "logic",
+    "kind": "number_pattern",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A number pattern is made by weaving two lists together. The 1st, 3rd, 5th, ... numbers start at {a} and go up by {d1} each time. The 2nd, 4th, 6th, ... numbers start at {b} and go up by {d2} each time. So the pattern begins {a}, {b}, {a2}, {b2}, ... What is the sum of the first {m} numbers in the pattern?",
+    "hints": [
+      "Split the numbers into the odd-position list and the even-position list. How many numbers are in each list?",
+      "Each list goes up by the same amount each time, so find its sum using first term, last term and number of terms.",
+      "Add the two list sums together."
+    ],
+    "explanation": "Half of the numbers sit in odd positions and half in even positions. Each half is a list with a constant step, so its sum is (number of terms) times (first term + last term) divided by 2. Add the two sums.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-weaving-sum-1",
+        "params": {
+          "a": 2,
+          "d1": 3,
+          "b": 10,
+          "d2": 4,
+          "a2": 5,
+          "b2": 14,
+          "m": 30
+        },
+        "answer": "915"
+      },
+      {
+        "id": "logic-weaving-sum-2",
+        "params": {
+          "a": 5,
+          "d1": 2,
+          "b": 1,
+          "d2": 6,
+          "a2": 7,
+          "b2": 7,
+          "m": 24
+        },
+        "answer": "600"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 3000,
+      "step": 1
+    },
+    "verify": "(m/2)*(2*a+(m/2-1)*d1)/2 + (m/2)*(2*b+(m/2-1)*d2)/2"
+  },
+  {
+    "id": "logic-stamp-frobenius",
+    "subject": "logic",
+    "kind": "balance",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A shop has only {a}p stamps and {b}p stamps, and you may use as many of each as you like. Some amounts of postage can never be made exactly. What is the largest amount, in pence, that cannot be made?",
+    "hints": [
+      "Try listing the amounts you can make: 0, then the multiples of each stamp, then sums.",
+      "After a certain amount, every larger amount can be made. Look for the pattern of which amounts are missing.",
+      "For two stamp values with no common factor, the largest missing amount is the product of the two values minus both values."
+    ],
+    "explanation": "When the two stamp values share no common factor, the largest amount that cannot be made is a times b minus a minus b. Every larger amount can be made with some mix of the two stamps.",
+    "answer_type": "integer",
+    "instances": [
+      {
+        "id": "logic-stamp-frobenius-1",
+        "params": {
+          "a": 5,
+          "b": 7
+        },
+        "answer": "23"
+      },
+      {
+        "id": "logic-stamp-frobenius-2",
+        "params": {
+          "a": 5,
+          "b": 9
+        },
+        "answer": "31"
+      },
+      {
+        "id": "logic-stamp-frobenius-3",
+        "params": {
+          "a": 7,
+          "b": 11
+        },
+        "answer": "59"
+      }
+    ],
+    "plausible": {
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    "verify": "a*b - a - b"
+  },
+  {
+    "id": "logic-street-fish",
+    "subject": "logic",
+    "kind": "grid_deduction",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "Five houses stand in a row, numbered 1 to 5 from the left. Five people, Lily, Max, Nora, Omar and Pia, each live in a different one. The houses are red, blue, green, white and yellow, one each, and each person keeps a different pet: cat, dog, fish, bird or mouse. You are told:\n- Lily's house is next to the green house.\n- The yellow house is directly to the left of the bird owner's house.\n- The cat owner's house is directly to the left of the yellow house.\n- Max's house is next to the yellow house.\n- Pia's house is directly to the left of Lily's house.\n- Nora's house is directly to the left of Max's house.\n- The fish is kept in the white house.\n- The yellow house is directly to the left of the red house.\n- The bird owner's house is directly to the left of the dog owner's house.\n- Pia's house is next to the fish owner's house.\nWho owns the fish?",
+    "hints": [
+      "Draw five boxes in a row. Under each box leave room for a name, a colour and a pet.",
+      "Start by chaining together the 'directly to the left' clues about yellow, cat, bird and red, then add the other clues.",
+      "Whenever a clue links two things (like a name and a colour), they go in the same house, so treat them as one unit."
+    ],
+    "explanation": "Reading from house 1, the only arrangement that fits is: house 1: Omar, blue, cat; house 2: Nora, yellow, mouse; house 3: Max, red, bird; house 4: Pia, green, dog; house 5: Lily, white, fish. So the fish belongs to Lily.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-street-fish-1",
+        "params": {},
+        "answer": "d"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Pia"
+      },
+      {
+        "id": "b",
+        "text": "Nora"
+      },
+      {
+        "id": "c",
+        "text": "Max"
+      },
+      {
+        "id": "d",
+        "text": "Lily"
+      },
+      {
+        "id": "e",
+        "text": "Omar"
+      }
+    ]
+  },
+  {
+    "id": "logic-banquet-table",
+    "subject": "logic",
+    "kind": "seating",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "Eight guests, Alma, Bruno, Cyra, Dario, Elin, Faris, Gwen and Hugo, sit at a round table. The seats are numbered 1 to 8 going clockwise, and seat 8 is next to seat 1. Seats directly across the table from each other are four numbers apart (1 and 5, 2 and 6, 3 and 7, 4 and 8). You are told:\n- Exactly one seat is between Cyra and Gwen (counting the short way round).\n- Going clockwise round the table, Bruno sits immediately after Faris.\n- Going clockwise round the table, Hugo sits immediately after Bruno.\n- Exactly one seat is between Alma and Cyra (counting the short way round).\n- Going clockwise round the table, Gwen sits immediately after Elin.\n- Dario sits in seat 5.\nWho sits in seat 6?",
+    "hints": [
+      "The table is a circle, so seat 8 is next to seat 1. 'One seat between' means two seats apart.",
+      "Start with the clue that names an exact seat, then use the 'immediately after' clues to place linked guests.",
+      "Put guests who are linked together into small groups, then see where each group can fit around the circle."
+    ],
+    "explanation": "Going round the seats 1 to 8, the only arrangement that fits every clue is: 1 Faris, 2 Bruno, 3 Hugo, 4 Alma, 5 Dario, 6 Cyra, 7 Elin, 8 Gwen. So seat 6 is Cyra.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-banquet-table-1",
+        "params": {},
+        "answer": "h"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Dario"
+      },
+      {
+        "id": "b",
+        "text": "Bruno"
+      },
+      {
+        "id": "c",
+        "text": "Faris"
+      },
+      {
+        "id": "d",
+        "text": "Elin"
+      },
+      {
+        "id": "e",
+        "text": "Gwen"
+      },
+      {
+        "id": "f",
+        "text": "Alma"
+      },
+      {
+        "id": "g",
+        "text": "Hugo"
+      },
+      {
+        "id": "h",
+        "text": "Cyra"
+      }
+    ]
+  },
+  {
+    "id": "logic-lost-trophy",
+    "subject": "logic",
+    "kind": "truth_teller",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "A trophy went missing, and exactly one of seven children, Abel, Bea, Cato, Dina, Eoin, Faye and Gil, took it. Each child makes one statement, in this order:\n- Abel: \"It was either Bea or Faye.\"\n- Bea: \"It was Faye.\"\n- Cato: \"It was not Dina.\"\n- Dina: \"It was either Faye or Cato.\"\n- Eoin: \"Bea is telling the truth.\"\n- Faye: \"Cato is telling the truth.\"\n- Gil: \"It was Cato.\"\nExactly three of the seven statements are true. Who took the trophy?",
+    "hints": [
+      "Take each of the seven children in turn as the one who took the trophy and count the true statements.",
+      "A statement 'X is lying' or 'X is telling the truth' depends on X's own statement, so work from the top of the list.",
+      "Keep a list of how many true statements each suspect would give. Only one reaches the right number."
+    ],
+    "explanation": "Test each suspect and count the true statements (a statement about someone else's honesty depends on that person's statement): if it was Abel, two true; if it was Bea, three true; if it was Cato, four true; if it was Dina, no true; if it was Eoin, two true; if it was Faye, six true; if it was Gil, two true. Only Bea gives exactly three true statements, so it was Bea.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-lost-trophy-1",
+        "params": {},
+        "answer": "a"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "Bea"
+      },
+      {
+        "id": "b",
+        "text": "Dina"
+      },
+      {
+        "id": "c",
+        "text": "Cato"
+      },
+      {
+        "id": "d",
+        "text": "Gil"
+      },
+      {
+        "id": "e",
+        "text": "Eoin"
+      },
+      {
+        "id": "f",
+        "text": "Abel"
+      },
+      {
+        "id": "g",
+        "text": "Faye"
+      }
+    ]
+  },
+  {
+    "id": "logic-island-six",
+    "subject": "logic",
+    "kind": "truth_teller",
+    "tier": "challenge",
+    "grade": 5,
+    "est_minutes": 10,
+    "prompt": "On an island, every person is either a knight (always tells the truth) or a knave (always lies). Six islanders, Ines, Jory, Kit, Lena, Milo and Nell, say:\n- Ines says: \"Exactly one of the six of us is a knight.\"\n- Jory says: \"Ines is a knight.\"\n- Kit says: \"Jory and Lena are the same type (both knights or both knaves).\"\n- Lena says: \"Nell and Jory are the same type (both knights or both knaves).\"\n- Milo says: \"Ines and Jory are both knaves.\"\n- Nell says: \"Lena and Kit are different types (one knight and one knave).\"\nHow many of the six islanders are knights?",
+    "hints": [
+      "Knights always tell the truth and knaves always lie. Try assuming one person is a knight and follow what that forces.",
+      "Statements about how many knights there are must match the real number, so check them against your assumed assignment at the end.",
+      "Try both possibilities for the first speaker and see which one leads to a contradiction."
+    ],
+    "explanation": "Testing the possibilities, the only assignment with no contradiction has knight(s): Kit, Milo, Nell, and knave(s): Ines, Jory, Lena. So the number of knights is 3.",
+    "answer_type": "choice",
+    "instances": [
+      {
+        "id": "logic-island-six-1",
+        "params": {},
+        "answer": "b"
+      }
+    ],
+    "options": [
+      {
+        "id": "a",
+        "text": "2"
+      },
+      {
+        "id": "b",
+        "text": "3"
+      },
+      {
+        "id": "c",
+        "text": "1"
+      },
+      {
+        "id": "d",
+        "text": "4"
+      },
+      {
+        "id": "e",
+        "text": "5"
+      },
+      {
+        "id": "f",
+        "text": "0"
+      },
+      {
+        "id": "g",
+        "text": "6"
+      }
+    ]
+  }
+]

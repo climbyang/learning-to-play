@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #101820; color: #fff; font-family: sans-serif; font-size: 36px; line-height: 1.35; }
+#app { width: 1920px; height: 1080px; position: relative; }
+.page { position: absolute; top: 0; right: 0; bottom: 0; left: 0; padding: 60px 80px; }
+h1 { font-size: 56px; margin: 0 0 40px; }
+.notice { position: absolute; top: 0; left: 0; right: 0; z-index: 5; padding: 14px 80px; background: #ffb300; color: #000; font-size: 34px; }
+
+.btn { font: inherit; font-size: 36px; color: #fff; background: #26384a; border: 3px solid #4a6178; border-radius: 16px; padding: 18px 36px; margin: 0 16px 16px 0; cursor: pointer; transition: transform 0.1s; }
+.btn:disabled { opacity: 0.4; }
+.btn:focus, .btn.focused, .passage-text:focus, .passage-text.focused { outline: 8px solid #ffd54a; outline-offset: 2px; transform: scale(1.06); box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.6); }
+.passage-text:focus, .passage-text.focused { transform: none; }
+
+.home .stats { margin-bottom: 50px; }
+.home .stat { font-size: 44px; margin-bottom: 12px; }
+.home .buttons .btn { display: block; min-width: 520px; font-size: 48px; }
+
+.question { display: flex; }
+.question .left { margin-right: 60px; }
+.question .left { flex: 1 1 55%; }
+.question .right { flex: 1 1 45%; }
+.prompt { font-size: 40px; margin-bottom: 24px; }
+.hints .hint { background: #1d2c3a; border-radius: 12px; padding: 12px 20px; margin-bottom: 12px; }
+.tries { margin-top: 16px; color: #ffd54a; }
+.field { min-height: 90px; font-size: 64px; background: #000; border: 3px solid #4a6178; border-radius: 12px; padding: 4px 24px; margin-bottom: 20px; letter-spacing: 4px; }
+.keypad { display: grid; grid-template-columns: repeat(4, 110px); }
+.keypad .key { margin: 0 12px 12px 0; padding: 12px 0; width: 98px; font-size: 40px; text-align: center; }
+.actions { margin-top: 12px; }
+.options .option { display: block; width: 100%; text-align: left; }
+.figure { margin: 16px 0; }
+.figure-title { font-size: 32px; margin-bottom: 8px; }
+.figure-table { border-collapse: collapse; font-size: 32px; }
+.figure-table th, .figure-table td { border: 2px solid #4a6178; padding: 8px 20px; }
+
+.passage .markers { margin-bottom: 20px; font-size: 44px; }
+.passage .marker { display: inline-block; width: 60px; text-align: center; }
+.passage .marker.right { color: #66bb6a; }
+.passage .marker.wrong { color: #ef5350; }
+.passage .marker.current { color: #ffd54a; }
+.passage .body { display: flex; }
+.passage-text { margin-right: 50px; }
+.passage-text { flex: 1 1 55%; height: 820px; overflow: hidden; background: #1d2c3a; border-radius: 16px; padding: 24px 32px; font-size: 34px; white-space: pre-wrap; }
+.passage .right { flex: 1 1 45%; }
+.feedback .verdict { font-size: 52px; margin-bottom: 20px; }
+.feedback .verdict.right { color: #66bb6a; }
+.feedback .verdict.wrong { color: #ef5350; }
+.feedback .answer { font-size: 40px; margin-bottom: 16px; }
+.feedback .explanation { font-size: 36px; margin-bottom: 30px; }
+
+.vocab .word { font-size: 96px; font-weight: bold; margin-bottom: 20px; }
+.vocab .meaning { font-size: 44px; margin-bottom: 20px; }
+.vocab .sentence { font-size: 40px; margin-bottom: 30px; }
+.vocab mark { background: #ffd54a; color: #000; padding: 0 6px; border-radius: 6px; }
+.look-again { font-size: 48px; color: #ffd54a; margin-bottom: 24px; }
+
+.result .outcome { font-size: 52px; }
+.result .credited { font-size: 80px; color: #66bb6a; margin-bottom: 20px; }
+.result .score, .result .answer { font-size: 44px; margin-bottom: 16px; }
+.result .explanation { font-size: 36px; margin-bottom: 30px; max-width: 1500px; }
+.unavailable .message { font-size: 60px; margin-top: 300px; }
+.unavailable .countdown { font-size: 96px; }

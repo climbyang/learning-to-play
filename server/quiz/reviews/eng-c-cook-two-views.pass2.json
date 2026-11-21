@@ -1,0 +1,18 @@
+{
+  "template_id": "eng-c-cook-two-views",
+  "content_hash": "190c35c3d82806f0b51577d52fa2f4bbe12adac30418c4c4e91d8f77137469c6",
+  "reviewer": "codex",
+  "model": "gpt-5.6-sol",
+  "utc": "2026-11-21T04:40:18Z",
+  "pass": 2,
+  "verdict": "pass",
+  "checks": {
+    "answer_unique_correct": true,
+    "distractors_unambiguous": true,
+    "reading_level": true,
+    "child_appropriate": true,
+    "factual_accuracy": true,
+    "sentence_in_passage": true
+  },
+  "notes": "The questions clearly distinguish written and oral sources; the historical summary is simplified but defensible."
+}

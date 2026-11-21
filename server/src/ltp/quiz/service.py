@@ -502,7 +502,7 @@ class QuizService:
                                       outcome="parts_wrong", credited_minutes=0.0)
             return
         challenge = a.tier == "challenge"
-        base = self.cfg.challenge_minutes if challenge else self.cfg.regular_minutes
+        base = self._base_minutes(a)
         nominal = base // 2 if wrong == 1 else base
         if a.hints_used > 0:
             nominal //= 2
@@ -540,9 +540,18 @@ class QuizService:
             ctx.notify("🏆 今日挑战完成")
 
     # -- grading -----------------------------------------------------------------
+    def _base_minutes(self, a: Attempt) -> int:
+        if a.tier == "challenge":
+            return self.cfg.challenge_minutes
+        kind = a.snapshot.get("kind") or ""
+        for family, minutes in self.cfg.kind_minutes.items():
+            if kind == family or kind.startswith(family + "_"):
+                return minutes
+        return self.cfg.regular_minutes
+
     def _finish_correct(self, a: Attempt, ctx: QuizContext) -> None:
         challenge = a.tier == "challenge"
-        base = self.cfg.challenge_minutes if challenge else self.cfg.regular_minutes
+        base = self._base_minutes(a)
         nominal = base // 2 if a.hints_used > 0 else base
         min_s = a.snapshot.get("min_seconds") or (
             self.cfg.min_seconds_challenge if challenge else self.cfg.min_seconds_regular)

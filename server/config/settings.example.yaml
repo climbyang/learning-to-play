@@ -46,6 +46,7 @@ quiz:
 #   allowed_ips: ["192.168.1.50"]    # default: only LG_TV_IP
 #   regular_minutes: 10
 #   challenge_minutes: 25
+#   kind_minutes: {vocab: 3}   # reward per regular question of a kind family (vocab = vocab_*)
 #   write_rate_per_min: 10
 #   read_rate_per_min: 60
 

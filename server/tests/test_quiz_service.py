@@ -677,3 +677,12 @@ async def test_template_min_seconds_overrides_tier_default(env):
     env.clock.advance(seconds=9)
     r = await env.svc.submit(DEV, v.id, env.answer(v), env.rev(v.id))
     assert r.outcome == "credited" and r.credited_minutes == 10
+
+
+async def test_kind_minutes_sets_vocab_reward(env):
+    v = await env.svc.current(DEV, "regular")
+    a = env.store.get_attempt(v.id)
+    env.store.update_attempt(v.id, snapshot={**a.snapshot, "kind": "vocab_meaning"})
+    env.clock.advance(seconds=60)
+    r = await env.svc.submit(DEV, v.id, env.answer(v), env.rev(v.id))
+    assert r.outcome == "credited" and r.credited_minutes == 3 and r.nominal_minutes == 3

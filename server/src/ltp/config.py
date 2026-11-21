@@ -49,6 +49,9 @@ class QuizSettings:
     write_rate_per_min: int = 10
     read_rate_per_min: int = 60
     dedup_days: int = 30
+    # Reward for regular questions of a kind family ("vocab" covers vocab_*), instead of
+    # regular_minutes: quick questions must not pay as much as a maths problem.
+    kind_minutes: Mapping[str, int] = field(default_factory=lambda: {"vocab": 3})
     bank_dir: Path = Path("quiz/bank")  # relative to the server root
 
 
@@ -187,8 +190,21 @@ def _parse_quiz(raw: Mapping[str, Any], env: Mapping[str, str], tv_ip: str | Non
                      else frozenset({tv_ip}) if tv_ip else frozenset()),
         tokens=_quiz_tokens(_env(env, "QUIZ_TOKENS")),
         bank_dir=bank_dir,
+        kind_minutes=_kind_minutes(raw.get("kind_minutes", d.kind_minutes)),
         **ints,
     )
+
+
+def _kind_minutes(raw: Any) -> dict[str, int]:
+    if not isinstance(raw, Mapping):
+        raise ValueError(f"quiz.kind_minutes must be a mapping, got {raw!r}")
+    out: dict[str, int] = {}
+    for kind, minutes in raw.items():
+        if (not isinstance(kind, str) or not kind or isinstance(minutes, bool)
+                or not isinstance(minutes, int) or not 0 <= minutes <= 60):
+            raise ValueError(f"quiz.kind_minutes: {kind!r} needs whole minutes 0-60, got {minutes!r}")
+        out[kind] = minutes
+    return out
 
 
 def _devmode_int(raw: Mapping[str, Any], key: str, default: int) -> int:

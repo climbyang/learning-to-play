@@ -18,6 +18,7 @@ ltp = "ltp.cli:main"
 
 [dependency-groups]
 dev = [
+    "chess>=1.11.2",
     "pytest>=8",
     "pytest-asyncio>=0.24",
 ]

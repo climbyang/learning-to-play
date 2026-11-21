@@ -53,6 +53,7 @@ class Instance:
     options: tuple[tuple[str, str], ...]
     content_hash: str
     passage: dict | None = None
+    min_seconds: int | None = None  # per-template too-fast floor, overrides the tier default
 
 
 def content_hash(template: dict) -> str:
@@ -385,6 +386,11 @@ def _validate_template(t: dict, seen_instances: dict[str, str]) -> tuple[list[st
     figure = t.get("figure")
     if figure is not None and not isinstance(figure, str):
         bad("figure must be a string when present")
+    min_seconds = t.get("min_seconds")
+    if min_seconds is not None and (isinstance(min_seconds, bool) or not isinstance(min_seconds, int)
+                                    or not 5 <= min_seconds <= 600):
+        bad("min_seconds must be an integer from 5 to 600 when present")
+        min_seconds = None
 
     options: list = []
     plausible = None
@@ -494,6 +500,7 @@ def _validate_template(t: dict, seen_instances: dict[str, str]) -> tuple[list[st
                 answer=answer,
                 options=tuple((o["id"], o["text"]) for o in options),
                 content_hash=chash,
+                min_seconds=min_seconds,
             )
         )
     return problems, built

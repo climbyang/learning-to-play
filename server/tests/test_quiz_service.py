@@ -668,3 +668,12 @@ async def test_open_attempts_lists_both_tiers(env):
     await env.svc.skip(DEV, r.id, r.rev)
     assert [v.id for v in await env.svc.open_attempts(DEV)] == [c.id]
     assert await env.svc.open_attempts(DEV + "x") == []
+
+
+async def test_template_min_seconds_overrides_tier_default(env):
+    v = await env.svc.current(DEV, "regular")
+    a = env.store.get_attempt(v.id)
+    env.store.update_attempt(v.id, snapshot={**a.snapshot, "min_seconds": 8})
+    env.clock.advance(seconds=9)
+    r = await env.svc.submit(DEV, v.id, env.answer(v), env.rev(v.id))
+    assert r.outcome == "credited" and r.credited_minutes == 10

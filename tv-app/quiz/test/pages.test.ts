@@ -107,6 +107,17 @@ describe("figure", () => {
     expect(renderFigure(null)).toBeNull();
     expect(renderFigure(JSON.stringify({ type: "bar", data: [] }))).toBeNull();
   });
+  it("chess board from the side to move", () => {
+    const w = renderFigure(JSON.stringify({ type: "chess", fen: "6k1/5ppp/8/8/8/8/8/R5K1 w - - 0 1" }))!;
+    expect(w.querySelectorAll("rect").length).toBe(64);
+    expect(w.querySelectorAll(".chess-piece").length).toBe(6);
+    const labels = (e: HTMLElement) => [...e.querySelectorAll("text:not(.chess-piece)")].map((t) => t.textContent);
+    expect(labels(w)[0]).toBe("a");
+    const b = renderFigure(JSON.stringify({ type: "chess", fen: "6k1/5ppp/8/8/8/8/8/R5K1 b - - 0 1" }))!;
+    expect(labels(b)[0]).toBe("h");
+    expect(renderFigure(JSON.stringify({ type: "chess", fen: "bad" }))).toBeNull();
+    expect(renderFigure(JSON.stringify({ type: "chess", fen: "9/8/8/8/8/8/8/8 w" }))).toBeNull();
+  });
 });
 
 describe("passage", () => {

@@ -245,3 +245,18 @@ def test_bank_rejects_1e999_literal(tmp_path, old, new):
     (tmp_path / "b.json").write_text(text, encoding="utf-8")
     with pytest.raises(BankError):
         load_reviewed(tmp_path)
+
+
+@pytest.mark.parametrize("value,ok", [(8, True), (5, True), (600, True), (4, False),
+                                      (601, False), ("8", False), (True, False), (8.5, False)])
+def test_min_seconds_is_optional_and_bounded(tmp_path, value, ok):
+    from ltp.quiz.bank import _validate_template
+    t = base_template()
+    t["min_seconds"] = value
+    problems, built = _validate_template(t, {})
+    if ok:
+        assert problems == [] and built[0].min_seconds == value
+    else:
+        assert any("min_seconds" in p for p in problems)
+    problems, built = _validate_template(base_template("t2"), {})
+    assert problems == [] and built[0].min_seconds is None

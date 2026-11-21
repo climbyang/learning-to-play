@@ -39,7 +39,8 @@ MARKER = "REVIEW_JSON:"
 CHECKS_COMMON = {
     "answer_unique_correct": "the keyed answer is correct and the only correct option",
     "distractors_unambiguous": "no distractor could also be argued correct; options are clearly distinct",
-    "reading_level": "wording suits Year 4-5 readers (age 9-11)",
+    "reading_level": "wording suits a reader in the school year given by the template's grade field "
+                     "(grade 5 = Year 5, about age 10)",
     "child_appropriate": "content is safe and suitable for a child",
     "factual_accuracy": "any nonfiction statements in the passage or prompt are accurate "
                         "(flag claims that are false or outdated for a 2026 reader)",
@@ -47,12 +48,14 @@ CHECKS_COMMON = {
 CHECK_PASSAGE = {"sentence_in_passage": "every vocab sentence appears verbatim in the passage text"}
 
 PROMPT_PASS1 = (
-    "You are reviewing quiz questions for a Year 4-5 child. For each template below, check:\n{rubric}\n"
+    "You are reviewing quiz questions for a primary-school child (each template's grade field is "
+    "its target school year). For each template below, check:\n{rubric}\n"
     "Templates use {{param}} placeholders filled from each instance's params; judge the filled-in question. "
     "Do not modify any file."
 )
 PROMPT_PASS2 = (
-    "You are an adversarial second reviewer of challenge-tier quiz questions for a Year 4-5 child. "
+    "You are an adversarial second reviewer of challenge-tier quiz questions for a primary-school child "
+    "(each template's grade field is its target school year). "
     "Try hard to break each template: look for a second defensible answer, an ambiguous or trick option, "
     "a wrong key, a hint or explanation that leaks or contradicts the answer, wording above the reading level, "
     "or unsuitable content. Mark a check false if you can build any reasonable counter-argument. "

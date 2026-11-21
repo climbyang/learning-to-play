@@ -321,6 +321,8 @@ class QuizService:
             "options": options, "content_hash": inst.content_hash,
             "subject": inst.subject, "kind": inst.kind,
         }
+        if inst.min_seconds is not None:
+            snapshot["min_seconds"] = inst.min_seconds
         if inst.answer_type == ps.PASSAGE:
             extra, answer, order, progress = ps.build(inst, self.rng)
             snapshot.update(extra)
@@ -542,7 +544,8 @@ class QuizService:
         challenge = a.tier == "challenge"
         base = self.cfg.challenge_minutes if challenge else self.cfg.regular_minutes
         nominal = base // 2 if a.hints_used > 0 else base
-        min_s = self.cfg.min_seconds_challenge if challenge else self.cfg.min_seconds_regular
+        min_s = a.snapshot.get("min_seconds") or (
+            self.cfg.min_seconds_challenge if challenge else self.cfg.min_seconds_regular)
         elapsed = (ctx.now - a.issued_utc).total_seconds()
         if elapsed < min_s:
             outcome, credited = "too_fast", 0.0

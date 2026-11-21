@@ -18,6 +18,7 @@ curfew:
 enforcement:
   violation_count: 3        # re-opens after time-up within the window -> power off
   violation_window_minutes: 10
+  curfew_power_off: false   # true = during curfew, power off on the first open
 
 # Foreground apps that never count as entertainment ("" = nothing in front).
 exempt_apps:

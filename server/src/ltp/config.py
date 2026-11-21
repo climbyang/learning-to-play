@@ -93,6 +93,7 @@ class Settings:
     curfew_end: time
     violation_count: int
     violation_window_minutes: float
+    curfew_power_off: bool
     notify_app_switch: bool
     daily_summary_at: time | None
     power_on_debounce_minutes: float
@@ -270,6 +271,7 @@ def load_settings(yaml_path: Path, env: Mapping[str, str]) -> Settings:
         curfew_end=_parse_hhmm(curfew.get("end", "07:00")),
         violation_count=int(enf.get("violation_count", 3)),
         violation_window_minutes=float(enf.get("violation_window_minutes", 10)),
+        curfew_power_off=_bool(enf, "curfew_power_off", False),
         notify_app_switch=_bool(notify, "app_switch", False),
         daily_summary_at=None if summary is None else _parse_hhmm(summary),
         power_on_debounce_minutes=float(notify.get("power_on_debounce_minutes", 5)),

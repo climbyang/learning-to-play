@@ -40,6 +40,17 @@ def _fmt_min(seconds: float) -> str:
 
 
 @dataclass
+class _Streak:
+    """Violations that follow each other within the violation window."""
+    first: datetime
+    last: datetime
+    sent: set[str]  # actions ("close_app" / "power_off") already reported in this run
+    held: int = 0   # violations whose message was held back
+    held_power_off: set[int | None] = field(default_factory=set)  # sessions quietly powered off
+    confirmed_off: set[int | None] = field(default_factory=set)   # ... where it really happened
+
+
+@dataclass
 class QuizContext:
     """Handle given to a quiz transaction callback; credits are only ever written here."""
     now: datetime
@@ -78,6 +89,9 @@ class Monitor:
         # (session id, reason, action, mode, violation count) of the last enforcement,
         # for retry dedup
         self._enforced: tuple[int | None, str, str, str, int] | None = None
+        # Run of back-to-back violations whose repeat messages are being merged.
+        # In memory only: a restart mid-run just loses the held-back count.
+        self._streak: _Streak | None = None
         # Quiz app to hand over to after a quota close; None when the quiz service is
         # unavailable (set by the runtime wiring).
         self.quiz_app_id: str | None = None
@@ -321,7 +335,8 @@ class Monitor:
     def _enforce_call(self, label: str, fn: Callable[[], Awaitable[None]], reason: str, *,
                       toast: str | None = None, done_msg: str | None = None,
                       buttons: Buttons | None = None,
-                      then: Callable[[], Awaitable[None]] | None = None) -> ActionFn:
+                      then: Callable[[], Awaitable[None]] | None = None,
+                      on_done: Callable[[], None] | None = None) -> ActionFn:
         """Recheck -> toast -> destructive TV call -> confirmation, as one action.
 
         Actions run after the lock is released, so a parent command (/add, /unlock,
@@ -354,6 +369,8 @@ class Monitor:
                 if done_msg is not None:
                     await self.notifier.send(f"⚠️ {label} 失败（{exc}），下个周期重试", None)
                 return
+            if on_done is not None:
+                on_done()
             if done_msg is not None:
                 await self.notifier.send(done_msg, buttons)
             if then is not None:
@@ -408,6 +425,7 @@ class Monitor:
         enforce = mode == "enforce"
         why = REASON_TEXT.get(reason, reason)
         title = self._title(app_id)
+        actions: list[ActionFn] = []
         if self._enforced is not None and self._enforced[:2] == (self._session_id, reason):
             _, _, action, prev_mode, count = self._enforced
             if prev_mode == mode:
@@ -416,7 +434,8 @@ class Monitor:
                 if not enforce:
                     return []
                 if action == "power_off":
-                    return [self._enforce_call("power_off", self.tv.power_off, reason)]
+                    return [self._enforce_call("power_off", self.tv.power_off, reason,
+                                               on_done=self._held_off_done())]
                 return [self._enforce_call("close_app", lambda: self.tv.close_app(app_id),
                                            reason, then=self._quiz_then(reason))]
             # Mode changed (e.g. observe -> enforce): run the full flow again for the same
@@ -435,22 +454,90 @@ class Monitor:
             self.store.log_event("violation", f"{reason}:{app_id}", now)
             since = now - timedelta(minutes=self.s.violation_window_minutes)
             count = self.store.count_events("violation", since)
-            power_off = count >= self.s.violation_count
+            power_off = (count >= self.s.violation_count
+                         or (self.s.curfew_power_off and in_curfew(self._local(now), self.s)))
+            pre = self._end_streak(now)  # an earlier run that ended without a tick
+            if self._hold_message(now, "power_off" if power_off else "close_app"):
+                # Same kind of message already sent in this run: enforce quietly.
+                self._enforced = (self._session_id, reason,
+                                  "power_off" if power_off else "close_app", mode, count)
+                return pre + self._enforce_quiet(reason, app_id, power_off, why)
+            actions = pre
         self._enforced = (self._session_id, reason, "power_off" if power_off else "close_app",
                           mode, count)
-        if power_off:
+        if power_off and count >= self.s.violation_count:
             msg = f"⏻ {why}，{self.s.violation_window_minutes:g} 分钟内第 {count} 次打开 {title}，已关机"
+        elif power_off:
+            msg = f"⏻ {why}，打开了 {title}，已关机"
         elif count <= 1:  # 0 = natural expiry carried across a mode switch
             msg = f"⛔ {why}，已退出 {title}"
         else:
             msg = f"⛔ {why}，第 {count} 次打开 {title}，已再次退出"
         if not enforce:
-            return [self._send(msg + "（观察模式，未执行）", None if power_off else self._buttons())]
+            return actions + [self._send(msg + "（观察模式，未执行）",
+                                         None if power_off else self._buttons())]
         if power_off:
-            return [self._enforce_call("power_off", self.tv.power_off, reason, done_msg=msg)]
+            return actions + [self._enforce_call("power_off", self.tv.power_off, reason,
+                                                 toast=f"⏻ {why}", done_msg=msg)]
+        return actions + [self._enforce_call("close_app", lambda: self.tv.close_app(app_id),
+                                             reason, toast=f"⛔ {why}", done_msg=msg,
+                                             buttons=self._buttons(),
+                                             then=self._quiz_then(reason))]
+
+    def _enforce_quiet(self, reason: str, app_id: str, power_off: bool,
+                       why: str) -> list[ActionFn]:
+        """Enforcement for a violation whose parent message is merged into the run summary."""
+        if self.mode != "enforce":
+            return []
+        if power_off:
+            if self._streak is not None:
+                self._streak.held_power_off.add(self._session_id)
+            return [self._enforce_call("power_off", self.tv.power_off, reason, toast=f"⏻ {why}",
+                                       on_done=self._held_off_done())]
         return [self._enforce_call("close_app", lambda: self.tv.close_app(app_id), reason,
-                                   toast=f"⛔ {why}", done_msg=msg, buttons=self._buttons(),
-                                       then=self._quiz_then(reason))]
+                                   toast=f"⛔ {why}", then=self._quiz_then(reason))]
+
+    # -- merging repeat violation messages -------------------------------
+    def _held_off_done(self) -> Callable[[], None] | None:
+        """Completion hook for a merged power-off (first try or retry): only a power-off that
+        really happened is reported in the run summary, once per session."""
+        st, session_id = self._streak, self._session_id
+        if st is None or session_id not in st.held_power_off:
+            return None
+
+        def done() -> None:
+            st.confirmed_off.add(session_id)
+        return done
+
+    def _hold_message(self, now: datetime, action: str) -> bool:
+        """Add a violation to the current run; True when its message should be held back
+        (a message for the same action was already sent in this run)."""
+        st = self._streak
+        if st is None:
+            self._streak = _Streak(first=now, last=now, sent={action})
+            return False
+        st.last = now
+        if action not in st.sent:
+            st.sent.add(action)
+            return False
+        st.held += 1
+        return True
+
+    def _end_streak(self, now: datetime) -> list[ActionFn]:
+        """Close the run once the window has passed without a new violation, and report
+        what was held back."""
+        st = self._streak
+        window = timedelta(minutes=self.s.violation_window_minutes)
+        if st is None or now - st.last < window:
+            return []
+        self._streak = None
+        if st.held == 0:
+            return []
+        first, last = self._local(st.first), self._local(st.last)
+        off = f"，其中 {len(st.confirmed_off)} 次关机" if st.confirmed_off else ""
+        note = "" if self.mode == "enforce" else "（观察模式，未执行）"
+        return [self._send(f"🔁 {first:%H:%M}–{last:%H:%M} 又重复打开了 {st.held} 次"
+                           f"{off}，已合并为这一条{note}")]
 
     # -- tick -------------------------------------------------------------
     async def tick(self) -> None:
@@ -464,6 +551,7 @@ class Monitor:
             now = self._now()
             self._heartbeat(now)
             actions = self._decide(now)
+            actions += self._end_streak(now)
             actions += self._maybe_summary(now)
         await self._execute(actions)
         if self.devmode is not None:

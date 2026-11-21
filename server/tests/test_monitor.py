@@ -729,3 +729,127 @@ async def test_enabled_quiz_digest_present(env):
     clock.t = datetime(2026, 11, 18, 10, 0, tzinfo=timezone.utc)
     await mon.tick()
     assert sink.has("QUIZ-DIGEST")
+
+
+def _monitor(tmp_path, yaml: str):
+    cfg = tmp_path / "config"
+    cfg.mkdir(exist_ok=True)
+    (cfg / "settings.yaml").write_text(yaml, encoding="utf-8")
+    s = load_settings(cfg / "settings.yaml", {})
+    clock, tv, sink = Clock(), FakeTV({YT: "YouTube"}), Sink()
+    store = Store(tmp_path / "ltp.db")
+    return Monitor(tv, store, sink, s, now=clock), tv, sink, clock, store
+
+
+async def _reopen_after_power_off(tv, clock, app_id, seconds=30):
+    await tv.set(connected=False)
+    clock.advance(seconds=seconds)
+    await tv.set(app_id=app_id)
+
+
+CURFEW_YAML = ("mode: enforce\ntimezone: Etc/GMT-10\n"
+               "enforcement:\n  curfew_power_off: true\n")
+
+
+async def test_curfew_power_off_on_first_open(tmp_path):
+    mon, tv, sink, clock, _ = _monitor(tmp_path, CURFEW_YAML)
+    clock.advance(hours=11)  # 21:00 local
+    await tv.set(app_id=YT)
+    assert tv.powered_off == 1 and tv.closed == []
+    assert tv.toasts and "休息时段" in tv.toasts[-1]
+    assert sink.has("休息时段，打开了 YouTube，已关机")
+
+
+async def test_curfew_power_off_is_opt_in(tmp_path):
+    mon, tv, sink, clock, _ = _monitor(tmp_path, "mode: enforce\ntimezone: Etc/GMT-10\n")
+    clock.advance(hours=11)
+    await tv.set(app_id=YT)
+    assert tv.powered_off == 0 and tv.closed == [YT]
+
+
+async def test_repeat_violation_messages_are_merged(tmp_path):
+    mon, tv, sink, clock, store = _monitor(tmp_path, CURFEW_YAML)
+    clock.advance(hours=11)
+    await tv.set(app_id=YT)
+    for _ in range(5):
+        await _reopen_after_power_off(tv, clock, YT)
+    assert tv.powered_off == 6  # every open is still enforced
+    assert store.count_events("violation", clock() - timedelta(hours=1)) == 6
+    assert sum("已关机" in m for m in sink.msgs) == 1
+    await tv.set(connected=False)
+    await watch(mon, clock, 9)
+    assert not sink.has("重复打开")  # run still within the window
+    await watch(mon, clock, 2)
+    assert sum("又重复打开了 5 次，其中 5 次关机" in m for m in sink.msgs) == 1
+    await watch(mon, clock, 15)
+    assert sum("重复打开" in m for m in sink.msgs) == 1  # summary sent once
+
+
+async def test_escalation_to_power_off_is_still_reported(env):
+    mon, tv, sink, clock, *_ = env
+    await tv.set(app_id=YT)
+    await watch(mon, clock, 20)            # natural expiry: not part of a run
+    for app in (TUBI, YT, TUBI, YT):       # violations 1..4
+        clock.advance(minutes=1)
+        await tv.set(app_id=app)
+        if tv.powered_off:
+            await _reopen_after_power_off(tv, clock, HOME, seconds=1)
+    assert sink.has("已退出 Tubi") or sink.has("已退出 com.tubitv.ott")
+    assert not sink.has("第 2 次打开")      # second close merged
+    assert sum("已关机" in m for m in sink.msgs) == 1  # first power-off reported, second merged
+
+
+async def test_new_run_after_quiet_window_reports_again(tmp_path):
+    mon, tv, sink, clock, _ = _monitor(tmp_path, CURFEW_YAML)
+    clock.advance(hours=11)
+    await tv.set(app_id=YT)
+    await _reopen_after_power_off(tv, clock, YT)
+    await tv.set(connected=False)
+    clock.advance(minutes=30)              # no tick in between: flushed by the next violation
+    await tv.set(app_id=YT)
+    assert sink.has("又重复打开了 1 次")
+    assert sum("已关机" in m and "又重复" not in m for m in sink.msgs) == 2
+
+
+async def test_curfew_power_off_applies_while_also_locked(tmp_path):
+    mon, tv, sink, clock, store = _monitor(tmp_path, CURFEW_YAML)
+    store.set_kv("locked", "1")
+    clock.advance(hours=11)
+    await tv.set(app_id=YT)
+    assert tv.powered_off == 1 and tv.closed == []
+
+
+async def test_failed_quiet_power_off_not_counted_in_summary(tmp_path):
+    mon, tv, sink, clock, _ = _monitor(tmp_path, CURFEW_YAML)
+    clock.advance(hours=11)
+    await tv.set(app_id=YT)
+    real = tv.power_off
+
+    async def broken():
+        raise ConnectionError("boom")
+    tv.power_off = broken
+    await _reopen_after_power_off(tv, clock, YT)
+    tv.power_off = real
+    await _reopen_after_power_off(tv, clock, YT)
+    await tv.set(connected=False)
+    await watch(mon, clock, 11)
+    assert sink.has("又重复打开了 2 次，其中 1 次关机")
+
+
+async def test_retried_quiet_power_off_counted_once(tmp_path):
+    mon, tv, sink, clock, _ = _monitor(tmp_path, CURFEW_YAML)
+    clock.advance(hours=11)
+    await tv.set(app_id=YT)
+    real = tv.power_off
+
+    async def broken():
+        raise ConnectionError("boom")
+    tv.power_off = broken
+    await _reopen_after_power_off(tv, clock, YT)   # merged power-off fails, TV stays on
+    tv.power_off = real
+    clock.advance(seconds=10)
+    await mon.tick()                               # retry succeeds
+    assert tv.powered_off == 2
+    await tv.set(connected=False)
+    await watch(mon, clock, 11)
+    assert sink.has("又重复打开了 1 次，其中 1 次关机")

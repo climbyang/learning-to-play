@@ -7,6 +7,10 @@ Contract notes verified against bscpylgtv 0.5.5:
   states=[] the power state stays "Unknown" and dead sockets go unnoticed.
 - Its state-update callbacks fire on every change; the connection task ends
   when the socket dies, which we watch to emit OFFLINE.
+- When the TV powers off, its power-state handler awaits disconnect() from inside a
+  task that the connection's own cleanup waits for, with cancellation swallowed on
+  both sides: a deadlock that leaks the whole connection on every power-off. The
+  handler is replaced per client (see _avoid_power_off_deadlock).
 """
 from __future__ import annotations
 
@@ -39,6 +43,25 @@ def power_on_from(power_state: str | None, app_id: str) -> bool:
     if power_state == "Unknown":
         return bool(app_id)
     return power_state not in OFF_STATES
+
+
+def _avoid_power_off_deadlock(client: Any) -> None:
+    """Replace the library's power-state handler on this client so that a power-off only
+    cancels the connection task instead of awaiting it from within its own handler. Must
+    run before connect(): the library binds the handler when it subscribes."""
+    if not callable(getattr(client, "set_power_state", None)):
+        return
+
+    async def set_power_state(payload: dict) -> None:
+        client._power_state = {"state": payload.get("state", "Unknown")}
+        if not client.is_on:
+            task = client.connect_task
+            if task is not None and not task.done():
+                task.cancel()  # its cleanup cancels and awaits this handler; never await it here
+        elif client.state_update_callbacks and client.doStateUpdate:
+            await client.do_state_update_callbacks()
+
+    client.set_power_state = set_power_state
 
 
 async def _default_factory(ip: str, **kwargs: Any) -> Any:
@@ -183,6 +206,7 @@ class LGWebOSController:
         if self._client_key:
             kwargs["client_key"] = self._client_key
         client = await self._factory(self._ip, **kwargs)
+        _avoid_power_off_deadlock(client)
         try:
             await self._bounded(client.connect(), "TV connect")
         except BaseException as exc:

@@ -311,3 +311,64 @@ async def test_connect_gives_up_when_library_connect_hangs():
     assert tv.state == TVState.OFFLINE
     await tv.connect()  # a later attempt still works
     assert tv.state.connected
+
+
+async def test_power_off_handler_does_not_deadlock_the_connection():
+    # bscpylgtv 0.5.5: on power-off its power-state handler awaits disconnect(), which
+    # awaits the connection task, whose cleanup waits (ignoring cancellation) for the
+    # very task running that handler. Model that structure on a real client.
+    from bscpylgtv import WebOsClient
+
+    from ltp.tv.lg_webos import _avoid_power_off_deadlock
+
+    client = WebOsClient("192.168.1.20", client_key="k", states=["power"])
+    _avoid_power_off_deadlock(client)
+    client._power_state = {"state": "Active"}
+    pushed = asyncio.Event()
+
+    async def callback_handler():
+        try:
+            await pushed.wait()
+            await client.set_power_state({"state": "Suspend"})
+            await asyncio.Event().wait()  # keeps reading its queue until cancelled
+        except asyncio.CancelledError:
+            pass
+
+    async def connect_handler():
+        handler = asyncio.create_task(callback_handler())
+        try:
+            await asyncio.wait({handler})
+        finally:
+            handler.cancel()
+            closeout = asyncio.create_task(asyncio.wait({handler}))
+            while not closeout.done():
+                try:
+                    await asyncio.shield(closeout)
+                except asyncio.CancelledError:
+                    pass
+
+    client.connect_task = asyncio.create_task(connect_handler())
+    await asyncio.sleep(0)
+    pushed.set()
+    done, _ = await asyncio.wait({client.connect_task}, timeout=2)
+    assert done, "connection task deadlocked after power-off"
+    assert not client.is_on
+
+
+async def test_adapter_installs_power_off_fix_before_connecting():
+    seen = {}
+    orig = StubClient.connect
+
+    async def connect(self):
+        seen["patched"] = "set_power_state" in self.__dict__
+        await orig(self)
+
+    StubClient.set_power_state = lambda self, payload: None
+    StubClient.connect = connect
+    try:
+        tv, _ = _make()
+        await tv.connect()
+    finally:
+        StubClient.connect = orig
+        del StubClient.set_power_state
+    assert seen["patched"]

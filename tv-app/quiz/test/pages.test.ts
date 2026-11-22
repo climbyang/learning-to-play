@@ -243,6 +243,7 @@ describe("result", () => {
     ["correct", "lost", /wrong answer earlier/],
     ["correct", "parts_wrong", /Too many parts/],
     ["correct", "kind_cap", /practice/],
+    ["correct", "practice", /review/],
     ["exhausted", "exhausted", /No tries left/],
     ["skipped", "skipped", /Skipped/],
     ["expired", "expired", /expired/],

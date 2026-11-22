@@ -376,6 +376,13 @@ class Store:
             "GROUP BY template_id", (device, tier, _ts(since))).fetchall()
         return {tid: _parse(ts) for tid, ts in rows}
 
+    def attempts_since(self, device: str, tier: str, since: datetime) -> list[Attempt]:
+        """A device's attempts of a tier issued since `since`, oldest first."""
+        rows = self._db.execute(
+            f"SELECT {_ATTEMPT_SELECT} FROM quiz_attempts WHERE device=? AND tier=? "
+            "AND issued_utc>=? ORDER BY issued_utc, id", (device, tier, _ts(since))).fetchall()
+        return [_attempt_from_row(r) for r in rows]
+
     def count_attempts(self, device: str, day: date, *, state: str | None = None) -> int:
         sql = "SELECT COUNT(*) FROM quiz_attempts WHERE device=? AND day=?"
         args: list[Any] = [device, day.isoformat()]

@@ -8,6 +8,7 @@ const OUTCOME_TEXT: Record<string, string> = {
   cap: "Correct! You've reached today's quiz limit, so only some of the time was added.",
   cap_full: "Correct! You've reached today's quiz limit, so no more time can be added today.",
   kind_cap: "Correct! You've already earned today's time for this kind of question, so this one was practice.",
+  practice: "Correct! This was a review of a question you saw before, so it was practice.",
   too_fast: "Correct, but that was very quick, so no time was added.",
   lost: "Not this time. You chose a wrong answer earlier, so no time was added.",
   parts_wrong: "Too many parts were wrong, so no time was added.",

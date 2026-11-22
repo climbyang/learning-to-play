@@ -18,6 +18,7 @@ from typing import Any, Mapping, TypeVar
 
 from ltp.config import QuizSettings
 from ltp.monitor import Monitor, QuizContext
+from ltp.quiz import mistakes as mk
 from ltp.quiz import passage as ps
 from ltp.quiz.bank import WORD_SET_KIND, Instance, QuizBank, check_answer
 from ltp.store import Attempt, Store
@@ -26,6 +27,8 @@ T = TypeVar("T")
 TIERS = ("regular", "challenge")
 SEED_KEY = "quiz:challenge_seed"
 DISABLED_PREFIX = "quiz:disabled:"
+REVIEW_EVERY = 3  # every 3rd regular question of the day is a due mistake, if any
+MISTAKE_HORIZON = timedelta(days=60)  # history the mistake book looks at
 SKIP_LIMIT_EVENT = "quiz_skip_limit"
 
 
@@ -278,13 +281,54 @@ class QuizService:
         start, _ = self.monitor._day_bounds(day)
         skip_limit = self.store.count_events(SKIP_LIMIT_EVENT, start)
         denied = self.store.count_events("quiz_denied", start)
-        return (f"答题：答对 {correct} 题，计入 {_fmt(self.store.quiz_credit_minutes(day))} 分钟，"
+        text = (f"答题：答对 {correct} 题，计入 {_fmt(self.store.quiz_credit_minutes(day))} 分钟，"
                 f"太快 {too_fast} 次，跳过达上限 {skip_limit} 次，拒绝请求 {denied} 次")
+        _, end = self.monitor._day_bounds(day)
+        for device in sorted(self.cfg.tokens):
+            entries = self.mistake_book(device, end)
+            if not entries:
+                continue
+            open_ = [e for e in entries.values() if not e.mastered]
+            new_today = sorted(e.template_id for e in open_
+                               if e.streak == 0 and start <= e.last_utc < end)
+            text += (f"\n错题本：待复习 {len(open_)} 题（到期 {len(mk.due(entries, end))}），"
+                     f"已掌握 {len(entries) - len(open_)} 题")
+            if new_today:
+                text += "；今天新错：" + "、".join(new_today[:8])
+        return text
 
-    def _pick_regular(self, device: str, now: datetime) -> Instance:
+    def mistake_book(self, device: str, now: datetime) -> dict[str, mk.Entry]:
+        return mk.book(self.store.attempts_since(device, "regular", now - MISTAKE_HORIZON))
+
+    def _pick_review(self, device: str, now: datetime, day: date,
+                     pool: list[Instance]) -> tuple[Instance, str] | None:
+        """Every REVIEW_EVERY-th regular question of the day re-asks a due mistake, with
+        different numbers where the template has them ("fresh"), else as practice."""
+        today = [x for x in self._today(device, day) if x.tier == "regular"]
+        if len(today) % REVIEW_EVERY != REVIEW_EVERY - 1:
+            return None
+        last = self.store.last_attempt(device, "regular")
+        by_template: dict[str, list[Instance]] = {}
+        for i in pool:
+            by_template.setdefault(i.template_id, []).append(i)
+        for entry in mk.due(self.mistake_book(device, now), now):
+            if entry.template_id not in by_template or (
+                    last is not None and last.template_id == entry.template_id):
+                continue
+            others = [i for i in by_template[entry.template_id]
+                      if i.instance_id != entry.last_instance]
+            if others:
+                return self.rng.choice(others), "fresh"
+            return by_template[entry.template_id][0], "practice"
+        return None
+
+    def _pick_regular(self, device: str, now: datetime,
+                      day: date | None = None) -> tuple[Instance, str | None]:
         pool = self._enabled("regular")
         if not pool:
             raise QuizUnavailable("disabled")
+        if day is not None and (review := self._pick_review(device, now, day, pool)):
+            return review
         # "Seen" = any terminal attempt (its answer was revealed), not only correct ones,
         # so skip/exhaust cannot be used to read an answer and get the item back.
         seen = self.store.last_seen_by_template(
@@ -299,7 +343,7 @@ class QuizService:
             # Everything was seen recently: fall back to the longest-ago template(s).
             oldest = min(seen[i.template_id] for i in pool)
             candidates = [i for i in pool if seen[i.template_id] == oldest]
-        return self.rng.choice(candidates)
+        return self.rng.choice(candidates), None
 
     def _pick_challenge(self, day: date) -> Instance:
         pool = self._enabled("challenge")
@@ -307,7 +351,8 @@ class QuizService:
             raise QuizUnavailable("disabled")
         return pool[pick_challenge_index(self.seed_provider(), day, len(pool))]
 
-    def _issue(self, device: str, tier: str, inst: Instance, ctx: QuizContext) -> Attempt:
+    def _issue(self, device: str, tier: str, inst: Instance, ctx: QuizContext,
+               review: str | None = None) -> Attempt:
         options = [{"id": oid, "text": text} for oid, text in inst.options]
         order: Any = None
         answer: Any = inst.answer
@@ -323,6 +368,8 @@ class QuizService:
         }
         if inst.min_seconds is not None:
             snapshot["min_seconds"] = inst.min_seconds
+        if review is not None:
+            snapshot["review"] = review
         if inst.answer_type == ps.PASSAGE:
             extra, answer, order, progress = ps.build(inst, self.rng)
             snapshot.update(extra)
@@ -365,7 +412,8 @@ class QuizService:
                 if a is None:
                     a = self._issue(device, tier, self._pick_challenge(ctx.day), ctx)
             elif a is None:
-                a = self._issue(device, tier, self._pick_regular(device, ctx.now), ctx)
+                inst, review = self._pick_regular(device, ctx.now, ctx.day)
+                a = self._issue(device, tier, inst, ctx, review=review)
             return self._view(a)
         return await self._txn(fn, write=True, device=device)
 
@@ -519,9 +567,8 @@ class QuizService:
         if elapsed < min_s:
             outcome, credited = "too_fast", 0.0
             reason = f"（答得太快：用时 {elapsed:.0f} 秒，少于 {min_s} 秒，未计入）"
-        elif (limit := self._kind_limit_reached(a, ctx.day)) is not None:
-            outcome, credited = "kind_cap", 0.0
-            reason = f"（这类题今天已奖励 {limit} 个，这题算练习，未计入）"
+        elif (nc := self._no_credit(a, ctx.day)) is not None:
+            (outcome, reason), credited = nc, 0.0
         else:
             credited = ctx.award(a.id, nominal, f"{a.tier}:{a.template_id}")
             if credited <= 0:
@@ -561,6 +608,15 @@ class QuizService:
         family = self._family(a.snapshot.get("kind") or "", self.cfg.kind_minutes)
         return self.cfg.regular_minutes if family is None else self.cfg.kind_minutes[family]
 
+    def _no_credit(self, a: Attempt, day: date) -> tuple[str, str] | None:
+        """Outcome and parent note for a correct answer that earns nothing by design."""
+        if a.snapshot.get("review") == "practice":
+            return "practice", "（错题复习，答案之前看过，这题算练习，未计入）"
+        limit = self._kind_limit_reached(a, day)
+        if limit is not None:
+            return "kind_cap", f"（这类题今天已奖励 {limit} 个，这题算练习，未计入）"
+        return None
+
     def _kind_limit_reached(self, a: Attempt, day: date) -> int | None:
         """The daily limit when this attempt's kind family already used it up today."""
         if a.tier == "challenge":
@@ -587,9 +643,8 @@ class QuizService:
         elif a.reward_lost:
             outcome, credited = "lost", 0.0
             reason = "（选择题答错过，未计入）"
-        elif (limit := self._kind_limit_reached(a, ctx.day)) is not None:
-            outcome, credited = "kind_cap", 0.0
-            reason = f"（这类题今天已奖励 {limit} 个，这题算练习，未计入）"
+        elif (nc := self._no_credit(a, ctx.day)) is not None:
+            (outcome, reason), credited = nc, 0.0
         else:
             credited = ctx.award(a.id, nominal, f"{a.tier}:{a.template_id}")
             if credited <= 0:

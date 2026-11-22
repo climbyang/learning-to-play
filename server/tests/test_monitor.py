@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 import pytest
 
 from ltp.config import load_settings
-from ltp.monitor import Monitor
+from ltp.monitor import CURFEW_TOAST, Monitor
 from ltp.notify import Command
 from ltp.rules import AllowedWhen, AppRule
 from ltp.store import Store
@@ -756,7 +756,7 @@ async def test_curfew_power_off_on_first_open(tmp_path):
     clock.advance(hours=11)  # 21:00 local
     await tv.set(app_id=YT)
     assert tv.powered_off == 1 and tv.closed == []
-    assert tv.toasts and "休息时段" in tv.toasts[-1]
+    assert tv.toasts and tv.toasts[-1] == CURFEW_TOAST and ":" not in tv.toasts[-1]
     assert sink.has("休息时段，打开了 YouTube，已关机")
 
 

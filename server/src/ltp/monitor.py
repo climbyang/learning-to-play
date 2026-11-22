@@ -33,6 +33,16 @@ QUIZ_TOAST_SUFFIX = " · Open Quiz to earn more time"
 REASON_TEXT = {"quota": "今日娱乐时间已用完", "locked": "家长已锁定电视", "curfew": "现在是休息时段"}
 
 
+# What the child sees on screen during curfew: no times, so there is nothing to count down to.
+CURFEW_TOAST = "📺 电视只能在下午和晚上看哦 · TV is for afternoons and evenings only"
+
+
+def _kid_toast(reason: str, icon: str) -> str:
+    if reason == "curfew":
+        return CURFEW_TOAST
+    return f"{icon} {REASON_TEXT.get(reason, reason)}"
+
+
 def _utcnow() -> datetime:
     return datetime.now(timezone.utc)
 
@@ -479,7 +489,7 @@ class Monitor:
             if not enforce:
                 return [self._send(msg + "（观察模式，未执行）", self._buttons())]
             return [self._enforce_call("close_app", lambda: self.tv.close_app(app_id), reason,
-                                       toast=f"⛔ {why}", done_msg=msg, buttons=self._buttons(),
+                                       toast=_kid_toast(reason, "⛔"), done_msg=msg, buttons=self._buttons(),
                                        then=self._quiz_then(reason))]
         else:
             self.store.log_event("violation", f"{reason}:{app_id}", now)
@@ -509,9 +519,9 @@ class Monitor:
                                          None if power_off else self._buttons())]
         if power_off:
             return actions + [self._enforce_call("power_off", self.tv.power_off, reason,
-                                                 toast=f"⏻ {why}", done_msg=msg)]
+                                                 toast=_kid_toast(reason, "⏻"), done_msg=msg)]
         return actions + [self._enforce_call("close_app", lambda: self.tv.close_app(app_id),
-                                             reason, toast=f"⛔ {why}", done_msg=msg,
+                                             reason, toast=_kid_toast(reason, "⛔"), done_msg=msg,
                                              buttons=self._buttons(),
                                              then=self._quiz_then(reason))]
 
@@ -523,10 +533,10 @@ class Monitor:
         if power_off:
             if self._streak is not None:
                 self._streak.held_power_off.add(self._session_id)
-            return [self._enforce_call("power_off", self.tv.power_off, reason, toast=f"⏻ {why}",
+            return [self._enforce_call("power_off", self.tv.power_off, reason, toast=_kid_toast(reason, "⏻"),
                                        on_done=self._held_off_done())]
         return [self._enforce_call("close_app", lambda: self.tv.close_app(app_id), reason,
-                                   toast=f"⛔ {why}", then=self._quiz_then(reason))]
+                                   toast=_kid_toast(reason, "⛔"), then=self._quiz_then(reason))]
 
     # -- merging repeat violation messages -------------------------------
     def _held_off_done(self) -> Callable[[], None] | None:

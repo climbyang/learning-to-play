@@ -172,3 +172,21 @@ def test_no_devices_and_repeated_runs(tmp_path):
     b = gen.run(cfg, store, [DEV], NOW, FakeLLM([variant(prompt="Pack {boxes} {per_box} {sold}.")]),
                 random.Random(0)).batch
     assert a != b
+
+
+def test_llm_client_reports_empty_reply_reason():
+    import httpx
+    import pytest
+
+    from ltp import llm
+
+    def handler(request):
+        assert request.headers["Authorization"] == "Bearer k"
+        return httpx.Response(200, json={"choices": [{"message": {"content": ""},
+                                                      "finish_reason": "length"}]})
+    client = httpx.Client(transport=httpx.MockTransport(handler))
+    with pytest.raises(llm.LLMError, match="length"):
+        llm.chat("hi", api_key="k", client=client)
+    ok = httpx.Client(transport=httpx.MockTransport(
+        lambda r: httpx.Response(200, json={"choices": [{"message": {"content": "yes"}}]})))
+    assert llm.chat("hi", api_key="k", client=ok) == "yes"

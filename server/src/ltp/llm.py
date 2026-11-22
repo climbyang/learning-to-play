@@ -21,7 +21,7 @@ class LLMError(RuntimeError):
 
 
 def chat(prompt: str, *, model: str = DEFAULT_MODEL, api_key: str | None = None,
-         base_url: str | None = None, timeout: float = 600.0, max_tokens: int = 8000,
+         base_url: str | None = None, timeout: float = 900.0, max_tokens: int = 32000,
          client: httpx.Client | None = None) -> str:
     key = api_key or os.environ.get(KEY_ENV)
     if not key:
@@ -42,11 +42,13 @@ def chat(prompt: str, *, model: str = DEFAULT_MODEL, api_key: str | None = None,
     if resp.status_code != 200:
         raise LLMError(f"HTTP {resp.status_code}: {resp.text[:300]}")
     try:
-        text = resp.json()["choices"][0]["message"]["content"]
-    except (ValueError, KeyError, IndexError, TypeError) as exc:
+        choice = resp.json()["choices"][0]
+        text = choice["message"].get("content")
+    except (ValueError, KeyError, IndexError, TypeError, AttributeError) as exc:
         raise LLMError(f"unexpected reply shape: {exc}") from exc
     if not isinstance(text, str) or not text.strip():
-        raise LLMError("empty reply")
+        # reasoning models can spend the whole budget thinking (finish_reason "length")
+        raise LLMError(f"empty reply (finish_reason={choice.get('finish_reason')!r})")
     return text
 
 

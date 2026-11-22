@@ -33,6 +33,14 @@ Answers for maths and numeric logic questions are checked by `verify`. English a
 
 The records shipped in this repository were produced by an LLM reviewer. Treat them as a first filter, not a guarantee.
 
+## Generated questions
+
+Parents can ask for new questions from Telegram with `/quiz generate`. Nothing runs on a schedule: the daily summary only suggests a run when open mistakes have no practice variants yet or a subject is running low on unseen questions.
+
+- `server/src/ltp/quiz/generate.py` plans the run, asks the LLM (`server/src/ltp/llm.py`, DeepSeek by default, key in `DEEPSEEK_API_KEY`) and checks every candidate like the shipped bank: loader validation, the `verify` expression, python-chess for chess, no duplicate prompts. Every candidate, numeric ones included, also gets an LLM review.
+- Nothing goes live by itself. The same model writes the question, its formula and the review, so each batch waits in `pending/` until a parent checks it with `/quiz pending` and runs `/quiz publish <batch>`.
+- Generated files live under `quiz.extra_bank_dir` (default `server/data/bank_extra/`, outside git): `bank/` for published batches, `reviews/`, `pending/` and `archive/`. The daemon reloads the bank when these files change. If a published batch stops loading, the quiz falls back to the shipped bank.
+
 ## Changing the bank
 
 1. Edit or add templates in `server/quiz/bank/`. `uv run python scripts/check_bank_draft.py` checks their structure before any review exists.

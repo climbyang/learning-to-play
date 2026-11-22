@@ -75,6 +75,9 @@ Requests are also rate-limited per device, separately for reads and writes. Ever
 | `/quiz` | Today's quiz details |
 | `/quiz check` | A random live question with its answer, for spot-checking |
 | `/quiz bad <id>` | Pull a question from the bank |
+| `/quiz generate` | Write new questions with an LLM: variants of open mistakes and top-ups for subjects running low. One run at a time, at most `quiz.generate_max` questions |
+| `/quiz pending` | Show generated questions waiting for approval, with their answers |
+| `/quiz publish <batch>`, `/quiz drop <batch>` | Put a pending batch live, or discard it |
 
 ## Data
 

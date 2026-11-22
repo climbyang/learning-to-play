@@ -9,11 +9,13 @@ from __future__ import annotations
 import hashlib
 import hmac
 import math
+import logging
 import random
 import secrets
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
+from pathlib import Path
 from typing import Any, Mapping, TypeVar
 
 from ltp.config import QuizSettings
@@ -22,6 +24,8 @@ from ltp.quiz import mistakes as mk
 from ltp.quiz import passage as ps
 from ltp.quiz.bank import WORD_SET_KIND, Instance, QuizBank, check_answer
 from ltp.store import Attempt, Store
+
+log = logging.getLogger(__name__)
 
 T = TypeVar("T")
 TIERS = ("regular", "challenge")
@@ -154,6 +158,41 @@ class QuizService:
         self.cfg = cfg
         self.rng = rng
         self.seed_provider = seed_provider or kv_seed_provider(store)
+        # Reloads the bank when generated files change (set by the runtime wiring).
+        self.bank_loader: Callable[[], QuizBank] | None = None
+        self._bank_sig: tuple | None = None
+
+    def _extra_signature(self) -> tuple:
+        root = Path(self.cfg.extra_bank_dir)
+        return tuple(sorted((str(p.relative_to(root)), p.stat().st_mtime_ns, p.stat().st_size)
+                            for sub in ("bank", "reviews") if (root / sub).is_dir()
+                            for p in (root / sub).glob("*.json")))
+
+    def generation_job(self, now: datetime) -> str:
+        """One /quiz generate run (blocking; called in a worker thread with its own DB
+        connection). Returns the parent message."""
+        from ltp import llm
+        from ltp.quiz import generate as gen
+        store = Store(self.monitor.s.db_path)
+        result = gen.run(self.cfg, store, sorted(self.cfg.tokens), now,
+                         lambda prompt, model: llm.chat(prompt, model=model))
+        return gen.summary(result)
+
+    def maybe_reload(self) -> bool:
+        """Pick up newly generated or published questions; keep the old bank on failure."""
+        if self.bank_loader is None:
+            return False
+        sig = self._extra_signature()
+        if sig == self._bank_sig:  # None at start: the first check always loads once
+            return False
+        self._bank_sig = sig
+        try:
+            self.bank = self.bank_loader()
+        except Exception as exc:  # a bad generated file must never take the quiz down
+            log.warning("generated questions not loaded, keeping the current bank: %s", exc)
+            return False
+        log.info("quiz bank reloaded: %d templates", len(self.bank.templates()))
+        return True
 
     # -- transaction plumbing ------------------------------------------------
     async def _txn(self, fn: Callable[[QuizContext], T], *, write: bool, device: str) -> T:
@@ -295,6 +334,9 @@ class QuizService:
                      f"已掌握 {len(entries) - len(open_)} 题")
             if new_today:
                 text += "；今天新错：" + "、".join(new_today[:8])
+        from ltp.quiz import generate as gen
+        if (hint := gen.suggestion(self.cfg, self.store, sorted(self.cfg.tokens), end)):
+            text += "\n" + hint
         return text
 
     def mistake_book(self, device: str, now: datetime) -> dict[str, mk.Entry]:
@@ -404,6 +446,7 @@ class QuizService:
     async def current(self, device: str, tier: str) -> AttemptView:
         if tier not in TIERS:
             raise QuizRejected("bad_input")
+        self.maybe_reload()
 
         def fn(ctx: QuizContext) -> AttemptView:
             a = self.store.open_attempt(device, tier)

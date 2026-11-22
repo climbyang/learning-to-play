@@ -55,13 +55,20 @@ class QuizSettings:
     # At most this many rewarded questions per day of a kind family; later ones are practice.
     kind_daily_limit: Mapping[str, int] = field(default_factory=lambda: {"vocab": 3})
     bank_dir: Path = Path("quiz/bank")  # relative to the server root
+    # Locally generated questions (not in git): bank/, reviews/, pending/ under this dir.
+    extra_bank_dir: Path = Path("data/bank_extra")
+    generate_model: str = "deepseek-v4-pro"
+    review_model: str = "deepseek-v4-pro"
+    generate_max: int = 20        # new templates per generation run
+    generate_low_water: int = 15  # top up a subject when fewer unseen regular templates remain
 
 
 _QUIZ_INT_KEYS = ("port", "api_version", "regular_minutes", "challenge_minutes",
                   "min_seconds_regular", "min_seconds_challenge", "min_seconds_passage_regular",
                   "min_seconds_passage_challenge", "vocab_cooldown_s", "numeric_tries",
                   "wrong_cooldown_s", "skips_per_day", "wrong_pause_threshold",
-                  "wrong_pause_minutes", "write_rate_per_min", "read_rate_per_min", "dedup_days")
+                  "wrong_pause_minutes", "write_rate_per_min", "read_rate_per_min", "dedup_days",
+                  "generate_max", "generate_low_water")
 
 
 @dataclass(frozen=True)
@@ -162,7 +169,7 @@ _QUIZ_INT_MIN = {"min_seconds_regular": 0, "min_seconds_challenge": 0, "wrong_co
                  "min_seconds_passage_regular": 0, "min_seconds_passage_challenge": 0,
                  "vocab_cooldown_s": 0,
                  "skips_per_day": 0, "dedup_days": 0}
-_QUIZ_INT_MAX = {"port": 65535}
+_QUIZ_INT_MAX = {"port": 65535, "generate_max": 100}
 
 
 def _quiz_int(raw: Mapping[str, Any], key: str, default: int) -> int:
@@ -183,6 +190,9 @@ def _parse_quiz(raw: Mapping[str, Any], env: Mapping[str, str], tv_ip: str | Non
     bank_dir = Path(raw.get("bank_dir", d.bank_dir))
     if not bank_dir.is_absolute():
         bank_dir = server_root / bank_dir
+    extra_bank_dir = Path(raw.get("extra_bank_dir", d.extra_bank_dir))
+    if not extra_bank_dir.is_absolute():
+        extra_bank_dir = server_root / extra_bank_dir
     ints = {k: _quiz_int(raw, k, getattr(d, k)) for k in _QUIZ_INT_KEYS}
     return QuizSettings(
         enabled=_bool(raw, "enabled", d.enabled),
@@ -192,6 +202,9 @@ def _parse_quiz(raw: Mapping[str, Any], env: Mapping[str, str], tv_ip: str | Non
                      else frozenset({tv_ip}) if tv_ip else frozenset()),
         tokens=_quiz_tokens(_env(env, "QUIZ_TOKENS")),
         bank_dir=bank_dir,
+        extra_bank_dir=extra_bank_dir,
+        generate_model=str(raw.get("generate_model", d.generate_model)),
+        review_model=str(raw.get("review_model", d.review_model)),
         kind_minutes=_kind_map(raw.get("kind_minutes", d.kind_minutes), "kind_minutes", 60),
         kind_daily_limit=_kind_map(raw.get("kind_daily_limit", d.kind_daily_limit),
                                    "kind_daily_limit", 100),

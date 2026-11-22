@@ -207,3 +207,14 @@ def test_quiz_kind_daily_limit(tmp_path):
     f.write_text("mode: observe\nquiz:\n  kind_daily_limit: {vocab: 101}\n", encoding="utf-8")
     with pytest.raises(ValueError, match="kind_daily_limit"):
         load_settings(f, {})
+
+
+def test_quiz_generation_limits_are_applied(tmp_path):
+    f = tmp_path / "settings.yaml"
+    f.write_text("mode: observe\nquiz:\n  generate_max: 5\n  generate_low_water: 7\n"
+                 "  generate_model: m1\n", encoding="utf-8")
+    q = load_settings(f, {}).quiz
+    assert (q.generate_max, q.generate_low_water, q.generate_model) == (5, 7, "m1")
+    f.write_text("mode: observe\nquiz:\n  generate_max: 101\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="generate_max"):
+        load_settings(f, {})

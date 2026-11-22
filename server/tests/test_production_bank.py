@@ -11,6 +11,7 @@ from pathlib import Path
 import pytest
 
 from ltp.quiz.bank import QuizBank
+from ltp.quiz.chesscheck import chess_problem, fen_problem
 
 PROD_BANK = Path(__file__).resolve().parents[1] / "quiz" / "bank"
 PROD_REVIEWS = PROD_BANK.parent / "reviews"
@@ -64,13 +65,7 @@ def figure_problem(raw):
               and len(labels) == len(values) and all(_number(v) for v in values))
         return None if ok else "bar needs data[] or equal-length labels[]/values[>=0]"
     if spec.get("type") == "chess":
-        import chess
-        fen = spec.get("fen")
-        try:
-            ok = isinstance(fen, str) and chess.Board(fen).is_valid()
-        except ValueError:
-            ok = False
-        return None if ok else "chess needs a valid fen"
+        return fen_problem(spec.get("fen"))
     if spec.get("type") == "table":
         headers, rows = spec.get("headers"), spec.get("rows")
         ok = (isinstance(headers, list) and headers and isinstance(rows, list) and rows
@@ -88,66 +83,6 @@ def test_every_figure_renders_in_the_app(bank):
                 if problem:
                     bad[i.instance_id] = problem
     assert bad == {}
-
-
-def _mates_in_one(board):
-    for move in list(board.legal_moves):
-        board.push(move)
-        mate = board.is_checkmate()
-        board.pop()
-        if mate:
-            return True
-    return False
-
-
-def _forces_mate_in_two(board, move):
-    board.push(move)
-    try:
-        if board.is_checkmate():
-            return False  # a mate in one is not a mate-in-two puzzle answer
-        replies = list(board.legal_moves)
-        if not replies:
-            return False  # stalemate
-        for reply in replies:
-            board.push(reply)
-            ok = _mates_in_one(board)
-            board.pop()
-            if not ok:
-                return False
-        return True
-    finally:
-        board.pop()
-
-
-def chess_problem(i):
-    """Why a chess template's keyed answer is not the one correct move, or None."""
-    import chess
-    board = chess.Board(json.loads(i.figure)["fen"])
-    moves = {}
-    for oid, text in i.options:
-        if "#" in text or "+" in text:
-            return f"option {text!r} gives the answer away"
-        try:
-            moves[oid] = board.parse_san(text)
-        except ValueError:
-            return f"option {text!r} is not a legal move"
-    if len(set(moves.values())) != len(moves):
-        return "duplicate moves among options"
-    if i.kind == "chess_mate1":
-        def wins(m):
-            board.push(m)
-            mate = board.is_checkmate()
-            board.pop()
-            return mate
-    elif i.kind == "chess_mate2":
-        if _mates_in_one(board):
-            return "position has a mate in one"
-        def wins(m):
-            return _forces_mate_in_two(board, m)
-    else:
-        return f"unknown chess kind {i.kind!r}"
-    winners = {oid for oid, m in moves.items() if wins(m)}
-    return None if winners == {i.answer} else f"winning options {sorted(winners)}, keyed {i.answer!r}"
 
 
 def test_chess_answers_are_the_only_winning_move(bank):

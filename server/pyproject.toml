@@ -5,6 +5,7 @@ description = "Home TV learning/entertainment control: LG webOS monitor, daily q
 requires-python = ">=3.11"
 dependencies = [
     "bscpylgtv>=0.5.5,<0.6",
+    "chess>=1.11",
     "httpx>=0.27",
     "pyyaml>=6.0",
     "python-dotenv>=1.0",
@@ -18,7 +19,6 @@ ltp = "ltp.cli:main"
 
 [dependency-groups]
 dev = [
-    "chess>=1.11.2",
     "pytest>=8",
     "pytest-asyncio>=0.24",
 ]

@@ -532,12 +532,16 @@ class QuizBank:
         self._templates = list(template_ids)
 
     @classmethod
-    def load(cls, directory: Path, reviews_dir: Path) -> "QuizBank":
+    def load(cls, directory: Path, reviews_dir: Path,
+             extra: tuple[tuple[Path, Path], ...] = ()) -> "QuizBank":
+        """Load the bank; `extra` adds (bank dir, reviews dir) pairs such as locally generated
+        questions. A missing extra dir is skipped; ids and content must be unique across all."""
         directory = Path(directory)
-        reviews_dir = Path(reviews_dir)
-        files = sorted(directory.glob("*.json"))
+        files = [(p, Path(reviews_dir)) for p in sorted(directory.glob("*.json"))]
         if not files:
             raise BankError([f"no *.json bank files in {directory}"])
+        for extra_dir, extra_reviews in extra:
+            files += [(p, Path(extra_reviews)) for p in sorted(Path(extra_dir).glob("*.json"))]
         problems: list[str] = []
         instances: list[Instance] = []
         template_ids: list[str] = []
@@ -545,7 +549,7 @@ class QuizBank:
         seen_templates: set[str] = set()
         seen_prompts: dict[str, str] = {}
         seen_passages: dict[str, str] = {}
-        for path in files:
+        for path, reviews_dir in files:
             try:
                 data = json.loads(path.read_text(encoding="utf-8"))
             except (OSError, ValueError) as exc:

@@ -328,7 +328,7 @@ async def test_forwarded_for_header_cannot_spoof_allowlist(env):
 
 
 def test_prepare_quiz_unexpected_bank_error_disables_quiz_only(env, monkeypatch):
-    def boom(_dir, _reviews):
+    def boom(_dir, _reviews, extra=()):
         raise RuntimeError("kaboom")
 
     monkeypatch.setattr(cli.QuizBank, "load", staticmethod(boom))

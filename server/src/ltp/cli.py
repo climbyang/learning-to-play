@@ -51,6 +51,19 @@ def _setup_logging(verbose: bool) -> None:
 
 
 # -- run -------------------------------------------------------------------
+def _load_bank(s: Settings) -> QuizBank:
+    """Shipped bank plus published generated questions. If the generated part is broken,
+    fall back to the shipped bank alone so a bad batch never disables the quiz."""
+    from ltp.quiz.generate import Paths
+    main = (s.quiz.bank_dir, Path(s.quiz.bank_dir).parent / "reviews")
+    extra = Paths(s.quiz.extra_bank_dir)
+    try:
+        return QuizBank.load(*main, extra=((extra.bank, extra.reviews),))
+    except BankError as exc:
+        log.error("generated questions invalid, using the shipped bank only: %s", exc)
+        return QuizBank.load(*main)
+
+
 def _prepare_quiz(s: Settings) -> tuple[Settings, QuizBank | None, list[str]]:
     """Load the quiz bank when enabled; on success register the quiz app's rule.
 
@@ -60,7 +73,7 @@ def _prepare_quiz(s: Settings) -> tuple[Settings, QuizBank | None, list[str]]:
     if not s.quiz.enabled:
         return s, None, []
     try:
-        bank = QuizBank.load(s.quiz.bank_dir, Path(s.quiz.bank_dir).parent / "reviews")
+        bank = _load_bank(s)
     except BankError as exc:
         log.error("quiz bank invalid, quiz disabled: %s", exc)
         return s, None, exc.problems
@@ -117,6 +130,7 @@ async def _run(s: Settings) -> None:
             log.warning("devmode check disabled: LG_TV_IP not set")
         if bank is not None:
             service = QuizService(bank, monitor, store, s.quiz, random.Random())
+            service.bank_loader = lambda: _load_bank(s)
             monitor.enable_quiz(s.quiz.app_id, user_quiz_rule, service)
             tasks.append(run_quiz_server(service, monitor, s.quiz, store, monitor.notify_once,
                                          lambda: datetime.now(timezone.utc)))

@@ -104,6 +104,8 @@ class Monitor:
         # Run of back-to-back violations whose repeat messages are being merged.
         # In memory only: a restart mid-run just loses the held-back count.
         self._streak: _Streak | None = None
+        # The running /quiz generate job, if any (one at a time; it calls a paid LLM API).
+        self._gen_task: asyncio.Task | None = None
         # Quiz app to hand over to after a quota close; None when the quiz service is
         # unavailable (set by the runtime wiring).
         self.quiz_app_id: str | None = None
@@ -718,7 +720,7 @@ class Monitor:
             actions += self._decide(now)  # apply the new mode right away
             return Reply(f"模式已切换为：{'执行' if arg == 'enforce' else '观察'}")
         if name == "quiz":
-            return self._quiz_command(cmd.arg.strip(), now)
+            return self._quiz_command(cmd.arg.strip(), now, actions)
         if name in ("status", "today"):
             return Reply(self.status_text(now), self._buttons())
         return Reply("命令：/status 今日状态 · /add 分钟 加时 · /lock 锁定 · /unlock 解锁 · "
@@ -727,12 +729,41 @@ class Monitor:
                      self._buttons())
 
     # -- main loop --------------------------------------------------------
-    def _quiz_command(self, arg: str, now: datetime) -> Reply:
+    def _quiz_command(self, arg: str, now: datetime, actions: list[ActionFn]) -> Reply:
         if self.quiz is None:
             return Reply("答题功能未启用")
-        from ltp.quiz.service import QuizUnavailable  # local: service imports this module
+        from ltp.quiz import generate as gen  # local: these import this module
+        from ltp.quiz.service import QuizUnavailable
         sub, _, rest = arg.partition(" ")
         sub, rest = sub.lower(), rest.strip()
+        if sub == "generate":
+            if self._gen_task is not None and not self._gen_task.done():
+                return Reply("上一批还在生成中，完成后会通知你")
+            actions.append(self._start_generation(now))
+            return Reply("🧠 开始生成新题（DeepSeek 出题 + 自动检查 + 审核），"
+                         "通常几分钟，完成后通知你确认")
+        if sub == "pending":
+            batches = gen.pending_batches(self.quiz.cfg)
+            if not batches:
+                return Reply("没有待确认的新题")
+            parts = []
+            for batch, templates in batches.items():
+                parts.append(f"📦 {batch}（{len(templates)} 题）")
+                parts += [gen.show(t) for t in templates]
+            text = "\n\n".join(parts)
+            if len(text) > TELEGRAM_MESSAGE_LIMIT - 200:
+                text = text[:TELEGRAM_MESSAGE_LIMIT - 200] + "\n…（太长已截断）"
+            return Reply(text + "\n\n/quiz publish 批次 上线 · /quiz drop 批次 丢弃")
+        if sub == "publish":
+            count, problem = gen.publish(self.quiz.cfg, rest)
+            if problem is not None:
+                return Reply(f"⚠️ {problem}")
+            self.quiz.maybe_reload()
+            return Reply(f"✅ 已上线 {rest}：{count} 题")
+        if sub == "drop":
+            if gen.drop(self.quiz.cfg, rest):
+                return Reply(f"🗑 已丢弃 {rest}")
+            return Reply("找不到这个批次（/quiz pending 查看）")
         if sub == "check":
             try:
                 instance_id, text = self.quiz.spot_check(TELEGRAM_MESSAGE_LIMIT - 64)
@@ -747,6 +778,22 @@ class Monitor:
             return Reply(f"找不到 {rest}")
         lines = self.quiz.today_lines(self.business_day(now))
         return Reply("\n".join(lines) if lines else "今天还没有答题")
+
+    def _start_generation(self, now: datetime) -> ActionFn:
+        async def start() -> None:
+            async def job() -> None:
+                quiz = self.quiz
+                if quiz is None:
+                    return
+                try:
+                    text = await asyncio.to_thread(quiz.generation_job, now)
+                except Exception as exc:
+                    log.exception("question generation failed")
+                    text = f"⚠️ 新题生成失败：{type(exc).__name__}: {str(exc)[:300]}"
+                await self.notifier.send(text, None)
+            # Its own task: a run takes minutes and must not hold up Telegram commands.
+            self._gen_task = asyncio.create_task(job())
+        return start
 
     async def _connection_loop(self) -> None:
         backoff = 5.0

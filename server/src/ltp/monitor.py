@@ -746,14 +746,15 @@ class Monitor:
             batches = gen.pending_batches(self.quiz.cfg)
             if not batches:
                 return Reply("没有待确认的新题")
-            parts = []
+            parts, buttons = [], []
             for batch, templates in batches.items():
                 parts.append(f"📦 {batch}（{len(templates)} 题）")
                 parts += [gen.show(t) for t in templates]
+                buttons += gen.batch_buttons(batch, len(templates))
             text = "\n\n".join(parts)
             if len(text) > TELEGRAM_MESSAGE_LIMIT - 200:
                 text = text[:TELEGRAM_MESSAGE_LIMIT - 200] + "\n…（太长已截断）"
-            return Reply(text + "\n\n/quiz publish 批次 上线 · /quiz drop 批次 丢弃")
+            return Reply(text + "\n\n点下面的按钮一键上线或丢弃", buttons)
         if sub == "publish":
             count, problem = gen.publish(self.quiz.cfg, rest)
             if problem is not None:
@@ -785,12 +786,13 @@ class Monitor:
                 quiz = self.quiz
                 if quiz is None:
                     return
+                buttons = None
                 try:
-                    text = await asyncio.to_thread(quiz.generation_job, now)
+                    text, buttons = await asyncio.to_thread(quiz.generation_job, now)
                 except Exception as exc:
                     log.exception("question generation failed")
                     text = f"⚠️ 新题生成失败：{type(exc).__name__}: {str(exc)[:300]}"
-                await self.notifier.send(text, None)
+                await self.notifier.send(text, buttons)
             # Its own task: a run takes minutes and must not hold up Telegram commands.
             self._gen_task = asyncio.create_task(job())
         return start

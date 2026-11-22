@@ -168,15 +168,16 @@ class QuizService:
                             for sub in ("bank", "reviews") if (root / sub).is_dir()
                             for p in (root / sub).glob("*.json")))
 
-    def generation_job(self, now: datetime) -> str:
+    def generation_job(self, now: datetime) -> tuple[str, list | None]:
         """One /quiz generate run (blocking; called in a worker thread with its own DB
-        connection). Returns the parent message."""
+        connection). Returns the parent message and its publish/drop buttons."""
         from ltp import llm
         from ltp.quiz import generate as gen
         store = Store(self.monitor.s.db_path)
         result = gen.run(self.cfg, store, sorted(self.cfg.tokens), now,
                          lambda prompt, model: llm.chat(prompt, model=model))
-        return gen.summary(result)
+        buttons = gen.batch_buttons(result.batch, len(result.pending)) if result.pending else None
+        return gen.summary(result), buttons
 
     def maybe_reload(self) -> bool:
         """Pick up newly generated or published questions; keep the old bank on failure."""

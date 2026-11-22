@@ -152,8 +152,12 @@ async def test_telegram_generate_pending_publish(tmp_path):
 
     def cmd(arg):
         return env.mon.handle(Command(1, 1, "quiz", arg))
-    assert batch in (await cmd("pending")).text and "→ 280" in (await cmd("pending")).text
-    env.svc.generation_job = lambda now: "🧠 fake run done"
+    pending = await cmd("pending")
+    assert batch in pending.text and "→ 280" in pending.text
+    datas = [d for row in pending.buttons for _label, d in row]
+    assert datas == [f"quiz:publish {batch}", f"quiz:drop {batch}"]
+    assert all(len(d.encode("utf-8")) <= 64 for d in datas)  # Telegram callback_data limit
+    env.svc.generation_job = lambda now: ("🧠 fake run done", None)
     assert "开始生成" in (await cmd("generate")).text
     for _ in range(20):
         await asyncio.sleep(0.01)

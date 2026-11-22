@@ -389,6 +389,13 @@ def show(t: dict) -> str:
     return f"{head}\n{prompt}\n  → {ans}"
 
 
+def batch_buttons(batch: str, count: int) -> list[list[tuple[str, str]]]:
+    """One-tap publish/drop for a batch (callback data becomes /quiz publish|drop <batch>)."""
+    tag = batch.rsplit("-", 1)[-1]
+    return [[(f"✅ 上线 {tag}（{count} 题）", f"quiz:publish {batch}"),
+             (f"🗑 丢弃 {tag}", f"quiz:drop {batch}")]]
+
+
 def summary(result: Result) -> str:
     lines = [f"🧠 新题生成 {result.batch}：待你确认 {len(result.pending)} 题，"
              f"未通过检查 {len(result.rejected)} 题"]

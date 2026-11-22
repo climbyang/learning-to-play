@@ -129,7 +129,7 @@ RULES = """Rules (a strict validator checks every one):
 - Output ONLY a JSON array of new templates. No prose, no code fences.
 - Copy the exact JSON shape of the example: same subject, tier, answer_type and field names.
 - "id": any short string (the system renames it). Instances need unique ids too.
-- Plain English, British/Australian spelling. Curly braces only for {param} placeholders.
+- Plain English, British spelling. Curly braces only for {param} placeholders.
 - integer/decimal: "verify" is an arithmetic expression over the params using numbers,
   + - * / ** and parentheses only, and it must equal each instance's answer exactly;
   "plausible" {min, max, step} allows at least 20 values and contains every answer;

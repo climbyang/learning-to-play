@@ -899,3 +899,12 @@ async def test_kid_command_switches_back_mid_session(env):
     assert used_min(mon, clock) == pytest.approx(3, abs=0.3)
     assert "用法" in (await mon.handle(Command(PARENT, PARENT, "adult", "abc"))).text
     assert "1–480" in (await mon.handle(Command(PARENT, PARENT, "adult", "999"))).text
+
+
+async def test_quiz_app_during_curfew_gets_the_same_notice_and_power_off(tmp_path):
+    mon, tv, sink, clock, _ = _monitor(tmp_path, CURFEW_YAML)
+    mon.s = replace(mon.s, app_rules={**mon.s.app_rules,
+                                      QUIZ: AppRule(False, AllowedWhen.QUOTA_EXHAUSTED)})
+    clock.advance(hours=11)  # 21:00 local
+    await tv.set(app_id=QUIZ)
+    assert tv.powered_off == 1 and tv.toasts[-1] == CURFEW_TOAST
